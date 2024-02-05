@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading  | 1 </title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="estilo_reading_game.css">
+
+</head>
+
+
+<body>
+    <div class="row">
+        <div class="col-md-6 align-self-center text-center">
+            <div id="container">
+                <nav class="navbar">
+                    <a class="fatec-linguo">Four<span>Language</span></a>
+                    <div class="sair"><button type="submit" id="btnRedirect"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+                
+                </nav>
+            </div>
+
+            <div class="sidebar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="revisao.html">Revisão</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="creditos.html">Créditos</a></li>
+                    <li><a class="close-menu">Fechar</a></li>
+                    <!--botao para acessar o menu-->
+                    <button class="menu-toggle">&#9776;</button>
+                    
+                </ul>
+                    
+            </div>
+    <!--home inicio-->
+    <section class="box">                  
+      
+             
+           <div class="container">
+            <h1>BUSINESS PEOPLE</h1>
+                <p class="typing2"></p>       
+                <div>
+                    <button class="next" id="botao-resposta" onclick="next(1)">Answer</button> 
+                </div>  
+
+        
+          <!--
+           <div>
+                    <img src="img/satelite.png" id="img-left">
+                </div>
+          --> 
+                
+            </div>            
+
+            <div class="container">
+              
+
+                <h2>Where does Mr. Tatié live?</h2>
+                <input type="radio" name="question2" id="correct1">Victoria<br>
+                <input type="radio" name="question2" >Dublin<br>             
+                <input type="radio" name="question2">San Francisco<br>
+                <button class="next" id="botao-resposta" onclick="next(2)">Next</button>
+           
+                
+                <div class="img-1">
+                    <img src="img/artistic-8171093_1280.png" alt="">
+                </div>
+            </div>   
+            <div class="container">
+                <div class="img-1">
+                    <img src="img/moon-removebg-preview.png">
+                </div>
+
+                 <h1>What is correct to say about the text?</h1>
+                 <input type="radio" name="question3" >He owns all of the orion Group.<br>
+                 <input type="radio" name="question3">Goran Tatié is 38 years old.<br>
+                 <input type="radio" name="question3"  id="correct3">Orion companies have total sales of about $3billion a year.<br>
+                 <button class="next" id="botao-resposta" onclick="next(3)">Next</button>
+            
+             </div>    
+             <div class="container">
+                <div class="img-1">
+                    <img src="img/astronaut5.png">
+                </div>
+                
+                 <h1>Where does Mr. Tatié come from?</h1>
+                 <input type="radio" name="question4" >Germany<br>
+                 <input type="radio" name="question4" id="correct2">Croatia<br>
+                 <input type="radio" name="question4">Australia<br>
+                 <button class="next" id="botao-resposta" onclick="next(4)">Next</button>
+            
+             </div> 
+
+             <div class="container">
+                <h1>How many employees do work for Orion group?</h1>
+                <input type="radio" name="question5" id="correct1">50.000<br>
+                <input type="radio" name="question5" >40.000<br>
+                <input type="radio" name="question5">30.000<br>
+                <button class="next" id="botao-resposta" onclick="result()">Submit</button>
+           
+            </div> 
+            </div>
+ 
+    </section>
+
+    <script>
+        
+        document.getElementsByClassName('container')[0].style.display = "block";
+        function next(id) {
+            document.getElementsByClassName('container')[id-1].style.display = "none";
+            document.getElementsByClassName('container')[id].style.display = "block";
+        }
+        function result() {
+            var score=0;
+            if(document.getElementById('correct1').checked) {
+                score++;
+            }
+            if(document.getElementById('correct2').checked) {
+                score++;
+            }
+            if(document.getElementById('correct3').checked) {
+                score++;
+            }
+            alert('Score: ' + score);
+        }
+    </script>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="script_typing.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    
+
+</body>
+</html>

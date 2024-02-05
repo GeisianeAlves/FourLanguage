@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fatec Linguo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-6 align-self-center text-center">
+            <div id="container">
+                <nav class="navbar">
+                    <a class="fatec-linguo">Four<span>Language</span></a>
+                    <div class="sair"><button type="submit" id="btnRedirect"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+                
+                </nav>
+            </div>
+
+            <div class="sidebar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="revisao.html">Review</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="creditos.html">About</a></li>
+                    <li><a class="close-menu">Close</a></li>
+                    <!--botao para acessar o menu-->
+                    <button class="menu-toggle">&#9776;</button>
+
+                    
+                </ul>
+
+                    
+            </div>
+
+            <!-- banners -->
+            <section class="container-banners">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 align-self-center text-center">
+                            <!--primeiro banner-->
+                            <div class="slide-container active">
+                                <div class="slide banner">
+                                    <div class="content-slide"></div>
+                                </div>
+                            </div>
+
+                            <!--segundo banner-->
+                            <div class="slide-container">
+                                <div class="slide">
+                                    <div class="content-slide">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--terceiro banner-->
+                            <div class="slide-container">
+                                <div class="slide">
+                                    <div class="content-slide">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="prev" onclick="prev()">
+                                < </div>
+                                    <div id="next" onclick="next()"> > </div>
+                            </div>
+                        </div>
+
+            </section>
+
+            <header>
+                <div id="container-semestre">
+                    <div id="first">
+                        <br><br><br>
+                        <img src="img/P1.jpg" alt="">
+                        
+                        <h2>1º Semestre</h2>
+                        <p class="first-paragraph">Aprenda: </p>
+                        <ul>
+                            <li>How much? </li>
+                            <li>Business verbs and nouns </li>
+                            <li>Daily routine verbs </li>
+                        </ul>
+                        <br><br><br>
+
+                    </div>
+                    <div id="second">
+                        
+                        <img src="img/2.jpg" alt="">
+                        <h2>2º Semestre</h2>
+                        <p class="second-paragraph">Aprenda: </p>
+                        <ul>
+                            <li>Information</li>
+                            <li>Places</li>
+                            <li>Action</li>
+                        </ul>
+                        <br><br>
+
+                    </div>
+                    <div id="third">
+                        
+                        <img src="img/3.jpg" alt="">
+                        <h2>3º Semestre</h2>
+                        <p class="third-paragraph">Aprenda: </p>
+                        <ul>
+                            <li>Meeting</li>
+                            <li>Reporting</li>
+                            <li>Communication</li>
+                        </ul>
+                        <br><br>
+
+                    </div>
+                    <div id="four">
+                        <br><br><br>
+                        <img src="img/4.jpg" alt="">
+                        <br>
+                        <h2>4º Semestre</h2>
+                        <p class="four-paragraph">Aprenda:</p>
+                        <ul>
+                            <li>Progress</li>
+                            <li>Plans</li>
+                            <li>Sales</li>
+                        </ul>
+                        <br><br>
+
+                    </div>
+                </div>
+            </header>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>Criado por: Rafaela Araujo, Raquel Diniz e Vinicius Pereira</p>
+            </footer>
+
+           
+            <script src="https://use.fontawesome.com/62e43a72a9.js"></script>
+            <script src="script.js"></script>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+</body>
+
+</html>

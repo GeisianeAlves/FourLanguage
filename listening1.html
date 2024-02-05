@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listening 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="estilo_listening_game.css">
+</head>
+
+
+<body>
+    <div class="row">
+        <div class="col-md-6 align-self-center text-center">
+            <div id="container">
+                <nav class="navbar">
+                    <a class="fatec-linguo">Four<span>Language</span></a>
+                    <div class="sair"><button type="submit" id="btnRedirect"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+                    <div class="logout-button">
+                        <a href="login.html">sair</a>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="sidebar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tela_skills.html">Games</a></li>
+                    <li><a href="tela_niveis.html">Levels</a></li>
+                    <li><a href="revisao.html">Review</a></li>
+                    <li><a class="close-menu">Close</a></li>
+                    <!--botao para acessar o menu-->
+                    <button class="menu-toggle">&#9776;</button>
+                    <div class="logout-button">
+                        <a href="login.html">sair</a>
+                    </div>
+                    
+                </ul>
+                    
+            </div>
+
+
+    <div class="all">
+        <h1>Spelling game</h1>
+       <img src="img/green.png" alt=""> 
+        <input type="text" id="input">
+        <button id="btn">GENERATE WORD</button>
+    
+        <div class="cont">
+            <button id="speak" class="btn2">Repeat</button>
+            <button id="submit" class="btn2">Check</button>
+            
+        </div>
+        <p id="score"><span class="correct-answer">Score: </span></p>
+    
+    </div>
+
+        
+    <div>
+        <img id="img-2"  src="img/astronaut.jpg" class="object" data-value="10">   
+    </div>
+    <div>        
+        <img id="img-3"  src="img/planet_pink.png" class="object" data-value="3">
+    </div>        
+   
+</body>
+
+<script>
+    let word;
+
+const words = ["south", "north", "east", "west","country", "airport", "flight", "departure", "currency", "factory"]
+document.getElementById('btn').addEventListener('click', function() {
+    num=Math.floor(Math.random()*(10));
+    word=words[num]
+
+    let voice = new SpeechSynthesisUtterance()
+    voice.lang = "en-US";
+    voice.text=word
+    speechSynthesis.speak(voice)
+})
+
+let correctWord=0;
+let incorrectWord=0;
+  
+const displayScore = document.querySelector("#score span");  
+
+
+document.getElementById('submit').addEventListener('click', function() {
+    if(document.getElementById('input').value == word) {
+    correctWord++;
+    //alert('Correct!')
+    displayScore.textContent = 'Score: ' + correctWord;      
+ 
+} else {
+    incorrectWord++;
+    //alert(`Incorrect \n It was ${word}`)
+}
+document.getElementById('input').value=''
+
+})
+
+
+
+document.getElementById('speak').addEventListener('click', function() {     
+    let voice = new SpeechSynthesisUtterance()
+    voice.text=word
+    voice.lang = "en-US";
+    speechSynthesis.speak(voice)
+})
+
+</script>
+<script src="script_listening.js"></script>
+<script src="script.js"></script>
+</html>

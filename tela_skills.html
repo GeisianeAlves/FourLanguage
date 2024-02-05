@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="estilo_tela_skills.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>    
+    <!--HOME-->
+    <section> 
+        <div class="row">
+        <div class="col-md-6 align-self-center text-center">
+            <div id="container">
+                <nav class="navbar">
+                    <a class="fatec-linguo">Four<span>Language</span></a>
+                    <div class="sair"><button type="submit" id="btnRedirect"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+                
+                </nav>
+            </div>
+
+            <div class="sidebar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="revisao.html">Review</a></li>
+                    <li><a href="saibamais.html">Learning</a></li>
+                    <li><a href="creditos.html">About</a></li>
+                    <li><a class="close-menu">Close</a></li>
+                    <!--botao para acessar o menu-->
+                    <button class="menu-toggle">&#9776;</button>
+
+                    
+                </ul>
+                    
+            </div>
+
+      <!--CONTAINER da tela inicial dos jogos -->
+    <div class="container-skills">       
+
+        <h2 class="object" data-value="3"><span>4 English</span><br> LANGUAGE <br> <span>SKILLS</span></h2>
+
+        <div class="box">
+            <h4><i>Business START-UP</i></h4>
+            <h5>Book Review</h5>            
+        </div>
+        <div class="box-2">
+            <h4>Activities for English Language Learners</h4>            
+        </div>
+
+        <div class="skills">
+            <div class="skills-card" id="reading">
+                <a href="reading1.html">
+                    <h1>Reading</h1>
+                </a>
+            </div>
+            <div class="skills-card" id="writing">
+                <a href="quiz.html">
+                    <h1>Writing</h1>
+                </a>
+            </div>
+            <div class="skills-card" id="speaking">
+                <a href="quiz.html">
+                    <h1>Speaking</h1>
+                </a>
+            </div>
+            <div class="skills-card" id="listening">
+                <a href="listening1.html">
+                    <h1>Listening</h1>
+                </a>
+            </div>
+        </div>
+     
+        <!--imagens para efeito parallex-->
+        <div>
+            <img  id="img-1" src="img/walle.png" class="object" data-value="4">   
+        </div>        
+        <div>
+            <img id="img-2"  src="img/girl.png" class="object" data-value="10">   
+        </div>
+        <div>        
+            <img id="img-3"  src="img/planet.png" class="object" data-value="3">
+        </div>        
+       
+    </div>
+
+</section>
+
+
+<!--script para movimentar imagens do banner Homepage-->
+    <script type="text/javascript">
+    document.addEventListener("mousemove", parallax);
+
+    function parallax(e) {
+        document.querySelectorAll(".object").forEach(function(move) {
+            var moving_value = move.getAttribute("data-value");
+            var x = (e.clientX * moving_value) / 200;
+            var y = (e.clientY * moving_value) / 200;
+
+            move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+        });
+    }
+</script>
+   <script src="barrNavef.js"></script>
+   <script src="https://use.fontawesome.com/62e43a72a9.js"></script>
+   <script src="script.js"></script>
+   <script src="script_listening.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="stylelog.css">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <div class="row">
+    <div class="col-md-6 align-self-center text-center">
+        <div id="container">
+            <nav class="navbar">
+              <a class="fatec-linguo">Four<span>Language</span></a>
+            </nav>
+        </div>
+
+        
+
+  <div class="container">
+    <div class="buttonsForm">
+      
+   
+      
+    </div>
+    <h1>Bem-vindo (a)</h1>
+    <form id="login">
+        <input type="text" id="emailInput" placeholder="Email" required />
+        <i class="fas fa-envelope iEmail"></i>
+        <input type="password" id="senhaInput" placeholder="Password" required />
+        <i class="fas fa-lock iPassword"></i>
+        <div class="divCheck">
+          <input type="checkbox" />
+          <span>Lembrar senha</span>
+        </div>
+        <button type="button" onclick="fazerLogin()">Login</button>
+      </form>
+      
+    
+      
+
+     
+  </div>
+
+  
+  <script>
+    // Função de validação de email
+    function validarEmail(email) {
+      var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
+    }
+  
+    function fazerLogin() {
+      var emailInput = document.querySelector('#emailInput').value;
+      var senhaInput = document.querySelector('#senhaInput').value;
+  
+      if (validarEmail(emailInput) && senhaInput.length >= 6) {
+        // Redirecionar o usuário para a página index.html
+        window.location.href = 'index.html';
+      } else {
+        alert('Por favor, insira um email válido e uma senha com pelo menos 6 caracteres.');
+      }
+    }
+  </script>
+  
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
