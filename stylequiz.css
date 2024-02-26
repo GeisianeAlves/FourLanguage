@@ -4,6 +4,9 @@
 * {
   box-sizing: border-box;
   text-decoration: none;
+  margin: 0px 0px;
+}
+body{
   margin: 0;
 }
 
@@ -282,12 +285,13 @@ span{
   
   
 footer {
-  text-align: center;
+  text-align:center;
   color: #fff;
   background-color: #08021dea;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 1px;
+  padding-bottom: 1px;
   font-size: 20px;
+  bottom: 0px;
 
 }
 

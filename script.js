@@ -34,3 +34,4 @@ setInterval(next, 15000);
 document.getElementById("btnRedirect").addEventListener("click", function() {
   window.location.href = "login.html";
 });
+
