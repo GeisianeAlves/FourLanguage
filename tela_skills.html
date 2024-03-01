@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="estilo_tela_skills.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleReview.css" />
+
+    
+    <script src="utils/renderSpeakingLevel.js"></script>
+    <script src="utils/renderLevels.js"></script>
+
+    <script>
+      window.renderUnit()
+      window.renderLevel()
+    </script>
 </head>
 
 <body>    
@@ -53,25 +63,26 @@
         </div>
 
         <div class="skills">
+        
+            <!--container que direciona para o nível/semestre da habilidade reading" -->
             <div class="skills-card" id="reading">
-                <a href="reading1.html">
-                    <h1>Reading</h1>
-                </a>
+                    <a class="btn-skill" href="tela_niveis.html?skill=primeiro">READING</a>
+                <!--<h1>Writing</h1> --> 
             </div>
-            <div class="skills-card" id="writing">
-                <a href="quiz.html">
-                    <h1>Writing</h1>
-                </a>
+            <!--container que direciona para o nível/semestre da habilidade writing" -->
+            <div class="skills-card skill" id="writing">                
+                    <a class="btn-skill" href="tela_niveis.html?skill=segundo">WRITING</a>                
+                <!--<h1>Writing</h1> -->              
             </div>
-            <div class="skills-card" id="speaking">
-                <a href="quiz.html">
-                    <h1>Speaking</h1>
-                </a>
+            <!--container que direciona para o nível/semestre da habilidade speaking" -->
+            <div class="skills-card skill" id="speaking">                        
+                    <a class="btn-skill" href="tela_niveis.html?skill=terceiro">SPEAKING</a>
+                <!--<h1>Speaking</h1>  -->              
             </div>
+            <!--container que direciona para o nível/semestre da habilidade listening" -->
             <div class="skills-card" id="listening">
-                <a href="listening1.html">
-                    <h1>Listening</h1>
-                </a>
+                <a class="btn-skill" href="tela_niveis.html?skill=quarto">LISTENING</a>
+                <!--<h1>Writing</h1> --> 
             </div>
         </div>
      
