@@ -9,72 +9,36 @@ let actualQuestion = 0;
 
 // Perguntas
 const questions = [
-  {
-   
+  {   
     "question": "Do you live in the town centre?  ",
-    "answers": [
-      {
-        "answer": "My apartment’s quite small.",
-        "correct": true
-      },
-      {
-        "answer": "No, my apartment’s about five kilometres from here.",
-        "correct": true
-      }
-    ]
-  },
+    "answers": [     
+      { "answer": "My apartment’s quite small.", "correct": false },
+      { "answer": "No, my apartment’s about five kilometres from here.", "correct": true }
+    ]  },
   {
-    "question": "Right. Do you live in a house or an apartment?"  ,
+    "question": "Right. Do you live in a house or an apartment?"  , 
     "answers": [
-      {
-        "answer": "An apartment. It’s quite small, just one bedroom. ",
-        "correct": true
-      },
-      {
-        "answer": "My house is very expensive.",
-        "correct": true    
-      }
-    ]
-  },
+      { "answer": "An apartment. It’s quite small, just one bedroom. ", "correct": true },
+      { "answer": "My house is very expensive.",  "correct": false  }
+    ] },
   {
     "question": "Do you have a garden?" ,
     "answers": [
-      {
-        "answer": "My apartment’s very modern.",
-        "correct": false
-      },
-      {
-        "answer": "No, but the view is beautiful.",
-        "correct": true
-      }
-    ]
-  },
+      { "answer": "My apartment’s very modern." , "correct": false },
+      { "answer": "No, but the view is beautiful.",  "correct": true }
+    ] },
   {
     "question": "What do you do? ",
     "answers": [
-      {
-        "answer": "I’m a sales assistant. I work in a shop.",
-        "correct": true
-      },
-      {
-        "answer": "I work in Washington.",
-        "correct": false
-      }
-    ]
-  },
+      { "answer": "I’m a sales assistant. I work in a shop.",  "correct": true },
+      {  "answer": "I work in Washington.", "correct": false }
+    ] },
   {
     "question": "When do you finish work? ",
     "answers": [
-      {
-        "answer": "I get up at quarter to six.",
-        "correct": false
-      },
-      {
-        "answer": "I finish work at six.",
-        "correct": true
-      }
-    ]
-  }
+      { "answer": "I get up at quarter to six.", "correct": false },
+      { "answer": "I finish work at six.", "correct": true }
+]}
 ]
 
 // Substituição do quizz para a primeria pergunta
@@ -153,9 +117,7 @@ function checkAnswer(btn) {
       }
 
     } else {
-
       button.classList.add("wrong-answer");
-
     }
 
   });
