@@ -48,7 +48,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;   
-    background: url(img/night_sky3.jpg);
+    background: url(/img/night_sky3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
