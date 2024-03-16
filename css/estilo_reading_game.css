@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Cinzel:wght@400;500;600&family=Festive&family=Gelasio:wght@400;500;700&family=Henny+Penny&family=Hubballi&family=Inspiration&family=Jacques+Francois+Shadow&family=Lato:ital,wght@0,300;1,700&family=Lavishly+Yours&family=Monofett&family=Mystery+Quest&family=Playfair+Display+SC:wght@400;700&family=Poppins:wght@200;300;400;500;600;700;800&family=Quattrocento&family=Righteous&family=Sarala:wght@400;700&family=Satisfy&family=Water+Brush&display=swap');
-
+/*
 body{
     font-family: 'Sarala',cursive;
     color: rgb(251, 213, 213);
@@ -9,7 +9,7 @@ body{
     height: 100vh;
     width: 100%;
     }
- 
+ */
    
     #img-left{
         position: absolute;
