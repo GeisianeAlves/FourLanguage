@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
 }
+/*
 body {
     background: url(/img/stars.jpg)no-repeat;
     background-size: cover;   
@@ -14,7 +15,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+}*/
 
 .all{
     display: flex;

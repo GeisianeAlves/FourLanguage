@@ -244,30 +244,7 @@ span{
   width: 50%;
   height: 200px;
 }
-/*
-.container-banners .slide-container:nth-child(1) .slide{
-  background: url(/img/welcome1.png);
-  background-size:cover;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 50vh;
-}
 
-
-.container-banners .slide-container:nth-child(2) .slide{
-  background: url(/img/welcome2.png);
-  background-size:cover;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 100vh;
-}
-.container-banners .slide-container:nth-child(3) .slide{
-  background: url(/img/welcome3.png);
-  background-size:cover;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 100vh;
-}*/
 .container-banners #prev, 
 .container-banners #next {
   position: absolute;

@@ -196,7 +196,7 @@ span{
     color: #cf34c2;
 }
 
-/*Quiz container*/
+/*Quiz container
 .main{
    background: url(/img/stars.jpg);
     background-size:cover;
@@ -205,10 +205,8 @@ span{
     height: 90vh;
     display: flex;
     flex-direction: row;
-   /* justify-content: center;
-    align-items: center;*/
    
-}
+}*/
 .container-left {
 
     display: flex;
