@@ -7,12 +7,17 @@
     <title>Reading  | Game </title>
     
     <style>
-        body { font-family: 'Sarala',cursive; color: rgb(251, 213, 213); background: url(/img/night_sky3.jpg)no-repeat;
+        body { font-family: 'Sarala',cursive; color: rgb(26, 24, 24); background: url(/img/foguete-voar-atraves-do-espaco.jpg)no-repeat;
         background-size: cover; height: 100vh; width: 100%; }
     </style>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/estilo_reading_game.css">
 
+    <script src="utils/renderReadingLevel.js"></script>
+
+    <script>    
+      window.renderReading() 
+    </script>
 </head>
 
 
@@ -35,102 +40,181 @@
                     <li><a href="creditos.html">About</a></li>
                     <li><a class="close-menu">Close</a></li>
                     <!--botao para acessar o menu-->
-                    <button class="menu-toggle">&#9776;</button>
-                    
-                </ul>
-                    
+                    <button class="menu-toggle">&#9776;</button>                    
+                </ul>                    
             </div>
-    <!--home inicio-->
-    <section class="box">                  
-      
-             
-           <div class="container">
-            <h1>BUSINESS PEOPLE</h1>
-                <p class="typing2"></p>       
-                <div>
-                    <button class="next" id="botao-resposta" onclick="next(1)">Answer</button> 
-                </div>  
+        </div>
+    </div>
 
-        
-          <!--
-           <div>
+    <!--home inicio-->
+        <div class="box" id="primeiro">               
+                        
+                <div class="container">
+                <h1>BUSINESS PEOPLE</h1>
+                    <p class="typing2"></p>       
+                    <div>
+                        <button class="next" id="botao-resposta" onclick="next(1)">Answer</button> 
+                    </div>  
+
+                <div class="img-1">
                     <img src="img/satelite.png" id="img-left">
                 </div>
-          --> 
-                
-            </div>            
+        
+                    
+                </div>            
 
-            <div class="container">
-              
+                <div class="container">
+                
 
                 <h2>Where does Mr. Tatié live?</h2>
-                <input type="radio" name="question2" id="correct1">Victoria<br>
-                <input type="radio" name="question2" >Dublin<br>             
-                <input type="radio" name="question2">San Francisco<br>
-                <button class="next" id="botao-resposta" onclick="next(2)">Next</button>
-           
+                <button class="btn-opcao" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                <button class="btn-opcao">Victoria</button><br>             
+                <button class="btn-opcao">Austin</button><br>
+                <button id="botao-resposta" onclick="next(2)">Next</button>
+        
+                    
+                    <!-- <div class="img-1">
+                        <img src="img/artistic-8171093_1280.png" alt="">
+                    </div> -->
+                </div>   
+
+                <div class="container">
+                    <!-- <div class="img-1">
+                        <img src="img/moon-removebg-preview.png">
+                    </div> -->
+
+                    <h2>What is correct to say about the text?</h2>
+                    <button class="btn-opcao">He owns all of the orion Group.</button><br>
+                    <button class="btn-opcao">Goran Tatié is 38 years old.</button><br>             
+                    <button class="btn-opcao" id="correct3" onclick="checarResposta('correct3')">Orion companies have total sales of about $3billion a year.</button><br>
+                    <button class="next" id="botao-resposta" onclick="next(3)">Next</button>
+                
+                </div>    
+
+                <div class="container">
+                <!-- <div class="img-1">
+                    <img src="img/foguete6.jpg">
+                </div> -->
+                
+                    <h2>Where does Mr. Tatié come from?</h2>
+                    <button  class="btn-opcao" >Germany</button><br>
+                    <button class="btn-opcao" id="correct2" onclick="checarResposta('correct2')">Croatia</button><br>             
+                    <button class="btn-opcao">Australia</button><br>
+                    <button class="next" id="botao-resposta" onclick="next(4)">Next</button>
+            
+                </div> 
+
+                <div class="container">
+                    <h2>How many employees do work for Orion group?</h2>
+                <button class="btn-opcao" id="correct1" onclick="checarResposta('correct1')">50.000</button><br>
+                <button class="btn-opcao">40.000</button><br>             
+                <button class="btn-opcao">30.000</button><br>
+                <button class="next" id="botao-resposta" onclick="result()">Submit</button>
+     
+                </div> 
+    
+        </div>
+
+
+        <div class="box" id="segundo">
+
+            <div class="invisible container">
+                <h1>TRAVEL</h1>
+                <p class="typing3"></p>     
+                
+                <div>
+                    <button class="next" id="botao-resposta" onclick="next(5)">Answer</button> 
+                </div> 
+                
+            </div>
+
+            <div class="container">
+                
+
+                <h2>Where ...?</h2>
+                <input type="radio" name="question2" id="correct1">Ana<br>
+                <input type="radio" name="question2" >Eureca<br>             
+                <input type="radio" name="question2">Jennifer<br>
+                <button class="next" id="botao-resposta" onclick="proximo(1)">Next</button>
+
+ 
                 
                 <div class="img-1">
                     <img src="img/artistic-8171093_1280.png" alt="">
                 </div>
-            </div>   
-            <div class="container">
-                <div class="img-1">
-                    <img src="img/moon-removebg-preview.png">
-                </div>
-
-                 <h1>What is correct to say about the text?</h1>
-                 <input type="radio" name="question3" >He owns all of the orion Group.<br>
-                 <input type="radio" name="question3">Goran Tatié is 38 years old.<br>
-                 <input type="radio" name="question3"  id="correct3">Orion companies have total sales of about $3billion a year.<br>
-                 <button class="next" id="botao-resposta" onclick="next(3)">Next</button>
-            
-             </div>    
-             <div class="container">
-                <div class="img-1">
-                    <img src="img/astronaut5.png">
-                </div>
-                
-                 <h1>Where does Mr. Tatié come from?</h1>
-                 <input type="radio" name="question4" >Germany<br>
-                 <input type="radio" name="question4" id="correct2">Croatia<br>
-                 <input type="radio" name="question4">Australia<br>
-                 <button class="next" id="botao-resposta" onclick="next(4)">Next</button>
-            
-             </div> 
-
-             <div class="container">
-                <h1>How many employees do work for Orion group?</h1>
-                <input type="radio" name="question5" id="correct1">50.000<br>
-                <input type="radio" name="question5" >40.000<br>
-                <input type="radio" name="question5">30.000<br>
-                <button class="next" id="botao-resposta" onclick="result()">Submit</button>
-           
             </div> 
-            </div>
+            
+            <div class="container">
+                
+
+                    <h2>Where does Mr. Tatié live?</h2>
+                    <input type="radio" name="question2" id="correct1">Victoria<br>
+                    <input type="radio" name="question2" >Dublin<br>             
+                    <input type="radio" name="question2">San Francisco<br>
+                    <button class="next" id="botao-resposta" onclick="proximo(2)">Next</button>
+            
+                    
+                    <div class="img-1">
+                        <img src="img/artistic-8171093_1280.png" alt="">
+                    </div>
+            </div>   
+
+            
+            <div class="container">
+                
+
+                <h2>keinaskdoklggg?</h2>
+                <input type="radio" name="question2" id="correct1">eeitaaaa<br>
+                <input type="radio" name="question2" >Dublin<br>             
+                <input type="radio" name="question2">San Francisco<br>
+                <button class="next" id="botao-resposta" onclick="proximo(3)">Next</button>
+        
+                
+                <div class="img-1">
+                    <img src="img/artistic-8171093_1280.png" alt="">
+                </div>
+        </div>  
+        </div>
+
  
-    </section>
+
+
 
     <script>
         
         document.getElementsByClassName('container')[0].style.display = "block";
+        document.getElementsByClassName('invisible')[0].style.display = "block";
         function next(id) {
-            document.getElementsByClassName('container')[id-1].style.display = "none";
+            document.getElementsByClassName('container')[id-1].style.display = "none";        
             document.getElementsByClassName('container')[id].style.display = "block";
+
+        }
+        function proximo(id) {
+
+            document.getElementsByClassName('invisible')[id-1].style.display = "none";
+            document.getElementsByClassName('invisible')[id].style.display = "block";
+        }
+        var score = 0;
+        function checarResposta(id) {
+            if (id === 'correct1' || id === 'correct2' || id === 'correct3') {
+            score++;
+        }
         }
         function result() {
-            var score=0;
-            if(document.getElementById('correct1').checked) {
-                score++;
-            }
-            if(document.getElementById('correct2').checked) {
-                score++;
-            }
-            if(document.getElementById('correct3').checked) {
-                score++;
-            }
             alert('Score: ' + score);
         }
+            // var score=0;
+            // if(document.getElementById('correct1').checked) {
+            //     score++;
+            // }
+            // if(document.getElementById('correct2').checked) {
+            //     score++;
+            // }
+            // if(document.getElementById('correct3').checked) {
+            //     score++;
+            // }
+            // alert('Score: ' + score);
+        //}
     </script>
 
 
@@ -140,6 +224,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="js/script_typing.js"></script>
+    <!-- <script src="js/script.js"></script> -->  
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     
 
