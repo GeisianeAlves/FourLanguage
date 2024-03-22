@@ -10,34 +10,56 @@ body{
     width: 100%;
     }
  */
-   .invisible{
+.semestre2, .semestre3, .semestre4, .semestre5, .semestre6, .texto{
     display: none;
-   }
-    #img-left{
-        position: absolute;
-        width: 200px;
-        left: 0;
-    }
-    .btn-opcao{
-        border: none;
-        border-radius: 25px;
+    border: 1px solid plum;
+    background-color: none;
+    text-align: center;
+    height: 480px;
+    margin-bottom: 10px;
+    color: aliceblue;
+}
+#img-left{
+    position: absolute;
+    width: 200px;
+    left: 0;
+}
+.respostas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 750px;
+}
+
+.btn-resposta{       
+    width: 550px;
+    padding: 10px;
+    padding-left: 25px;
+    background-color: none;
+    opacity: 0.9;            
+    font-size: 20px;
+    outline: none;
+    box-shadow: none;
+left: 50%;
+}
+.btn-letra {
+    margin-left: 50px;
+    width: 150px;
+
+}
+.btn-letra, .btn-resposta {
+    border: 1px solid plum;
+    background-color: black;
+    text-align: center;
         height: 60px;
-        width: 750px;
-        padding: 10px;
-        padding-left: 25px;
-        background-color: none;
-        opacity: 0.9;
-        text-align: center;
-        margin-left: 50px;
-        font-size: 20px;
-        outline: none;
-        box-shadow: none;
         margin-bottom: 10px;
-    }
-    .btn-opcao:hover {
-        background-color: rgb(75, 72, 106);
-    }
-#botao-resposta {
+        color: aliceblue;
+}
+.btn-resposta:hover {
+    background-color: rgb(75, 72, 106);
+}
+#botao-proximo {
     margin-top: 50px;
     border: 3px solid green;
     border-radius: 25px;
@@ -55,6 +77,11 @@ body{
 }
 
 .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
     border-radius: 20px;
     top: 20%;
     width: 60%;
@@ -63,9 +90,9 @@ body{
     display: none;
     font-size: 35px;
     line-height:55px;
-    border: 5px solid orange;
+    /* border: 5px solid orange; */
     padding: 40px;
-    background-color: rgb(124, 120, 141);
+    /* background-color: rgb(124, 120, 141); */
     opacity: 0.85;
 }
 .container-resposta{
@@ -92,10 +119,13 @@ body{
 }
 .container h1 {
     font-size: 50px;
+
 }
 .container h2 {
     text-align: center;
     font-size: 40px;
+    color: rgb(126, 138, 150);
+
 }
 .container-answer{
 
@@ -103,12 +133,25 @@ body{
   text-align: center;
   align-items: left;
 }
-.container img{
+/* .container img{
   position: absolute;
   right: 0;
   width: 600px;
   bottom: 0;
+} */
+.container .img-1 {
+    position: absolute;
+    right: 70px;
+    width:300px;
+    bottom: 50px;
 }
+.container .img-0 { 
+    position: absolute;
+    right: 70px;
+    width:400px;
+    bottom: 0px;
+}
+
 .img-2 {
     width: 50px;
 }
