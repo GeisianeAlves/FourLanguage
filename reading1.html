@@ -7,7 +7,7 @@
     <title>Reading  | Game </title>
     
     <style>
-        body { font-family: 'Sarala',cursive; color: rgb(26, 24, 24); background: url(/img/foguete-voar-atraves-do-espaco.jpg)no-repeat;
+        body { font-family: 'Sarala',cursive; color: rgb(26, 24, 24); background: url(/img/stars.jpg)no-repeat;
         background-size: cover; height: 100vh; width: 100%; }
     </style>
     <link rel="stylesheet" href="css/styles.css">
@@ -49,68 +49,95 @@
     <!--home inicio-->
         <div class="box" id="primeiro">               
                         
-                <div class="container">
+                <div class="container texto">
                 <h1>BUSINESS PEOPLE</h1>
-                    <p class="typing2"></p>       
+                    <p class="typing1"></p>       
                     <div>
-                        <button class="next" id="botao-resposta" onclick="next(1)">Answer</button> 
-                    </div>  
-
-                <div class="img-1">
-                    <img src="img/satelite.png" id="img-left">
-                </div>
-        
+                        <button class="next" id="botao-proximo" onclick="next(1)">Answer</button> 
+                    </div>
+                    
+                    <img class="img-0" src="img/foguete6.jpg" alt="">
                     
                 </div>            
 
                 <div class="container">
-                
+                    <img class="img-1" src="img/planet_red.png" alt="">
 
                 <h2>Where does Mr. Tatié live?</h2>
-                <button class="btn-opcao" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
-                <button class="btn-opcao">Victoria</button><br>             
-                <button class="btn-opcao">Austin</button><br>
-                <button id="botao-resposta" onclick="next(2)">Next</button>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta">Victoria</button><br>  
+                </div>           
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta">Austin</button><br>
+                </div>
+                <button id="botao-proximo" onclick="next(2)">Next</button>
         
-                    
-                    <!-- <div class="img-1">
-                        <img src="img/artistic-8171093_1280.png" alt="">
-                    </div> -->
+                <img class="img-1" src="img/planet_red.png" alt="">
                 </div>   
 
                 <div class="container">
-                    <!-- <div class="img-1">
-                        <img src="img/moon-removebg-preview.png">
-                    </div> -->
-
-                    <h2>What is correct to say about the text?</h2>
-                    <button class="btn-opcao">He owns all of the orion Group.</button><br>
-                    <button class="btn-opcao">Goran Tatié is 38 years old.</button><br>             
-                    <button class="btn-opcao" id="correct3" onclick="checarResposta('correct3')">Orion companies have total sales of about $3billion a year.</button><br>
-                    <button class="next" id="botao-resposta" onclick="next(3)">Next</button>
                 
+                    <h2>What is correct to say about the text?</h2>
+                    <div class="respostas">
+                        <button class="btn-letra">A</button>
+                        <button class="btn-resposta">He owns all of the orion Group.</button><br>
+                    </div>
+                    <div class="respostas">
+                        <button class="btn-letra">A</button>
+                        <button class="btn-resposta">Goran Tatié is 38 years old.</button><br>   
+                    </div>          
+                    <div class="respostas">
+                        <button class="btn-letra">A</button>
+                        <button class="btn-resposta" id="correct3" onclick="checarResposta('correct3')">Orion companies have total sales of about $3billion a year.</button><br>
+                    </div>
+                    <button class="next" id="botao-proximo" onclick="next(3)">Next</button>
+                
+                    <img class="img-1" src="img/moon-removebg-preview.png" alt="">
                 </div>    
 
                 <div class="container">
-                <!-- <div class="img-1">
-                    <img src="img/foguete6.jpg">
-                </div> -->
-                
+              
                     <h2>Where does Mr. Tatié come from?</h2>
-                    <button  class="btn-opcao" >Germany</button><br>
-                    <button class="btn-opcao" id="correct2" onclick="checarResposta('correct2')">Croatia</button><br>             
-                    <button class="btn-opcao">Australia</button><br>
-                    <button class="next" id="botao-resposta" onclick="next(4)">Next</button>
+                    <div class="respostas">
+                        <button class="btn-letra">A</button>
+                        <button class="btn-resposta" >Germany</button><br>
+                    </div>
+                    <div class="respostas">
+                        <button class="btn-letra">A</button>
+                        <button class="btn-resposta" id="correct2" onclick="checarResposta('correct2')">Croatia</button><br> 
+                    </div>            
+                    <div class="respostas">
+                        <button class="btn-letra">A</button>
+                        <button class="btn-resposta">Australia</button><br>
+                    </div>
+                    <button class="next" id="botao-proximo" onclick="next(4)">Next</button>
             
+                    <img class="img-1" src="img/planet.png" alt="">
                 </div> 
 
                 <div class="container">
-                    <h2>How many employees do work for Orion group?</h2>
-                <button class="btn-opcao" id="correct1" onclick="checarResposta('correct1')">50.000</button><br>
-                <button class="btn-opcao">40.000</button><br>             
-                <button class="btn-opcao">30.000</button><br>
-                <button class="next" id="botao-resposta" onclick="result()">Submit</button>
+                <h2>How many employees do work for Orion group?</h2>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">50.000</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta">40.000</button><br>      
+                </div>       
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta">30.000</button><br>
+                </div>
+                <button class="next" id="botao-proximo" onclick="result()">Submit</button>
      
+                <img class="img-1" src="img/planet_pink.png" alt="">
                 </div> 
     
         </div>
@@ -118,72 +145,521 @@
 
         <div class="box" id="segundo">
 
-            <div class="invisible container">
+            <div class="semestre2 container">
+                <h1>TRAVEL</h1>
+                <p class="typing2"></p>     
+                
+                <div>
+                    <button class="next" id="botao-proximo" onclick="next(6)">Answer</button> 
+                </div> 
+                <img class="img-1" src="img/planet_red.png" alt="">
+            </div>
+
+
+            <div class="container">            
+
+                <h2>Question 1</h2>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <button id="botao-proximo" onclick="next(7)">Next</button>
+        
+                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                 
+            </div>   
+    
+            
+            <div class="container">            
+
+                <h2>Question 2</h2>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <button id="botao-proximo" onclick="next(8)">Next</button>
+        
+                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                 
+            </div>   
+    
+            
+            <div class="container">            
+
+                <h2>Question 3</h2>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <button id="botao-proximo" onclick="next(9)">Next</button>
+        
+                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                 
+            </div>   
+    
+            <div class="container">            
+
+                <h2>Question 4</h2>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <button id="botao-proximo" onclick="result()">Submit</button>
+        
+                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                 
+            </div>   
+    
+
+        </div>
+
+        <div class="box" id="terceiro">
+
+            <div class="semestre3 container">
                 <h1>TRAVEL</h1>
                 <p class="typing3"></p>     
                 
                 <div>
-                    <button class="next" id="botao-resposta" onclick="next(5)">Answer</button> 
+                    <button class="next" id="botao-proximo" onclick="next(11)">Answer</button> 
                 </div> 
-                
+                <img class="img-1" src="img/planet_red.png" alt="">
             </div>
 
-            <div class="container">
-                
 
-                <h2>Where ...?</h2>
-                <input type="radio" name="question2" id="correct1">Ana<br>
-                <input type="radio" name="question2" >Eureca<br>             
-                <input type="radio" name="question2">Jennifer<br>
-                <button class="next" id="botao-resposta" onclick="proximo(1)">Next</button>
+            <div class="container">            
 
- 
-                
-                <div class="img-1">
-                    <img src="img/artistic-8171093_1280.png" alt="">
+                <h2>Question 1</h2>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
                 </div>
-            </div> 
-            
-            <div class="container">
-                
-
-                    <h2>Where does Mr. Tatié live?</h2>
-                    <input type="radio" name="question2" id="correct1">Victoria<br>
-                    <input type="radio" name="question2" >Dublin<br>             
-                    <input type="radio" name="question2">San Francisco<br>
-                    <button class="next" id="botao-resposta" onclick="proximo(2)">Next</button>
-            
-                    
-                    <div class="img-1">
-                        <img src="img/artistic-8171093_1280.png" alt="">
-                    </div>
-            </div>   
-
-            
-            <div class="container">
-                
-
-                <h2>keinaskdoklggg?</h2>
-                <input type="radio" name="question2" id="correct1">eeitaaaa<br>
-                <input type="radio" name="question2" >Dublin<br>             
-                <input type="radio" name="question2">San Francisco<br>
-                <button class="next" id="botao-resposta" onclick="proximo(3)">Next</button>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <button id="botao-proximo" onclick="next(12)">Next</button>
         
-                
-                <div class="img-1">
-                    <img src="img/artistic-8171093_1280.png" alt="">
+                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                 
+            </div>   
+    
+            
+            <div class="container">            
+
+                <h2>Question 2</h2>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
                 </div>
-        </div>  
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <button id="botao-proximo" onclick="next(13)">Next</button>
+        
+                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                 
+            </div>   
+    
+            
+            <div class="container">            
+
+                <h2>Question 3</h2>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <button id="botao-proximo" onclick="next(14)">Next</button>
+        
+                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                 
+            </div>   
+    
+            <div class="container">            
+
+                <h2>Question 4</h2>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <button id="botao-proximo" onclick="result()">Submit</button>
+        
+                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                 
+            </div>   
+    
+
+        </div>
+ 
+        <div class="box" id="quarto">
+
+            <div class="semestre4 container">
+                <h1>TRAVEL</h1>
+                <p class="typing4"></p>     
+                
+                <div>
+                    <button class="next" id="botao-proximo" onclick="next(16)">Answer</button> 
+                </div> 
+                <img class="img-1" src="img/planet_red.png" alt="">
+            </div>
+
+
+            <div class="container">            
+
+                <h2>Question 1</h2>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <button id="botao-proximo" onclick="next(17)">Next</button>
+        
+                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                 
+            </div>   
+    
+            
+            <div class="container">            
+
+                <h2>Question 2</h2>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <button id="botao-proximo" onclick="next(18)">Next</button>
+        
+                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                 
+            </div>   
+    
+            
+            <div class="container">            
+
+                <h2>Question 3</h2>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <button id="botao-proximo" onclick="next(19)">Next</button>
+        
+                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                 
+            </div>   
+    
+            <div class="container">            
+
+                <h2>Question 4</h2>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <button id="botao-proximo" onclick="result()">Submit</button>
+        
+                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                 
+            </div>   
+    
+
+        </div>
+ 
+        <div class="box" id="quinto">
+
+            <div class="semestre5 container">
+                <h1>TRAVEL</h1>
+                <p class="typing5"></p>     
+                
+                <div>
+                    <button class="next" id="botao-proximo" onclick="next(21)">Answer</button> 
+                </div> 
+                <img class="img-1" src="img/planet_red.png" alt="">
+            </div>
+
+
+            <div class="container">            
+
+                <h2>Question 1</h2>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <button id="botao-proximo" onclick="next(22)">Next</button>
+        
+                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                 
+            </div>   
+    
+            
+            <div class="container">            
+
+                <h2>Question 2</h2>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <button id="botao-proximo" onclick="next(23)">Next</button>
+        
+                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                 
+            </div>   
+    
+            
+            <div class="container">            
+
+                <h2>Question 3</h2>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <button id="botao-proximo" onclick="next(24)">Next</button>
+        
+                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                 
+            </div>   
+    
+            <div class="container">            
+
+                <h2>Question 4</h2>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <button id="botao-proximo" onclick="result()">Submit</button>
+        
+                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                 
+            </div>   
+    
+
         </div>
 
- 
+        <div class="box" id="sexto">
+
+            <div class="semestre6 container">
+                <h1>TRAVEL</h1>
+                <p class="typing6"></p>     
+                
+                <div>
+                    <button class="next" id="botao-proximo" onclick="next(26)">Answer</button> 
+                </div> 
+                <img class="img-1" src="img/planet_red.png" alt="">
+            </div>
 
 
+            <div class="container">            
 
+                <h2>Question 1</h2>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <button id="botao-proximo" onclick="next(27)">Next</button>
+        
+                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                 
+            </div>   
+    
+            
+            <div class="container">            
+
+                <h2>Question 2</h2>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <button id="botao-proximo" onclick="next(28)">Next</button>
+        
+                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                 
+            </div>   
+    
+            
+            <div class="container">            
+
+                <h2>Question 3</h2>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <button id="botao-proximo" onclick="next(29)">Next</button>
+        
+                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                 
+            </div>   
+    
+            <div class="container">            
+
+                <h2>Question 4</h2>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <div class="respostas">
+                    <button class="btn-letra">A</button>
+                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                </div>
+                <button id="botao-proximo" onclick="result()">Submit</button>
+        
+                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                 
+            </div>   
+    
+
+        </div>
     <script>
         
         document.getElementsByClassName('container')[0].style.display = "block";
-        document.getElementsByClassName('invisible')[0].style.display = "block";
+        document.getElementsByClassName('semestre2')[0].style.display = "block";
+        document.getElementsByClassName('semestre3')[0].style.display = "block";
+        document.getElementsByClassName('semestre4')[0].style.display = "block";
+        document.getElementsByClassName('semestre5')[0].style.display = "block";
+        document.getElementsByClassName('semestre6')[0].style.display = "block";
         function next(id) {
             document.getElementsByClassName('container')[id-1].style.display = "none";        
             document.getElementsByClassName('container')[id].style.display = "block";
@@ -203,18 +679,7 @@
         function result() {
             alert('Score: ' + score);
         }
-            // var score=0;
-            // if(document.getElementById('correct1').checked) {
-            //     score++;
-            // }
-            // if(document.getElementById('correct2').checked) {
-            //     score++;
-            // }
-            // if(document.getElementById('correct3').checked) {
-            //     score++;
-            // }
-            // alert('Score: ' + score);
-        //}
+    
     </script>
 
 
