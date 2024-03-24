@@ -7,9 +7,9 @@ class ReusableCode {
             {
                 element: ".typing1",
                 strings: [
-                    "Multi millionaire Goran Tatié is just 36 years old. He comes from Split in Croatia, but today he lives in Victoria, Australia, and has Australian nationality.", 
-                    "Mr. Tatié owns half of the Orion Group. His colleague, James Bernard, owns the other 50%.", 
-                    "Orion companies have total sales of about $3billion a year, and about 50,000 people work for the group."
+                    "I'm Paul Reed and this is Julia Bell. We're from zap Productions.", 
+                    "Diana Edison is from CCC, and David Clark is from Safeguard.", 
+                    "Alan Parker and George Carter are from NorthNet."
                 ],
                 options: {
                     typeSpeed: 50,
@@ -19,8 +19,9 @@ class ReusableCode {
             {
                 element: ".typing2",
                 strings: [
-                    "(Conteúdo será inserido para este nível",
-                    "..."
+                    "Sarah Taylor comes from Chicago.",
+                    "Sharon works in the Melbourne office.",
+                    "James Smith and Ross Milburn live in the USA."
                 ],
                 options: {
                     typeSpeed: 50,
@@ -30,8 +31,9 @@ class ReusableCode {
             {
                 element: ".typing3",
                 strings: [
-                    "(Conteúdo será inserido para este nível",
-                    "..."
+                    "Gabriel loves swimming. He goes every morning.",
+                    "Page hates running. She finds it boring.",
+                    "Jacob likes watching football, but he can't play very well."
                 ],
                 options: {
                     typeSpeed: 50,
@@ -41,8 +43,9 @@ class ReusableCode {
             {
                 element: ".typing4",
                 strings: [
-                    "(Conteúdo será inserido para este nível",
-                    "..."
+                    "Scott flew back last Friday.",
+                    "Leonard and Carolina drove from London to Barcelona.",
+                    "Daniel, Lucas and Jack ate at a good restaurant last night."
                 ],
                 options: {
                     typeSpeed: 50,
@@ -63,8 +66,9 @@ class ReusableCode {
             {
                 element: ".typing6",
                 strings: [
-                    "(Conteúdo será inserido para este nível",
-                    "..."
+                    "Multi millionaire Goran Tatié is just 36 years old. He comes from Split in Croatia, but today he lives in Victoria, Australia, and has Australian nationality.", 
+                    "Mr. Tatié owns half of the Orion Group. His colleague, James Bernard, owns the other 50%.", 
+                    "Orion companies have total sales of about $3billion a year, and about 50,000 people work for the group."
                 ],
                 options: {
                     typeSpeed: 50,
