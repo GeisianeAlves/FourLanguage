@@ -1,0 +1,157 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Cinzel:wght@400;500;600&family=Festive&family=Gelasio:wght@400;500;700&family=Henny+Penny&family=Hubballi&family=Inspiration&family=Jacques+Francois+Shadow&family=Lato:ital,wght@0,300;1,700&family=Lavishly+Yours&family=Monofett&family=Mystery+Quest&family=Playfair+Display+SC:wght@400;700&family=Poppins:wght@200;300;400;500;600;700;800&family=Quattrocento&family=Righteous&family=Sarala:wght@400;700&family=Satisfy&family=Water+Brush&display=swap');
+/*
+body{
+    font-family: 'Sarala',cursive;
+    color: rgb(251, 213, 213);
+    background: url(/img/night_sky3.jpg)no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    }
+ */
+.semestre2, .semestre3, .semestre4, .semestre5, .semestre6, .texto{
+    display: none;
+    border: 1px solid plum;
+    background-color: none;
+    text-align: center;
+    height: 480px;
+    margin-bottom: 10px;
+    color: aliceblue;
+}
+#img-left{
+    position: absolute;
+    width: 200px;
+    left: 0;
+}
+.respostas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 750px;
+}
+
+.btn-resposta{       
+    width: 550px;
+    padding: 10px;
+    padding-left: 25px;
+    background-color: none;
+    opacity: 0.9;            
+    font-size: 20px;
+    outline: none;
+    box-shadow: none;
+left: 50%;
+}
+.btn-letra {
+    margin-left: 50px;
+    width: 150px;
+
+}
+.btn-letra, .btn-resposta {
+    border: 1px solid plum;
+    background-color: black;
+    text-align: center;
+        height: 60px;
+        margin-bottom: 10px;
+        color: aliceblue;
+}
+.btn-resposta:hover {
+    background-color: rgb(75, 72, 106);
+}
+#botao-proximo {
+    margin-top: 50px;
+    border: 3px solid green;
+    border-radius: 25px;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    font: bolder ;
+    font-family: 'Sarala',cursive;
+}
+.box{
+    height: 100vh;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 20px;
+    top: 20%;
+    width: 60%;
+    left: 50%;
+    padding: 20px;   
+    display: none;
+    font-size: 35px;
+    line-height:55px;
+    /* border: 5px solid orange; */
+    padding: 40px;
+    /* background-color: rgb(124, 120, 141); */
+    opacity: 0.85;
+}
+.container-resposta{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+    top: 20%;
+    width: 70%;
+    left: 50%;
+    padding: 20px;   
+    display: none;
+    font-size: 35px;
+    line-height:55px;
+    border: 5px solid orange;
+    padding: 40px;
+    background-color: rgb(99, 95, 116);
+    opacity: 0.85;
+}
+.container h1, h2 {
+    margin-bottom: 60px;
+}
+.container h1 {
+    font-size: 50px;
+
+}
+.container h2 {
+    text-align: center;
+    font-size: 40px;
+    color: rgb(126, 138, 150);
+
+}
+.container-answer{
+
+  width: 70%;
+  text-align: center;
+  align-items: left;
+}
+/* .container img{
+  position: absolute;
+  right: 0;
+  width: 600px;
+  bottom: 0;
+} */
+.container .img-1 {
+    position: absolute;
+    right: 70px;
+    width:300px;
+    bottom: 50px;
+}
+.container .img-0 { 
+    position: absolute;
+    right: 70px;
+    width:400px;
+    bottom: 0px;
+}
+
+.img-2 {
+    width: 50px;
+}

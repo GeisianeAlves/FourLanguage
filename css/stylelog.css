@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Jost:wght@200;300&family=Lora:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Lora', Courier, monospace;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:'Lora', Courier, monospace;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(img/galaxy-3.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  bottom: -2;
+  left: 0;
+  width: 100%;
+  font-family: "Lora";
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  /* background-color: #08021df5; MEXI AQUI*/
+  padding: 16px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-family:'Lora', monospace;
+  padding: 6px;
+  
+ 
+}
+
+.fatec-linguo {
+    border: 2px solid rgb(142, 3, 3);
+    margin: 5px;
+    padding: 1.5em;
+}  
+
+.container {
+  background-color: rgba(255, 202, 248, 0.219);
+  padding: 6px;
+  width: 350px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 darkgrey;
+}
+
+form {
+  position: absolute;
+  margin-top: 80px;
+  transition: .5s;
+  width: 300px;
+  height: 400px;
+}
+
+.buttonsForm {
+  margin-top: 40px;
+  position: relative;
+  border-radius: 30px;
+  box-shadow: 0 0 7px 0 rgb(23, 18, 92);
+}
+
+
+.btnColor {
+  position: absolute;
+  width: 108px;
+  height: 100%;
+  background-color: #f866c77a;
+  border-radius: 30px;
+  transition: .3s;
+  
+}
+
+input[type="text"], input[type="password"] {
+  border: none;
+  margin-top: 40px;
+  border-radius: 60px;
+  padding: 8px 0 8px 35px;
+  outline: none;
+  width: 100%;
+  
+  
+}
+
+button[type="button"] {
+  box-shadow: 0 0 7px 0 rgb(23, 18, 92);
+  background-color: #f866c77a;
+  border-radius: 30px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 8px 0 8px 15px;
+  font-size: 15px;
+  margin-top: 40px;
+  cursor: pointer;
+  color: #000000;
+}
+
+.divCheck {
+  margin: 10px 0 0 5px;
+  width: 80%;
+  font-size: 13px;
+  color: rgb(90, 87, 87);
+}
+
+#signin {
+  left: 25px;
+  
+}
+
+#signup {
+  left: 450px;
+}
+
+i {
+  position: absolute;
+  left: 0;
+  padding: 10px 10px;
+}
+
+.iEmail {
+  top: 40px;
+}
+
+.iPassword {
+  top: 114px;
+}
+
+
+
+  

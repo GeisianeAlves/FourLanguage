@@ -7,8 +7,23 @@
     <title>Skills</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="estilo_tela_skills.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/estilo_tela_skills.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styleReview.css" />
+
+    <style>
+        body { background: url(img/galaxy-3.jpg)no-repeat; background-size: cover; height: 100vh; }
+    </style>
+    
+    <script src="utils/renderSpeakingLevel.js"></script>  
+    <script src="utils/renderListeningLevel.js"></script>
+    <script src="utils/renderLevels.js"></script>
+
+    <script>
+      window.renderUnit()
+      window.renderLevel()
+      window.renderListening()
+    </script>
 </head>
 
 <body>    
@@ -28,7 +43,6 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="revisao.html">Review</a></li>
-                    <li><a href="saibamais.html">Learning</a></li>
                     <li><a href="creditos.html">About</a></li>
                     <li><a class="close-menu">Close</a></li>
                     <!--botao para acessar o menu-->
@@ -53,25 +67,26 @@
         </div>
 
         <div class="skills">
+        
+            <!--container que direciona para o nível/semestre da habilidade reading" -->
             <div class="skills-card" id="reading">
-                <a href="reading1.html">
-                    <h1>Reading</h1>
-                </a>
+                    <a class="btn-skill" href="tela_niveis.html?skill=primeiro">READING</a>
+                <!--<h1>Writing</h1> --> 
             </div>
-            <div class="skills-card" id="writing">
-                <a href="quiz.html">
-                    <h1>Writing</h1>
-                </a>
+            <!--container que direciona para o nível/semestre da habilidade writing" -->
+            <div class="skills-card skill" id="writing">                
+                    <a class="btn-skill" href="tela_niveis.html?skill=segundo">WRITING</a>                
+                <!--<h1>Writing</h1> -->              
             </div>
-            <div class="skills-card" id="speaking">
-                <a href="quiz.html">
-                    <h1>Speaking</h1>
-                </a>
+            <!--container que direciona para o nível/semestre da habilidade speaking" -->
+            <div class="skills-card skill" id="speaking">                        
+                    <a class="btn-skill" href="tela_niveis.html?skill=terceiro">SPEAKING</a>
+                <!--<h1>Speaking</h1>  -->              
             </div>
+            <!--container que direciona para o nível/semestre da habilidade listening" -->
             <div class="skills-card" id="listening">
-                <a href="listening1.html">
-                    <h1>Listening</h1>
-                </a>
+                <a class="btn-skill" href="tela_niveis.html?skill=quarto">LISTENING</a>
+                <!--<h1>Writing</h1> --> 
             </div>
         </div>
      
@@ -105,9 +120,8 @@
         });
     }
 </script>
-   <script src="barrNavef.js"></script>
    <script src="https://use.fontawesome.com/62e43a72a9.js"></script>
-   <script src="script.js"></script>
-   <script src="script_listening.js"></script>
+   <script src="js/script.js"></script>
+   <script src="js/script_listening.js"></script>
 </body>
 </html>

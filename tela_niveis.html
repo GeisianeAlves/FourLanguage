@@ -9,8 +9,23 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    
-    <link rel="stylesheet" href="estilo_tela_niveis.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styleReview.css" />
+
+    <link rel="stylesheet" href="css/estilo_tela_niveis.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        .conteudo-principal-background {   display: flex; flex-direction: column; justify-content: center; align-items: center; background: url(img/night_sky3.jpg); 
+         background-size: cover; background-repeat: no-repeat; height: 100vh; width: 100vw; }
+    </style>
+
+    <script src="utils/renderSpeakingLevel.js"></script>
+    <script src="utils/renderLevels.js"></script>
+
+    <script>
+      window.renderUnit()
+      window.renderLevel()
+    </script>
 </head>
 
 <body>    
@@ -31,9 +46,9 @@
             <div class="sidebar">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Speaking</a></li>
-                    <li><a href="#">Listening</a></li>
-                    <li><a href="#l">Writing</a></li>
+                    <li><a href="revisao.html">Review</a></li>
+                    <li><a href="tela_skills.html">Skills</a></li>
+                    <li><a href="creditos.html">About</a></li>
                     <li><a class="close-menu">Close</a></li>
                     <!--botao para acessar o menu-->
                     <button class="menu-toggle">&#9776;</button>
@@ -43,98 +58,316 @@
                     
             </div>
 
-   <!--conteúdo principal da aba de vagas-->
+<!--          conteúdo principal -> níveis/semestres     class="skill-speaking" id="primeiro  class="level" id="primeiro"" -->
       <section> 
-        <div class="conteudo-principal-background">
+                      
+        <div>
+            <img src="img/astronauta-planeta.png" id="img-main">
+        </div>    
+
+        <!--container para escolher jogo da habilidade reading" -->
+        <div class="conteudo-principal-background" id=primeiro>
             
-            <div class="conteudo-principal-texto">
-                <div class="topic">Reading</div>
-              <!--   <h1>THE BEST WAY OF LEARNING</h1>  -->  
-                <h1>Select a quiz according to your semester</h1>            
-               <!--  <h3>Select a quiz according to your semester</h3> -->
+            <div class="conteudo-principal-texto" >
+                <!--Mudar títulos dessa parte conforme o tópico e inserir explicação do jogo-->
+                <div class="topic"> Reading </div>                
+                <h1>Select a quiz according to your semester</h1>         
+            
+                <div>
+                    <p id="about-game">Learn reading skills with this speed reading game, and improve your comprehension level.
+                    </p><br>
+                </div>
+                <div>                  
+                    <h3 id="play">How to play</h3>
+                    <p id=about-game>Try to read the phrases and retain the most important information as they appear on the screen. <br><br>
+                    Then, answer to the following questions.
+                    </p>
+                </div>
+            </div>
+        
+            <div class="level-container" >
+                    <h1>Levels</h1>
 
-               <div>
-                <img src="img/aeronave.png" id="img-left">
-             </div>
-           </div>    
-       
-           
+                <div class="level-box">
 
-            <div>
-                 <img src="img/astronauta-planeta.png" id="img-main">
-            </div>     
-           
+        <!-- class=level -> direciona para o semestre pretendido de speaking  / id=primeiro direciona para jogo do 1 semestre -->
+                    <div class="level-card level" id="level-1">               
+                        <button class="btn-right">          
+                            <a class="btn-right-anc" href="reading1.html?sem=primeiro">Semester</a>
+                        </button>  
+                        <h3>1</h3>
+                    </div>
 
-            <div class="level-container">
+                    <div class="level-card level" id="level-2">
+                        <button class="btn-right">
+                            <a class="btn-right-anc" href="reading1.html?sem=segundo">Semester</a>                     
+                        </button>  
+                        <h3>2</h3>
+                    </div>
+
+                    <div class="level-card level" id="level-3">
+                        <button class="btn-right">
+                            <a class="btn-right-anc" href="reading1.html?sem=terceiro">Semester</a>
+                        </button>  
+                        <h3>3</h3>
+                    </div>
+                </div>
+
+                <div class="level-box">
+                    
+                    <div class="level-card level" id="level-4">
+                        <button class="btn-right">
+                            <a class="btn-right-anc" href="reading1.html?sem=quarto">Semester</a>
+                        </button>  
+                        <h3>4</h3>
+                    </div>
+
+                    <div class="level-card level" id="level-5">                    
+                        <button class="btn-right">
+                            <a class="btn-right-anc" href="reading1.html?sem=quinto">Semester</a>
+                        </button>  
+                        <h3>5</h3>
+                    </div>
+
+                    <div class="level-card level"id="level-6">  
+                        <button class="btn-right">
+                            <a class="btn-right-anc" href="reading1.html?sem=sexto">Semester</a>
+                        </button>  
+                        <h3>6</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--container para escolher jogo da habilidade writing" -->
+        <div class="conteudo-principal-background" id=segundo>   
+            <div class="conteudo-principal-texto" >
+                <!--Mudar títulos dessa parte conforme o tópico e inserir explicação do jogo-->
+                <div class="topic">Writing</div>                
+                    <h1>Select a quiz according to your semester</h1>         
+                    
+                        <div>
+                            <p id="about-game">It teaches you to find mistakes in your writing, and review your grammar.
+                            </p><br>
+                        </div>
+                        <div>                  
+                            <h3 id="play">How to play</h3>
+                            <p id=about-game>Choose the correct answer among 4 options.<br><br>
+                            The correct answer will be coloured in green, and the wrong ones, in red.
+                            </p>
+                        </div>
+                        </div>
+                    
+                    
+            <div class="level-container" >
                 <h1>Levels</h1>
 
             <div class="level-box">
-                <div class="level-card" id="level-1">
-                    <a href="reading1.html">
-                        <!--
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg"style="width:50px"
-                        /> -->
-                       
-                    </a>
+
+    <!-- class=level -> direciona para o semestre pretendido de speaking  / id=primeiro direciona para jogo do 1 semestre -->
+                <div class="level-card level" id="level-1">               
+                    <button class="btn-right">          
+                        <a class="btn-right-anc" href="quiz.html?sem=primeiro">Semester</a>
+                    </button>  
                     <h3>1</h3>
                 </div>
-                <div class="level-card" id="level-2">
-                    <a href="reading1.html">
-                        <!--
-                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/argocd/argocd-original.svg" style="width:50px"/>
-                        -->
-                       
-                    </a>
+
+                <div class="level-card level" id="level-2">
+                    <button class="btn-right">
+                        <a class="btn-right-anc" href="quiz.html?sem=segundo">Semester</a>                     
+                    </button>  
                     <h3>2</h3>
                 </div>
-                <div class="level-card" id="level-3">
-                    <a href="reading1.html">
-                        <!--
-                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/podman/podman-original.svg" style="width:50px"/>    
-                        -->
-                     
-                </a>
+
+                <div class="level-card level" id="level-3">
+                    <button class="btn-right">
+                        <a class="btn-right-anc" href="quiz.html?sem=terceiro">Semester</a>
+                    </button>  
                     <h3>3</h3>
                 </div>
             </div>
 
             <div class="level-box">
-                <div class="level-card" id="level-4">
-                    <a href="reading1.html">
-                        <!--
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg" style="width:50px
-                      "/>  -->
-                    
+                
+                <div class="level-card level" id="level-4">
+                    <button class="btn-right">
+                        <a class="btn-right-anc" href="quiz.html?sem=quarto">Semester</a>
+                    </button>  
                     <h3>4</h3>
-                </a>
                 </div>
-                <div class="level-card" id="level-5">                    
-                     <a href="reading1.html" >
-                        <!--
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" style="width:50px"/>
-                        -->
-                        
-                     </a>
+
+                <div class="level-card level" id="level-5">                    
+                    <button class="btn-right">
+                        <a class="btn-right-anc" href="quiz.html?sem=quinto">Semester</a>
+                    </button>  
                     <h3>5</h3>
                 </div>
 
-                <div class="level-card"id="level-6">  
-                    <a href="reading1.html" >    
-                        <!--
-                              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" style="width:50px"/>
-                        -->           
-                      
-                    </a>  
+                <div class="level-card level"id="level-6">  
+                    <button class="btn-right">
+                        <a class="btn-right-anc" href="quiz.html?sem=sexto">Semester</a>
+                    </button>  
                     <h3>6</h3>
                 </div>
             </div>
 
+            </div>
+        </div>   
+
+        <!--container para escolher jogo da habilidade speaking" -->
+        <div class="conteudo-principal-background" id=terceiro>  
+            <div class="conteudo-principal-texto" >
+                <div class="topic">Speaking</div>                
+                <h1>Select a quiz according to your semester</h1>        
+                <div>
+                    <p id="about-game">It helps you practise your conversation skills in English, using sample of dialogues.
+                    </p><br>
+                </div>
+                <div>                  
+                    <h3 id="play">How to play</h3>
+                    <p id=about-game>Pick the correct answer for the corresponding question.<br>
+                        <br>The correct answer will be highlighted in green, and the wrong one, in red.
+                    </p>
+                </div>
+            </div>
+
+            <div class="level-container" >
+                <h1>Levels</h1>
+
+            <div class="level-box">
+
+    <!-- class=level -> direciona para o semestre pretendido de speaking  / id=primeiro direciona para jogo do 1 semestre -->
+                <div class="level-card level" id="level-1">               
+                    <button class="btn-right">          
+                        <a class="btn-right-anc" href="speaking1.html?sem=primeiro">Semester</a>
+                    </button>  
+                    <h3>1</h3>
+                </div>
+
+                <div class="level-card level" id="level-2">
+                    <button class="btn-right">
+                        <a class="btn-right-anc" href="speaking1.html?sem=segundo">Semester</a>                     
+                    </button>  
+                    <h3>2</h3>
+                </div>
+
+                <div class="level-card level" id="level-3">
+                    <button class="btn-right">
+                        <a class="btn-right-anc" href="speaking1.html?sem=terceiro">Semester</a>
+                    </button>  
+                    <h3>3</h3>
+                </div>
+            </div>
+
+            <div class="level-box">
+                
+                <div class="level-card level" id="level-4">
+                    <button class="btn-right">
+                        <a class="btn-right-anc" href="speaking1.html?sem=quarto">Semester</a>
+                    </button>  
+                    <h3>4</h3>
+                </div>
+
+                <div class="level-card level" id="level-5">                    
+                    <button class="btn-right">
+                        <a class="btn-right-anc" href="speaking1.html?sem=quinto">Semester</a>
+                    </button>  
+                    <h3>5</h3>
+                </div>
+
+                <div class="level-card level"id="level-6">  
+                    <button class="btn-right">
+                        <a class="btn-right-anc" href="speaking1.html?sem=sexto">Semester</a>
+                    </button>  
+                    <h3>6</h3>
+                </div>
+            </div>
+
+            </div>
+            </div>
+
+        <!--container para escolher jogo da habilidade listening" -->
+        <div class="conteudo-principal-background" id=quarto>  
+            <div class="conteudo-principal-texto" >
+                <div class="topic">Listening</div>                
+                <h1>Select a quiz according to your semester</h1>        
+                <div>
+                    <p id="about-game">It teaches you to notice differences between words and letters that may sound similar.
+                    </p><br>
+                </div>
+                <div>                  
+                    <h3 id="play">How to play</h3>
+                    <p id=about-game>Click on 'Generate word', listen to it, and try to spell it on the field.
+                        <br>Then, click on 'Check' to verify if it is right. 
+                        <br>
+                        <br> Correct words are added to Score.
+                        <br> For incorrect spelling, it is provided the expected answer.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="level-container">
+                <h1>Levels</h1>
+
+            <div class="level-box">
+
+                 <!-- class=level -> direciona para o semestre pretendido de speaking  / id=primeiro direciona para jogo do 1 semestre -->
+                <div class="level-card level" id="level-1">               
+                    <button class="btn-right">          
+                        <a class="btn-right-anc" href="listening1.html?sem=primeiro">Semester</a>
+                    </button>  
+                    <h3>1</h3>
+                </div>
+
+                <div class="level-card level" id="level-2">
+                    <button class="btn-right">
+                        <a class="btn-right-anc" href="listening1.html?sem=segundo">Semester</a>                     
+                    </button>  
+                    <h3>2</h3>
+                </div>
+
+                <div class="level-card level" id="level-3">
+                    <button class="btn-right">
+                        <a class="btn-right-anc" href="listening1.html?sem=terceiro">Semester</a>
+                    </button>  
+                    <h3>3</h3>
+                </div>
+            </div>
+
+            <div class="level-box">
+                
+                <div class="level-card level" id="level-4">
+                    <button class="btn-right">
+                        <a class="btn-right-anc" href="listening1.html?sem=quarto">Semester</a>
+                    </button>  
+                    <h3>4</h3>
+                </div>
+
+                <div class="level-card level" id="level-5">                    
+                    <button class="btn-right">
+                        <a class="btn-right-anc" href="listening1.html?sem=quinto">Semester</a>
+                    </button>  
+                    <h3>5</h3>
+                </div>
+
+                <div class="level-card level"id="level-6">  
+                    <button class="btn-right">
+                        <a class="btn-right-anc" href="listening1.html?sem=sexto">Semester</a>
+                    </button>  
+                    <h3>6</h3>
+                </div>
+            </div>
+
+            </div>
         </div>
-    </div>
+
     </section>
 
 
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
