@@ -1,72 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Quizz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="stylequiz.css" />
+    <script src="script.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Quizz</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="stylequiz.css">
-  <script src="script.js" defer></script>
-</head>
-
-<body>
-  <div id="container">
-    <nav class="navbar">
-      <a class="fatec-linguo">Four<span>Language</span></a>
-      <div class="logout-button">
-        <a href="login.html">sair</a>
-      </div>
-    </nav>
-  </div>
-  </div>
-
-  <div class="sidebar">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="revisao.html">Review</a></li>
-      <li><a href="quiz.html">Quiz</a></li>
-      <li><a href="creditos.html">About</a></li>
-      <li><a class="close-menu">Close</a></li>
-      <!--botao para acessar o menu-->
-      <button class="menu-toggle">&#9776;</button>
-    </ul>
-  </div>
-
-  <h1>QUIZZ</h1>
-  <div id="score-container" class="hide">
-    <h2>Parabéns!</h2>
-    <p id="display-score"><span></span>%</p>
-    <p>Você acertou<span id="correct-answers">0</span> de <span id="questions-qty"></span> perguntas</p>
-    <button id="restart">Refazer quizz!</button>
-  </div>
-
-
-  <!-- QUIZZ CONTAINER -->
-  <div id="quizz-container">
-    <p id="question">
-      <span id="question-number"></span> - <span id="question-text"></span>
-    </p>
-    <div id="answers-box">
-      <button><span class="btn-letter">a</span> <span class="question-answer"></span></button>
-      <button><span class="btn-letter">b</span> <span class="question-answer"></span></button>
-      <button><span class="btn-letter">c</span> <span class="question-answer"></span></button>
-      <button><span class="btn-letter">d</span> <span class="question-answer"></span></button>
+  <body>
+    <div id="container">
+      <nav class="navbar">
+        <a class="fatec-linguo">Four<span>Language</span></a>
+        <div class="logout-button">
+          <a href="login.html">sair</a>
+        </div>
+      </nav>
     </div>
-  </div>
 
-  <!-- template resposta -->
-  <button class="answer-template hide"><span class="btn-letter"></span> <span class="question-answer"></span></button>
+    <div class="sidebar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="revisao.html">Review</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="creditos.html">About</a></li>
+        <li><a class="close-menu">Close</a></li>
+        <!--botao para acessar o menu-->
+        <button class="menu-toggle">&#9776;</button>
+      </ul>
+    </div>
 
+    <h1>QUIZZ</h1>
+    <div id="score-container" class="hide">
+      <h2>Parabéns!</h2>
+      <p id="display-score"><span></span>%</p>
+      <p>
+        Você acertou<span id="correct-answers">0</span> de
+        <span id="questions-qty"></span> perguntas
+      </p>
+      <button id="restart">Refazer quizz!</button>
+    </div>
 
+    <!-- QUIZZ CONTAINER -->
+    <div id="quizz-container">
+      <p id="question">
+        <span id="question-number"></span> - <span id="question-text"></span>
+      </p>
+      <div id="answers-box">
+        <button>
+          <span class="btn-letter">a</span>
+          <span class="question-answer"></span>
+        </button>
+        <button>
+          <span class="btn-letter">b</span>
+          <span class="question-answer"></span>
+        </button>
+        <button>
+          <span class="btn-letter">c</span>
+          <span class="question-answer"></span>
+        </button>
+        <button>
+          <span class="btn-letter">d</span>
+          <span class="question-answer"></span>
+        </button>
+      </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>Criado por: Geisiane Alves, Rafaela Araujo, Raquel Diniz e Vinicius Pereira</p>
-  </footer>
-  <script src="quiz.js"></script>
+      <!-- template resposta -->
+    <button class="answer-template hide">
+      <span class="btn-letter"></span> <span class="question-answer"></span>
+    </button>
+    </div>
 
+    
 
-</body>
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        Criado por: Geisiane Alves, Rafaela Araujo, Raquel Diniz e Vinicius
+        Pereira
+      </p>
+    </footer>
 
+    
+    <script src="quiz.js"></script>
+  </body>
 </html>
