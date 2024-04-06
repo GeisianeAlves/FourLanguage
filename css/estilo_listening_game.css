@@ -23,9 +23,11 @@ body {
     justify-content: center;
     align-items: center;
     width: 700px;
-    height: 600px;
+    height: 680px;
     border-radius: 10px;
-    border: 2px solid wheat;
+    border: 2px solid rgb(182, 131, 37);
+    /* background-color: black;
+    box-shadow: 10px 5px 5px 8px #14c56780; */
 }
 .all h1{
     font-family: 'Righteous', cursive;
@@ -34,9 +36,20 @@ body {
     margin-bottom: 20px;
     margin-top: 50px;
 }
-.all h3 {
-    font-size: 22px;
+.all h2 {
+    font-size: 35px;
     font-family: 'Righteous', cursive;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.all h3 {
+    font-size: 25px;
+    font-family: 'Righteous', cursive;
+    padding-bottom: 30px;
+}
+#playpalavra {
+    height: 120px;
+    width: 120px;
 }
 #cor-1{
 color: rgb(212, 227, 170);
@@ -67,14 +80,14 @@ img {
     font-size:28px;
 }
 #wrong, #erros, #erros2, #erros3, #erros4,#erros5, #erros6 span {
-    color: #ae1f96;
+    color: #e7e2bd;
     font-size: 28px;
 }
 #input, #input2, #input3, #input4, #input5, #input6{
     height: 60px;
     border: 1px solid rgb(151, 181, 180);
     border-radius: 15px;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     width: 440px;
     padding: 20px;
     outline: 2px solid rgb(131, 222, 167);
@@ -82,6 +95,27 @@ img {
     font-size: 20px;
 }
 #gerarPalavra1, #gerarPalavra2, #gerarPalavra3, #gerarPalavra4, #gerarPalavra5, #gerarPalavra6 {
+   border-radius: 50%;
+}
+#gerarPalavra1 {
+    background-color: #b4a8b2;
+ }
+ #gerarPalavra2 {
+    background-color: #d2f1cf;
+ }
+ #gerarPalavra3 {
+    background-color: #aef1f8;
+ }
+ #gerarPalavra4 {
+    background-color: #b5a4dd;
+ }
+ #gerarPalavra5 {
+    background-color: #89848a;
+ }
+ #gerarPalavra6 {
+    background-color: #aef1f8;
+ }
+/*  #gerarPalavra2, #gerarPalavra3, #gerarPalavra4, #gerarPalavra5, #gerarPalavra6 {
     width:440px;
     padding: 5px;
     cursor: pointer;
@@ -93,18 +127,45 @@ img {
     font-family: "Raleway", sans-serif;
     font-size: 22px;
   font-weight: bold;
-}
-/*   .cont {
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
 } */
+   .cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    width:700px;
+    margin-top: 20px;
+    padding-top: 20px;
+} 
+/* #pontos{
+    text-align: center;
+} */
+.correct-answer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 700;
+    background-color: #4bad7c;
+}
+
 .btn2{
     border-radius: 25px;
     width: 150px;
     padding: 5px;
     cursor: pointer;
-    margin: 0 60px 0 60px;
+    /* margin: 0 60px 0 60px; */
+    margin-left: 20px ;
+  
     border: 1px solid rgb(151, 181, 180);
     outline: 2px solid rgb(131, 222, 167);
     font-family: 'Righteous', cursive;
