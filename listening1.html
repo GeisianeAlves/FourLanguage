@@ -7,6 +7,7 @@
     <title>Listening | Game</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/estilo_listening_game.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <style>
         body { background: url(img/stars.jpg)no-repeat; background-size: cover; width: 100%; height: 100vh;
@@ -125,7 +126,7 @@
 
      <!--  JOGO SEXTO SEMESTRE -->   
      <div class="all level" id=sexto >
-        <h3 style="color: rgb(169, 117, 27);">Semester 5 </h3>
+        <h3 style="color: rgb(64, 82, 138);">Semester 5 </h3>
         <h2 style="color: rgb(180, 197, 180);">Listen to the words, <br>and spell them correctly</h2>
         <button  id="gerarPalavra6"><img id="playpalavra" src="img/play6.png" alt=""></button>
      
@@ -139,6 +140,44 @@
     </div>
 
 
+    <!--Container lateral esquerda com dicas-->
+    <div class="dicas">
+        <h1>Tips</h1>
+        <p>
+            According to British Council, <b> Listening</b> activities are important to enhance your understanding of the language and your pronunciation.
+        </p>
+        <h3>Here are some topics related to the words you might hear:</h3>
+        <p>Clothes</p>
+        <p>Numbers</p>
+        <p>Work</p>
+        <p>Information</p>
+        <p>Places</p>
+        <p>Traveling</p> 
+        <p>Food</p> 
+   
+    </div>
+
+
+ <!--Container lateral direita sobre como jogar-->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <h2>How to play</h2>
+      <p>Firstly, click on play icon to listen to the words.</p>
+      <p>After, type the word spoken.</p>
+      <p>Then, click on Check button.</p>
+      <h3>Score</h3>
+      <p>If you type correcty, points will be added to your score.</p>
+      <h3>Word displayed:</h3>
+      <p>If you spell the word incorrecty, the right one will be shown.</p>
+      <!-- <img src="img/play5.svg" alt="Image"> -->
+    </div>
+  
+  </div>
+   <!-- Image to trigger modal -->
+   <img id="myImg" src="img/help.svg" alt="Image" class="modal-trigger">
+  
      <!--imagens-->
      <div>
         <img id="img-2"  src="img/astronaut.jpg" class="object" data-value="10">   
@@ -147,8 +186,9 @@
         <img id="img-3"  src="img/planet_pink.png" class="object" data-value="3">
     </div>     
    
-</body>
 
+</div>     
+</body>
 
 
 <script src="js/script.js"></script>
