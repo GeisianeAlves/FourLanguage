@@ -5,27 +5,55 @@
   box-sizing: border-box;
   text-decoration: none;
   margin: 0;
-
 }
 
-.extra-content{
+.extra-dicionarios{
+  background-color: #e6d9f7;
   width: 100vw;
-  height: 60vh;
+  height: 80vh;
   display: flex;
-  justify-content: space-evenly;
+  justify-content:center;
   align-items: center;
-  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
 }
-.conteudo {
+.extra-dicionarios p{
+  font-size: 20px;
+}
+.conteudo-1, .conteudo-2, .conteudo-3, .conteudo-4 {
   background-color: #edefed;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 300px;
+  font-family: "Raleway", sans-serif;
   border: 2px solid rgb(55, 94, 105);
-  height: 200px;
-  margin-right:20px ;
+  margin-right: 30px;
+}
+.conteudo-1 {
+  width: 700px;
+  height: 400px;
+}
+.conteudo-2 {
+  width: 400px;
+  height: 400px;
+  margin-right: 40px;
+}
+.conteudo-part3{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+}
+.conteudo-3 {
+  width: 400px;
+  height: 190px;
+}
+.conteudo-4 {
+  width: 400px;
+  height: 190px;
 }
 .conteudo img {
   width: 150px;
@@ -33,20 +61,131 @@
 .conteudo h2, p {
   margin-bottom: 20px;
 }
-.jogos {
+.preview-jogos {
+  display: flex;
+  flex-wrap: wrap;
+   justify-content: space-evenly;
+  align-items: center; 
+  /* flex-direction: row; */
+  width: 100%;
+  height: 170vh; 
+  background-color: #bcc0ce;
+  font-family: "Raleway", sans-serif;
+}
+.container-jogos {
   display: flex;
   justify-content: center;
+  align-items: center; 
+  flex-direction: column; 
+  width: 70%;
+ gap: 50px;
+}
+.container-jogos  h1 {
+  font-size: 40px;
+}
+.jogos {
+  /* background-color: #92a1cd; */
+  background-color: #d6edea;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
-  width: 600px;
-  /* border: 3px solid purple; */
-  height: 350px;
+  flex-direction:row;
+  width: 80%;
+  height: 280px;
   margin-right:20px ;
+  font-family: "Raleway", sans-serif;
+  border-radius: 10px;
+  border: 2px solid rgb(30, 32, 32);
+ 
 }
 .jogos img{
-  width: 400px;
-  height: 200px;
+  width: 600px;
+  height: 100%;
+  border-bottom-right-radius: 25px;
 }
+.jogos .content {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  flex-direction:column;
+  text-align: left;
+ padding: 10px;
+}
+.jogos h2 {
+  font-size: 24px;
+  padding: 10px;
+}
+.jogos h3 {
+  font-size: 20px;
+  padding: 10px;
+}
+.jogos p {
+  font-size: 20px;
+  padding-left: 10px;
+}
+.jogos button {
+  width: 60px;
+  height: 30px;
+  border-radius: 25px;
+  border: 2px solid rgb(189, 189, 161);
+  font-weight: bolder;
+  background-color: #efeda1;
+}
+
+.container-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center; 
+    flex-direction: column; 
+    width: 30%;
+    height: 100%; 
+    /* background-color: #819999;  */
+
+}
+.content-right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center; 
+  flex-direction: column; 
+  background-color: #819999; 
+  border: 2px solid rgb(117, 232, 215);
+  height: 30%; 
+  width: 100%;
+  border-radius: 15px;
+
+}
+.container-right img {
+  width: 100%;
+  height: 60%;
+  border-top-left-radius: 45px;
+  border-bottom-right-radius: 45px;
+}
+.content-coluna {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: row; 
+
+}
+.coluna-texto{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: column; 
+  font-size: 22px;
+  font-family: "Raleway", sans-serif;
+  padding-right: 50px;
+}
+mark {
+  font-weight: bolder;
+  font-size: 22px;
+  background-color: #dda1f5;
+}
+
 #titulo{
   width: 100px;
   margin-left: 50px;
@@ -60,8 +199,8 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 70vh;
- 
+  height: 80vh;
+ background-color: rgb(229, 230, 212);
 }
 .video h1 {
   font-size: 40px;
@@ -69,24 +208,44 @@
 html {
   scroll-behavior: smooth;
 }
-.teste {
+.container-teste{
   width: 100vw;
   height: 60vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+
+}
+.container-teste-1 {
+  width: 50vw;
+  height: 100%;
+}
+/* .container-teste-1 img {
+  width: 100%;
+  height: 100%;
+} */
+.container-teste-2 {
+  width: 50%;
+  height: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+  background-color: #f1e6d4;
 }
-.teste img {
-  width: 500px;
+.container-teste-2 img {
+  width: 300px;
 }
-.teste h1 {
+.container-teste-2 h1 {
   font-size: 40px;
 }
-.teste button {
-  width: 300px;
-  height: 80px;
+.container-teste-2 button {
+  width: 200px;
+  height: 60px;
   font-size: 25px;
+  border-radius: 30px;
+  border: 3px solid orchid;
 }
 /* menu lateral e bar */
 .navbar {
@@ -411,13 +570,12 @@ header {
 }
 
 #container-semestre {
- background-color: rgb(72, 72, 90);
+ background-color: rgb(80, 80, 110);
   gap: 20px;
   padding-top: 60px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 20px;
 }
 
 
@@ -444,7 +602,9 @@ header {
 #first:hover,
 #second:hover,
 #third:hover,
-#four:hover {
+#four:hover,
+#five:hover,
+#six:hover  {
   transform: scale(1.1);
   transition: all 0.5s ease-in-out;
 }
@@ -486,18 +646,14 @@ ul{
   margin-top: 20px;
   padding: 3px;
 }
-.third-paragraph {
+.third-paragraph, .four-paragraph, .fifth-paragraph, .sixth-paragraph{
   text-decoration: underline;
   font-size: 18px;
   padding-top: 8px;
 }
 
 
-.four-paragraph{
-  text-decoration: underline;
-  font-size: 18px;
-  padding-top: 8px;
-}
+
 
 
 
@@ -523,7 +679,7 @@ ul{
 }
 
 #second,
-#third{
+#third {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -536,11 +692,26 @@ ul{
   padding: 17px;
   box-shadow: 5px 5px 5px #333;
 }
+#five, #six{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 369px;
+  margin-bottom: 50px;
+  border: 2px solid #333;
+  background-color: #ccc;
+  padding: 17px;
+  box-shadow: 5px 5px 5px #333;
+}
 
 #first:hover,
 #second:hover,
 #third:hover,
-#four:hover {
+#four:hover,
+#five:hover,
+#six:hover {
   transform: scale(1.1);
   transition: all 0.5s ease-in-out;
 }
@@ -678,7 +849,7 @@ footer {
   padding-bottom: 16px;
   font-size: 20px;
   bottom: 0px;
-
+width: 100%;
 }
 
 footer:hover {
