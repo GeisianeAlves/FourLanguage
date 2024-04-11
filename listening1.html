@@ -7,6 +7,7 @@
     <title>Listening | Game</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/estilo_listening_game.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <style>
         body { background: url(img/stars.jpg)no-repeat; background-size: cover; width: 100%; height: 100vh;
@@ -47,107 +48,136 @@
                     
             </div>
 
-    <!--  JOGO SEGUNDO SEMESTRE -->   
+    <!--  JOGO PRIMEIRO SEMESTRE -->   
     <div class="all level" id=primeiro >
         <h3 style="color: rgb(85, 170, 85);">Semester 1 </h3>
-        <h1>Spelling game</h1>
-
-         <input type="text" id="input">
-         <button id="gerarPalavra1">GENERATE WORD</button>
+        <h2 style="color: rgb(180, 197, 180);">Listen to the words, <br>and spell them correctly</h2>
+        <button  id="gerarPalavra1"><img id="playpalavra" src="img/play6.png" alt=""></button>
      
          <div class="cont">
-             <button id="repetir" class="btn2">Repeat</button>
+             <input type="text" placeholder="Type the correct word..." id="input">
              <button id="enviar" class="btn2">Check</button>            
          </div>
-         <p id="pontos"><span class="correct-answer" style="color: rgb(170, 130, 85); font-size: 28px;">Score: </span></p><br><br>
+         <p id="pontos"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 32px;">Score: </span></p><br><br>
          <p id="erros"><span class="correct-answer" style="font-size: 28px;"></span></p>
-     
+         
     </div>
 
 <!--  JOGO SEGUNDO SEMESTRE -->   
-    <div class="all level" id=segundo>
-        <h3 id="cor-3">Semester 2 </h3>
-        <h1>Spelling game</h1>
-         <input type="text" id="input2">
-         <button id="gerarPalavra2" style="background-color:rgb(225, 157, 102);">GENERATE WORD</button>
-        
+     <div class="all level" id=segundo >
+        <h3 style="color: rgb(170, 116, 85);">Semester 2 </h3>
+        <h2 style="color: rgb(180, 197, 180);">Listen to the words, <br>and spell them correctly</h2>
+        <button  id="gerarPalavra2"><img id="playpalavra" src="img/play6.png" alt=""></button>
+     
          <div class="cont">
-             <button id="repetir" class="btn2">Repeat</button>
+             <input type="text" placeholder="Type the correct word..." id="input2">
              <button id="enviar2" class="btn2">Check</button>            
          </div>
          <p id="pontos2"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 32px;">Score: </span></p><br><br>
          <p id="erros2"><span class="correct-answer" style="font-size: 28px;"></span></p>
          
-     </div>
+    </div>
 
      <!--  JOGO TERCEIRO SEMESTRE -->   
-    <div class="all level" id=terceiro >
-        <h3 id="cor-3">Semester 3 </h3>
-        <h1 style="color: rgb(105, 190, 232);">Spelling game</h1>
-         <input type="text" id="input3">
-         <button id="gerarPalavra3" style="background-color: rgb(105, 190, 232);">GENERATE WORD</button>
+     <div class="all level" id=terceiro >
+        <h3 style="color: rgb(224, 212, 249);">Semester 3 </h3>
+        <h2 style="color: rgb(180, 197, 180);">Listen to the words, <br>and spell them correctly</h2>
+        <button  id="gerarPalavra3"><img id="playpalavra" src="img/play6.png" alt=""></button>
+     
          <div class="cont">
-             <button id="repetir" class="btn2">Repeat</button>
+             <input type="text" placeholder="Type the correct word..." id="input3">
              <button id="enviar3" class="btn2">Check</button>            
          </div>
          <p id="pontos3"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 32px;">Score: </span></p><br><br>
          <p id="erros3"><span class="correct-answer" style="font-size: 28px;"></span></p>
          
-     </div>
+    </div>
   
 
      <!--  JOGO QUARTO SEMESTRE -->   
-    <div class="all level" id=quarto>
-        <h3 id="cor-5">Semester 4 </h3>
-        <h1>Spelling game</h1>
-
-         <input type="text" id="input4">
-         <button id="gerarPalavra4" style="background-color: rgb(205, 123, 182);">GENERATE WORD</button>
+     <div class="all level" id=quarto >
+        <h3 style="color: rgb(148, 106, 238);">Semester 4 </h3>
+        <h2 style="color: rgb(180, 197, 180);">Listen to the words, <br>and spell them correctly</h2>
+        <button  id="gerarPalavra4"><img id="playpalavra" src="img/play6.png" alt=""></button>
      
          <div class="cont">
-             <button id="repetir" class="btn2">Repeat</button>
+             <input type="text" placeholder="Type the correct word..." id="input4">
              <button id="enviar4" class="btn2">Check</button>            
          </div>
          <p id="pontos4"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 32px;">Score: </span></p><br><br>
          <p id="erros4"><span class="correct-answer" style="font-size: 28px;"></span></p>
          
-     </div>
+    </div>
 
      <!--  JOGO QUINTO SEMESTRE -->   
-     <div class="all level" id=quinto>
-        <h3 id="cor-4">Semester 5</h3>
-        <h1>Spelling game</h1>
-
-         <input type="text" id="input5">
-         <button id="gerarPalavra5" style="background-color: rgb(170, 147, 247);">GENERATE WORD</button>
+     <div class="all level" id=quinto >
+        <h3 style="color: rgb(64, 82, 138);">Semester 5 </h3>
+        <h2 style="color: rgb(180, 197, 180);">Listen to the words, <br>and spell them correctly</h2>
+        <button  id="gerarPalavra5"><img id="playpalavra" src="img/play6.png" alt=""></button>
      
          <div class="cont">
-             <button id="repetir" class="btn2">Repeat</button>
+             <input type="text" placeholder="Type the correct word..." id="input5">
              <button id="enviar5" class="btn2">Check</button>            
          </div>
          <p id="pontos5"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 32px;">Score: </span></p><br><br>
          <p id="erros5"><span class="correct-answer" style="font-size: 28px;"></span></p>
          
-     </div>
+    </div>
 
      <!--  JOGO SEXTO SEMESTRE -->   
-        <div class="all level" id=sexto>
-            <h3 id="cor-1">Semester 6</h3>
-            <h1>Spelling game</h1>
-    
-             <input type="text" id="input6">
-             <button id="gerarPalavra6" style="background-color:  rgb(212, 227, 170);">GENERATE WORD</button>
-         
-             <div class="cont">
-                 <button id="repetir" class="btn2">Repeat</button>
-                 <button id="enviar6" class="btn2">Check</button>            
-             </div>
-             <p id="pontos6"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 32px;">Score: </span></p><br><br>
-             <p id="erros6"><span class="correct-answer" style="font-size: 28px;"></span></p>
-             
+     <div class="all level" id=sexto >
+        <h3 style="color: rgb(64, 82, 138);">Semester 5 </h3>
+        <h2 style="color: rgb(180, 197, 180);">Listen to the words, <br>and spell them correctly</h2>
+        <button  id="gerarPalavra6"><img id="playpalavra" src="img/play6.png" alt=""></button>
+     
+         <div class="cont">
+             <input type="text" placeholder="Type the correct word..." id="input6">
+             <button id="enviar6" class="btn2">Check</button>            
          </div>
+         <p id="pontos6"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 32px;">Score: </span></p><br><br>
+         <p id="erros6"><span class="correct-answer" style="font-size: 28px;"></span></p>
+         
+    </div>
 
 
+    <!--Container lateral esquerda com dicas-->
+    <div class="dicas">
+        <h1>Tips</h1>
+        <p>
+            According to British Council, <b> Listening</b> activities are important to enhance your understanding of the language and your pronunciation.
+        </p>
+        <h3>Here are some topics related to the words you might hear:</h3>
+        <p>Clothes</p>
+        <p>Numbers</p>
+        <p>Work</p>
+        <p>Information</p>
+        <p>Places</p>
+        <p>Traveling</p> 
+        <p>Food</p> 
+   
+    </div>
+
+
+ <!--Container lateral direita sobre como jogar-->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <h2>How to play</h2>
+      <p>Firstly, click on play icon to listen to the words.</p>
+      <p>After, type the word spoken.</p>
+      <p>Then, click on Check button.</p>
+      <h3>Score</h3>
+      <p>If you type correcty, points will be added to your score.</p>
+      <h3>Word displayed:</h3>
+      <p>If you spell the word incorrecty, the right one will be shown.</p>
+      <!-- <img src="img/play5.svg" alt="Image"> -->
+    </div>
+  
+  </div>
+   <!-- Image to trigger modal -->
+   <img id="myImg" src="img/help.svg" alt="Image" class="modal-trigger">
+  
      <!--imagens-->
      <div>
         <img id="img-2"  src="img/astronaut.jpg" class="object" data-value="10">   
@@ -156,8 +186,9 @@
         <img id="img-3"  src="img/planet_pink.png" class="object" data-value="3">
     </div>     
    
-</body>
 
+</div>     
+</body>
 
 
 <script src="js/script.js"></script>

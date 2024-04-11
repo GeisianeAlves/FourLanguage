@@ -19,24 +19,34 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url(img/galaxy-3.jpg);
+  /* background: url(img/galaxy-3.jpg);
   background-size:cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   
 }
+/* 
+.navbar {
+  position: fixed; 
+  top: 0;
+  bottom: -2; 
+  left: 0; 
+  width: 100%;
+  font-family: "Lora";
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  background-color: #08021df5; MEXI AQUI
+  padding: 16px; 
+} */
 
 .navbar {
-  position: fixed;
-  top: 0;
-  bottom: -2;
-  left: 0;
   width: 100%;
   font-family: "Lora";
   font-size: 30px;
   text-align: center;
   color: white;
   /* background-color: #08021df5; MEXI AQUI*/
-  padding: 16px;
+  /* padding: 16px; */
 }
 
 .navbar a {

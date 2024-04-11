@@ -46,7 +46,11 @@ class WordGame {
         const userInput5 = document.getElementById('input5').value.trim();
         const userInput6 = document.getElementById('input6').value.trim();
 
-        if (userInput === this.palavra || userInput2 == this.palavra || userInput3 == this.palavra || userInput4 == this.palavra || userInput5 == this.palavra || userInput6 == this.palavra) {
+        // if (userInput === null || userInput2 == null || userInput3 == this.palavra || userInput4 == this.palavra || userInput5 == this.palavra || userInput6 == this.palavra) {
+        //     document.querySelector("#erros span").textContent = 'Type the correct word...';
+        // }
+        
+       if (userInput === this.palavra || userInput2 == this.palavra || userInput3 == this.palavra || userInput4 == this.palavra || userInput5 == this.palavra || userInput6 == this.palavra) {
             this.correctPalavra++;
             document.querySelector("#pontos span").textContent = 'Score:  ' + this.correctPalavra;
             document.querySelector("#pontos2 span").textContent = 'Score:  ' + this.correctPalavra;
