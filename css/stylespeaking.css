@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Jost:wght@200;300&family=Lora:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Cinzel:wght@400;500;600&family=Festive&family=Gelasio:wght@400;500;700&family=Henny+Penny&family=Hubballi&family=Inspiration&family=Jacques+Francois+Shadow&family=Lato:ital,wght@0,300;1,700&family=Lavishly+Yours&family=Monofett&family=Mystery+Quest&family=Playfair+Display+SC:wght@400;700&family=Poppins:wght@200;300;400;500;600;700;800&family=Quattrocento&family=Righteous&family=Sarala:wght@400;700&family=Satisfy&family=Water+Brush&display=swap');
+
+
 
 * {
   box-sizing: border-box;
@@ -11,6 +14,90 @@ html {
   scroll-behavior: smooth;
 }
 
+.jogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  height: 60vh;
+  font-family: 'Sarala',cursive;
+  position: absolute;
+  right: 120px;
+  top:150px;
+  color: rgb(212, 202, 186);
+
+}
+
+.correct, .incorrect {
+  cursor: pointer;
+  
+}
+#tema {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  color: #a6a2f7;
+  letter-spacing: 0.2em;
+  font-size: 45px;
+  text-align: center;
+}
+.jogo p{
+  font-size: 20px;
+}
+.jogo h1 {
+  font-size: 22px;
+}
+.jogo h2 {
+  font-size: 20px;
+}
+
+#part-1, #part-2, #part-3, #part-4, #part-5,  #part-6,  #part-7,  #part-8 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.palavras {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.correct, .incorrect {
+  flex: 1; /* Each item takes up an equal amount of space */
+  min-width: 150px; /* Minimum width of each item */
+  height: 20px;
+  /* background-color: #ccc; */
+
+}
+
+#nextButton, #nextButton2, #nextButton3, #nextButton4 {
+  border: 3px solid rgb(216, 137, 17);
+  border-radius: 5px;
+  background-color: black;
+  color: #587b7c;
+  font-size: 20px;
+  font-weight: bold;
+  width: 150px;
+  height: 40px;
+  bottom: 0;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+#timer, #timer2, #timer3, #timer4, #timer5, #timer6 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
 /* menu lateral e bar */
 .navbar {
   position: fixed;
@@ -21,7 +108,7 @@ html {
   font-family: "Lora";
   font-size: 30px;
   text-align: center;
-  color: white;
+  color: rgb(240, 235, 235);
   background-color: #08021df5;
   padding: 16px;
 }
@@ -213,29 +300,29 @@ span{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 30%;
 }
 #img-nave{
     position: absolute;
-    height:280px;
-    width: 680px;
+    height:180px;
+    width: 500px;
     top: 100px;
     left: 50px;
 }
 #img-astronaut{
     position: absolute;
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
     bottom: 80px;
-    left: 400px;
+    left: 250px;
 }
 
 #img-planet {
     position: absolute;
-    height: 200px;
-    top: 150px;
-    right: 100px;
-    width: 200px;
+    height: 100px;
+    top: 100px;
+    right: 80px;
+    width: 100px;
 }
 .container-right {
    
