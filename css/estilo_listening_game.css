@@ -6,6 +6,15 @@
     margin: 0;
     padding: 0;
 }
+.container {
+    /* background-color: #359e61; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
 /*
 body {
     background: url(/img/stars.jpg)no-repeat;
@@ -187,7 +196,7 @@ color: #4bad7c;
     color: #e7e2bd;
     position: absolute;
     padding: 30px;
-    left: 150px;
+    left: 10%;
     top: 160px;
     height: 800px;
     width: 400px;
