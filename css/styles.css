@@ -3025,7 +3025,9 @@ ul {
 }
 /*jogos*/
 .preview-jogos {
-  max-width: 640px;
+  /* max-width: 640px; */
+  min-height: 250vh;
+  width: 100%;
   max-height: 100% !important;
   display: flex;
   flex-wrap: wrap; 
@@ -3036,18 +3038,21 @@ ul {
   display: none;
 }
 .preview-jogos .container-jogos {
-  max-width: 100%;
+  /* max-width: 100%; */
+  width: 100%;
   max-height: 100% !important; 
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 20px;
 }
 .preview-jogos .container-jogos h1 {
   font-size: 20px;
+  margin: 20px;
   /* width: 100%; */
 }
 .preview-jogos .container-jogos .jogos {
-  height: 20%;  
+  height: 30%;  
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -3055,7 +3060,7 @@ ul {
 }
 .preview-jogos .container-jogos .jogos img {
   width: 100%;
-  max-height: 200px;
+  max-height: 300px;
 }
 .preview-jogos .container-jogos .jogos .content{
   width: 100%;
@@ -3074,41 +3079,30 @@ ul {
   font-size: 0.7rem;
 
 }
-.video {
-  display: none;
-}
-/* .video .video{
-  width: 200px;
-  max-height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-} 
+ 
 .video h1 {
   font-size: 20px;
-}*/
-
- .extra-dicionarios {
-  max-width: 640px;
-  max-height: 100%; 
-  display: flex;
-  /* flex-wrap: wrap; */
-  flex-direction: column;
-  justify-content: center;
 }
+
 
 .extra-dicionarios .conteudo-1 {
   height: 200px;
-width: 100%;
+margin-bottom: 10px;
+
 } 
 .extra-dicionarios .conteudo-2 {
   height: 200px;
+  margin-bottom: 10px;
+
 }
+
 .extra-dicionarios .conteudo-3 {
   height: 200px;
+
 }
 .conteudo-4 {
   height: 200px;
+
 }
 .conteudo-1 img{
   height: 50px;
@@ -3124,12 +3118,17 @@ width: 100%;
 } 
 .conteudo-4 img{
   height: 50px;
-  width: 100px;
+  width: 150px;
 } 
 
 }
-
-
+/* @media only screen and (max-width: 700px) {
+  .extra-dicionarios .conteudo-1 {
+    height: 200px;
+    width: 350px;
+  } 
+}
+ */
 
 /*seção c/ explicação dos jogos */
 .preview-jogos {
@@ -3287,7 +3286,7 @@ mark {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 80vh;
+  height: 60vh;
   background-color: #e9c792;
 }
 
@@ -3303,12 +3302,12 @@ mark {
 /*seção com dicas de dicionários */
 .extra-dicionarios {
   background-color: #123850;
-  width: 100%;
-  height: 60vh;
+  /* width: 100%; */
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap; 
   /* gap: 10px; */
 }
 
@@ -3331,13 +3330,13 @@ gap: 10px;
 }
 
 .conteudo-1 {
-  width: 500px;
+  width: 400px;
   height: 400px;
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 
 .conteudo-2 {
-  width: 350px;
+  width: 400px;
   height: 400px;
  
 }
@@ -3352,12 +3351,12 @@ gap: 10px;
 }
 
 .conteudo-3 {
-  width: 350px;
+  width: 400px;
   height: 190px;
 }
 
 .conteudo-4 {
-  width: 350px;
+  width: 400px;
   height: 190px;
 }
 
@@ -3372,7 +3371,6 @@ gap: 10px;
 .conteudo p {
   font-size: 16px;
 }
-
 
 
 
