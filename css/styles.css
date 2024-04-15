@@ -2876,7 +2876,7 @@ ul {
   width: 100%;
   height: 100vh;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
@@ -2974,161 +2974,8 @@ ul {
   text-decoration: none;
 
 }
-@media only screen and (max-width: 640px) {
-  .container-teste {
-   
-    max-width: 100%;
-    height: 150vh;
-    display: flex;
-    /* flex-wrap: wrap;  */
-    flex-direction: column;
-    justify-content: center; 
-  }
-  .container-teste-1 {
-   display:none;
-  }
-  .container-test-2 {
-    background-color: #0000;
-    padding: 20px;
-    display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-    height:100%;
-    width: 100%;
-}
-.container-test-2 h1 {
-  font-size: 1.3rem;
-  padding: 0 20px 0 20px;
-}
-.container-teste-3 {
- height:25%; 
-  width: 100%;
-  text-align: left;
-  /* padding: 20px;  */
-  /* height: 42%; */
-}
-.container-teste-3 h1 {
-  font-size: 1.0rem;
-}
-.container-teste-3 p {
-  font-size: 0.9rem;
-  padding: 0 20px 0 20px;
-}
-.container-teste-3 img {
-  width: 80px;
-  height: 30px;
-}
-.container-teste-3 button {
-  width: 80px;
-  height: 30px;
-  font-size: 14px;
-}
-/*jogos*/
-.preview-jogos {
-  /* max-width: 640px; */
-  min-height: 250vh;
-  width: 100%;
-  max-height: 100% !important;
-  display: flex;
-  flex-wrap: wrap; 
-  flex-direction: column;
-  justify-content: center;
-}
-.preview-jogos .container-right {
-  display: none;
-}
-.preview-jogos .container-jogos {
-  /* max-width: 100%; */
-  width: 100%;
-  max-height: 100% !important; 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-}
-.preview-jogos .container-jogos h1 {
-  font-size: 20px;
-  margin: 20px;
-  /* width: 100%; */
-}
-.preview-jogos .container-jogos .jogos {
-  height: 30%;  
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-}
-.preview-jogos .container-jogos .jogos img {
-  width: 100%;
-  max-height: 300px;
-}
-.preview-jogos .container-jogos .jogos .content{
-  width: 100%;
-  max-height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.preview-jogos .container-jogos .jogos .content h2{
-  font-size: 1rem;
-}
-.preview-jogos .container-jogos .jogos .content h3{
-  font-size: 0.8rem;
-}
-.preview-jogos .container-jogos .jogos .content p{
-  font-size: 0.7rem;
-
-}
- 
-.video h1 {
-  font-size: 20px;
-}
 
 
-.extra-dicionarios .conteudo-1 {
-  height: 200px;
-margin-bottom: 10px;
-
-} 
-.extra-dicionarios .conteudo-2 {
-  height: 200px;
-  margin-bottom: 10px;
-
-}
-
-.extra-dicionarios .conteudo-3 {
-  height: 200px;
-
-}
-.conteudo-4 {
-  height: 200px;
-
-}
-.conteudo-1 img{
-  height: 50px;
-  width: 100px;
-} 
-.conteudo-2 img{
-  height: 50px;
-  width: 100px;
-} 
-.conteudo-3 img{
-  height: 50px;
-  width: 100px;
-} 
-.conteudo-4 img{
-  height: 50px;
-  width: 150px;
-} 
-
-}
-/* @media only screen and (max-width: 700px) {
-  .extra-dicionarios .conteudo-1 {
-    height: 200px;
-    width: 350px;
-  } 
-}
- */
 
 /*seção c/ explicação dos jogos */
 .preview-jogos {
@@ -3225,6 +3072,7 @@ margin-bottom: 10px;
 gap: 50px;
 
 }
+
 /* estilo para div da direito com english tips*/
 .content-right {
   display: flex;
@@ -3286,8 +3134,11 @@ mark {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 60vh;
   background-color: #e9c792;
+  height: 60vh;
+}
+.video video {
+  height: 70%;
 }
 
 .video h1 {
@@ -3303,12 +3154,12 @@ mark {
 .extra-dicionarios {
   background-color: #123850;
   /* width: 100%; */
-  height: 100vh;
+  min-height:60vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; 
-  /* gap: 10px; */
+  gap: 10px; 
 }
 
 .extra-dicionarios p {
@@ -3370,6 +3221,165 @@ gap: 10px;
 }
 .conteudo p {
   font-size: 16px;
+}
+
+
+
+@media only screen and (max-width: 640px) {
+  .container-teste {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+  }
+    .container-teste-1 {
+    width: 100%;
+    height: 10%;
+    }
+    .container-teste-1 img{
+      display: none;
+    } 
+  
+  .container-test-2 {
+    margin-top: 320px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height:100%;
+    width: 100%;
+}
+  .container-test-2 h1 {
+    font-size: 1.5rem;
+    padding: 0 20px 0 20px;
+  }
+  .container-teste-3 {
+    height:35%; 
+    width: 100%;
+    text-align: left;
+    /* padding: 20px;  */
+    /* height: 42%; */
+  }
+  .container-teste-3 h1 {
+    font-size: 1.0rem;
+  }
+  .container-teste-3 p {
+    font-size: 0.9rem;
+    padding: 0 20px 0 20px;
+  }
+  .container-teste-3 img {
+    width: 80px;
+    height: 30px;
+    margin-bottom: 10px;
+  }
+  .container-teste-3 button {
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  /*jogos*/
+  .preview-jogos {
+    /* max-width: 640px; */
+    min-height: 250vh;
+    width: 100%;
+    max-height: 100% !important;
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: column;
+    justify-content: center;
+  }
+  .preview-jogos .container-right {
+    display: none;
+  }
+  .preview-jogos .container-jogos {
+    width: 90%;
+    max-height: 100% !important; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    margin-left: 20px;
+  }
+  .preview-jogos .container-jogos h1 {
+    font-size: 20px;
+    margin: 20px;
+  }
+  .preview-jogos .container-jogos .jogos {
+    height: 30%;  
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .preview-jogos .container-jogos .jogos img {
+    width: 100%;
+    max-height: 320px;
+  }
+  .preview-jogos .container-jogos .jogos .content{
+    width: 100%;
+    max-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .preview-jogos .container-jogos .jogos .content h2{
+    font-size: 1rem;
+  }
+  .preview-jogos .container-jogos .jogos .content h3{
+    font-size: 0.8rem;
+  }
+  .preview-jogos .container-jogos .jogos .content p{
+    font-size: 0.7rem;
+
+  }
+
+  .video h1 {
+    font-size: 20px;
+  }
+  .video video {
+    display: none;
+  }
+  .extra-dicionarios  {
+    height:100%;
+  }
+
+  .extra-dicionarios .conteudo-1 {
+    height: 200px;
+  margin-bottom: 10px;
+
+  } 
+  .extra-dicionarios .conteudo-2 {
+    height: 200px;
+    margin-bottom: 10px;
+
+  }
+
+  .conteudo-3 {
+    /* height: 200px; */
+    display: none;
+}
+  .conteudo-4 {
+    /* height: 200px; */
+    display: none;
+  }
+  .conteudo-1 img{
+    height: 50px;
+    width: 100px;
+  } 
+  .conteudo-2 img{
+    height: 50px;
+    width: 100px;
+  } 
+  .conteudo-3 img{
+    height: 50px;
+    width: 100px;
+  } 
+  .conteudo-4 img{
+    height: 50px;
+    width: 150px;
+  } 
+
 }
 
 
