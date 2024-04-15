@@ -2901,6 +2901,7 @@ ul {
   width: 65vw;
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
@@ -2979,8 +2980,8 @@ ul {
     max-width: 100%;
     height: 150vh;
     display: flex;
-    flex-wrap: wrap; 
-   flex-direction: column;
+    /* flex-wrap: wrap;  */
+    flex-direction: column;
     justify-content: center; 
   }
   .container-teste-1 {
@@ -3000,7 +3001,7 @@ ul {
   padding: 0 20px 0 20px;
 }
 .container-teste-3 {
-  /* height:30%; */
+ height:25%; 
   width: 100%;
   text-align: left;
   /* padding: 20px;  */
@@ -3036,7 +3037,7 @@ ul {
 }
 .preview-jogos .container-jogos {
   max-width: 100%;
-  max-height: 100% !important;
+  max-height: 100% !important; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3046,7 +3047,7 @@ ul {
   /* width: 100%; */
 }
 .preview-jogos .container-jogos .jogos {
-  height: 30%; 
+  height: 20%;  
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -3086,18 +3087,46 @@ ul {
 .video h1 {
   font-size: 20px;
 }*/
+
  .extra-dicionarios {
-  max-height: 200%; 
+  max-width: 640px;
+  max-height: 100%; 
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   flex-direction: column;
   justify-content: center;
 }
 
-.extra-dicionarios .conteudo .conteudo-1 {
-  height: 100px;
-  width: 30%;
+.extra-dicionarios .conteudo-1 {
+  height: 200px;
+width: 100%;
 } 
+.extra-dicionarios .conteudo-2 {
+  height: 200px;
+}
+.extra-dicionarios .conteudo-3 {
+  height: 200px;
+}
+.conteudo-4 {
+  height: 200px;
+}
+.conteudo-1 img{
+  height: 50px;
+  width: 100px;
+} 
+.conteudo-2 img{
+  height: 50px;
+  width: 100px;
+} 
+.conteudo-3 img{
+  height: 50px;
+  width: 100px;
+} 
+.conteudo-4 img{
+  height: 50px;
+  width: 100px;
+} 
+
 }
 
 
@@ -3279,7 +3308,7 @@ mark {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   /* gap: 10px; */
 }
 
