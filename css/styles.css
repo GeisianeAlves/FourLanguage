@@ -2876,6 +2876,7 @@ ul {
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
@@ -2972,24 +2973,26 @@ ul {
   text-decoration: none;
 
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 640px) {
   .container-teste {
-    max-width: 600px;
-    max-height: 100% !important;
+   
+    max-width: 100%;
+    height: 150vh;
     display: flex;
     flex-wrap: wrap; 
-    flex-direction: column;
-    justify-content: center;
+   flex-direction: column;
+    justify-content: center; 
   }
   .container-teste-1 {
-    height: 20%;
-    width: 70%;
+   display:none;
   }
   .container-test-2 {
+    background-color: #0000;
     padding: 20px;
     display: flex;
    flex-wrap: wrap;
-    height:70%;
+   justify-content: center;
+    height:100%;
     width: 100%;
 }
 .container-test-2 h1 {
@@ -2997,9 +3000,11 @@ ul {
   padding: 0 20px 0 20px;
 }
 .container-teste-3 {
+  /* height:30%; */
+  width: 100%;
   text-align: left;
   /* padding: 20px;  */
-  height: 42%;
+  /* height: 42%; */
 }
 .container-teste-3 h1 {
   font-size: 1.0rem;
@@ -3068,33 +3073,31 @@ ul {
   font-size: 0.7rem;
 
 }
-.video .video{
+.video {
+  display: none;
+}
+/* .video .video{
   width: 200px;
   max-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
+} 
 .video h1 {
   font-size: 20px;
-}
-/* .extra-dicionarios {
+}*/
+ .extra-dicionarios {
   max-height: 200%; 
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
 }
-.extra-dicionarios .conteudo {
-  max-height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+
 .extra-dicionarios .conteudo .conteudo-1 {
   height: 100px;
   width: 30%;
-} */
+} 
 }
 
 
