@@ -22,13 +22,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 700px;
-    height: 600px;
+    width: 550px;
+    height: 550px;
     border-radius: 10px;
     border: 2px solid rgb(182, 131, 37);
-    /* background-color: black;
-    box-shadow: 10px 5px 5px 8px #14c56780; */
-}
+  }
 .all h1{
     font-family: 'Righteous', cursive;
     font-size: 40px;
@@ -48,8 +46,8 @@
     padding-bottom: 10px;
 }
 #playpalavra {
-    height: 120px;
-    width: 120px;
+    height: 100px;
+    width: 100px;
 }
 #cor-1{
 color: rgb(212, 227, 170);
@@ -77,17 +75,16 @@ img {
 
  #pontos, #pontos2, #pontos3, #pontos4, #pontos5, #pontos6 span{
     color: #359e61;
-    font-size:28px;
+    font-size:1.2rem;
 }
 #wrong, #erros, #erros2, #erros3, #erros4,#erros5, #erros6 span {
     color: #e7e2bd;
-    font-size: 28px;
+    font-size:1.2rem;
 }
 #input, #input2, #input3, #input4, #input5, #input6{
-    height: 60px;
+    height: 50px;
     border: 1px solid rgb(151, 181, 180);
     border-radius: 15px;
-    /* margin-top: 30px; */
     width: 60%;
     padding: 20px;
     outline: 2px solid rgb(131, 222, 167);
@@ -141,7 +138,7 @@ img {
     justify-content: center;
     align-items: center;
     height: 200px;
-    width: 700;
+    width: 100%;
     background-color: #4bad7c;
 }
 
@@ -156,7 +153,7 @@ img {
     font-family: 'Righteous', cursive;
     margin-bottom: 50px;
     font-size: 20px;
-    height: 60px;
+    height: 50px;
     border-radius: 15px;
     color: #89848a;
 }
@@ -165,31 +162,32 @@ img {
 }
 
 #img-2 {
-position: absolute;
-width: 300px;
-height: 320px;
-top: 65px;
-left: 75%;
-}
+    position: absolute;
+    width: 220px;
+    height: 250px;
+    top: 45px;
+    left: 80%;
+    }
 #img-3 {
-position: absolute;
-width: 200px;
-height: 200px;
-bottom: 15%;
-left:15%;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 10%;
+    left:15%;
 }
 
 .correct-answer span{
-font-weight: bold;
-color: #4bad7c;
+    font-weight: bold;
+    color: #4bad7c;
+    font-size: 1.2rem;
 }
 .dicas {
     color: #e7e2bd;
     padding: 30px;
     right: 120px;
     top: 100px;
-    height: 600px;
-    width: 350px;
+    height: 550px;
+    width: 300px;
     background-color: #89848a;
     border-radius: 10px;
     display: flex;
@@ -202,7 +200,9 @@ color: #4bad7c;
     margin-bottom: 30px;
     font-family: "Space Mono", monospace;
     font-weight: 700;
-    
+}
+.dicas h3 {
+font-size: 1rem;    
 }
 .dicas p {
     font-size: 16px;
@@ -210,64 +210,58 @@ color: #4bad7c;
     font-family: "Space Mono", monospace;
     font-weight: 400;
     font-style: normal;
-    line-height: 1.3rem;
+    line-height: 1.2rem;
 }
 .container-direita {
     display: flex; 
     flex-direction: column;
     justify-content: flex-end;
-    align-content: center;
+    align-content: flex-end;
     text-align: justify;
-    width: 350px; 
-    height:600px; 
-    /* right: 150px; */
-    /* bottom: 200px; */
-
+    width: 300px; 
+    height:400px; 
 }
 .modal {
-    display: flex; /* Hidden by default */
+    display: flex; 
     flex-direction: column;
     justify-content: space-between;
     align-content: center;
     text-align: justify;
-    /* position: fixed; 
-    z-index: 1;  */
     font-family: "Space Mono", monospace;
-    width: 400px; 
-    height:400px; 
+    width: 100%;
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(55, 41, 75, 0.8);
-    /* right: 150px;
-    bottom: 200px; */
   }
   
   /* Modal Content/Box */
   .modal-content {
     margin: auto;
-    padding-top: 15px;
     display: block;
     width: 80%;
-
   }
   .modal-content p {
     color: #e7e2bd;
+    font-size: 0.8rem;
   }
-  .modal-content h2, h3 {
+  .modal-content h2 {
     color: #dbc947;
-    padding-top: 20px;
-    padding-bottom: 0;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-size: 1rem;
+  }
+  .modal-content h4 {
+    color: #7a9da0;
+    padding: 10px 0;
+    font-size: 1rem;
   }
   /* Style the Image */
   #myImg {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
-    width: 150px;
-    /* position: absolute;
-    right: 280px;
-    top: 400px; */
-  
+    width: 120px; 
   }
+
   #img-help{
     display: flex;
     flex-direction: row;
@@ -277,7 +271,7 @@ color: #4bad7c;
   #myImg:hover {
     opacity: 0.7;
   }
-  
+/*   
   @media(min-width: 1024px) {
     .modal {
         height: 280px;
@@ -289,4 +283,4 @@ color: #4bad7c;
         top: 400px;
       
       }
-    }
+    } */

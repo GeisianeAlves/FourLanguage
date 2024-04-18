@@ -44,6 +44,7 @@
 .skills-card a{
     color: rgb(23, 18, 18);
     text-shadow: none;
+    text-decoration: none !important;
 }
 /*botão para escolher skills: listening, reading...*/
 .btn-skill {
