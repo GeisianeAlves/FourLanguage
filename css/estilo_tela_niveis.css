@@ -17,6 +17,7 @@ body{
 }
 .level-box a {
     outline: none;
+    text-decoration: none !important;
 }
 #level-1 {
  background-color: rgb(188, 188, 199);
@@ -89,6 +90,7 @@ body{
     font-family: 'Sarala',cursive;
     color:#f3e4d9 ;
     padding: 15px;
+    text-align: left;
 }
 .conteudo-principal-texto h1{
     font-family: 'Righteous', cursive;
@@ -112,6 +114,7 @@ body{
     padding: 10px 25px;
     font-size: 16px;
     text-transform: uppercase;
+    text-decoration: none !important;
 }
 .conteudo-principal-botao a:hover{
     background-color: rgb(51, 55, 70);
