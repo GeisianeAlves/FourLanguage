@@ -43,18 +43,7 @@ body{
     margin: auto;
     max-width: 100vw;
 }
-/*banner principal
-.conteudo-principal-background{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;   
-    background: url(/img/night_sky3.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
-}*/
+
 .topic{
     display: flex;
     align-items: center;
@@ -67,7 +56,8 @@ body{
 }
 #about-game{
     font-size: 22px;
-    line-height: 2rem;
+    line-height: 1.7rem;
+    font-size: 1.2rem;
 }
 #play {
     color: rgb(182, 151, 17);
@@ -77,11 +67,10 @@ body{
 
     border-radius: 15px;
     height: 75vh;
-    width: 400px;
+    width: 370px;
     position: absolute;
     left: 60px;
-    top: 150px;
-
+    top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -95,13 +84,16 @@ body{
 .conteudo-principal-texto h1{
     font-family: 'Righteous', cursive;
     font-weight: 400;
-    font-size: 36px;
-
+    font-size: 2.2rem;
+    line-height: 2.5rem;
 }
 .conteudo-principal-texto h3{
     width: 200px;
-    font-size: 25px;
+    font-size: 1.5rem;
     font-weight: lighter;
+}
+.conteudo-principal-texto p{
+    font-size: 1.5rem;
 }
 .conteudo-principal-texto span{
     color: rgb(212, 113, 43);
