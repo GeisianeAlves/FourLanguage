@@ -1,75 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-    
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="css/stylelog.css">
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
 </head>
-<body style="background: url(img/galaxy-3.jpg); background-size:cover; background-repeat: no-repeat;">
-  <div class="row">
-    <div class="col-md-6 align-self-center text-center">
-        <div id="container">
-            <nav class="navbar">
-              <a class="fatec-linguo">Four<span>Language</span></a>
-            </nav>
-        </div>
 
-        
+<body>
+    <div class="container">
+        <div class="content first-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Bem-vindo de volta!</h2>
+                <p class="description description-primary">Para se manter conectado conosco</p>
+                <p class="description description-primary">Faça login com suas informações pessoais</p>
+                <button id="signin" class="btn btn-primary">Entrar</button>
+            </div>
+            <div class="second-column">
+                <h2 class="title title-second">Criar conta</h2>
+                <div class="social-media">
+                    <ul class="list-social-media">
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-facebook-f"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-google-plus-g"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-linkedin-in"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div><!-- social media -->
+                <p class="description description-second">ou use seu e-mail para se cadastrar:</p>
+                <form class="form">
+                    <label class="label-input" for="">
+                        <i class="far fa-user icon-modify"></i>
+                        <input type="text" placeholder="Name">
+                    </label>
 
-  <div class="container">
-    <div class="buttonsForm">
-      
-   
-      
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="email" placeholder="Email">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="Password">
+                    </label>
+
+
+                    <button class="btn btn-second">sign up</button> //botão cadastro
+                </form>
+            </div><!-- second column -->
+        </div><!-- first content -->
+        <div class="content second-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Olá, amigo!</h2>
+                <p class="description description-primary">Enter your personal details</p>
+                <p class="description description-primary">and start journey with us</p>
+                <button id="signup" class="btn btn-primary">sign up</button> //esse é o botão de nav
+            </div>
+            <div class="second-column">
+                <h2 class="title title-second">sign in to developer</h2>
+                <div class="social-media">
+                    <ul class="list-social-media">
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-facebook-f"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-google-plus-g"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-linkedin-in"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div><!-- social media -->
+                <p class="description description-second">or use your email account:</p>
+                <form class="form">
+
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input id="emailInput" type="email" placeholder="Email" required>
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input id="passwordInput" type="password" placeholder="Password">
+                    </label>
+
+                    <a id="forgotPasswordLink" class="password" href="#">Esqueceu sua senha?</a>
+                    //redefinição de senha
+                    <button id="btn-login" class="btn btn-second">Login</button>//botão do login
+                </form>
+            </div><!-- second column -->
+
+
+        </div><!-- second-content -->
     </div>
-    <h1>Bem-vindo (a)</h1>
-    <form id="login">
-        <input type="text" id="emailInput" placeholder="Email" required />
-        <i class="fas fa-envelope iEmail"></i>
-        <input type="password" id="senhaInput" placeholder="Password" required />
-        <i class="fas fa-lock iPassword"></i>
-        <div class="divCheck">
-          <input type="checkbox" />
-          <span>Lembrar senha</span>
-        </div>
-        <button type="button" onclick="fazerLogin()">Login</button>
-      </form>
-      
+    <div class="container">
+        <!-- Conteúdo da página aqui -->
+    </div>
     
-      
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Por favor, insira seu e-mail:</p>
+            <input id="emailPrompt" type="email" placeholder="Email">
+            <button id="confirmEmail">Confirmar</button>
+        </div>
+    </div>
+    
+    <script type="module">
+        // Ouvinte de evento para o botão de login
+        import { fazerLogin } from './js/auth.js';
+        document.getElementById('btn-login').addEventListener('click', function (event) {
+            event.preventDefault(); // Impede o comportamento padrão de envio do formulário
+            // Obtenha o valor do campo de email
+            var email = document.getElementById('emailInput').value;
+            // Obtenha o valor do campo de senha (se necessário)
+            var senha = document.getElementById('passwordInput').value;
 
-     
-  </div>
+            // Chame a função fazerLogin() passando o email e a senha
+            fazerLogin(email, senha);
+        });
+    </script>
+    <script type="module">
+        import { resetarSenha } from './js/auth.js';
 
-  
-  <script>
-    // Função de validação de email
-    function validarEmail(email) {
-      var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return regex.test(email);
-    }
-  
-    function fazerLogin() {
-      var emailInput = document.querySelector('#emailInput').value;
-      var senhaInput = document.querySelector('#senhaInput').value;
-  
-      if (validarEmail(emailInput) && senhaInput.length >= 6) {
-        // Redirecionar o usuário para a página index.html
-        window.location.href = 'index.html';
-      } else {
-        alert('Por favor, insira um email válido e uma senha com pelo menos 6 caracteres.');
-      }
-    }
-  </script>
-  
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("forgotPasswordLink");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        document.getElementById("confirmEmail").addEventListener('click', function (event) {
+            var email = document.getElementById('emailPrompt').value;
+            if (email) {
+                resetarSenha(email);
+                modal.style.display = "none"; // Fechar o modal após confirmar o email
+            }
+        });
+    </script>
 
 
-<script src="script.js"></script>
+    <script src="js/switchScreen.js"></script>
+    <script src="js/firebaseConfig.js" type="module"></script>
+    <script src="js/auth.js" type="module"></script>
 
 </body>
+
 </html>
