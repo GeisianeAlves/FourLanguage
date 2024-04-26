@@ -2493,7 +2493,7 @@ header {
 }
 
 #container-semestre {
-  background-color: rgb(53, 71, 96);
+  background-color: rgba(53, 71, 96, 0.863);
   gap: 20px;
   padding-top: 60px;
   display: flex;
@@ -3152,7 +3152,7 @@ mark {
 
 /*seção com dicas de dicionários */
 .extra-dicionarios {
-  background-color: #123850;
+  background-color: #123850a1;
   /* width: 100%; */
   min-height:60vh;
   display: flex;
