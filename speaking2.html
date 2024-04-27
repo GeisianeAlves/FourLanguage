@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day Guessing Game</title>
     <link rel="stylesheet" href="css/estilo_speaking2.css"> 
+    <link rel="stylesheet" href="css/styles.css"> 
    
 
     <style>
@@ -20,6 +21,11 @@
     </script>
 </head>
 <body>
+
+    <div id="container-menu">
+        <!-- aqui chama função do arquivo menu.js -->
+    </div>
+
 
     <!-- divs contendo os jogos para cada semestre -->
     <div class="box" id="primeiro">           
@@ -427,6 +433,12 @@
     </div>
 
 
+    <script>
+    window.onbeforeunload = function() {
+        return "Tem certeza que deseja sair desta página?"
+    };
+    </script>
+    
     <script src="js/menu.js"></script>
     <script src="js/speaking2.js"></script>
         
