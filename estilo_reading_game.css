@@ -102,3 +102,29 @@ footer {
   footer:hover {
     color: white;
   }
+
+.botoes{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  background-color: #fff;
+}   
+#btn-voltar {
+  background-color: rgb(190, 216, 138);
+  border: 2px solid palevioletred;
+  color: rgb(31, 27, 27);
+  font-family: 'Sarala',cursive;
+  font-weight: bolder;
+  margin-top: 50px;
+  color: #fff;  
+  border-radius: 25px;
+  width: 200px;
+  height: 50px;
+  /* font-size: 20px; */
+
+}
+#btn-voltar a {
+  text-decoration: none;
+}     
