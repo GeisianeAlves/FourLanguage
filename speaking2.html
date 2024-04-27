@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Guessing Game</title>
+    <link rel="stylesheet" href="css/estilo_speaking2.css"> 
+   
+
+    <style>
+        body { background: url(img/dark-sky.jpg)no-repeat; background-size: cover; height: 100vh; }
+    </style>
+    
+    
+<script src="utils/renderSpeakingLevel.js"></script>
+
+    <script>    
+      window.renderUnit()
+    </script>
+</head>
+<body>
+
+    <!-- divs contendo os jogos para cada semestre -->
+    <div class="box" id="primeiro">           
+    
+        <div class="container-audio">
+    
+            <h2>Fill in the gaps with the right words:</h2>
+          
+            <div class="text">
+                <div class="container-question">
+                    <h1>Could you say that ___________ ?</h1>            
+                    <p class="result"></p>
+                    <div class="div-pontos">
+                        <p class="score-div">Score: 0</p>                 
+                        <button class="botao-proximo" onclick="next(1)">Next</button>
+                    </div>
+                </div>
+
+
+                <div class="container-question">
+                    <h1>Can I pay by ___________ ?</h1>        
+                    <p class="result"></p>   
+                    <div class="div-pontos"> 
+                        <p class="score-div" >Score: 0</p>        
+                        <button class="botao-proximo" onclick="next(2)">Next</button>
+                    </div>
+                </div>
+                
+                <div class="container-question">
+                    <h1>What does ‘WWW’ ___________ for?</h1>        
+                    <p class="result"></p>
+                    <div class="div-pontos">    
+                        <p class="score-div" >Score: 0</p>     
+                        <button class="botao-proximo" onclick="next(3)">Next</button>
+                    </div>
+                </div>
+        
+                <div class="container-question">
+                    <h1> _________ you speak slowly?</h1>        
+                    <p class="result"></p>    
+                    <div class="div-pontos">
+                        <p class="score-div" >Score: 0</p>   
+                        <button class="botao-proximo" onclick="next(4)">Next</button>
+                    </div>
+                </div>
+                
+                <div class="container-question">
+                    <h1>You can ___________ a hotel online.</h1>        
+                    <p class="result"></p>    
+                    <div class="div-pontos">
+                        <p class="score-div" >Score: 0</p>   
+                        <button class="botao-proximo" onclick="next(5)">Submit</button>                    
+                    </div>
+                </div>
+
+                <div class="container-question">
+                    <h1>Your progress:</h1>
+                    <p class="pontos-div" id="pontos" style="color:rgb(129, 81, 36);">Score: 0</p>          
+                </div> 
+              
+            </div>
+      
+            <img src="img/icons8-record-100.png" alt="">
+   
+        </div>   
+  
+    </div>
+    
+    <div class="box" id="segundo">           
+         
+        <div class="container-audio">
+    
+            <h2>Fill in the gaps with the correct form of the verbs:</h2>
+          
+            <div class="text">
+                <div class="container-question2">
+                    <h1>I _______ up at six o’clock.</h1>            
+                    <p class="result"></p>
+                    <div class="div-pontos">
+                        <p class="score-div" >Score: 0</p>                 
+                        <button class="botao-proximo" onclick="next(1)">Next</button>
+                    </div>
+                </div>
+
+
+                <div class="container-question2">
+                    <h1>We _________ 75 stores in Europe.</h1>        
+                    <p class="result"></p>   
+                    <div class="div-pontos"> 
+                        <p class="score-div" >Score: 0</p>        
+                        <button class="botao-proximo" onclick="next(2)">Next</button>
+                    </div>
+                </div>
+                
+                <div class="container-question2">
+                    <h1>He __________ for SHS.</h1>        
+                    <p class="result"></p>
+                    <div class="div-pontos">    
+                        <p class="score-div" >Score: 0</p>     
+                        <button class="botao-proximo" onclick="next(3)">Next</button>
+                    </div>
+                </div>
+        
+                <div class="container-question2">
+                    <h1> Where __________ she have lunch?</h1>        
+                    <p class="result"></p>    
+                    <div class="div-pontos">
+                        <p class="score-div" >Score: 0</p>   
+                        <button class="botao-proximo" onclick="next(4)">Next</button>
+                    </div>
+                </div>
+                
+                <div class="container-question2">
+                    <h1>He _________ in the town centre.</h1>        
+                    <p class="result"></p>    
+                    <div class="div-pontos">
+                        <p class="score-div" >Score: 0</p>   
+                        <button class="botao-proximo" onclick="next(5)">Submit</button>                    
+                    </div>
+                </div>
+
+                <div class="container-question2">
+                    <h1>Your progress:</h1>
+                    <p  class="pontos-div" id="pontos3" style="color:rgb(129, 81, 36);">Score: 0</p>          
+                </div> 
+              
+            </div>
+      
+            <img src="img/icons8-record-100.png" alt="">
+   
+        </div>  
+  
+    </div>
+
+    <div class="box" id="terceiro">           
+    
+        <div class="container-audio">
+    
+            <h2>Complete the sentences. Use Present Continuous Tense:</h2>
+          
+            <div class="text">
+                <div class="container-question3">
+                    <h1>Two people ____ _________ coffee.</h1>            
+                    <p class="result"></p>
+                    <div class="div-pontos">
+                        <p class="score-div" >Score: 0</p>                 
+                        <button class="botao-proximo" onclick="next(1)">Next</button>
+                    </div>
+                </div>
+
+
+                <div class="container-question3">
+                    <h1>One man ____ __________ at a computer.</h1>        
+                    <p class="result"></p>   
+                    <div class="div-pontos"> 
+                        <p class="score-div" >Score: 0</p>        
+                        <button class="botao-proximo" onclick="next(2)">Next</button>
+                    </div>
+                </div>
+                
+                <div class="container-question3">
+                    <h1>Two men ___ ________ on the phone.</h1>        
+                    <p class="result"></p>
+                    <div class="div-pontos">    
+                        <p class="score-div" >Score: 0</p>     
+                        <button class="botao-proximo" onclick="next(3)">Next</button>
+                    </div>
+                </div>
+        
+                <div class="container-question3">
+                    <h1> One woman ___ __________ an email.</h1>        
+                    <p class="result"></p>    
+                    <div class="div-pontos">
+                        <p class="score-div" >Score: 0</p>   
+                        <button class="botao-proximo" onclick="next(4)">Next</button>
+                    </div>
+                </div>
+                
+                <div class="container-question3">
+                    <h1>One boy ___ __________ a sandwich.</h1>        
+                    <p class="result"></p>    
+                    <div class="div-pontos">
+                        <p class="score-div" >Score: 0</p>   
+                        <button class="botao-proximo" onclick="next(5)">Submit</button>                    
+                    </div>
+                </div>
+
+                <div class="container-question3">
+                    <h1>Your progress:</h1>
+                    <p  class="pontos-div" id="pontos3" style="color:rgb(129, 81, 36);">Score: 0</p>          
+                </div> 
+              
+            </div>
+      
+            <img src="img/icons8-record-100.png" alt="">
+   
+        </div>   
+  
+    </div>  
+    
+    <div class="box" id="quarto">           
+    
+        <div class="container-audio">
+    
+            <h2>FiIl in the gaps:</h2>
+          
+            <div class="text">
+                <div class="container-question4">
+                    <h1>Would you like a single or a r______ ticket?</h1>            
+                    <p class="result"></p>
+                    <div class="div-pontos">
+                        <p class="score-div" >Score: 0</p>                 
+                        <button class="botao-proximo" onclick="next(1)">Next</button>
+                    </div>
+                </div>
+
+
+                <div class="container-question4">
+                    <h1>When does the next train _________?</h1>
+                    <p class="result"></p>   
+                    <div class="div-pontos"> 
+                        <p class="score-div" >Score: 0</p>        
+                        <button class="botao-proximo" onclick="next(2)">Next</button>
+                    </div>
+                </div>
+                
+                <div class="container-question4">
+                    <h1>Do you want to b_____ the return trip now?</h1>        
+                    <p class="result"></p>
+                    <div class="div-pontos">    
+                        <p class="score-div" >Score: 0</p>     
+                        <button class="botao-proximo" onclick="next(3)">Next</button>
+                    </div>
+                </div>
+        
+                <div class="container-question4">
+                    <h1> I’d like to cancel my r_________ .</h1>        
+                    <p class="result"></p>    
+                    <div class="div-pontos">
+                        <p class="score-div" >Score: 0</p>   
+                        <button class="botao-proximo" onclick="next(4)">Next</button>
+                    </div>
+                </div>
+                
+                <div class="container-question4">
+                    <h1>I want to reserve a s_________ .</h1>        
+                    <p class="result"></p>    
+                    <div class="div-pontos">
+                        <p class="score-div" >Score: 0</p>   
+                        <button class="botao-proximo" onclick="next(5)">Submit</button>                    
+                    </div>
+                </div>
+
+                <div class="container-question4">
+                    <h1>Your progress:</h1>
+                    <p  class="pontos-div" id="pontos3" style="color:rgb(129, 81, 36);">Score: 0</p>          
+                </div> 
+              
+            </div>
+      
+            <img src="img/icons8-record-100.png" alt="">
+   
+        </div>   
+  
+    </div>   
+ 
+    <div class="box" id="quinto">           
+    
+        <div class="container-audio">
+    
+            <h2>FiIl in the gaps using <i>Past Simple Tense:</i></h2>
+          
+            <div class="text">
+                <div class="container-question5">
+                    <h1>He _______ <i>(leave)</i> on Wednesday.</h1>            
+                    <p class="result"></p>
+                    <div class="div-pontos">
+                        <p class="score-div" >Score: 0</p>                 
+                        <button class="botao-proximo" onclick="next(1)">Next</button>
+                    </div>
+                </div>
+
+
+                <div class="container-question5">
+                    <h1>She ______ <i>(is)</i> at the trade fair.</h1>
+                    <p class="result"></p>   
+                    <div class="div-pontos"> 
+                        <p class="score-div" >Score: 0</p>        
+                        <button class="botao-proximo" onclick="next(2)">Next</button>
+                    </div>
+                </div>
+                
+                <div class="container-question5">
+                    <h1>We _______ <i>(stay)</i> in Paris for two days.</h1>        
+                    <p class="result"></p>
+                    <div class="div-pontos">    
+                        <p class="score-div" >Score: 0</p>     
+                        <button class="botao-proximo" onclick="next(3)">Next</button>
+                    </div>
+                </div>
+        
+                <div class="container-question5">
+                    <h1> Miguel _________ <i>(rent)</i> a car.</h1>        
+                    <p class="result"></p>    
+                    <div class="div-pontos">
+                        <p class="score-div" >Score: 0</p>   
+                        <button class="botao-proximo" onclick="next(4)">Next</button>
+                    </div>
+                </div>
+                
+                <div class="container-question5">
+                    <h1>They _______ <i>(go)</i> to China last month.</h1>        
+                    <p class="result"></p>    
+                    <div class="div-pontos">
+                        <p class="score-div" >Score: 0</p>   
+                        <button class="botao-proximo" onclick="next(5)">Submit</button>                    
+                    </div>
+                </div>
+
+                <div class="container-question5">
+                    <h1>Your progress:</h1>
+                    <p  class="pontos-div" id="pontos3" style="color:rgb(129, 81, 36);">Score: 0</p>          
+                </div> 
+              
+            </div>
+      
+            <img src="img/icons8-record-100.png" alt="">
+   
+        </div>   
+  
+    </div>
+
+    
+    <div class="box" id="sexto">           
+    
+        <div class="container-audio">
+    
+            <h2>FiIl in the gaps using the right words:</i></h2>
+          
+            <div class="text">
+                <div class="container-question6">
+                    <h1>A train is l________ than a bus.</h1>            
+                    <p class="result"></p>
+                    <div class="div-pontos">
+                        <p class="score-div" >Score: 0</p>                 
+                        <button class="botao-proximo" onclick="next(1)">Next</button>
+                    </div>
+                </div>
+
+
+                <div class="container-question6">
+                    <h1>A Ford is c_________ than a Rolls Royce.</h1>
+                    <p class="result"></p>   
+                    <div class="div-pontos"> 
+                        <p class="score-div" >Score: 0</p>        
+                        <button class="botao-proximo" onclick="next(2)">Next</button>
+                    </div>
+                </div>
+                
+                <div class="container-question6">
+                    <h1>A sports car can go f_____ than a bus.</h1>        
+                    <p class="result"></p>
+                    <div class="div-pontos">    
+                        <p class="score-div" >Score: 0</p>     
+                        <button class="botao-proximo" onclick="next(3)">Next</button>
+                    </div>
+                </div>
+        
+                <div class="container-question6">
+                    <h1> You always have the b_______ ideas.</h1>        
+                    <p class="result"></p>    
+                    <div class="div-pontos">
+                        <p class="score-div" >Score: 0</p>   
+                        <button class="botao-proximo" onclick="next(4)">Next</button>
+                    </div>
+                </div>
+                
+                <div class="container-question6">
+                    <h1>This is the ____ difficult question in the book!</h1>        
+                    <p class="result"></p>    
+                    <div class="div-pontos">
+                        <p class="score-div" >Score: 0</p>   
+                        <button class="botao-proximo" onclick="next(5)">Submit</button>                    
+                    </div>
+                </div>
+
+                <div class="container-question6">
+                    <h1>Your progress:</h1>
+                    <p  class="pontos-div" id="pontos3" style="color:rgb(129, 81, 36);">Score: 0</p>          
+                </div> 
+              
+            </div>
+      
+            <img src="img/icons8-record-100.png" alt="">
+   
+        </div>   
+  
+    </div>
+
+
+    <!-- imagem do astronauta (direita) -->
+    <img src="img/astronaut10.png" id="img-direita">
+    <div id="div-esquerda">
+        <h2>Speak using the microphone!</h2>       
+    </div>
+
+
+    <script src="js/menu.js"></script>
+    <script src="js/speaking2.js"></script>
+        
+</body>
+</html>

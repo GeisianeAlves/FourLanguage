@@ -161,3 +161,16 @@ left: 50%;
 .img-2 {
     width: 50px;
 }
+#btn-voltar {
+    background-color: rgb(190, 216, 138);
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    border: 2px solid palevioletred;
+    color: rgb(31, 27, 27);
+    font-family: 'Sarala',cursive;
+    font-weight: bolder;
+}
+#btn-voltar a {
+    text-decoration: none;
+}

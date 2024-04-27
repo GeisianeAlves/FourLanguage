@@ -1,0 +1,142 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.box {
+    display: none;
+}
+img{
+    width: 100%;
+    display: block;
+ 
+}
+.container-audio{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(174, 196, 190);
+    height: 200px;
+    width: 600px;
+    padding: 20px;
+    border: 2px solid rgb(138, 91, 135);
+    margin-bottom: 35px;
+    margin-top: 30px;
+    color: rgb(68, 65, 65);
+}
+.container-audio img{
+    width: 140px;
+    transform: scale(1);
+    animation: scaleEffect 3s linear infinite;
+}
+
+@keyframes scaleEffect{
+    0%{
+        transform: scale(0.9);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(0.9);
+    }
+}
+
+.container-audio h1{
+    padding-bottom: 2rem;
+    font-size: 1.7rem;
+}
+.container-audio h2{
+    margin-top: 2rem;
+    margin-bottom:1rem;
+    font-weight: 500;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+
+}
+.container-audio span{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bolder;
+ 
+}
+
+
+.botao-proximo, .score-div{
+    background-color: #fff;
+    padding: 0.65rem 0.8rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    width: 200px;
+    color: rgb(68, 65, 65);
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.botao-proximo {
+    background-color: rgb(102, 96, 88);
+    color: #efe6e6;
+}
+.botao-proximo:hover {
+    background-color: rgb(245, 216, 193);
+    color:  rgb(102, 96, 88);
+}
+#img-direita{
+    position: absolute;
+    right: 50px;
+    width: 400px;
+    height:400px;
+    bottom: 50px;
+}
+#div-esquerda{
+    position: absolute;
+    left: 50px;
+    width: 400px;
+    height:400px;
+    top: 150px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #dfd5d5;
+    border-radius: 50%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.div-pontos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    gap: 20px;
+}
+
+#pontos, #pontos2, #pontos3 {
+    font-size: 2rem;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}

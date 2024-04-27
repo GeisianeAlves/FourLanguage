@@ -1,6 +1,6 @@
-function renderUnit() {
+function renderWriting() {
     const params = new URLSearchParams(window.location.search)
-    if (!window.location.pathname.includes("/speaking2.html")) return
+    if (!window.location.pathname.includes("/writing1.html")) return
     const sem = params.get("sem")
 
 
@@ -20,4 +20,4 @@ function renderUnit() {
 
 }
 
-window.renderUnit = renderUnit
+window.renderUnit = renderWriting
