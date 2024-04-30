@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Cookie&family=Jost:wght@200;300&family=Lora:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
 * {
   box-sizing: border-box;
   text-decoration: none;
@@ -21,7 +24,7 @@ html {
   bottom: -2;
   left: 0;
   width: 100%;
-  font-family: "Lora";
+  font-family: 'Roboto', sans-serif;
   font-size: 30px;
   text-align: center;
   color: white;
@@ -33,16 +36,25 @@ html {
   color: #fff;
   text-decoration: none;
   font-size: 20px;
-  font-family: "Lora", monospace;
+  font-family: 'Roboto', sans-serif;
   padding: 6px;
 }
-span {
+#question-number, #question-text{
+  color: #2e2c31;
+  font-size: 22px;
+}
+#answers-box span {
   font-size: 16px;
-  font-family: "Lora", Courier, monospace;
-  color: #ef38d7;
+  font-family: 'Roboto', sans-serif;
+  color: #2e2c31;
   margin-left: 1.9px;
   margin-top: 20px;
   font-weight: bold;
+
+}
+
+.question-answer {
+  padding-left: 15px;
 }
 /* Estilos para o menu lateral */
 .sidebar {
@@ -129,7 +141,7 @@ span {
   background-color: #cddde8;
   color: #000;
   text-align: center;
-  width: 300px;
+  width: 400px;
   margin: 50px auto;
   padding: 25px;
   border-radius: 20px;
@@ -155,6 +167,11 @@ span {
   color: #075ea4;
 }
 
+#display-score span {
+  font-size: 32px;
+  padding-right: 5px;
+}
+
 #restart {
   background-color: #e78230;
   color: #fff;
@@ -178,21 +195,32 @@ span {
 /*Quiz container*/
 
 #quizz-container {
-  width: 500px;
+  width: 600px;
   margin: 50px auto;
-  border: 6px solid #152343;
   padding: 25px;
   border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 #question {
   text-align: center;
   margin-bottom: 25px;
   font-size: 20px;
+  font-family: 'Roboto', sans-serif;
 }
 
 #question-number {
   font-weight: bold;
+}
+#questions-qty, #correct-answers{
+  color: red;
+  font-size: 25px;
+}
+#display-score-text {
+  font-size: 25px;
 }
 
 #answers-box button {
@@ -200,7 +228,7 @@ span {
   align-items: center;
   margin: 15px 0;
   width: 417px;
-  height: 50px;
+  height: 60px;
   border-radius: 25px;
   background-color: #cddde8;
   border: 2px solid transparent;
@@ -220,7 +248,7 @@ span {
 #answers-box .btn-letter {
   font-size: 18px;
   font-weight: bold;
-  background-color: #cf34c2;
+  background-color: #c46bbc;
   color: #fff;
   border-radius: 50%;
   line-height: 40px;
@@ -228,6 +256,7 @@ span {
   text-transform: uppercase;
   flex: 1 1 0;
   max-width: 40px;
+  margin-left: 10px;
 }
 
 .question-answer {
@@ -235,6 +264,7 @@ span {
   margin-left: 10px;
   font-size: 16px;
   padding-right: 20px;
+  font-family: 'Roboto', sans-serif;
 }
 
 #quizz-container .wrong-answer,
@@ -276,6 +306,81 @@ h1 {
   color: white;
   font-size: 15px;
 }
+
+.div-all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(136, 189, 201);
+}
+
+#img-astronauta {
+  position:absolute;
+  right: 30px;
+  bottom: 50px;
+  /* width: 50px; */
+}
+
+#div-esquerda{
+  position: absolute;
+  left: 50px;
+  width: 200px;
+  height:400px;
+  top: 150px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #efe4cc;
+  border-radius: 50%;
+  text-align: center;
+ 
+}
+#div-esquerda h2 {
+  width: 70%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+ /* Estilo personalizado para o elemento de áudio */
+ audio {
+  width: 400px; /* Largura personalizada */
+  margin-bottom: 50px; /* Margem ao redor do elemento */
+}
+
+/* Estilizar os controles de áudio */
+audio::-webkit-media-controls {
+  background-color: #f1f1f1; /* Cor de fundo */
+  border-radius: 10px; /* Borda arredondada */
+}
+
+/* Estilizar o botão de play/pause */
+audio::-webkit-media-controls-play-button {
+  color: green; /* Cor do botão de play */
+}
+
+/* Estilizar a barra de progresso */
+audio::-webkit-media-controls-seek-back-button,
+audio::-webkit-media-controls-seek-forward-button,
+audio::-webkit-media-controls-timeline {
+  background-color: rgb(182, 221, 225); /* Cor da barra de progresso */
+}
+
+/* Estilizar o tempo de reprodução */
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  color: rgb(43, 52, 53); /* Cor do tempo de reprodução */
+}
+
+/* Estilizar o volume */
+audio::-webkit-media-controls-volume-slider {
+  background-color: rgb(209, 243, 209); /* Cor do controle de volume */
+}
+
 
 footer {
   text-align: center;
