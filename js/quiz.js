@@ -31,7 +31,7 @@ const questions = [
     ]
   },
   {
-    "question": "What is the correct interrogative form of: She is from France."  ,
+    "question": "What is the correct interrogative form of: 'She is from France'."  ,
     "answers": [
       {
         "answer": "Are we from France? ",
@@ -202,15 +202,19 @@ function nextQuestion() {
 
 }
 
+const hideDivAudio = document.querySelector("#quizz-container");
+
 // Exibe a tela final
 function showSucccessMessage() {
 
   hideOrShowQuizz();
 
+  hideDivAudio.style.display = "none";
+
   // trocar dados da tela de sucesso
 
   // calcular o score
-  const score = ((points / questions.length) * 100).toFixed(2);
+  const score = ((points / questions.length) * 100);
 
   const displayScore = document.querySelector("#display-score span");
 
@@ -218,11 +222,11 @@ function showSucccessMessage() {
 
   // alterar o número de perguntas corretas
   const correctAnswers = document.querySelector("#correct-answers");
-  correctAnswers.textContent = points;
-
+  correctAnswers.innerHTML = points;
+console.log(points)
   // alterar o total de perguntas
   const totalQuestions = document.querySelector("#questions-qty");
-  totalQuestions.textContent = questions.length;
+  totalQuestions.innerHTML = questions.length;
 
 }
 
@@ -237,6 +241,7 @@ const restartBtn = document.querySelector("#restart");
 
 restartBtn.addEventListener("click", function() {
 
+  hideDivAudio.style.display = "block";
   // zerar o jogo
   actualQuestion = 0;
   points = 0;
