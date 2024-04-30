@@ -3542,15 +3542,9 @@ html {
   position: relative;
 }
 
-.bg-gradient-to-r {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
 
-.from-purple-500 {
-  --tw-gradient-from: #a855f7;
-  --tw-gradient-to: rgb(168 85 247 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
+
+
 
 .via-fuchsia-400 {
   --tw-gradient-to: rgb(232 121 249 / 0);
