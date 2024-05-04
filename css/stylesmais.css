@@ -10,7 +10,7 @@
 
   html {
     font-size: 16px;
-    font-family: sans-serif;
+    
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
   }
@@ -21,14 +21,16 @@
   color: white;
   background-color: #4c546c;
   font-size: 20px;
+  font-family: 'Space Mono';
 }
 
 .cabecalho {
+  font-family: 'Space Mono';
   align-items: last baseline;
   background-color: #4c546c;
   color: white;
   padding: 2% 0px 0px;
-  font-family: 'Montserrat', sans-serif;
+
   
 }
 
@@ -47,13 +49,12 @@
 	Justify-content:left;
 	Align-items:flex-start;
   Column-gap: 28px; */
-
 }
 
 .nav-menu ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 22px;
   display: flex;
 }
 
@@ -75,4 +76,3 @@
 .nav-menu ul li:hover > ul {
   display: block;
 }
-
