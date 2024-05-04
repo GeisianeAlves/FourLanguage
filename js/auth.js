@@ -2,6 +2,7 @@ import firebaseApp from './firebaseConfig.js';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
 
 const auth = getAuth(firebaseApp);
+console.log("Script de autenticação carregado.");
 
 function fazerLogin(email, senha) {
     console.log("Tentando fazer login com email:", email);
@@ -44,6 +45,7 @@ function fazerCadastro(email, senha) {
 }
 
 function resetarSenha(email) {
+    console.log("Tentando redefinir senha para email:", email);
     sendPasswordResetEmail(auth, email)
         .then(() => {
             alert('Um e-mail para redefinição de senha foi enviado para seu endereço de e-mail. Por favor, verifique seu e-mail.');
