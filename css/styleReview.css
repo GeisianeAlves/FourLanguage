@@ -13,16 +13,12 @@ html {
 }
 
 /* LOGO FATEC LINGUO */
-.fatec-linguo {
-    border: 2px solid #8d28f1;
-    margin: 5px;
-    padding: 1.5em;
-  }
+
 
   /* SPAN: A COR DAQUI ALTERA A LOGO E OS TITULOS DA UNIDADES */
   span-logo{
     font-size: 16px;
-    font-family: 'Lora', Courier, monospace;
+    font-family: 'Space Mono', Courier, monospace;
     color: #8d28f1;
     margin-left: 1.9px;
     margin-top: 20px;
@@ -38,70 +34,74 @@ html {
     font-weight: bold;
   }
 
-/* menu lateral e bar */
-.navbar {
-  position: fixed;
-  top: 0;
-  bottom: -2;
-  left: 0;
-  width: 100%;
-  font-family: "Lora";
-  font-size: 30px;
-  text-align: center;
-  color: white;
-  background-color: #08021df5;
-  padding: 16px;
-}
-
-
-.logout-button {
-  margin-top: -22px;
-  margin-bottom: -6px;
-  padding-left: 830px;
-  margin-left: 350px;
-  color: white;
-  font-size: 15px;
-}
-
-
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 20px;
-  font-family:'Lora', monospace;
-  padding: 6px; 
-}
-
-.sair{
-  margin-left: 600px;
-  padding-left: 608px;
-  margin-bottom: 0px;
-  margin-top: -38px;
+  .cabecalho {
+    font-family: 'Space Mono';
+    align-items: last baseline;
+    background-color: #4c546c;
+    color: white;
+    padding: 2% 0px 0px;
   
-}
+    
+  }
+  
+  .nav-menu a {
+    text-decoration: none; /* Remove sublinhado */
+    color: inherit; /* Herda a cor do texto do elemento pai */
+  }
+  
+  .nav-menu img{
+   margin-bottom: 15px;
+    margin-left: 13px;
+  }
+  
+  .nav-menu{
+    Display: flex;
+    Justify-content:left;
+    Align-items:flex-start;
+    Column-gap: 28px; */
+  }
+  
+  .nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 22px;
+    display: flex;
+  }
+  
+  .nav-menu ul li {
+    margin-right: 20px; /* Adapte a margem conforme necessário */
+    position: relative; /* Define posição relativa para alinhar a sub-lista */
+  }
+  
+  .nav-menu ul li ul {
+    display: none;
+    position: absolute; /* Posicionamento absoluto em relação ao item pai */
+    top: 100%; /* Aparece abaixo do item pai */
+    left: 0; /* Alinha com o lado esquerdo do item pai */
+    background-color: #4c546c; /* Fundo cinza */
+    color: #fff; /* Cor do texto branca */
+    padding: 10px; /* Adiciona espaço interno */
+  }
+  
+  .nav-menu ul li:hover > ul {
+    display: block;
+  }
 
-/*BOTAO PARA SAIR*/
-#btnRedirect{
-  cursor: pointer;
-  image-rendering: auto;
-  margin-left: 314px;
-}
+  
 
 /*Botao saiba mais*/
 .btn-right {
   float: right;
   cursor: pointer;
   font-weight: bolder;
-  background-color: #5725faca; 
-  border-radius: 59%;
-  font-size: 19px;
-  box-shadow: none;
+  font-family: 'Space Mono';
+  background-color: #4c546c;
   color: white;
-  border: none;
-  padding: 4px 16px 4px 13px;
-  margin-left: 3px;
-  margin-top: 22px;
-  margin-right: 3px;
+  border-radius: 28px; /* Ajuste o valor conforme desejado para bordas mais arredondadas */
+  font-size: 19px;
+  padding: 2px 13px; /* Ajuste o padding conforme necessário */
+  margin: 22px 10px 22px 10px; /* Top, Right, Bottom, Left */
+  border: none; /* Remove a borda */
 }
 
 .btn-right-anc{
@@ -109,6 +109,13 @@ html {
   color: white;
 }
 
+.rodape {
+  padding: 25px;
+  color: white;
+  background-color: #4c546c;
+  font-size: 20px;
+  font-family: 'Space Mono';
+}
 
 /* Estilos para o menu lateral */
 .sidebar {
@@ -162,19 +169,6 @@ html {
   z-index: 4;
 }
 
-/* Estilos para abrir e fechar o menu */
-.menu-open {
-  transform: translateX(300px);
-  cursor: pointer;
- 
-  font-family:'Lora', Courier, monospace;
-}
-
-.menu-close {
-  transform: translateX(0);
-  cursor: pointer;
-  background-color: #92a1cd;
-}
 
 
 
