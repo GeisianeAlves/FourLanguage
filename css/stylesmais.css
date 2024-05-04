@@ -15,27 +15,64 @@
     -webkit-text-size-adjust: 100%;
   }
 
-/* Estilos para abrir e fechar o menu */
-.menu-open {
-  transform: translateX(300px);
-  cursor: pointer;
 
-  font-family: 'Lora', Courier, monospace;
+.rodape {
+  padding: 25px;
+  color: white;
+  background-color: #4c546c;
+  font-size: 20px;
 }
 
-.menu-close {
-  transform: translateX(0);
-  cursor: pointer;
-  background-color: #92a1cd;
-}
-.menu-toggle {
-  position: fixed;
-  top: 9px;
-  left: 20px;
-  font-size: 28px;
-  cursor: pointer;
-  z-index: 4;
+.cabecalho {
+  align-items: last baseline;
+  background-color: #4c546c;
+  color: white;
+  padding: 2% 0px 0px;
+  font-family: 'Montserrat', sans-serif;
+  
 }
 
+.nav-menu a {
+  text-decoration: none; /* Remove sublinhado */
+  color: inherit; /* Herda a cor do texto do elemento pai */
+}
 
+.nav-menu img{
+ margin-bottom: 15px;
+  margin-left: 13px;
+}
+
+.nav-menu{
+  Display: flex;
+	Justify-content:left;
+	Align-items:flex-start;
+  Column-gap: 28px; */
+
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-menu ul li {
+  margin-right: 20px; /* Adapte a margem conforme necessário */
+  position: relative; /* Define posição relativa para alinhar a sub-lista */
+}
+
+.nav-menu ul li ul {
+  display: none;
+  position: absolute; /* Posicionamento absoluto em relação ao item pai */
+  top: 100%; /* Aparece abaixo do item pai */
+  left: 0; /* Alinha com o lado esquerdo do item pai */
+  background-color: #4c546c; /* Fundo cinza */
+  color: #fff; /* Cor do texto branca */
+  padding: 10px; /* Adiciona espaço interno */
+}
+
+.nav-menu ul li:hover > ul {
+  display: block;
+}
 
