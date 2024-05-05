@@ -140,12 +140,12 @@ body{
     top: 50px;
 }
 .level-card{
-border: 5px solid orange;
+    border: 5px solid orange;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(191, 232, 223);
+    /* background-color: rgb(191, 232, 223); */
     opacity: 0.8;
     width: 250px;
     height: 160px;
@@ -154,6 +154,7 @@ border: 5px solid orange;
 }
 .level-card h3{
 font-size: 40px;
+justify-content: center;
 }
 .level-card:hover {
     background-color: rgb(157, 185, 210);
@@ -172,3 +173,36 @@ font-size: 40px;
 #btn-voltar a {
     text-decoration: none;
 }
+
+.btn-semestre {
+    /* float: right; */
+    cursor: pointer;
+    font-weight: bolder;
+    /* background-color: #fdc03bca; */
+    border-radius: 45%;
+    font-size: 19px;
+    box-shadow: none;
+    border: none;
+    padding: 4px 16px 4px 13px;
+    /* margin-left: 3px;
+    margin-top: 22px;
+    margin-right: 3px; */
+    width: 100%;
+    height: 100%;
+    background-color: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .level-card a {
+    color: rgb(61, 68, 85);
+    font-family: 'Sarala',cursive;
+    letter-spacing: 0.01rem;
+}
+  
+  .btn-right-anc {
+    text-decoration: none;
+    color: white;
+  }
