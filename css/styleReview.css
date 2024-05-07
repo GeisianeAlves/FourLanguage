@@ -54,11 +54,11 @@ html {
     margin-left: 13px;
   }
   
-  .nav-menu{
+  .nav-menu {
     Display: flex;
     Justify-content:left;
     Align-items:flex-start;
-    Column-gap: 28px; */
+    Column-gap: 28px; 
   }
   
   .nav-menu ul {

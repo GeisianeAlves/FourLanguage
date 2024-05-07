@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Jost:wght@200;300&family=Lora:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Jost:wght@200;300&family=Lora:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
 
 * {
   box-sizing: border-box;
@@ -7,31 +7,27 @@
   margin: 0;
 }
 
+html {
+  font-size: 16px;
 
-  html {
-    font-size: 16px;
-    
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-  }
-
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
 
 .rodape {
   padding: 25px;
   color: white;
   background-color: #4c546c;
   font-size: 20px;
-  font-family: 'Space Mono';
+  font-family: "Space Mono";
 }
 
 .cabecalho {
-  font-family: 'Space Mono';
+  font-family: "Space Mono";
   align-items: last baseline;
   background-color: #4c546c;
   color: white;
   padding: 2% 0px 0px;
-
-  
 }
 
 .nav-menu a {
@@ -39,16 +35,16 @@
   color: inherit; /* Herda a cor do texto do elemento pai */
 }
 
-.nav-menu img{
- margin-bottom: 15px;
+.nav-menu img {
+  margin-bottom: 15px;
   margin-left: 13px;
 }
 
-.nav-menu{
-  Display: flex;
-	Justify-content:left;
-	Align-items:flex-start;
-  Column-gap: 28px; */
+.nav-menu {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  column-gap: 28px;
 }
 
 .nav-menu ul {
