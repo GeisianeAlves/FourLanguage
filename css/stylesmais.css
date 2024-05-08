@@ -20,6 +20,7 @@ html {
   background-color: #4c546c;
   font-size: 20px;
   font-family: "Space Mono";
+  line-height: 2;           /*espacamento entre as linhas*/
 }
 
 .cabecalho {
