@@ -72,7 +72,7 @@ function initializarMenu() {
                   type="button"
                   class="HeaderMenu-link border-0 width-full width-lg-auto px-0 px-lg-2 py-3 py-lg-2 no-wrap d-flex flex-items-center flex-justify-between js-details-target"
                   aria-expanded="false"
-                  href=""
+                  href="index.html"
                 >
                   Home
                 </button>
@@ -172,21 +172,8 @@ function initializarMenu() {
                   class="HeaderMenu-link border-0 width-full width-lg-auto px-0 px-lg-2 py-3 py-lg-2 no-wrap d-flex flex-items-center flex-justify-between js-details-target"
                   aria-expanded="false"
                 >
-                  Games
-                  <svg
-                    opacity="0.5"
-                    aria-hidden="true"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    version="1.1"
-                    width="16"
-                    data-view-component="true"
-                    class="octicon octicon-chevron-down HeaderMenu-icon ml-1"
-                  >
-                    <path
-                      d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"
-                    ></path>
-                  </svg>
+                Games
+                   
                 </button>
                 <div
                   class="HeaderMenu-dropdown dropdown-menu rounded m-0 p-0 py-2 py-lg-4 position-relative position-lg-absolute left-0 left-lg-n3 px-lg-4"
@@ -201,97 +188,27 @@ function initializarMenu() {
                         All
                       </a>
                     </li>
+                    <li>
+                      <a
+                        class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary"
+                        data-analytics-event='{"category":"Header dropdown (logged out), Solutions","action":"click to go to Enterprise","label":"ref_cta:Enterprise;"} href='
+                        href="quiz.html"
+                      >
+                        Extra Activity
+                      </a>
+                    </li>
                   </ul>
-                  <div class="">
-                    <div class="">
-                      <span
-                        class="d-block h4 color-fg-default my-1"
-                        id="open-source-repositories-heading"
-                        >Writing</span
-                      >
-                      <ul
-                        class="list-style-none f5"
-                        aria-labelledby="open-source-repositories-heading"
-                      >
-                        <li>
-                          <a
-                            class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary"
-                            data-analytics-event='{"category":"Header dropdown (logged out), Open Source","action":"click to go to Topics","label":"ref_cta:Topics;"}'
-                            href="#"
-                          >
-                            Play
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <!-- reading -->
-                  <div class="">
-                    <span
-                      class="d-block h4 color-fg-default my-1"
-                      id="open-source-repositories-heading"
-                      >Reading</span
-                    >
-                    <ul
-                      class="list-style-none f5"
-                      aria-labelledby="open-source-repositories-heading"
-                    >
-                      <li>
-                        <a
-                          class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary"
-                          data-analytics-event='{"category":"Header dropdown (logged out), Open Source","action":"click to go to Topics","label":"ref_cta:Topics;"}'
-                          href="reading1.html"
-                        >
-                          Play
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                  
+                  <!-- writing -->
+                
+               
                   <!-- listening -->
-                  <div class="">
-                    <span
-                      class="d-block h4 color-fg-default my-1"
-                      id="open-source-repositories-heading"
-                      >Listening</span
-                    >
-                    <ul
-                      class="list-style-none f5"
-                      aria-labelledby="open-source-repositories-heading"
-                    >
-                      <li>
-                        <a
-                          class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary"
-                          data-analytics-event='{"category":"Header dropdown (logged out), Open Source","action":"click to go to Topics","label":"ref_cta:Topics;"}'
-                          href="listening1.html"
-                        >
-                          Play
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                
                   <!-- Speaking -->
-                  <div class="">
-                    <span
-                      class="d-block h4 color-fg-default my-1"
-                      id="open-source-repositories-heading"
-                      >Speaking</span
-                    >
-                    <ul
-                      class="list-style-none f5"
-                      aria-labelledby="open-source-repositories-heading"
-                    >
-                      <li>
-                        <a
-                          class="HeaderMenu-dropdown-link lh-condensed d-block no-underline position-relative py-2 Link--secondary"
-                          data-analytics-event='{"category":"Header dropdown (logged out), Open Source","action":"click to go to Topics","label":"ref_cta:Topics;"}'
-                          href="speaking1.html"
-                        >
-                          Play</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                
+
+                  
+              
               </li>
               <li
                 class="HeaderMenu-item position-relative flex-wrap flex-justify-between flex-items-center d-block d-lg-flex flex-lg-nowrap flex-lg-items-center js-details-container js-header-menu-item"
@@ -299,7 +216,7 @@ function initializarMenu() {
                 <a
                   class="HeaderMenu-link no-underline px-0 px-lg-2 py-3 py-lg-2 d-block d-lg-inline-block"
                   data-analytics-event='{"category":"Header menu top item (logged out)","action":"click to go to Pricing","label":"ref_cta:Pricing;"}'
-                  href="/pricing"
+                  href="/creditos.html"
                   >About</a
                 >
               </li>
