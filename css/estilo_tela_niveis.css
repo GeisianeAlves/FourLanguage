@@ -160,14 +160,15 @@ font-size: 40px;
     cursor: pointer;}
 
 #btn-voltar {
-    background-color: rgb(190, 216, 138);
-    width: 100px;
-    height: 30px;
+    background-color: rgb(166, 232, 230);
+    width: 200px;
+    height: 40px;
     border-radius: 20px;
-    border: 2px solid palevioletred;
+    border: 3px solid palevioletred;
     color: rgb(31, 27, 27);
     font-family: 'Sarala',cursive;
     font-weight: bolder;
+    margin-top: 20PX;
 }
 #btn-voltar a {
     text-decoration: none;
