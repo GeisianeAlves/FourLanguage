@@ -62,13 +62,24 @@ const phrases = ["receive", "mean", "again", "card", "stand", "one more time", "
     recog.lang = 'en-US';
 
     //começando reconhecimento
-    recog.start();
+        // Adicionando efeito ao botão
+    document.getElementById('record').addEventListener('click', () => {
+        // Alterando o texto do botão para "Recording"
+        document.getElementById('btnGravar').innerText = 'Recording';
+
+        recog.start();
+        document.getElementById('record').classList.add('record-clicked');
+
+});
+    // recog.start();
 
     // Pegando o áudio do usuário através do microfone
     function captarAudio(e) {
         let mensagem = e.results[0][0].transcript;
         mostrarMensagem(mensagem);
+
     }
+    
 
 
     function  mostrarMensagem(mensagem) {

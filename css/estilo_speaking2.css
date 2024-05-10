@@ -32,7 +32,7 @@ img{
     justify-content: center;
     flex-direction: column;
     background-color: rgb(174, 196, 190);
-    height: 200px;
+    height: 230px;
     width: 600px;
     padding: 20px;
     border: 2px solid rgb(138, 91, 135);
@@ -42,9 +42,18 @@ img{
 }
 .container-audio img{
     width: 140px;
+    cursor: pointer;
+    /* transform: scale(1);
+    animation: scaleEffect 3s linear infinite; */
+}
+.record-clicked {
     transform: scale(1);
     animation: scaleEffect 3s linear infinite;
 }
+#btnGravar {
+    margin-top: 20px;
+}
+
 
 @keyframes scaleEffect{
     0%{
