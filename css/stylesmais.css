@@ -105,9 +105,10 @@ html {
 
 /* barra de pesquisa config */
 input {
-  background-color: rgba(245, 222, 179, 0.86);
-  border: 1px solid rgba(245, 222, 179, 0.86);
+  background-color: #4c546c;
+  border: 0.1em solid rgba(245, 179, 233, 0.86);
   border-radius: 10px;
+  color: white;
 }
 
 /* secao dos banners - o que falam */
