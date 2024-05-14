@@ -22,16 +22,46 @@ html {
   font-family: "Space Mono";
 }
 
+/* cabecalho + nav */
 .cabecalho {
   font-family: "Space Mono";
   align-items: last baseline;
   background-color: #4c546c;
   color: white;
   padding: 2% 0px 0px;
+  /* text-transform: lowercase; */
 }
 
+/* caso queira deixar tudo em caixa alta é text-transform */
+
+.item-lista-cabecalho:hover {
+  color: rgb(186, 250, 228);
+}
+
+.lista-nao-ordenada{
+
+}
+
+
+/* botao de sair */
+.nav-menu button {
+  background: none;
+  color: white;
+  font-family: "Space Mono";
+  border: 2px solid rgba(245, 222, 179, 0.738);
+  border-radius: 15px; /* Ajuste o valor de acordo com o arredondamento desejado */
+  padding: 10px 20px; /* Ajuste o espaçamento interno conforme necessário */
+  cursor: pointer;
+  font-weight: bold;
+  
+}
+
+.nav-botao:hover {
+  color: rgb(186, 250, 228);
+}
+
+
 .nav-menu a {
-  text-decoration: none; /* Remove sublinhado */
   color: inherit; /* Herda a cor do texto do elemento pai */
 }
 
@@ -72,3 +102,13 @@ html {
 .nav-menu ul li:hover > ul {
   display: block;
 }
+
+/* barra de pesquisa config */
+input {
+  background-color: #4c546c;
+  border: 0.1em solid rgba(245, 179, 233, 0.86);
+  border-radius: 10px;
+  color: white;
+}
+
+/* secao dos banners - o que falam */

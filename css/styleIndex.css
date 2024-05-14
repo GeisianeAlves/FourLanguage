@@ -1,0 +1,912 @@
+
+
+
+
+
+/* BANNERS */
+.container-banners .slide-container .slide {
+  background-color: #08021df5;
+  /* width: 400px;
+  height: 218px; */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  /* gap: 15px;
+  padding: 20px 9%;
+  padding-bottom: 100px; */
+  margin-top: 2px;
+}
+
+.container-banners .slide-container .slide .content-slide {
+  flex: 1 1 350px;
+  animation: slideContent 0.4s linear 0.4s backwards;
+}
+
+@keyframes slideContent {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+}
+
+
+.container-banners .slide-container .slide .content-slide .btn-slide {
+  margin-top: 10px;
+  display: inline-block;
+  background: rgb(255, 168, 243);
+  color: #ffffff;
+  font-size: 15px;
+  padding: 9px 40px;
+  border-radius: 5px;
+  font-family: 'Noto Sans', sans-serif;
+  text-decoration: none;
+}
+
+.container-banners .slide-container .slide .content-slide .btn-slide:hover {
+  background: rgba(254, 124, 213, 0.45);
+  border: 2px solid #d46dc6;
+  color: #ffffff;
+}
+
+.container-banners .slide-container {
+  display: none;
+}
+
+.container-banners .slide-container.active {
+  display: block;
+}
+
+.container-banners .slide-container .slide .banner1 {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100vw;
+  height: auto;
+  z-index: -1000;
+  /* background: url(img/Seja\ bem-vindo\,\ Fateco\ \(a\)\ \(1\).gif) no-repeat;
+      background-size: cover; 
+   */
+}
+
+.banner1 .banner2 .banner3 {
+  max-width: 100%;
+  min-width: 50%;
+  max-height: 100%;
+  min-height: 50%;
+  width: 50%;
+  height: 200px;
+}
+
+.container-banners #prev,
+.container-banners #next {
+  position: absolute;
+  top: 90%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  background: #c787dad3;
+  height: 44px;
+  width: 31px;
+  line-height: 50px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bolder;
+  border-radius: 60px;
+}
+
+.container-banners #prev:hover,
+.container-banners #next:hover {
+  background: #a355d761;
+}
+
+.container-banners #prev {
+  left: 51px;
+}
+
+.container-banners #next {
+  right: 20px;
+}
+
+@media(max-width: 500px) {
+  .container-banners #prev {
+    left: 0px;
+    top: 60%;
+  }
+
+  .container-banners #next {
+    right: 0px;
+    top: 60%;
+  }
+
+  .container-banners .slide-container .slide .content-slide p {
+    font-size: 16px;
+    color: #ffffff;
+    font-family: 'Noto Sans', sans-serif;
+    width: 70%;
+    height: 10%;
+
+  }
+}
+
+
+/*estilo para vídeos de slides do canvas*/
+.slides-canvas .max-width {
+  width: 100%;
+  margin-bottom: 0;
+  height: 100%;
+}
+
+.slides-canvas video {
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilos para os botões de navegação */
+.nav-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #120949e7;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.nav-btn:hover {
+  background-color: #ace7ae;
+}
+
+header {
+  background-color: rgba(255, 192, 203, 0.663);
+}
+
+/*banner*/
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+
+}
+
+#container-semestre {
+  background-color: rgba(53, 71, 96, 0.621);
+  gap: 20px;
+  padding-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+#container-semestre h1 {
+  font-size: 25px;
+}
+
+/* QUANDO FOR MEXER EM REVISAO, MAS LEMBRE-SE QUE ALTERA O BOX DO INICIO */
+/* para mexer e alinhar os box de semestre, as imagens parecem no obedecer, mas tem jeito */
+
+#first,
+#second,
+#third,
+#four,
+#five,
+#six {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 240px;
+  margin-bottom: 50px;
+  border: 2px solid #f1ecec;
+  background-color: pink;
+  padding: 10px;
+  box-shadow: 5px 5px 5px #333;
+  font-size: 18px;
+}
+
+#first:hover,
+#second:hover,
+#third:hover,
+#four:hover,
+#five:hover,
+#six:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+
+/* para mexer no tamanho dos titulos da página inicial, pq se for em revisao você terá que aumentar o nome do id ou class para batata-revisao*/
+#first h2,
+#four h2 {
+  font-size: 20px;
+  margin-top: 9px;
+  padding: 3px;
+}
+
+
+.first-paragraph {
+  text-decoration: underline;
+  font-size: 18px;
+  padding-top: 8px;
+}
+
+ul {
+  margin-left: -33px;
+  font-size: 18px;
+  padding-top: 12px;
+}
+
+#second h2 {
+  font-size: 20px;
+  margin-top: 9px;
+  padding: 3px;
+}
+
+.second-paragraph {
+  text-decoration: underline;
+  font-size: 18px;
+  padding-top: 8px;
+}
+
+#third h2 {
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 3px;
+}
+
+.third-paragraph,
+.four-paragraph,
+.fifth-paragraph,
+.sixth-paragraph {
+  text-decoration: underline;
+  font-size: 18px;
+  padding-top: 8px;
+}
+
+
+
+/*PARTE DOS SEMESTRES INDEX*/
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* para mexer e alinhar os box de semestre, as imagens parecem no obedecer, mas tem jeito */
+#first,
+#four {
+  display: flex;
+  align-items: center;
+  width: 220px;
+  height: 366px;
+  margin-bottom: 50px;
+  border: 2px solid #333;
+  background-color: #ccc;
+  padding: 30px;
+  box-shadow: 5px 5px 5px #333;
+}
+
+#second,
+#third {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 225px;
+  height: 369px;
+  margin-bottom: 50px;
+  border: 2px solid #333;
+  background-color: #ccc;
+  padding: 17px;
+  box-shadow: 5px 5px 5px #333;
+}
+
+#five,
+#six {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 369px;
+  margin-bottom: 50px;
+  border: 2px solid #333;
+  background-color: #ccc;
+  padding: 17px;
+  box-shadow: 5px 5px 5px #333;
+}
+#five, #six  h2 {
+  font-size: 18px;
+}
+
+#first:hover,
+#second:hover,
+#third:hover,
+#four:hover,
+#five:hover,
+#six:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+
+/* para mexer no tamanho dos titulos */
+#first h1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+
+}
+
+#second h2 {
+  font-size: 20px;
+  padding: 3px;
+}
+
+#third h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+
+}
+
+#four h4 {
+  font-size: 20px;
+  margin-bottom: 20px;
+
+}
+
+#first img,
+#four img {
+
+  width: 111%;
+  box-shadow: 5px 5px 5px #333;
+  margin-bottom: 2px;
+}
+
+#second img,
+#third img {
+  margin-top: 25px;
+  width: 86%;
+  box-shadow: 5px 5px 5px #333;
+  margin-bottom: 2px;
+}
+
+/* outra section */
+/* semestre parte de jogos*/
+#primeiro,
+#segundo,
+#terceiro,
+#quarto,
+#quinto,
+#sexto,
+#leitura,
+#escrita,
+#fala,
+#escuta {
+  display: none;
+}
+
+
+.show-review-div {
+  display: flex !important;
+}
+
+/*estilos para seções 2-6*/
+
+/*seção com dicas de testes de nivelamento*/
+.container-teste {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: #aabfbf;
+
+}
+
+.container-teste-1 {
+  width: 30vw;
+  height: 98%;
+  background-color: #aabfbf;
+}
+
+.container-teste-1 img {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.container-test-2 {
+  width: 65vw;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: #70667d; */
+  background-color: #aabfbf;
+  gap: 20px;
+  /* background-color: #f1e6d4; */
+
+}
+
+.container-test-2 h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  color: #333;
+}
+
+.container-teste-3 {
+  width: 90%;
+  height: 35%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(245, 237, 219);
+  border: 3px solid rgb(160, 121, 185);
+  border-radius: 20px;
+}
+
+.container-teste-3-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.container-teste-3 img {
+  width: 170px;
+  height: 60px;
+  border-radius: 50px;
+}
+
+.container-teste-3 h1 {
+  font-size: 25px;
+  color: #8b6760;
+}
+
+.container-teste-3 h2 {
+  font-size: 22px;
+  color: #333;
+}
+
+.container-teste-3 p {
+  font-size: 16px;
+  color: #333;
+}
+
+.container-teste-3 button {
+  width: 170px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: bolder;
+  border-radius: 50px;
+  border: 3px solid rgb(218, 180, 55);
+  background-color: #bcc8c7;
+  color: #3d4042;
+}
+
+.container-teste-3 button a {
+  text-decoration: none;
+
+}
+
+
+
+/*seção c/ explicação dos jogos */
+.preview-jogos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: row; */
+  width: 100%;
+  height: 190vh;
+  background-color: #bcc0ce;
+  font-family: "Raleway", sans-serif;
+  color: #333;
+}
+
+.container-jogos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  gap: 50px;
+
+}
+
+.container-jogos h1 {
+  font-size: 30px;
+}
+
+.jogos {
+  /* background-color: #92a1cd; */
+  background-color: #d6edea;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 80%;
+  height: 280px;
+  margin-right: 20px;
+  font-family: "Raleway", sans-serif;
+  border-radius: 10px;
+  border: 2px solid rgb(30, 32, 32);
+
+}
+
+.jogos img {
+  width: 450px;
+  height: 100%;
+  border-bottom-right-radius: 25px;
+}
+
+.jogos .content {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: left;
+  padding: 20px;
+
+}
+
+.jogos h2 {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.jogos h3 {
+  font-size: 18px;
+  padding: 10px;
+}
+
+.jogos p {
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+.jogos button {
+  width: 60px;
+  height: 30px;
+  border-radius: 25px;
+  border: 2px solid rgb(189, 189, 161);
+  font-weight: bolder;
+  background-color: #efeda1;
+}
+
+.container-right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+gap: 50px;
+
+}
+
+/* estilo para div da direito com english tips*/
+.content-right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #819999;
+  border: 2px solid rgb(117, 232, 215);
+  height: 30%;
+  width: 100%;
+  border-radius: 15px;
+gap: 10px;
+}
+
+.container-right img {
+  width: 100%;
+  height: 60%;
+  border-top-left-radius: 45px;
+  border-bottom-right-radius: 45px;
+}
+
+.content-coluna {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.coluna-texto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  padding-right: 50px;
+}
+
+mark {
+  font-weight: bolder;
+  font-size: 18px;
+  background-color: #dda1f5;
+}
+
+#titulo {
+  width: 100px;
+  margin-left: 50px;
+  color: #92a1cd;
+  font-size: 50px;
+}
+
+/*seção com vídeo falando da importância do inglês*/
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: #aabfbf;
+  height: 60vh;
+}
+.video video {
+  height: 70%;
+}
+
+.video h1 {
+  width: 60vw;
+  height: 45px;
+  background-color: #434545;
+  font-size: 30px;
+  color: #a19797;
+  text-align: center;
+}
+
+/*seção com dicas de dicionários */
+.extra-dicionarios {
+  background-color: #1238508a;
+  /* width: 100%; */
+  min-height:60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 10px; 
+}
+
+.extra-dicionarios p {
+  font-size: 16px;
+}
+
+.conteudo-1,
+.conteudo-2,
+.conteudo-3,
+.conteudo-4 {
+  background-color: #edefed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Raleway", sans-serif;
+  border: 2px solid rgb(55, 94, 105);
+gap: 10px;
+}
+
+.conteudo-1 {
+  width: 400px;
+  height: 400px;
+  /* margin-right: 20px; */
+}
+
+.conteudo-2 {
+  width: 400px;
+  height: 400px;
+ 
+}
+
+.conteudo-part3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+}
+
+.conteudo-3 {
+  width: 400px;
+  height: 190px;
+}
+
+.conteudo-4 {
+  width: 400px;
+  height: 190px;
+}
+
+.conteudo img {
+  width: 120px;
+}
+
+.conteudo h2
+{
+  margin-bottom: 20px;
+}
+.conteudo p {
+  font-size: 16px;
+}
+
+
+
+@media only screen and (max-width: 640px) {
+  .container-teste {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+  }
+    .container-teste-1 {
+    width: 100%;
+    height: 10%;
+    }
+    .container-teste-1 img{
+      display: none;
+    } 
+  
+  .container-test-2 {
+    margin-top: 320px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height:100%;
+    width: 100%;
+}
+  .container-test-2 h1 {
+    font-size: 1.5rem;
+    padding: 0 20px 0 20px;
+  }
+  .container-teste-3 {
+    height:35%; 
+    width: 100%;
+    text-align: left;
+    /* padding: 20px;  */
+    /* height: 42%; */
+  }
+  .container-teste-3 h1 {
+    font-size: 1.0rem;
+  }
+  .container-teste-3 p {
+    font-size: 0.9rem;
+    padding: 0 20px 0 20px;
+  }
+  .container-teste-3 img {
+    width: 80px;
+    height: 30px;
+    margin-bottom: 10px;
+  }
+  .container-teste-3 button {
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  /*jogos*/
+  .preview-jogos {
+    /* max-width: 640px; */
+    min-height: 250vh;
+    width: 100%;
+    max-height: 100% !important;
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: column;
+    justify-content: center;
+  }
+  .preview-jogos .container-right {
+    display: none;
+  }
+  .preview-jogos .container-jogos {
+    width: 90%;
+    max-height: 100% !important; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    margin-left: 20px;
+  }
+  .preview-jogos .container-jogos h1 {
+    font-size: 20px;
+    margin: 20px;
+  }
+  .preview-jogos .container-jogos .jogos {
+    height: 30%;  
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .preview-jogos .container-jogos .jogos img {
+    width: 100%;
+    max-height: 320px;
+  }
+  .preview-jogos .container-jogos .jogos .content{
+    width: 100%;
+    max-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .preview-jogos .container-jogos .jogos .content h2{
+    font-size: 1rem;
+  }
+  .preview-jogos .container-jogos .jogos .content h3{
+    font-size: 0.8rem;
+  }
+  .preview-jogos .container-jogos .jogos .content p{
+    font-size: 0.7rem;
+
+  }
+
+  .video h1 {
+    font-size: 20px;
+  }
+  .video video {
+    display: none;
+  }
+  .extra-dicionarios  {
+    height:100%;
+  }
+
+  .extra-dicionarios .conteudo-1 {
+    height: 200px;
+  margin-bottom: 10px;
+
+  } 
+  .extra-dicionarios .conteudo-2 {
+    height: 200px;
+    margin-bottom: 10px;
+
+  }
+
+  .conteudo-3 {
+    /* height: 200px; */
+    display: none;
+}
+  .conteudo-4 {
+    /* height: 200px; */
+    display: none;
+  }
+  .conteudo-1 img{
+    height: 50px;
+    width: 100px;
+  } 
+  .conteudo-2 img{
+    height: 50px;
+    width: 100px;
+  } 
+  .conteudo-3 img{
+    height: 50px;
+    width: 100px;
+  } 
+  .conteudo-4 img{
+    height: 50px;
+    width: 150px;
+  } 
+
+}
+
+
+
+
+
+
