@@ -103,5 +103,11 @@ html {
   display: block;
 }
 
+/* barra de pesquisa config */
+input {
+  background-color: rgba(245, 222, 179, 0.86);
+  border: 1px solid rgba(245, 222, 179, 0.86);
+  border-radius: 10px;
+}
 
 /* secao dos banners - o que falam */
