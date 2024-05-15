@@ -36,6 +36,10 @@
         <!-- aqui chama função do arquivo menu.js -->
     </div>
 
+    <div id="div-esquerda">
+        <h2>Wait until typing is completed before answering the questions.</h2>       
+    </div>
+
         <div class="box" id="primeiro">               
                         
                 <div class="container texto">
@@ -632,6 +636,9 @@
      
                 <img class="img-1" src="img/planet_pink.png" alt="">
                 </div> 
+
+                
+                
         </div>
 
         
@@ -664,12 +671,14 @@
         }
         // mudar a cor do botão da resposta escolhida
         var buttons = document.querySelectorAll(".btn-resposta");
+        var botaoProximo = document.getElementById("botao-proximo");
 
         buttons.forEach(function(button) {
             button.addEventListener("click", function() {
-                button.style.backgroundColor = "rgb(75, 72, 106)"; 
+                button.style.backgroundColor = "rgb(75, 72, 106)";
+                botaoProximo.style.backgroundColor = "rgb(75, 72, 106)"; // Altera a cor do botão próximo
             });
-        });
+});
     </script>
 
     <script src="js/menu.js"></script>

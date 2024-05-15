@@ -500,3 +500,17 @@ footer:hover {
   display: none;
 }
 
+#btn-voltar {
+  background-color: rgb(166, 232, 230);
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  border: 3px solid palevioletred;
+  color: rgb(31, 27, 27);
+  font-family: 'Sarala',cursive;
+  font-weight: bolder;
+  margin-top: 60px;
+}
+#btn-voltar a {
+  text-decoration: none;
+}
