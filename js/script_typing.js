@@ -7,7 +7,7 @@ class ReusableCode {
             {
                 element: ".typing1",
                 strings: [
-                    "I'm Paul Reed and this is Julia Bell. We're from zap Productions.", 
+                    "I'm Paul Reed and this is Julia Bell. We're from Zap Productions.", 
                     "Diana Edison is from CCC, and David Clark is from Safeguard.", 
                     "Alan Parker and George Carter are from NorthNet."
                 ],
