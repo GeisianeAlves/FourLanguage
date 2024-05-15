@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Página de Login</title>
+    <title>Página de Cadastro/Login</title>
     <link rel="stylesheet" href="css/style1.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -45,34 +45,30 @@
                 <p class="description description-second">ou use seu e-mail para se cadastrar:</p>
                 <form class="form">
                     <label class="label-input" for="">
-                        <i class="far fa-user icon-modify"></i>
-                        <input type="text" placeholder="Name">
-                    </label>
-
-                    <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="Email">
+                        <input id="emailInput1" type="email" placeholder="Email" required>
                     </label>
-
+                
                     <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Password">
+                        <input id="passwordInput1" type="password" placeholder="Password">
                     </label>
 
 
-                    <button class="btn btn-second" > <a href="index.html">sign up</a></button> 
+                    <button id="btn-cadastro" class="btn btn-second">Cadastre-se</button>
+                    <!-- botão cadastro -->
                 </form>
             </div><!-- second column -->
         </div><!-- first content -->
         <div class="content second-content">
             <div class="first-column">
                 <h2 class="title title-primary">Olá, amigo!</h2>
-                <p class="description description-primary">Enter your personal details</p>
-                <p class="description description-primary">and start journey with us</p>
-                <button id="signup" class="btn btn-primary">sign up</button> //esse é o botão de nav
+                <p class="description description-primary">Digite seus dados pessoais</p>
+                <p class="description description-primary">E comece a jornada conosco</p>
+                <button id="signup" class="btn btn-primary">Cadastre-se</button> <!--esse é o botão de nav-->
             </div>
             <div class="second-column">
-                <h2 class="title title-second">sign in to developer</h2>
+                <h2 class="title title-second">Faça Login</h2>
                 <div class="social-media">
                     <ul class="list-social-media">
                         <a class="link-social-media" href="#">
@@ -92,7 +88,7 @@
                         </a>
                     </ul>
                 </div><!-- social media -->
-                <p class="description description-second">or use your email account:</p>
+                <p class="description description-second">ou use sua conta de e-mail:</p>
                 <form class="form">
 
                     <label class="label-input" for="">
@@ -106,8 +102,17 @@
                     </label>
 
                     <a id="forgotPasswordLink" class="password" href="#">Esqueceu sua senha?</a>
-                    //redefinição de senha
-                    <button id="btn-login" class="btn btn-second">Login</button>//botão do login
+                    <!--redefinição de senha-->
+                    <!--  Modal -->
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>Por favor, insira seu e-mail:</p>
+                            <input id="emailPrompt" type="email" placeholder="Email">
+                            <button id="confirmEmail">Confirmar</button>
+                        </div>
+                    </div>
+                    <button id="btn-login" class="btn btn-second">Login</button><!-- botão do login-->
                 </form>
             </div><!-- second column -->
 
@@ -117,17 +122,9 @@
     <div class="container">
         <!-- Conteúdo da página aqui -->
     </div>
-    
-    <!-- Modal -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Por favor, insira seu e-mail:</p>
-            <input id="emailPrompt" type="email" placeholder="Email">
-            <button id="confirmEmail">Confirmar</button>
-        </div>
-    </div>
-    
+
+
+
     <script type="module">
         // Ouvinte de evento para o botão de login
         import { fazerLogin } from './js/auth.js';
@@ -144,38 +141,67 @@
     </script>
     <script type="module">
         import { resetarSenha } from './js/auth.js';
-
-        var modal = document.getElementById("myModal");
-        var btn = document.getElementById("forgotPasswordLink");
-        var span = document.getElementsByClassName("close")[0];
-
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-
-        span.onclick = function () {
+    
+        document.addEventListener('DOMContentLoaded', function () {
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("forgotPasswordLink");
+            var span = document.getElementsByClassName("close")[0];
+    
+            // Oculta o modal ao carregar a página
             modal.style.display = "none";
-        }
-
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+    
+            // Adicione um ouvinte de eventos ao botão de fechar o pop-up
+            span.addEventListener('click', function () {
+                modal.style.display = "none"; // Fecha o pop-up quando o botão de fechar for clicado
+            });
+    
+            // Adicione um ouvinte de evento de clique ao link "Esqueceu sua senha?"
+            btn.onclick = function (event) {
+                event.preventDefault(); // Evite o comportamento padrão de seguir o link
+    
+                // Exibe o modal quando o link for clicado
+                modal.style.display = "block";
             }
-        }
-
-        document.getElementById("confirmEmail").addEventListener('click', function (event) {
-            var email = document.getElementById('emailPrompt').value;
-            if (email) {
-                resetarSenha(email);
-                modal.style.display = "none"; // Fechar o modal após confirmar o email
-            }
+    
+            document.getElementById("confirmEmail").addEventListener('click', function (event) {
+                event.preventDefault(); // Evite o comportamento padrão do botão
+    
+                var modalEmail = document.getElementById('emailPrompt').value;
+    
+                if (modalEmail) {
+                    resetarSenha(modalEmail);
+                    modal.style.display = "none"; // Fechar o modal após confirmar o email
+                }
+            });
         });
     </script>
+    <script type="module">
+        // Importa a função fazerCadastro do arquivo auth.js
+        import { fazerCadastro } from './js/auth.js';
+    
+        document.addEventListener('DOMContentLoaded', function () {
+            // Adiciona um ouvinte de evento para o botão de cadastro
+            document.getElementById('btn-cadastro').addEventListener('click', function (event) {
+                event.preventDefault(); // Impede o comportamento padrão de envio do formulário
+    
+                // Obtenha o valor do campo de email
+                var email = document.getElementById('emailInput').value;
+    
+                // Obtenha o valor do campo de senha
+                var senha = document.getElementById('passwordInput').value;
+    
+                // Chame a função fazerCadastro() passando o email e a senha
+                fazerCadastro(email, senha);
+            });
+        });
+    </script>
+    
 
 
     <script src="js/switchScreen.js"></script>
     <script src="js/firebaseConfig.js" type="module"></script>
     <script src="js/auth.js" type="module"></script>
+
 
 </body>
 

@@ -60,7 +60,7 @@ left: 50%;
     background-color: rgb(75, 72, 106);
 }
 #botao-proximo {
-    margin-top: 50px;
+    /* margin-top: 50px;
     border: 3px solid green;
     border-radius: 25px;
     width: 200px;
@@ -69,6 +69,15 @@ left: 50%;
     font: bolder ;
     font-family: 'Sarala',cursive;
     color: rgb(212, 204, 196);
+    font-weight: bolder; */
+    background-color: rgb(138, 215, 216);
+    width: 180px;
+    height: 50px;
+    border-radius: 20px;
+    border: 3px solid palevioletred;
+    color: rgb(31, 27, 27);
+    font-family: 'Sarala',cursive;
+    font-size: 22px;
     font-weight: bolder;
 }
 #botao-proximo:hover {
@@ -173,4 +182,28 @@ left: 50%;
 }
 #btn-voltar a {
     text-decoration: none;
+}
+#div-esquerda{
+    position: absolute;
+    left: 50px;
+    top: 150px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #dfd5d5;
+    border-radius: 50%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+#div-esquerda h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    font-size: 18px;
+    margin-top: 60px;
 }

@@ -52,6 +52,7 @@ img{
 }
 #btnGravar {
     margin-top: 20px;
+    font-size: 20px;
 }
 
 
@@ -109,12 +110,27 @@ img{
     background-color: rgb(245, 216, 193);
     color:  rgb(102, 96, 88);
 }
-#img-direita{
+#img-direita {
     position: absolute;
     right: 50px;
     width: 400px;
     height:400px;
     bottom: 50px;
+}
+#btn-voltar{
+    position: absolute;
+    right: 50px;
+    background-color: rgb(190, 216, 138);
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid palevioletred;
+    color: rgb(31, 27, 27);
+    font-weight: bolder;
+    bottom: 30px;
+}
+#btn-voltar a {
+    text-decoration: none;
 }
 #div-esquerda{
     position: absolute;
