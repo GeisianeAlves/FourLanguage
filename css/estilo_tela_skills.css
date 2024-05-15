@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bungee&family=Bungee+Inline&family=Cinzel:wght@400;500;600&family=Festive&family=Fira+Sans:wght@300;400;500;600&family=Gelasio:wght@400;500;700&family=Henny+Penny&family=Hubballi&family=Inspiration&family=Jacques+Francois+Shadow&family=Lato:ital,wght@0,300;1,700&family=Lavishly+Yours&family=Monofett&family=Mystery+Quest&family=Nunito:wght@500;700;900&family=Open+Sans:wght@400;500;600&family=Playfair+Display+SC:wght@400;700&family=Poppins:wght@200;300;400;500;600;700;800&family=Quattrocento&family=Righteous&family=Sarala:wght@400;700&family=Satisfy&family=Water+Brush&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Cinzel:wght@400;500;600&family=Festive&family=Gelasio:wght@400;500;700&family=Henny+Penny&family=Hubballi&family=Inspiration&family=Jacques+Francois+Shadow&family=Lato:ital,wght@0,300;1,700&family=Lavishly+Yours&family=Monofett&family=Mystery+Quest&family=Playfair+Display+SC:wght@400;700&family=Poppins:wght@200;300;400;500;600;700;800&family=Quattrocento&family=Righteous&family=Sarala:wght@400;700&family=Satisfy&family=Water+Brush&display=swap');
 
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Jost:wght@200;300&family=Lora:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
 
 
  
@@ -167,7 +170,7 @@ background-color: pink;
     bottom: 40%;
     top: 35%;
 }
-.btn-acessar{
+.btn-acessar {
     position: absolute;
     bottom: 5%;
     right: 5%;

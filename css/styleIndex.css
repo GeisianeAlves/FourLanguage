@@ -172,7 +172,7 @@ header {
 }
 
 #container-semestre {
-  background-color: rgba(53, 71, 96, 0.621);
+  background-color: #FFF8DC;
   gap: 20px;
   padding-top: 60px;
   display: flex;
@@ -428,7 +428,6 @@ ul {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  /* background-color: #70667d; */
   background-color: #aabfbf;
   gap: 20px;
   /* background-color: #f1e6d4; */
@@ -509,7 +508,7 @@ ul {
   /* flex-direction: row; */
   width: 100%;
   height: 190vh;
-  background-color: #bcc0ce;
+  /* background-color: ; */
   font-family: "Raleway", sans-serif;
   color: #333;
 }
@@ -530,7 +529,7 @@ ul {
 
 .jogos {
   /* background-color: #92a1cd; */
-  background-color: #d6edea;
+  background-color: #d6edeaad;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -657,7 +656,7 @@ mark {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  background-color: #aabfbf;
+  background-color: #fff8dc62;
   height: 60vh;
 }
 .video video {
@@ -675,7 +674,7 @@ mark {
 
 /*seção com dicas de dicionários */
 .extra-dicionarios {
-  background-color: #1238508a;
+  background-color: rgb(18 56 80 / 18%);
   /* width: 100%; */
   min-height:60vh;
   display: flex;
