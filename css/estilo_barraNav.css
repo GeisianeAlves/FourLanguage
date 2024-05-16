@@ -1,11 +1,4 @@
-function applyStyles() {
-  // Criar uma tag style
-  var style = document.createElement('style');
-  style.type = 'text/css';
-  
-  // Adicionar o CSS ao estilo
-  style.innerHTML = `
-  @import url("https://fonts.googleapis.com/css2?family=Cookie&family=Jost:wght@200;300&family=Lora:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Jost:wght@200;300&family=Lora:wght@600&display=swap");
   @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
   
   * {
@@ -15,21 +8,20 @@ function applyStyles() {
   }
   
   html {
-
-    font-size: 16px;  
+    font-size: 18px;
+  
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
   }
   
-  
-  
+ 
   /* cabecalho + nav */
   .cabecalho {
     font-family: "Space Mono";
     align-items: last baseline;
     background-color: #4c546c;
     color: white;
-    padding: 1% 0px 0px;
+    padding: 2% 0px 0px;
     /* text-transform: lowercase; */
   }
   
@@ -86,7 +78,6 @@ function applyStyles() {
   .container-nav ul li {
     margin-right: 20px; /* Adapte a margem conforme necessário */
     position: relative; /* Define posição relativa para alinhar a sub-lista */
-    font-size: 18px; 
   }
   
   .nav-menu ul li ul {
@@ -167,7 +158,7 @@ function applyStyles() {
   
   
   /* barra de pesquisa config */
-  .search-bar {
+  input {
     background-color: rgba(245, 222, 179, 0.86);
     border: 1px solid rgba(245, 222, 179, 0.86);
     border-radius: 10px;
@@ -211,11 +202,3 @@ function applyStyles() {
     font-size: 20px;
     font-family: "Space Mono";
   }
-  `;
-  
-  // Adicionar o estilo ao head do documento
-  document.head.appendChild(style);
-}
-
-// Chamar a função para aplicar os estilos
-applyStyles();
