@@ -173,8 +173,6 @@ font-size: 40px;
 }
 #btn-voltar a {
     text-decoration: none;
-<<<<<<< Updated upstream
-=======
 }
 
 .btn-semestre {
@@ -225,5 +223,4 @@ font-size: 40px;
 
 .show-review-div {
 display: flex !important;
->>>>>>> Stashed changes
 }
