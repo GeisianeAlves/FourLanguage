@@ -249,21 +249,21 @@ input:-webkit-autofill
 
 /* Estilos para o modal */
 .modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999; /* Um valor alto para garantir que o modal esteja na parte superior */
-    /* Outros estilos do modal */
+    /* Outros estilos... */
+    width: 80%; /* Defina a largura desejada para o modal */
+    max-width: 500px; /* Defina uma largura máxima para o modal, se desejar */
+    margin: 0 auto; /* Isso centralizará o modal na tela horizontalmente */
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 10% auto; /* Distância do topo da janela */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px; /* Largura máxima */
+    /* Outros estilos... */
+    width: 100%; /* Defina a largura da caixa de conteúdo do modal */
+    max-width: 100%; /* Defina uma largura máxima para a caixa de conteúdo do modal, se desejar */
+    /* Adicione outros estilos conforme necessário */
+}
+.modal-content p {
+    color: #fff; /* Altera a cor do texto para branco */
+    margin-bottom: 10px;
 }
 
 .close {

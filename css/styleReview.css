@@ -16,14 +16,7 @@ html {
 
 
   /* SPAN: A COR DAQUI ALTERA A LOGO E OS TITULOS DA UNIDADES */
-  span-logo{
-    font-size: 16px;
-    font-family: 'Space Mono', Courier, monospace;
-    color: #8d28f1;
-    margin-left: 1.9px;
-    margin-top: 20px;
-    font-weight: bold;
-  }
+
 
   span{
     font-size: 16px;
@@ -54,11 +47,11 @@ html {
     margin-left: 13px;
   }
   
-  .nav-menu{
+  .nav-menu {
     Display: flex;
     Justify-content:left;
     Align-items:flex-start;
-    Column-gap: 28px; */
+    Column-gap: 28px; 
   }
   
   .nav-menu ul {
@@ -117,79 +110,6 @@ html {
   font-family: 'Space Mono';
 }
 
-/* Estilos para o menu lateral */
-.sidebar {
-  padding: 2px;
-  position: fixed;
-  top: 0;
-  left: -300px;
-  width: 209px;
-  height: 100%;
-  background-color: #08021de1;
-  padding-top: 60px;
-  transition: all 0.3s ease;
-  z-index: 2;
-}
-
-.content {
-  padding: 7px;
-}
-
-.sidebar ul {
-  list-style: none;
-  margin: 0;
-  padding: 12px;
-}
-
-.sidebar li {
-  margin-bottom: 10px;
-}
-
-
-.sidebar li a {
-  display: block;
-  padding: 13px;
-  color: #ffffff;
-  font-size: 18px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-
-}
-
-.sidebar li a:hover {
-  background-color: #92a1cd;
-}
-
-.menu-toggle {
-  position: fixed;
-  top: 9px;
-  left: 20px;
-  font-size: 28px;
-  cursor: pointer;
-  z-index: 4;
-}
-
-
-
-
-/* Estilos para os botões de navegação */
-.nav-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #120949e7;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.nav-btn:hover {
-  background-color: #ace7ae;
-}
-
-/* fundo de revisão */
-header {
-  background-color: rgba(185, 88, 238, 0.29);
-}
 
 
 #container-semestre {
@@ -245,11 +165,7 @@ header {
   padding-top: 8px;
 }
 
-ul{
-  margin-left: -33px;
-  font-size: 18px;
-  padding-top: 12px;
-}
+
 
 #second h2 {
   font-size: 20px;
@@ -326,6 +242,9 @@ ul{
   transition: all 0.5s ease-in-out;
 }
 
+body{
+  background-color: rgba(245, 222, 179, 0.523);
+}
 
 
 /* SOMENTE PARA A PAGINA DE REVISAO */
@@ -346,9 +265,9 @@ ul{
 .revisao-item {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 4px;
+  margin-bottom: 60px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 10px; 
 }
 
 

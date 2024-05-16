@@ -15,6 +15,7 @@ function applyStyles() {
   }
   
   html {
+
     font-size: 16px;  
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
