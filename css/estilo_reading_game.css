@@ -207,3 +207,20 @@ left: 50%;
     font-size: 18px;
     margin-top: 60px;
 }
+#primeiro,
+#segundo,
+#terceiro,
+#quarto,
+#quinto,
+#sexto,
+#leitura,
+#escrita,
+#fala,
+#escuta {
+display: none;
+}
+
+
+.show-review-div {
+display: flex !important;
+}

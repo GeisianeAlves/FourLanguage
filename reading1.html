@@ -5,36 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reading  | Game </title>
-    
-    <!-- <style>
-        body { font-family: 'Sarala',cursive; color: rgb(26, 24, 24); background: url(img/stars.jpg)no-repeat;
-        background-size: cover; height: 100vh; width: 100%; }
-    </style> -->
-
-<style>
-    body { font-family: 'Sarala',cursive; color: rgb(26, 24, 24); background: url(img/stars.jpg)no-repeat;
-    background-size: cover; height: 100vh; width: 100%; }
-</style>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/estilo_reading_game.css">
 
+    <style>
+        body { font-family: 'Sarala',cursive; color: rgb(26, 24, 24); background: url(img/stars.jpg)no-repeat;
+        background-size: cover; height: 100vh; width: 100%; }
+    </style>
+    
     <script src="utils/renderReadingLevel.js"></script>
 
     <script>    
       window.renderReading() 
     </script>
-</head>
+</head> 
 
 
 <body>
 
-    <div id="container-menu">
-        <!-- aqui chama função do arquivo menu.js -->
-    </div>
+    <header class="cabecalho">
+        <div class="container-nav">
+        <nav class="nav-menu">
+          <img src="img/logo-four.png" alt="Logo Four Language" width="60vw" class="logo-four">
+          <ul class="lista-nao-ordenada">
+            <li class="item-lista-cabecalho">
+              <a href="index.html">Home</a>
+            </li>
+        
+            <li class="item-lista-cabecalho">
+              <a href="tela_skills.html">Games</a>
+              <ul>
+                <li class="item-lista-cabecalho"><a href="tela_skills.html">All </a></li>
+                <li class="item-lista-cabecalho"><a href="quiz.html">Extra</li>
+              </ul>
+            </li>
+        
+            <li class="item-lista-cabecalho">
+              <a href="revisao.html"> Content Review</a>
+              
+            </li>
+        
+            <li class="item-lista-cabecalho"><a href="creditos.html">About</a></li>
+            <div class="menu-direita">
+            <li>
+              <input type="text" placeholder="Search Content..." class="search-bar"> </input>
+              <button class="nav-botao"><a href="login.html">Sign out</a></button>
+            </li>
+          </div>
+          </ul>
+        </div>
+        </nav>
+            
+        <!-- chamando a formatacao do cabecalho -->
+      <script src="utils/renderHeader.js"> </script>   
+     
+    </header>
+
     
-    <div id="container-menu">
-        <!-- aqui chama função do arquivo menu.js -->
-    </div>
+   
 
     <div id="div-esquerda">
         <h2>Wait until typing is completed before answering the questions.</h2>       
@@ -681,14 +708,15 @@
 });
     </script>
 
-    <script src="js/menu.js"></script>
+    <!-- <script src="js/menu.js"></script> -->
+    <!-- <script src="utils/renderFooter.js"></script>
+    <script src="utils/renderHeader.js"></script> -->
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="js/script_typing.js"></script>
-    <script src="js/menu.js"></script>   
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     

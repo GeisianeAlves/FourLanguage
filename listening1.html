@@ -5,13 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listening | Game</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/estilo_listening_game.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <style>
-        body { background: url(img/stars.jpg)no-repeat; background-size: cover; width: 100%; height: 100vh;
-        display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        body { background: url(img/stars.jpg)no-repeat; background-size: cover; width: 100%; height: 100vh;}
+
+        /* estilo diferente para este cabeçalho */
+        .cabecalho-listening { font-family: "Space Mono";  align-items: last baseline; background-color: #4c546c;
+        height: 100px;  color: white;  padding: 1%;  }
+       .logo-four-listening{
+        width: 50px;  margin-top: 10px;
+       }
+
     </style>
 
     <script src="utils/renderListeningLevel.js"></script>
@@ -23,10 +29,46 @@
 
 
 <body>
+  <header class="cabecalho-listening">
+        <div class="container-nav">
+        <nav class="nav-menu">
+          <img src="img/logo-four.png" alt="Logo Four Language" width="60vw" class="logo-four-listening">
+          <ul class="lista-nao-ordenada">
+            <li class="item-lista-cabecalho">
+              <a href="index.html">Home</a>
+            </li>
+        
+            <li class="item-lista-cabecalho">
+              <a href="tela_skills.html">Games</a>
+              <ul>
+                <li class="item-lista-cabecalho"><a href="tela_skills.html">All </a></li>
+                <li class="item-lista-cabecalho"><a href="quiz.html">Extra</li>
+              </ul>
+            </li>
+        
+            <li class="item-lista-cabecalho">
+              <a href="revisao.html"> Content Review</a>
+              
+            </li>
+        
+            <li class="item-lista-cabecalho"><a href="creditos.html">About</a></li>
+            <div class="menu-direita">
+            <li>
+              <input type="text" placeholder="Search Content..." class="search-bar"> </input>
+              <button class="nav-botao"><a href="login.html">Sign out</a></button>
+            </li>
+          </div>
+          </ul>
+        </div>
+        </nav>
+            
+        <!-- chamando a formatacao do cabecalho -->
+      <script src="utils/renderHeader.js"> </script>   
+     
+    </header>
+
     
-    <div id="container-menu">
-        <!-- aqui chama função do arquivo menu.js -->
-    </div>
+  
 
     <div class="container-jogo">
 
@@ -50,8 +92,8 @@
             </div>     
            
         </div>
-
-
+    
+    
     
         <!--  JOGO PRIMEIRO SEMESTRE -->   
         <div class="all level" id=primeiro >
@@ -67,7 +109,7 @@
             <p id="erros"><span class="correct-answer" style="font-size: 28px;"></span></p>
             
         </div>
-
+    
     <!--  JOGO SEGUNDO SEMESTRE -->   
         <div class="all level" id=segundo >
             <h3 style="color: rgb(170, 116, 85);">Semester 2 </h3>
@@ -82,7 +124,7 @@
             <p id="erros2"><span class="correct-answer" style="font-size: 28px;"></span></p>
             
         </div>
-
+    
         <!--  JOGO TERCEIRO SEMESTRE -->   
         <div class="all level" id=terceiro >
             <h3 style="color: rgb(224, 212, 249);">Semester 3 </h3>
@@ -98,7 +140,7 @@
             
         </div>
     
-
+    
         <!--  JOGO QUARTO SEMESTRE -->   
         <div class="all level" id=quarto >
             <h3 style="color: rgb(148, 106, 238);">Semester 4 </h3>
@@ -113,7 +155,7 @@
             <p id="erros4"><span class="correct-answer" style="font-size: 28px;"></span></p>
             
         </div>
-
+    
         <!--  JOGO QUINTO SEMESTRE -->   
         <div class="all level" id=quinto >
             <h3 style="color: rgb(64, 82, 138);">Semester 5 </h3>
@@ -128,7 +170,7 @@
             <p id="erros5"><span class="correct-answer" style="font-size: 28px;"></span></p>
             
         </div>
-
+    
         <!--  JOGO SEXTO SEMESTRE -->   
         <div class="all level" id=sexto >
             <h3 style="color: rgb(64, 82, 138);">Semester 5 </h3>
@@ -143,14 +185,14 @@
             <p id="erros6"><span class="correct-answer" style="font-size: 28px;"></span></p>
             
         </div>
-
-
+    
+    
         <div class="container-direita">
-
+    
             <div id="img-help">
                 <img id="myImg" src="img/help.svg" alt="Image">
             </div>
-
+    
             <!--Container lateral direita sobre como jogar-->
             <div id="myModal" class="modal">
                 <!-- Modal content -->
@@ -166,16 +208,16 @@
             </div>          
             
         </div>
-
+    
             <!--imagem-->
             <div>
                 <img id="img-2"  src="img/astronaut.jpg" class="object" data-value="10">   
             </div> 
-
+    
         </div>
-   
+    
        
-
+    
     </div> 
 
     
@@ -188,6 +230,7 @@
     </script>
     
     
-<script src="js/menu.js"></script>
+<!-- <script src="js/menu.js"></script> -->
+<!-- <script src="utils/renderHeader.js"></script> -->
 <script src="js/script_listening.js"></script>
 </html>

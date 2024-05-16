@@ -26,7 +26,7 @@ html {
   right: 120px;
   top:150px;
   color: rgb(212, 202, 186);
-
+  margin-top: 30px;
 }
 
 .correct, .incorrect {
@@ -283,17 +283,6 @@ span{
     color: #cf34c2;
 }
 
-/*Quiz container
-.main{
-   background: url(/img/stars.jpg);
-    background-size:cover;
-    background-repeat: no-repeat; 
-    width: 100vw;
-    height: 90vh;
-    display: flex;
-    flex-direction: row;
-   
-}*/
 .container-left {
 
     display: flex;
@@ -308,6 +297,7 @@ span{
     width: 500px;
     top: 100px;
     left: 50px;
+    margin-top: 70px;
 }
 #img-astronaut{
     position: absolute;
