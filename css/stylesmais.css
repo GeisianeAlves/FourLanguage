@@ -197,6 +197,73 @@ input {
 /* secao dos banners - o que falam */
 
 
+
+/* CARDS */
+/* General Card Styles */
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card {
+  background-color: #fff; /* Card background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  border-radius: 10px; /* Rounded corners */
+  margin-bottom: 20px; /* Add spacing between cards */
+  width: 300px; /* Adjust card width as needed */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange content vertically */
+  align-items: center; /* Center content horizontally */
+  padding: 20px; /* Add padding around card content */
+  text-align: center; /* Center text within the card */
+}
+
+/* Card Image */
+.card img {
+  width: 100%; /* Make image span the full width of the card */
+  height: 100%; /* Adjust image height as needed */
+  object-fit: cover; /* Cover the card area while maintaining aspect ratio */
+  margin-bottom: 15px; /* Add spacing between image and content */
+}
+
+/* Card Title */
+.card h4 {
+  font-size: 20px; /* Adjust font size as needed */
+  font-weight: bold; /* Make title bolder */
+  margin-bottom: 10px; /* Add spacing between title and content */
+  color: #333; /* Use a darker color for the title */
+}
+
+/* Card Description */
+.card p {
+  line-height: 1.6; /* Add some line spacing for better readability */
+  color: #666; /* Use a medium gray color for the description text */
+}
+
+/* Card Quote */
+.card blockquote {
+  font-style: italic; /* Make quote text italic */
+  margin-top: 10px; /* Add spacing above the quote */
+}
+
+/* Card Play Button (Optional) */
+.card button {
+  background-color: #007bff; /* Blue background color */
+  color: #fff; /* White text color */
+  border: none; /* Remove default button border */
+  padding: 10px 20px; /* Add padding around button text */
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Indicate that it's a clickable element */
+  transition: background-color 0.3s ease; /* Add a smooth hover effect */
+}
+
+.card button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+
 /* RODAPE */
 .rodape {
   padding: 25px;

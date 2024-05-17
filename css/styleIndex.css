@@ -154,9 +154,7 @@
   background-color: #ace7ae;
 }
 
-header {
-  background-color: rgba(255, 192, 203, 0.663);
-}
+
 
 /*banner*/
 #container {
@@ -178,89 +176,71 @@ header {
 }
 #container-semestre h1 {
   font-size: 25px;
+  text-align: center;
+  color: #92a1cd;
 }
 
-/* QUANDO FOR MEXER EM REVISAO, MAS LEMBRE-SE QUE ALTERA O BOX DO INICIO */
-/* para mexer e alinhar os box de semestre, as imagens parecem no obedecer, mas tem jeito */
-
-#first,
-#second,
-#third,
-#four,
-#five,
-#six {
+/* CARDS DOS SEMESTRES GRAMMAR */
+.card-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 240px;
-  height: 240px;
-  margin-bottom: 50px;
-  border: 2px solid #f1ecec;
-  background-color: pink;
-  padding: 10px;
-  box-shadow: 5px 5px 5px #333;
-  font-size: 18px;
+  flex-direction: column; /* Stack card rows vertically */
+  width: 100%; /* Take full width of container */
 }
 
-#first:hover,
-#second:hover,
-#third:hover,
-#four:hover,
-#five:hover,
-#six:hover {
-  transform: scale(1.1);
-  transition: all 0.5s ease-in-out;
+.card-row {
+  display: flex;
+  justify-content: space-evenly; /* Distribute cards evenly */
+  margin-bottom: 20px; /* Add spacing between rows */
+ 
+}
+.card {
+  width: 300px; /* Adjust card width as needed */
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
 }
 
-/* para mexer no tamanho dos titulos da página inicial, pq se for em revisao você terá que aumentar o nome do id ou class para batata-revisao*/
-#first h2,
-#four h2 {
-  font-size: 20px;
-  margin-top: 9px;
-  padding: 3px;
+.card img {
+  width: 100%; /* Images scale proportionally */
+  height: auto;
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column; /* Stack columns on mobile */
+  }
+
+  .card-coluna {
+    width: 100%; /* Columns take full width on mobile */
+    margin-bottom: 20px; /* Add spacing between columns on mobile */
+  }
 }
 
+/* Responsive Styles (Mobile First) */
+@media (max-width: 768px) {
+  .preview-jogos {
+    flex-direction: column; /* Stack sections vertically on mobile */
+  }
 
-.first-paragraph {
-  text-decoration: underline;
-  font-size: 18px;
-  padding-top: 8px;
+  .container-jogos, .container-right {
+    width: 100%; /* Make sections full width on mobile */
+  }
+
+  .card-container {
+    flex-direction: column; /* Cards stack vertically on mobile */
+  }
+
+  .card {
+    margin-bottom: 20px; /* Add spacing between cards on mobile */
+  }
 }
 
-ul {
-  margin-left: -33px;
-  font-size: 18px;
-  padding-top: 12px;
+/* Image Responsiveness */
+img {
+  max-width: 100%; /* Images scale down to fit container */
+  height: auto;
 }
-
-#second h2 {
-  font-size: 20px;
-  margin-top: 9px;
-  padding: 3px;
-}
-
-.second-paragraph {
-  text-decoration: underline;
-  font-size: 18px;
-  padding-top: 8px;
-}
-
-#third h2 {
-  font-size: 20px;
-  margin-top: 20px;
-  padding: 3px;
-}
-
-.third-paragraph,
-.four-paragraph,
-.fifth-paragraph,
-.sixth-paragraph {
-  text-decoration: underline;
-  font-size: 18px;
-  padding-top: 8px;
-}
-
 
 
 /*PARTE DOS SEMESTRES INDEX*/
@@ -271,102 +251,7 @@ ul {
   margin-top: 20px;
 }
 
-/* para mexer e alinhar os box de semestre, as imagens parecem no obedecer, mas tem jeito */
-#first,
-#four {
-  display: flex;
-  align-items: center;
-  width: 220px;
-  height: 366px;
-  margin-bottom: 50px;
-  border: 2px solid #333;
-  background-color: #ccc;
-  padding: 30px;
-  box-shadow: 5px 5px 5px #333;
-}
 
-#second,
-#third {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 225px;
-  height: 369px;
-  margin-bottom: 50px;
-  border: 2px solid #333;
-  background-color: #ccc;
-  padding: 17px;
-  box-shadow: 5px 5px 5px #333;
-}
-
-#five,
-#six {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 220px;
-  height: 369px;
-  margin-bottom: 50px;
-  border: 2px solid #333;
-  background-color: #ccc;
-  padding: 17px;
-  box-shadow: 5px 5px 5px #333;
-}
-#five, #six  h2 {
-  font-size: 18px;
-}
-
-#first:hover,
-#second:hover,
-#third:hover,
-#four:hover,
-#five:hover,
-#six:hover {
-  transform: scale(1.1);
-  transition: all 0.5s ease-in-out;
-}
-
-/* para mexer no tamanho dos titulos */
-#first h1 {
-  font-size: 20px;
-  margin-bottom: 20px;
-
-}
-
-#second h2 {
-  font-size: 20px;
-  padding: 3px;
-}
-
-#third h3 {
-  font-size: 20px;
-  margin-bottom: 20px;
-
-}
-
-#four h4 {
-  font-size: 20px;
-  margin-bottom: 20px;
-
-}
-
-#first img,
-#four img {
-
-  width: 111%;
-  box-shadow: 5px 5px 5px #333;
-  margin-bottom: 2px;
-}
-
-#second img,
-#third img {
-  margin-top: 25px;
-  width: 86%;
-  box-shadow: 5px 5px 5px #333;
-  margin-bottom: 2px;
-}
 
 /* outra section */
 /* semestre parte de jogos*/
@@ -603,12 +488,14 @@ gap: 50px;
   height: 30%;
   width: 100%;
   border-radius: 15px;
-gap: 10px;
+  gap: 10px;
+
 }
 
 .container-right img {
   width: 100%;
   height: 60%;
+  margin-bottom: 10px;
   border-top-left-radius: 45px;
   border-bottom-right-radius: 45px;
 }
