@@ -220,6 +220,14 @@ input {
   text-align: center; /* Center text within the card */
 }
 
+.card:hover {
+  background-color: #f0f0f0; 
+  box-shadow: 1em 10px 10px rgba(0, 0, 0, 0.756); /* Add a subtle shadow on hover */
+  transform: scale(1.05);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+
 /* Card Image */
 .card img {
   width: 100%; /* Make image span the full width of the card */
