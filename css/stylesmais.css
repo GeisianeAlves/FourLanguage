@@ -227,7 +227,6 @@ input {
   transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
 }
 
-
 /* Card Image */
 .card img {
   width: 100%; /* Make image span the full width of the card */
