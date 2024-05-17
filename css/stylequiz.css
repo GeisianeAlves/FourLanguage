@@ -314,7 +314,7 @@ h1 {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: rgb(136, 189, 201);
+  background-color: rgba(118, 168, 180, 0.671);
 }
 
 #img-astronauta {
@@ -336,7 +336,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #efe4cc;
+  background-color: #efe4cc99;
   border-radius: 50%;
   text-align: center;
  
@@ -354,7 +354,7 @@ h1 {
 
 /* Estilizar os controles de áudio */
 audio::-webkit-media-controls {
-  background-color: #f1f1f1; /* Cor de fundo */
+  background-color: #ecf2f6; /* Cor de fundo */
   border-radius: 10px; /* Borda arredondada */
 }
 
