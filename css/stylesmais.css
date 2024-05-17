@@ -14,7 +14,9 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-
+body{
+  background-color: #ecf2f6;
+}
 
 /* cabecalho + nav */
 .cabecalho {
