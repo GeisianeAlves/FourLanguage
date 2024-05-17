@@ -5,15 +5,16 @@
   box-sizing: border-box;
   text-decoration: none;
   margin: 0;
+  
 }
 
 html {
   font-size: 16px;
-
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
+<<<<<<< Updated upstream
 .rodape {
   padding: 25px;
   color: white;
@@ -23,6 +24,13 @@ html {
   line-height: 2;           /*espacamento entre as linhas*/
 }
 
+=======
+body{
+  background-color: #ecf2f6;
+}
+
+/* cabecalho + nav */
+>>>>>>> Stashed changes
 .cabecalho {
   font-family: "Space Mono";
   align-items: last baseline;
