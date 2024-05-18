@@ -32,8 +32,25 @@ function prev() {
   index = (index - 1 + slides.length) % slides.length;
   slides[index].classList.add("active");
 }
-setInterval(next, 15000);
+setInterval(next, 60000);
 
 document.getElementById("btnRedirect").addEventListener("click", function () {
   window.location.href = "login.html";
 });
+
+// config banner saiba mais - semestre revisao
+const banners = document.querySelectorAll(".banner");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+let currentBannerIndex = 0;
+
+function showBanner(index) {
+  banners[currentBannerIndex].classList.remove("active");
+  currentBannerIndex = (index + banners.length) % banners.length;
+  banners[currentBannerIndex].classList.add("active");
+}
+
+prevBtn.addEventListener("click", () => showBanner(currentBannerIndex - 1));
+nextBtn.addEventListener("click", () => showBanner(currentBannerIndex + 1));
+
+showBanner(currentBannerIndex); // Inicializa o carrossel

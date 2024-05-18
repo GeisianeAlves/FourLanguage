@@ -14,7 +14,7 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-body{
+body {
   background-color: #ecf2f6;
 }
 
@@ -42,11 +42,13 @@ body{
   color: white;
   font-family: "Space Mono";
   border: 2px solid rgba(245, 222, 179, 0.738);
-  border-radius: 15px; /* Ajuste o valor de acordo com o arredondamento desejado */
-  padding: 10px 20px; /* Ajuste o espaçamento interno conforme necessário */
+  border-radius: 15px;
+  /* Ajuste o valor de acordo com o arredondamento desejado */
+  padding: 10px 20px;
+  /* Ajuste o espaçamento interno conforme necessário */
   cursor: pointer;
   font-weight: bold;
-  
+
 }
 
 .nav-botao:hover {
@@ -55,7 +57,8 @@ body{
 
 
 .nav-menu a {
-  color: inherit; /* Herda a cor do texto do elemento pai */
+  color: inherit;
+  /* Herda a cor do texto do elemento pai */
 }
 
 .nav-menu img {
@@ -79,21 +82,29 @@ body{
 }
 
 .container-nav ul li {
-  margin-right: 20px; /* Adapte a margem conforme necessário */
-  position: relative; /* Define posição relativa para alinhar a sub-lista */
+  margin-right: 20px;
+  /* Adapte a margem conforme necessário */
+  position: relative;
+  /* Define posição relativa para alinhar a sub-lista */
 }
 
 .nav-menu ul li ul {
   display: none;
-  position: absolute; /* Posicionamento absoluto em relação ao item pai */
-  top: 100%; /* Aparece abaixo do item pai */
-  left: 0; /* Alinha com o lado esquerdo do item pai */
-  background-color: #4c546c; /* Fundo cinza */
-  color: #fff; /* Cor do texto branca */
-  padding: 10px; /* Adiciona espaço interno */
+  position: absolute;
+  /* Posicionamento absoluto em relação ao item pai */
+  top: 100%;
+  /* Aparece abaixo do item pai */
+  left: 0;
+  /* Alinha com o lado esquerdo do item pai */
+  background-color: #4c546c;
+  /* Fundo cinza */
+  color: #fff;
+  /* Cor do texto branca */
+  padding: 10px;
+  /* Adiciona espaço interno */
 }
 
-.nav-menu ul li:hover > ul {
+.nav-menu ul li:hover>ul {
   display: block;
 }
 
@@ -101,22 +112,29 @@ body{
 /* itens - semestres */
 /* Estilos para os itens do menu principal */
 .item-lista-cabecalho {
-  display: flex; /* Ativa layout flexbox */
-  align-items: center; /* Alinha verticalmente no centro */
+  display: flex;
+  /* Ativa layout flexbox */
+  align-items: center;
+  /* Alinha verticalmente no centro */
   font-family: "Space Mono";
   color: white;
   text-decoration: none;
   font-size: 14px;
   position: relative;
-  height: 40px; /* Define a altura dos itens */
+  height: 40px;
+  /* Define a altura dos itens */
   /* Adicionando propriedades para alinhar e dimensionar no hover */
-  transition: all 0.3s ease; /* Define a transição para as mudanças */
+  transition: all 0.3s ease;
+  /* Define a transição para as mudanças */
 }
 
 .item-lista-cabecalho:hover {
-  background-color: #33435c; /* Cor de fundo ao passar o mouse */
-  width: 178px; /* Define a largura da caixa no hover */
-  padding: 10px; /* Adiciona padding para espaçar o texto da borda */
+  background-color: #33435c;
+  /* Cor de fundo ao passar o mouse */
+  width: 178px;
+  /* Define a largura da caixa no hover */
+  padding: 10px;
+  /* Adiciona padding para espaçar o texto da borda */
 }
 
 /* Estilos para as sublistas do menu principal */
@@ -126,16 +144,23 @@ body{
   margin: 0;
   display: flex;
   background-color: #4c546c;
-  position: absolute; /* Posicionamento absoluto para sublistas */
-  left: 100%; /* Posiciona à esquerda do item pai */
-  top: 100%; /* Posiciona abaixo do item pai */
-  z-index: 1; /* Garante que a sublista fique em cima do item pai */
-  visibility: hidden; /* Oculta a sublista inicialmente */
-  transition: all 0.3s ease; /* Define a transição para mostrar/ocultar a sublista */
+  position: absolute;
+  /* Posicionamento absoluto para sublistas */
+  left: 100%;
+  /* Posiciona à esquerda do item pai */
+  top: 100%;
+  /* Posiciona abaixo do item pai */
+  z-index: 1;
+  /* Garante que a sublista fique em cima do item pai */
+  visibility: hidden;
+  /* Oculta a sublista inicialmente */
+  transition: all 0.3s ease;
+  /* Define a transição para mostrar/ocultar a sublista */
 }
 
 .item-lista-cabecalho:hover ul {
-  visibility: visible; /* Mostra a sublista quando o item pai é hoverizado */
+  visibility: visible;
+  /* Mostra a sublista quando o item pai é hoverizado */
 
 }
 
@@ -151,8 +176,10 @@ body{
 /* MENU DO LADO DIREITO DA TELA */
 /* Estilos para o menu-direita */
 .menu-direita {
-  position: absolute; /* Posicionamento absoluto */
-  right: 0; /* Alinha à direita */
+  position: absolute;
+  /* Posicionamento absoluto */
+  right: 0;
+  /* Alinha à direita */
   nav-left: 90px;
   flex-wrap: wrap;
   align-content: flex-start;
@@ -168,16 +195,21 @@ input {
   color: rgb(93, 91, 91);
   font-weight: bold;
 }
+
 /* Estilos da barra de pesquisa (dentro de menu-direita) */
 .menu-direita input {
-  flex: 1; /* Ocupa todo o espaço disponível */
-  padding: 10px 20px; /* Adiciona padding para espaçar o texto da borda */
-  width: 250px; /* Largura da barra de pesquisa */
+  flex: 1;
+  /* Ocupa todo o espaço disponível */
+  padding: 10px 20px;
+  /* Adiciona padding para espaçar o texto da borda */
+  width: 250px;
+  /* Largura da barra de pesquisa */
 }
 
 .menu-direita input::placeholder {
-  color: gray; 
-  font-weight: bold;/* Cor do texto de placeholder */
+  color: gray;
+  font-weight: bold;
+  /* Cor do texto de placeholder */
 }
 
 /* Estilos para o botão de logout */
@@ -190,11 +222,199 @@ input {
   padding: 10px 20px;
   cursor: pointer;
   font-weight: bold;
-  margin-left: 15px; /* Espaçamento entre o botão e a barra de pesquisa */
-  height: 30px; 
+  margin-left: 15px;
+  /* Espaçamento entre o botão e a barra de pesquisa */
+  height: 30px;
 }
 
 /* secao dos banners - o que falam */
+/* BANNERS */
+.container-banners .slide-container .slide {
+  background-color: #08021df5;
+  width: 100%;
+  /* height: 218px; */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  /* gap: 15px;
+  padding: 20px 9%;
+  padding-bottom: 100px; */
+  margin-top: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, 0%);
+}
+
+.container-banners .slide-container .slide .content-slide {
+  flex: 1 1 350px;
+  animation: slideContent 0.4s linear 0.4s backwards;
+}
+
+@keyframes slideContent {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+}
+
+
+.container-banners .slide-container .slide .content-slide .btn-slide {
+  margin-top: 10px;
+  display: inline-block;
+  background: rgb(255, 168, 243);
+  color: #ffffff;
+  font-size: 15px;
+  padding: 9px 40px;
+  border-radius: 5px;
+  font-family: 'Noto Sans', sans-serif;
+  text-decoration: none;
+}
+
+.container-banners .slide-container .slide .content-slide .btn-slide:hover {
+  background: rgba(254, 124, 213, 0.45);
+  border: 2px solid #d46dc6;
+  color: #ffffff;
+}
+
+.container-banners .slide-container {
+  display: none;
+}
+
+.container-banners .slide-container.active {
+  display: block;
+}
+
+.container-banners .slide-container .slide .banner1 {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100vw;
+  height: auto;
+  z-index: -1000;
+  /* background: url(img/Seja\ bem-vindo\,\ Fateco\ \(a\)\ \(1\).gif) no-repeat;
+      background-size: cover; 
+   */
+}
+
+.banner1 .banner2 .banner3 {
+  max-width: 100%;
+  min-width: 50%;
+  max-height: 100%;
+  min-height: 50%;
+  width: 50%;
+  height: 200px;
+}
+
+.container-banners #prev,
+.container-banners #next {
+  position: absolute;
+  top: 90%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  /* background: #c787dad3; cor para o botao preview */
+  height: 44px;
+  width: 31px;
+  line-height: 50px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bolder;
+  border-radius: 60px;
+}
+
+.container-banners #prev:hover,
+.container-banners #next:hover {
+  background: #a355d761;
+}
+
+.container-banners #prev {
+  left: 51px;
+}
+
+.container-banners #next {
+  right: 20px;
+}
+
+@media(max-width: 500px) {
+  .container-banners #prev {
+    left: 0px;
+    top: 60%;
+  }
+
+  .container-banners #next {
+    right: 0px;
+    top: 60%;
+  }
+
+  .container-banners .slide-container .slide .content-slide p {
+    font-size: 16px;
+    color: #ffffff;
+    font-family: 'Noto Sans', sans-serif;
+    width: 80%;
+    height: 10%;
+
+  }
+}
+
+
+
+/* SECTION ESTILOS */
+.section-content1,
+.section-content2,
+.section-content3 {
+  width: 80%;
+  /* Largura da seção (ajuste conforme necessário) */
+  margin: 0 auto;
+  /* Centraliza horizontalmente */
+  padding: 40px;
+  /* Espaçamento interno */
+  background-color: #fff;
+  /* Cor de fundo (opcional) */
+  border: 1px solid #ddd;
+  /* Borda (opcional) */
+  border-radius: 8px;
+  /* Cantos arredondados (opcional) */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Sombra (opcional) */
+  font-family: "Space Mono";
+}
+
+/* Estilos para o conteúdo interno (ajuste conforme necessário) */
+.section-content1 h2 {
+  margin-bottom: 20px;
+}
+
+.section-content1 p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.section-content1 ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+/* tips  */
+
+
+.recommendation {
+  /* Estiliza cada recomendação */
+  display: flex;
+  /* Ativa o Flexbox para o conteúdo da recomendação */
+  align-items: center;
+  /* Alinha verticalmente imagem e texto */
+  margin-bottom: 20px;
+  /* Espaçamento entre as recomendações */
+}
+
+.recommendation img {
+  margin-right: 15px;
+  /* Espaçamento entre a imagem e o texto */
+}
+
 
 
 
@@ -208,66 +428,98 @@ input {
 }
 
 .card {
-  background-color: #fff; /* Card background color */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  border-radius: 10px; /* Rounded corners */
-  margin-bottom: 20px; /* Add spacing between cards */
-  width: 300px; /* Adjust card width as needed */
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Arrange content vertically */
-  align-items: center; /* Center content horizontally */
-  padding: 20px; /* Add padding around card content */
-  text-align: center; /* Center text within the card */
+  background-color: #fff;
+  /* Card background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Add a subtle shadow */
+  border-radius: 10px;
+  /* Rounded corners */
+  margin-bottom: 20px;
+  /* Add spacing between cards */
+  width: 300px;
+  /* Adjust card width as needed */
+  display: flex;
+  /* Use flexbox for layout */
+  flex-direction: column;
+  /* Arrange content vertically */
+  align-items: center;
+  /* Center content horizontally */
+  padding: 20px;
+  /* Add padding around card content */
+  text-align: center;
+  /* Center text within the card */
 }
 
 .card:hover {
-  background-color: #f0f0f0; 
-  box-shadow: 1em 10px 10px rgba(0, 0, 0, 0.756); /* Add a subtle shadow on hover */
+  background-color: #f0f0f0;
+  box-shadow: 1em 10px 10px rgba(0, 0, 0, 0.756);
+  /* Add a subtle shadow on hover */
   transform: scale(1.05);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  /* Smooth transition for hover effects */
 }
 
 /* Card Image */
 .card img {
-  width: 100%; /* Make image span the full width of the card */
-  height: 100%; /* Adjust image height as needed */
-  object-fit: cover; /* Cover the card area while maintaining aspect ratio */
-  margin-bottom: 15px; /* Add spacing between image and content */
+  width: 100%;
+  /* Make image span the full width of the card */
+  height: 100%;
+  /* Adjust image height as needed */
+  object-fit: cover;
+  /* Cover the card area while maintaining aspect ratio */
+  margin-bottom: 15px;
+  /* Add spacing between image and content */
 }
 
 /* Card Title */
 .card h4 {
-  font-size: 20px; /* Adjust font size as needed */
-  font-weight: bold; /* Make title bolder */
-  margin-bottom: 10px; /* Add spacing between title and content */
-  color: #333; /* Use a darker color for the title */
+  font-size: 20px;
+  /* Adjust font size as needed */
+  font-weight: bold;
+  /* Make title bolder */
+  margin-bottom: 10px;
+  /* Add spacing between title and content */
+  color: #333;
+  /* Use a darker color for the title */
 }
 
 /* Card Description */
 .card p {
-  line-height: 1.6; /* Add some line spacing for better readability */
-  color: #666; /* Use a medium gray color for the description text */
+  line-height: 1.6;
+  /* Add some line spacing for better readability */
+  color: #666;
+  /* Use a medium gray color for the description text */
 }
 
 /* Card Quote */
 .card blockquote {
-  font-style: italic; /* Make quote text italic */
-  margin-top: 10px; /* Add spacing above the quote */
+  font-style: italic;
+  /* Make quote text italic */
+  margin-top: 10px;
+  /* Add spacing above the quote */
 }
 
 /* Card Play Button (Optional) */
 .card button {
-  background-color: #007bff; /* Blue background color */
-  color: #fff; /* White text color */
-  border: none; /* Remove default button border */
-  padding: 10px 20px; /* Add padding around button text */
-  border-radius: 5px; /* Rounded corners for the button */
-  cursor: pointer; /* Indicate that it's a clickable element */
-  transition: background-color 0.3s ease; /* Add a smooth hover effect */
+  background-color: #007bff;
+  /* Blue background color */
+  color: #fff;
+  /* White text color */
+  border: none;
+  /* Remove default button border */
+  padding: 10px 20px;
+  /* Add padding around button text */
+  border-radius: 5px;
+  /* Rounded corners for the button */
+  cursor: pointer;
+  /* Indicate that it's a clickable element */
+  transition: background-color 0.3s ease;
+  /* Add a smooth hover effect */
 }
 
 .card button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3;
+  /* Darker blue on hover */
 }
 
 

@@ -1,730 +1,548 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
-
-    <title>Four Language | Content Review</title>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1"
-    />
-    <link
-      rel="stylesheet"
-      href="css/stylesmais.css"
-    />
-
-
-    <link
-    href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet"
-  />
-
-    <script src="utils/renderUnit.js"></script>
-    <script>
-      window.renderUnit();
-    </script>
-  </head>
-  <!-- <link rel="shortcut icon" href="img/icone.png" type="image/x-icon"> -->
-
-  <body>
-
-    <header class="cabecalho">
-      <div class="container-nav">
-      <nav class="nav-menu">
-        <img src="img/logo-four.png" alt="Logo Four Language" width="60vw" class="logo-four">
-        <ul class="lista-nao-ordenada">
-          <li class="item-lista-cabecalho">
-            <a href="index.html">Home</a>
-          </li>
-      
-          <li class="item-lista-cabecalho">
-            Games
-            <ul>
-              <li class="item-lista-cabecalho"><a href="tela_skills.html">All </a></li>
-              <li class="item-lista-cabecalho"><a href="quiz.html">Extra</li>
-            </ul>
-          </li>
-      
-          <li class="item-lista-cabecalho">
-            <a href="revisao.html"> Content Review</a>
-            <ul>
-              <!-- <li class="item-lista-cabecalho">1º Semester</li> -->
-              <li class="item-lista-cabecalho" id="segundo-semestre">2º Semester</li>
-              <li class="item-lista-cabecalho" id="terceiro-semestre"> <a href="saibamais_2ano.html">3º Semester</a></li>
-              <li class="item-lista-cabecalho" id="quarto-semestre"> <a href="saibamais_2ano.html">4º Semester</a></li>
-              <li class="item-lista-cabecalho"  id="quarto-semestre"> <a href="saibamais_3ano.html">5º Semester</a></li>
-              <li class="item-lista-cabecalho"  id="quarto-semestre"> <a href="saibamais_3ano.html">6º Semester</a></li>
-            </ul>
-          </li>
-      
-          <li class="item-lista-cabecalho">
-            <a href="grammar.html"> Grammar</a>
-            
-          </li>
-          <li class="item-lista-cabecalho"><a href="creditos.html">About</a></li>
-          <div class="menu-direita">
-          <li>
-            <input type="text" placeholder="Search Content..." class="search-bar"> </input>
-            <button class="nav-botao"><a href="login.html">Sign out</a></button>
-          </li>
-        </div>
-        </ul>
+   <head>
+      <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+      <style>
+         .container-banners .slide-container:nth-child(1) .slide {
+         background: url(img/welcome-unit1.jpg);
+         background-size: cover;
+         background-repeat: no-repeat;
+         /* width: 100vw;
+         height: 50vh; */
+         }
+         .container-banners .slide-container:nth-child(2) .slide {
+         background: url(img/number-unit2.jpg);
+         background-size: cover;
+         background-repeat: no-repeat;
+         /* width: 100vw;
+         height: 100vh; */
+         }
+         .container-banners .slide-container:nth-child(3) .slide {
+         background: url(img/work-unit3.jpg);
+         background-size: cover;
+         background-repeat: no-repeat;
+         /* width: 100vw;
+         height: 100vh; */
+         }
+      </style>
+      <title>Four Language | Content Review</title>
+      <meta charset="UTF-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1"
+         />
+      <link
+         rel="stylesheet"
+         href="css/stylesmais.css"
+         />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+         rel="stylesheet"
+         />
+      <script src="utils/renderUnit.js"></script>
+      <script>
+         window.renderUnit();
+      </script>
+   </head>
+   <!-- <link rel="shortcut icon" href="img/icone.png" type="image/x-icon"> -->
+   <body>
+      <header class="cabecalho">
+         <div class="container-nav">
+            <nav class="nav-menu">
+               <img src="img/logo-four.png" alt="Logo Four Language" width="60vw" class="logo-four">
+               <ul class="lista-nao-ordenada">
+                  <li class="item-lista-cabecalho">
+                     <a href="index.html">Home</a>
+                  </li>
+                  <li class="item-lista-cabecalho">
+                     Games
+                     <ul>
+                        <li class="item-lista-cabecalho"><a href="tela_skills.html">All </a></li>
+                        <li class="item-lista-cabecalho"><a href="quiz.html">Extra</a></li>
+                     </ul>
+                  </li>
+                  <li class="item-lista-cabecalho">
+                     <a href="revisao.html"> Content Review</a>
+                     <ul>
+                        <!-- <li class="item-lista-cabecalho">1º Semester</li> -->
+                        <li class="item-lista-cabecalho" id="segundo-semestre">2º Semester</li>
+                        <li class="item-lista-cabecalho" id="terceiro-semestre"> <a href="saibamais_2ano.html">3º Semester</a></li>
+                        <li class="item-lista-cabecalho" id="quarto-semestre"> <a href="saibamais_2ano.html">4º Semester</a></li>
+                        <li class="item-lista-cabecalho"  id="quarto-semestre"> <a href="saibamais_3ano.html">5º Semester</a></li>
+                        <li class="item-lista-cabecalho"  id="quarto-semestre"> <a href="saibamais_3ano.html">6º Semester</a></li>
+                     </ul>
+                  </li>
+                  <li class="item-lista-cabecalho">
+                     <a href="grammar.html"> Grammar</a>
+                  </li>
+                  <li class="item-lista-cabecalho"><a href="creditos.html">About</a></li>
+                  <div class="menu-direita">
+                     <li>
+                        <input type="text" placeholder="Search Content..." class="search-bar">
+                        <button class="nav-botao"><a href="login.html">Sign out</a></button>
+                     </li>
+                  </div>
+               </ul>
+         </div>
+         </nav>
+      </header>
+      <div class="container-banners">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6 align-self-center text-center">
+                  <!--primeiro banner-->
+                  <div class="slide-container active">
+                     <div class="slide banner">
+                        <div class="content-slide"></div>
+                     </div>
+                  </div>
+                  <!--segundo banner-->
+                  <div class="slide-container">
+                     <div class="slide">
+                        <div class="content-slide"></div>
+                     </div>
+                  </div>
+                  <!--terceiro banner-->
+                  <div class="slide-container">
+                     <div class="slide">
+                        <div class="content-slide"></div>
+                     </div>
+                  </div>
+                  <div id="prev" onclick="prev()">  <img src="img/caret-quadrado-esquerda.svg" alt="" width="50"></div>
+                  <div id="next" onclick="next()"> <img src="img/caret-circulo-direita.svg" alt="" width="50"></div>
+               </div>
+            </div>
+         </div>
       </div>
-      </nav>
-      
-    
-   
-    </header>
-    
-
-    <!-- secao hero - PRINCIPAL - secao o que falam -->
-   <section class="hero">
-    <img src="img/welcome-unit1.jpg" alt="" class="banner1-1semestre1" width="1200vw" height="700vh">
-    <img src="img/number-unit2.jpg" alt="" class="banner1-1semestre2" width="1200vw" height="700vh">
-    <img src="img/work-unit3.jpg" alt="" class="banner1-1semestre3" width="1200vw" height="700vh">
-
-    <!-- esquerda -->
-    <button>
-      <img src="img/caret-quadrado-esquerda.svg" alt="" width="50vw">
-    </button>
-
-    <!-- direita -->
-    <button>
-      <img src="img/caret-circulo-direita.svg" alt=""width="50vw">
-    </button>
-    
-   </section>
-
-  <section class="section-content1" id="primeiro-unit1">  
-       <!-- secao conteudo 1 -->
-    <h2>Unit 1 - Welcome</h2>
-    <p>Introductions and greetings. Talking about
-      personal information, such as name, nationality, and occupation.
-      Expressing likes, dislikes, and preferences. Discussing daily routines and
-      leisure activities.</p>
-      <img
-      class="revisao-img1"
-      src="img/P1.jpg"
-      alt=""
-    />
-
-  
-    <h3>Talking About Personal Information</h3>
-
-    <p>When meeting someone for the first time, it's common to exchange personal information. Here are some phrases you can use:</p>
-    
-    <ul>
-      <li><b>Greetings:</b></li>
-        <ul>
-          <li>"Hi/Hello, my name is..."</li>
-          <li>"Nice to meet you."</li>
-          <li>"Pleased to meet you."</li>
-        </ul>
-      <li><b>Introducing yourself:</b></li>
-        <ul>
-          <li>"I'm from..." (country/city)</li>
-          <li>"I work as a..."</li>
-          <li>"I'm a student at..."</li>
-        </ul>
-      <li><b>Asking about others:</b></li>
-        <ul>
-          <li>"What's your name?"</li>
-          <li>"Where are you from?"</li>
-          <li>"What do you do?"</li>
-        </ul>
-    </ul>
-    
-    <p><b>Example Usage:</b></p>
-    <p>"Hi, my name is John. Nice to meet you! Where are you from?"</p>
-    
-<br>
-
-<h2>Discussing Daily Routines and Leisure Activities</h2>
-
-<p>Talking about your daily routine and leisure activities can be a great way to get to know someone better. Here are some questions and phrases you can use:</p>
-
-<h3>Daily routines</h3>
-<ul>
-  <li>"What time do you usually wake up/go to bed?"</li>
-  <li>"What do you do in the mornings/afternoons/evenings?"</li>
-  <li>"Do you have any hobbies?"</li>
-</ul>
-
-<h3>Leisure activities</h3>
-<ul>
-  <li>"What do you do for fun?"</li>
-  <li>"What do you like to do in your free time?"</li>
-  <li>"Do you play any sports?"</li>
-</ul>
-
-<h4>Example Conversation</h4>
-<div class="conversation">
-  <p><b>Person A:</b> What's your typical day like?</p>
-  <p><b>Person B:</b> I usually wake up around 7 am, have breakfast, and then go to work. In the evenings, I like to relax and watch TV.</p>
-  <p><b>Person A:</b> Do you have any hobbies?</p>
-  <p><b>Person B:</b> Yeah, I love playing soccer and going to the movies.</p>
-</div>
-
-
-
-
-   <!-- CARDS DE CONTEUDO -->
-   <div class="card-container">
-    <div class="card">
-      <h4>be: <em>present simple</em></h4>
-      
-      <img
-      src="img/present-tense-oyster-english.png" width="400vw"
-      alt="Present Simple"
-    />
-        <blockquote>Fonte: Oyster English</blockquote>
-      <p>Card content 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  
-    <div class="card">
-      <h4>be: question <br> Prepositions: in and near
-        </h4>
-      <p>Card content 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <img
-      src="img/prepositions-of-place-in-english.jpg" width="400vw"
-      alt=""
-    />
-    <blockquote>Fonte: Woodward English</blockquote>
-    </div>
-  
-    <div class="card">
-      <h4>A/An</h4>
-      <p>Card content 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <img
-      src="img/articles-a-an-the-exercises.jpg" width="400vw"
-      alt="Articles A and An"
-    />
-    <blockquote>Fonte: Blogger </blockquote>
-    </div>
-  </div>
-  
-  <div class="tips-unit1">
-    <!-- <img
-    src="img/dialogo.gif" width="100vw"
-    alt=""
-  /> -->
-
-  <h5 id="tips-unit1">Tips about Unit 1</h5>
-  <p>Para saber mais sobre os conteúdos abordados na unit 1, aqui estão algumas recomendações:</p>
-  <!-- DICAS DE CONTEÚDOS RELACIONADO A UNIT 1 -->
-  
-  <p><img src="img/oyster-logo.png" alt="" width="200vw"><a href="https://www.oysterenglish.com/present-simple.html">How to form the present simple tense</a></p>
-  <p><img src="img/woodward.png" alt="" width="200vw"><a href="https://www.woodwardenglish.com/lesson/basic-prepositions-of-place/">Basic Prepostions of Place</a></p>
-  <p><img src="img/blogger.png" alt="Use An and A" width="200vw"><a href="https://heinzenglishelp.blogspot.com/2016/10/indefinite-article-aan.html"> English Help - English Classes</a></p>
-
-  </div>
-   
-    </section>
-   
-
-
-
-
-    <section class="section-content2" id="primeiro-unit2">
-         <!-- secao conteudo 2 -->
-    <h2>Unit 2 - Numbers</h2>
-    <p>
-      Learning and practicing numbers from 1 to 100. Counting and identifying
-      quantities. Talking about prices and money. Using numbers in various
-      contexts, such as time, dates, and phone numbers.
-    </p>
-    
-    <img
-      src="img/compras-online.png"
-      alt="Compras Online"
-    />
-
-   
-
-    <h3>Learning and Practicing Numbers from 1 to 100</h3>
-
-    <p>Numbers are essential for everyday communication. Let's start with the basics:</p>
-
-    <ul>
-        <li><strong>Numbers 1-10:</strong> one, two, three, four, five, six, seven, eight, nine, ten</li>
-        <li><strong>Numbers 11-20:</strong> eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty</li>
-        <li><strong>Counting by tens:</strong> thirty, forty, fifty, sixty, seventy, eighty, ninety, one hundred</li>
-        <li><strong>Other numbers:</strong> twenty-one, twenty-two, thirty-three, forty-five, fifty-six, etc.</li>
-    </ul>
-
-    <p>Practice counting aloud and recognizing numbers in different contexts. You can also try counting objects, people, or money to reinforce your learning.</p>
-
-    <h3>Counting and Identifying Quantities</h3>
-
-    <p>When talking about quantities, use the following words and phrases:</p>
-
-    <ul>
-        <li><strong>Singular:</strong> one apple, two books, three cars</li>
-        <li><strong>Plural:</strong> four apples, five books, six cars</li>
-        <li><strong>More than one:</strong> several, many, a lot of, numerous</li>
-        <li><strong>Less than one:</strong> a few, a couple of, some</li>
-    </ul>
-
-    <p>You can also use numbers to describe quantities:</p>
-
-    <ul>
-        <li>There are five people in my family.</li>
-        <li>I have ten dollars in my wallet.</li>
-        <li>She bought three pairs of shoes.</li>
-    </ul>
-
-    <h3>Talking About Prices and Money</h3>
-
-    <p>When discussing prices, use the following phrases:</p>
-
-    <ul>
-        <li>How much is this/that?</li>
-        <li>It costs...</li>
-        <li>That's expensive/cheap.</li>
-        <li>Can I pay by credit card/cash?</li>
-        <li>Do you have change for a $20 bill?</li>
-    </ul>
-
-    <p>Here are some examples of how to talk about money:</p>
-
-    <ul>
-        <li>This shirt costs $25.</li>
-        <li>That's a good deal.</li>
-        <li>I paid $50 for this book.</li>
-        <li>I need to withdraw some money from the ATM.</li>
-    </ul>
-
-    <h3>Using Numbers in Various Contexts</h3>
-
-    <p>Numbers are used in many different ways in everyday life. Here are some examples:</p>
-
-    <ul>
-        <li><strong>Time:</strong> It's 3:30 pm.</li>
-        <li><strong>Dates:</strong> My birthday is on July 4th.</li>
-        <li><strong>Phone numbers:</strong> My phone number is (555) 555-5555.</li>
-        <li><strong>Addresses:</strong> I live at 123 Main Street.</li>
-        <li><strong>Measurements:</strong> This table is 2 meters long.</li>
-    </ul>
-
-    <p>By practicing and using numbers in different situations, you will become more confident and fluent in your English communication.</p>
-
-
-   <!-- CARDS DE CONTEUDO 2 -->
-   <div class="card-container">
-    <div class="card">
-      <h4>be: <em>present simple</em></h4>
-      
-      <img
-      src="#" 
-      alt="Present Simple"
-    />
-        <blockquote>Fonte: Oyster English</blockquote>
-      <p>Card content 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  
-    <div class="card">
-      <h4>be: question <br> Prepositions: in and near
-        </h4>
-      <p>Card content 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <img
-      src="#"
-      alt=""
-    />
-    <blockquote>Fonte: Woodward English</blockquote>
-    </div>
-  
-    <div class="card">
-      <h4>A/An</h4>
-      <p>Card content 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <img
-      src="#" 
-      alt="Articles A and An"
-    />
-    <blockquote>Fonte: Blogger </blockquote>
-    </div>
-  </div>
-   <!-- CARDS DE CONTEUDO  UNIT 2-->
-   
-  
-  <div class="tips-unit2">
-    <!-- <img
-    src="img/dialogo.gif" width="100vw"
-    alt=""
-  /> -->
-
-  <h5 id="tips-unit2">Tips about Unit 2</h5>
-  <p>Para saber mais sobre os conteúdos abordados na unit 1, aqui estão algumas recomendações:</p>
-  <!-- DICAS DE CONTEÚDOS RELACIONADO A UNIT 1 -->
-  
-  <p><img src="#" alt="" width="200vw"><a href="">How to form the present simple tense</a></p>
-  <p><img src="" alt="" width="200vw"><a href="">Basic Prepostions of Place</a></p>
-  <p><img src="" alt="" width="200vw"><a href=""> English Help - English Classes</a></p>
-
-  </div>
-
-    <section class="materials">
- 
-  
-     
-  
-      
- 
-    </section>
-
-    
-    </section>
- 
-   
-    
-
-    <section class="section-content3" id="primeiro-unit3">
-       <!-- secao conteudo 3 -->
-    <h4>Unit 3 - Work</h4>
-    <p>
-      Talking about different occupations and professions. Discussing job
-      responsibilities and daily tasks. Describing work environments and
-      workplace culture. Talking about future career plans and aspirations.
-    </p>
-    <img
-      src="img/trabalho-a-partir-de-casa.png"
-      alt="Compras Online"
-    />
-   
-    <img
-    src="img/bombeiro.png" width="100vw"
-    alt=""
-  />
-
-  <h3>Occupations and Professions</h3>
-  <p>There are countless occupations and professions in the world, each with its unique set of responsibilities and challenges. Here are some common job titles:</p>
-  <ul>
-      <li>Teacher</li>
-      <li>Doctor</li>
-      <li>Engineer</li>
-      <li>Lawyer</li>
-      <li>Nurse</li>
-      <li>Accountant</li>
-      <li>Artist</li>
-      <li>Musician</li>
-      <li>Chef</li>
-      <li>Police Officer</li>
-      <li>Firefighter</li>
-      <li>Pilot</li>
-      <li>Astronaut</li>
-      <li>Entrepreneur</li>
-  </ul>
-
-  <p>When talking about your job or someone else's, you can use the following phrases:</p>
-  <ul>
-      <li>"I work as a..."</li>
-      <li>"She's a..."</li>
-      <li>"He's employed as a..."</li>
-      <li>"What do you do for a living?"</li>
-      <li>"What's your profession?"</li>
-  </ul>
-
-  <h3>Job Responsibilities and Daily Tasks</h3>
-  <p>Every job comes with a set of responsibilities and tasks that need to be completed. Here are some common examples:</p>
-  <ul>
-      <li><strong>Teacher:</strong> preparing lesson plans, teaching students, grading assignments, attending meetings</li>
-      <li><strong>Doctor:</strong> diagnosing and treating patients, performing surgeries, prescribing medication, conducting research</li>
-      <li><strong>Engineer:</strong> designing and developing products, testing prototypes, troubleshooting problems, managing projects</li>
-      <li><strong>Lawyer:</strong> advising clients, representing them in court, drafting legal documents, negotiating settlements</li>
-  </ul>
-
-  <p>When discussing your daily tasks, you can use phrases like:</p>
-  <ul>
-      <li>"I usually..."</li>
-      <li>"My responsibilities include..."</li>
-      <li>"I'm in charge of..."</li>
-      <li>"I spend most of my time..."</li>
-  </ul>
-
-  <h3>Work Environments and Workplace Culture</h3>
-  <p>Work environments and workplace cultures can vary greatly depending on the company and industry. Some workplaces are more formal and structured, while others are more relaxed and casual. Here are some aspects of work environments and culture:</p>
-  <ul>
-      <li><strong>Dress code:</strong> formal, business casual, casual</li>
-      <li><strong>Communication style:</strong> formal, informal, direct, indirect</li>
-      <li><strong>Work-life balance:</strong> flexible hours, work-from-home options, paid time off</li>
-      <li><strong>Company values:</strong> teamwork, innovation, customer service</li>
-  </ul>
-
-  <p>When describing your workplace, you can use phrases like:</p>
-  <ul>
-      <li>"The work environment is..."</li>
-      <li>"We have a very..." culture</li>
-      <li>"The company values..."</li>
-      <li>"My colleagues are..."</li>
-  </ul>
-
-  <h3>Future Career Plans and Aspirations</h3>
-  <p>It's common to discuss your career goals and aspirations, whether you're just starting out or you've been working for years. Here are some phrases you can use:</p>
-  <ul>
-      <li>"I'm hoping to..."</li>
-      <li>"I'd like to..."</li>
-      <li>"My goal is to..."</li>
-      <li>"I'm interested in pursuing a career in..."</li>
-  </ul>
-  <p>You can also talk about your long-term career goals:</p>
-  <ul>
-      <li>"I see myself..."</li>
-      <li>"I'm planning to..."</li>
-      <li>"I'm working towards..."</li>
-  </ul>
-  <p>Remember, it's okay to change your mind and adjust your goals as you gain more experience and learn new things.</p>
-
-
-   <!-- CARDS DE CONTEUDO  UNIT 3-->
-   <div class="card-container">
-    <div class="card">
-      <h4>be: <em>present simple</em></h4>
-      
-      <img
-      src="" width="400vw"
-      alt=""
-    />
-        <blockquote>Fonte: </blockquote>
-      <p>Card content 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  
-    <div class="card">
-      <h4>be: question <br> Prepositions: in and near
-        </h4>
-     
-      <img
-      src="" width="400vw"
-      alt=""
-    />
-    <blockquote>Fonte: </blockquote>
-    </div>
-  
-    <div class="card">
-      <h4>A/An</h4>
-      
-      <img
-      src="" width="400vw"
-      alt=""
-    />
-    <blockquote>Fonte: </blockquote>
-    </div>
-  </div>
-  
-  <div class="tips-unit3">
-
-  <h5 id="tips-unit3">Tips about Unit 3</h5>
-  <p>Para saber mais sobre os conteúdos abordados na unit 1, aqui estão algumas recomendações:</p>
-  <!-- DICAS DE CONTEÚDOS RELACIONADO A UNIT 1 -->
-  
-  <p><img src="#" alt="" width="200vw"><a href="">How to form the present simple tense</a></p>
-  <p><img src="" alt="" width="200vw"><a href="">Basic Prepostions of Place</a></p>
-  <p><img src="" alt="" width="200vw"><a href=""> English Help - English Classes</a></p>
-
-  </div>
-
-  
-  <section class="section-materials">    
-    <div>
-        <!-- Material de aula -->
-    <h4>Material aula - Livro</h4>
-
-      <!-- icone-livro 1 -->
-    <p>
-      Baixe o livro das unidades:
-    </p>
-
-    <p><img src="img/seta-do-circulo-do-livro-para-a-direita.svg" alt="Ícone Livro" width="50vw">
-      <a
-        href="books/Business_Start-Up_1_Student_39_Student's_book.pdf"
-        >Livro Business 1</a
-      ></p>
-
-    </div>
-  </section>
-    
-
-    </section>
-   
-    
-    
-
-
-
-
-<!-- BOTAO DE VOLTAR -->
-    <div
-      class="revisao-item"
-      id="primeiro"
-    >
-      <button class="btn-right">
-        <a
-          class="btn-right-anc"
-          href="revisao.html"
-          >Voltar</a
-        >
-      </button>
-    </div>
-
-
-
-    <footer class="rodape">
-
-      <img src="img/logo-four.png" alt="" width="40vw" > 
-      <p>Four Language</p> <br><hr><br> 
-      <p class="mt-4 text-sm text-white-100 snipcss0-4-7-9"
-      ">
-        O Four Language tem o objetivo de auxiliar os estudantes da
-        Fatec que cursam a matéria de Inglês.
-      </p>
-
-      <p class="text-sm text-gray-100 snipcss0-2-41-42">
-        © Copyright 2024 Four Language Inc. Todos os direitos reservados.
-      </p>
-    </footer>
-    <!-- Alt + shift + seta para baixo repete o que selecionei -->
- 
-
-
-    <!-- SEGUNDO SEMESTRE -->
-
-    <header class="cabecalho">
-
-      <nav class="nav-menu">
-        <img src="img/logo-four.png" alt="" width="60vw">
-        <ul>
-          <li>
-            <a href="index.html">Home Page</a>
+      <div id="primeiro-unit" style="display: none;">
+         <section class="section-content1" id="primeiro-unit1">
+            <!-- secao conteudo 1 -->
+            <h2>Unit 1 - Welcome</h2>
+            <p>Introductions and greetings. Talking about
+               personal information, such as name, nationality, and occupation.
+               Expressing likes, dislikes, and preferences. Discussing daily routines and
+               leisure activities.
+            </p>
+            <img
+               class="revisao-img1"
+               src="img/P1.jpg"
+               alt=""
+               />
+            <h3>Talking About Personal Information</h3>
+            <p>When meeting someone for the first time, it's common to exchange personal information. Here are some phrases you can use:</p>
             <ul>
-              <li>
-                <a
-                  href="revisao.html"
-                  target="_parent"
-                  >Review</a
-                >
-              </li>
-              <li><a href="">Ação</a></li>
-              <li><a href="">Grupo</a></li>
-              <li><a href="">Item</a></li>
+               <li><b>Greetings:</b></li>
+               <ul>
+                  <li>"Hi/Hello, my name is..."</li>
+                  <li>"Nice to meet you."</li>
+                  <li>"Pleased to meet you."</li>
+               </ul>
+               <li><b>Introducing yourself:</b></li>
+               <ul>
+                  <li>"I'm from..." (country/city)</li>
+                  <li>"I work as a..."</li>
+                  <li>"I'm a student at..."</li>
+               </ul>
+               <li><b>Asking about others:</b></li>
+               <ul>
+                  <li>"What's your name?"</li>
+                  <li>"Where are you from?"</li>
+                  <li>"What do you do?"</li>
+               </ul>
             </ul>
-          </li>
-    
-          <li>
-            <a href="tela_skills.html">Games</a>
+            <p><b>Example Usage:</b></p>
+            <p>"Hi, my name is John. Nice to meet you! Where are you from?"</p>
+            <br>
+            <h2>Discussing Daily Routines and Leisure Activities</h2>
+            <p>Talking about your daily routine and leisure activities can be a great way to get to know someone better. Here are some questions and phrases you can use:</p>
+            <h3>Daily routines</h3>
             <ul>
-              <li>Reading</li>
-              <li>Writing</li>
-              <li>Speaking</li>
-              <li>Listening</li>
-              <li>Extra</li>
+               <li>"What time do you usually wake up/go to bed?"</li>
+               <li>"What do you do in the mornings/afternoons/evenings?"</li>
+               <li>"Do you have any hobbies?"</li>
             </ul>
-          </li>
-    
-          <li>
-            <a href="revisao.html">Review</a>
+            <h3>Leisure activities</h3>
             <ul>
-              <li>1º Semester</li>
-              <li>2º Semester</li>
-              <li>3º Semester</li>
-              <li>4º Semester</li>
-              <li>5º Semester</li>
-              <li>6º Semester</li>
+               <li>"What do you do for fun?"</li>
+               <li>"What do you like to do in your free time?"</li>
+               <li>"Do you play any sports?"</li>
             </ul>
-          </li>
-    
-          <li><a href="creditos.html">About</a></li>
-          <li> <button>Sign out</button></li>
-        </ul>
-      </nav>
+            <h4>Example Conversation</h4>
+            <div class="conversation">
+               <p><b>Person A:</b> What's your typical day like?</p>
+               <p><b>Person B:</b> I usually wake up around 7 am, have breakfast, and then go to work. In the evenings, I like to relax and watch TV.</p>
+               <p><b>Person A:</b> Do you have any hobbies?</p>
+               <p><b>Person B:</b> Yeah, I love playing soccer and going to the movies.</p>
+            </div>
+            <br><br><br>
+            <!-- CARDS DE CONTEUDO -->
+            <div class="card-container">
+               <div class="card">
+                  <h4>be: <em>present simple</em></h4>
+                  <img
+                     src="img/present-tense-oyster-english.png" width="400vw"
+                     alt="Present Simple"
+                     />
+                  <blockquote>Fonte: Oyster English</blockquote>
+                  <!-- <p>Card content 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+               </div>
+               <div class="card">
+                  <h4>be: question <br> Prepositions: in and near
+                  </h4>
+                  <img
+                     src="img/prepositions-of-place-in-english.jpg" 
+                     alt=""
+                     />
+                  <blockquote>Fonte: Woodward English</blockquote>
+               </div>
+               <div class="card">
+                  <h4>A/An</h4>
+                  <!-- <p>Card content 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+                  <img
+                     src="img/articles-a-an-the-exercises.jpg" 
+                     alt="Articles A and An"
+                     />
+                  <blockquote>Fonte: Blogger </blockquote>
+               </div>
+            </div>
+            <div class="tips-unit1">
+               <h5>Tips about Unit 1</h5>
+               <p>Para saber mais sobre os conteúdos abordados na unit 1, aqui estão algumas recomendações:</p>
+               <div class="recommendation">
+                  <img src="img/oyster-logo.png" alt="" width="200">
+                  <a href="https://www.oysterenglish.com/present-simple.html">How to form the present simple tense</a>
+               </div>
+               <div class="recommendation">
+                  <img src="img/woodward.png" alt="" width="200">
+                  <a href="https://www.woodwardenglish.com/lesson/basic-prepositions-of-place/">Basic Prepostions of Place</a>
+               </div>
+               <div class="recommendation">
+                  <img src="img/blogger.png" alt="Use An and A" width="200">
+                  <a href="https://heinzenglishelp.blogspot.com/2016/10/indefinite-article-aan.html"> English Help - English Classes</a>
+               </div>
+            </div>
+         </section>
+         <section class="section-content2" id="primeiro-unit2">
+            <!-- secao conteudo 2 -->
+            <h2>Unit 2 - Numbers</h2>
+            <p>
+               Learning and practicing numbers from 1 to 100. Counting and identifying
+               quantities. Talking about prices and money. Using numbers in various
+               contexts, such as time, dates, and phone numbers.
+            </p>
+            <img
+               src="img/compras-online.png"
+               alt="Compras Online"
+               />
+            <h3>Learning and Practicing Numbers from 1 to 100</h3>
+            <p>Numbers are essential for everyday communication. Let's start with the basics:</p>
+            <ul>
+               <li><strong>Numbers 1-10:</strong> one, two, three, four, five, six, seven, eight, nine, ten</li>
+               <li><strong>Numbers 11-20:</strong> eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty</li>
+               <li><strong>Counting by tens:</strong> thirty, forty, fifty, sixty, seventy, eighty, ninety, one hundred</li>
+               <li><strong>Other numbers:</strong> twenty-one, twenty-two, thirty-three, forty-five, fifty-six, etc.</li>
+            </ul>
+            <p>Practice counting aloud and recognizing numbers in different contexts. You can also try counting objects, people, or money to reinforce your learning.</p>
+            <h3>Counting and Identifying Quantities</h3>
+            <p>When talking about quantities, use the following words and phrases:</p>
+            <ul>
+               <li><strong>Singular:</strong> one apple, two books, three cars</li>
+               <li><strong>Plural:</strong> four apples, five books, six cars</li>
+               <li><strong>More than one:</strong> several, many, a lot of, numerous</li>
+               <li><strong>Less than one:</strong> a few, a couple of, some</li>
+            </ul>
+            <p>You can also use numbers to describe quantities:</p>
+            <ul>
+               <li>There are five people in my family.</li>
+               <li>I have ten dollars in my wallet.</li>
+               <li>She bought three pairs of shoes.</li>
+            </ul>
+            <h3>Talking About Prices and Money</h3>
+            <p>When discussing prices, use the following phrases:</p>
+            <ul>
+               <li>How much is this/that?</li>
+               <li>It costs...</li>
+               <li>That's expensive/cheap.</li>
+               <li>Can I pay by credit card/cash?</li>
+               <li>Do you have change for a $20 bill?</li>
+            </ul>
+            <p>Here are some examples of how to talk about money:</p>
+            <ul>
+               <li>This shirt costs $25.</li>
+               <li>That's a good deal.</li>
+               <li>I paid $50 for this book.</li>
+               <li>I need to withdraw some money from the ATM.</li>
+            </ul>
+            <h3>Using Numbers in Various Contexts</h3>
+            <p>Numbers are used in many different ways in everyday life. Here are some examples:</p>
+            <ul>
+               <li><strong>Time:</strong> It's 3:30 pm.</li>
+               <li><strong>Dates:</strong> My birthday is on July 4th.</li>
+               <li><strong>Phone numbers:</strong> My phone number is (555) 555-5555.</li>
+               <li><strong>Addresses:</strong> I live at 123 Main Street.</li>
+               <li><strong>Measurements:</strong> This table is 2 meters long.</li>
+            </ul>
+            <p>By practicing and using numbers in different situations, you will become more confident and fluent in your English communication.</p>
+            <!-- CARDS DE CONTEUDO 2 -->
+            <div class="card-container">
+               <div class="card">
+                  <h4><em>What's...? - It's...my and your</em></h4>
+                  <img
+                     src="#" 
+                     alt="Present Simple"
+                     />
+                  <blockquote>Fonte: </blockquote>
+                  <p>Card content 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+               </div>
+               <div class="card">
+                  <h4><em>What time...? <br> When...?</em>
+                  </h4>
+                  <p>Card content 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <img
+                     src="#"
+                     alt=""
+                     />
+                  <blockquote>Fonte: Woodward English</blockquote>
+               </div>
+               <div class="card">
+                  <h4><em>Plurals <br> How much...?</em></h4>
+                  <p>Card content 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <img
+                     src="#" 
+                     alt="Articles A and An"
+                     />
+                  <blockquote>Fonte: Blogger </blockquote>
+               </div>
+            </div>
+            <!-- CARDS DE CONTEUDO  UNIT 2-->
+            <div class="tips-unit2">
+               <!-- <img
+                  src="img/dialogo.gif" width="100vw"
+                  alt=""
+                  /> -->
+               <h5 id="tips-unit2">Tips about Unit 2</h5>
+               <p>Para saber mais sobre os conteúdos abordados na unit 1, aqui estão algumas recomendações:</p>
+               <!-- DICAS DE CONTEÚDOS RELACIONADO A UNIT 1 -->
+               <p><img src="#" alt="" width="200vw"><a href="">How to form the present simple tense</a></p>
+               <p><img src="" alt="" width="200vw"><a href="">Basic Prepostions of Place</a></p>
+               <p><img src="" alt="" width="200vw"><a href=""> English Help - English Classes</a></p>
+            </div>
+            <section class="materials">
+            </section>
+         </section>
+         <section class="section-content3" id="primeiro-unit3">
+            <!-- secao conteudo 3 -->
+            <h4>Unit 3 - Work</h4>
+            <p>
+               Talking about different occupations and professions. Discussing job
+               responsibilities and daily tasks. Describing work environments and
+               workplace culture. Talking about future career plans and aspirations.
+            </p>
+            <img
+               src="img/trabalho-a-partir-de-casa.png"
+               alt="Compras Online"
+               />
+            <img
+               src="img/bombeiro.png" width="100vw"
+               alt=""
+               />
+            <h3>Occupations and Professions</h3>
+            <p>There are countless occupations and professions in the world, each with its unique set of responsibilities and challenges. Here are some common job titles:</p>
+            <ul>
+               <li>Teacher</li>
+               <li>Doctor</li>
+               <li>Engineer</li>
+               <li>Lawyer</li>
+               <li>Nurse</li>
+               <li>Accountant</li>
+               <li>Artist</li>
+               <li>Musician</li>
+               <li>Chef</li>
+               <li>Police Officer</li>
+               <li>Firefighter</li>
+               <li>Pilot</li>
+               <li>Astronaut</li>
+               <li>Entrepreneur</li>
+            </ul>
+            <p>When talking about your job or someone else's, you can use the following phrases:</p>
+            <ul>
+               <li>"I work as a..."</li>
+               <li>"She's a..."</li>
+               <li>"He's employed as a..."</li>
+               <li>"What do you do for a living?"</li>
+               <li>"What's your profession?"</li>
+            </ul>
+            <h3>Job Responsibilities and Daily Tasks</h3>
+            <p>Every job comes with a set of responsibilities and tasks that need to be completed. Here are some common examples:</p>
+            <ul>
+               <li><strong>Teacher:</strong> preparing lesson plans, teaching students, grading assignments, attending meetings</li>
+               <li><strong>Doctor:</strong> diagnosing and treating patients, performing surgeries, prescribing medication, conducting research</li>
+               <li><strong>Engineer:</strong> designing and developing products, testing prototypes, troubleshooting problems, managing projects</li>
+               <li><strong>Lawyer:</strong> advising clients, representing them in court, drafting legal documents, negotiating settlements</li>
+            </ul>
+            <p>When discussing your daily tasks, you can use phrases like:</p>
+            <ul>
+               <li>"I usually..."</li>
+               <li>"My responsibilities include..."</li>
+               <li>"I'm in charge of..."</li>
+               <li>"I spend most of my time..."</li>
+            </ul>
+            <h3>Work Environments and Workplace Culture</h3>
+            <p>Work environments and workplace cultures can vary greatly depending on the company and industry. Some workplaces are more formal and structured, while others are more relaxed and casual. Here are some aspects of work environments and culture:</p>
+            <ul>
+               <li><strong>Dress code:</strong> formal, business casual, casual</li>
+               <li><strong>Communication style:</strong> formal, informal, direct, indirect</li>
+               <li><strong>Work-life balance:</strong> flexible hours, work-from-home options, paid time off</li>
+               <li><strong>Company values:</strong> teamwork, innovation, customer service</li>
+            </ul>
+            <p>When describing your workplace, you can use phrases like:</p>
+            <ul>
+               <li>"The work environment is..."</li>
+               <li>"We have a very..." culture</li>
+               <li>"The company values..."</li>
+               <li>"My colleagues are..."</li>
+            </ul>
+            <h3>Future Career Plans and Aspirations</h3>
+            <p>It's common to discuss your career goals and aspirations, whether you're just starting out or you've been working for years. Here are some phrases you can use:</p>
+            <ul>
+               <li>"I'm hoping to..."</li>
+               <li>"I'd like to..."</li>
+               <li>"My goal is to..."</li>
+               <li>"I'm interested in pursuing a career in..."</li>
+            </ul>
+            <p>You can also talk about your long-term career goals:</p>
+            <ul>
+               <li>"I see myself..."</li>
+               <li>"I'm planning to..."</li>
+               <li>"I'm working towards..."</li>
+            </ul>
+            <p>Remember, it's okay to change your mind and adjust your goals as you gain more experience and learn new things.</p>
+            <!-- CARDS DE CONTEUDO  UNIT 3-->
+            <div class="card-container">
+               <div class="card">
+                  <h4>be: <em>present simple</em></h4>
+                  <img
+                     src="" width="400vw"
+                     alt=""
+                     />
+                  <blockquote>Fonte: </blockquote>
+                  <p>Card content 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+               </div>
+               <div class="card">
+                  <h4>be: question <br> Prepositions: in and near
+                  </h4>
+                  <img
+                     src="" width="400vw"
+                     alt=""
+                     />
+                  <blockquote>Fonte: </blockquote>
+               </div>
+               <div class="card">
+                  <h4>A/An</h4>
+                  <img
+                     src="" width="400vw"
+                     alt=""
+                     />
+                  <blockquote>Fonte: </blockquote>
+               </div>
+            </div>
+            <div class="tips-unit3">
+               <h5 id="tips-unit3">Tips about Unit 3</h5>
+               <p>Para saber mais sobre os conteúdos abordados na unit 1, aqui estão algumas recomendações:</p>
+               <!-- DICAS DE CONTEÚDOS RELACIONADO A UNIT 1 -->
+               <p><img src="#" alt="" width="200vw"><a href="">How to form the present simple tense</a></p>
+               <p><img src="" alt="" width="200vw"><a href="">Basic Prepostions of Place</a></p>
+               <p><img src="" alt="" width="200vw"><a href=""> English Help - English Classes</a></p>
+            </div>
+            <section class="section-materials">
+               <div>
+                  <!-- Material de aula -->
+                  <h4>Material aula - Livro</h4>
+                  <!-- icone-livro 1 -->
+                  <p>
+                     Baixe o livro das unidades:
+                  </p>
+                  <p><img src="img/seta-do-circulo-do-livro-para-a-direita.svg" alt="Ícone Livro" width="50vw">
+                     <a
+                        href="books/Business_Start-Up_1_Student_39_Student's_book.pdf"
+                        >Livro Business 1</a
+                        >
+                  </p>
+               </div>
+            </section>
+         </section>
+      </div>
+      <!-- BOTAO DE VOLTAR -->
+      <div
+         class="revisao-item"
+         id="primeiro"
+         >
+         <button class="btn-right">
+         <a
+            class="btn-right-anc"
+            href="revisao.html"
+            >Voltar</a
+            >
+         </button>
+      </div>
+      <!-- Alt + shift + seta para baixo repete o que selecionei -->
+      <!-- SEGUNDO SEMESTRE -->    
       <!-- <a class="">Four<span>Language</span></a> -->
-   
-    </header>
-    
-    <!-- <a class="">Four<span>Language</span></a> -->
-    <div
-      class="revisao-item"
-      id="segundo"
-    >
-      <img
-        class="revisao-img2"
-        src="img/2.jpg"
-        alt=""
-      />
-      <!-- secao conteudo 1 -->
-      <h2>Unit 4 - Information</h2>
-      <p>Gathering and sharing information. Asking and answering questions. Discussing personal information and preferences. Talking about news, events, and current affairs.</p>
-
-      <a href="#">Gramática</a>
-
-      <!-- <p>VIDEO IA EXPLICANDO SOBRE A UNIDADE E ASSUNTO RELACIONADOS</p> -->
-
-      <!-- secao conteudo 2 -->
-      <h3>Unit 5 - Places</h3>
-      <p>
-        Vocabulary related to different places and locations. Describing and giving directions to places. Talking about travel and tourism. Discussing favorite places to visit and activities to do.
-      </p>
-
-      <a href="#">Gramática</a>
-
-      <p>Dicas</p>
-
-      <!-- secao conteudo 3 -->
-      <h4>Unit 6 - Action</h4>
-      <p>
-        Vocabulary and expressions related to various actions and activities. Talking about daily routines and habits. Discussing hobbies, interests, and leisure activities. Describing past experiences and future plans.
-      </p>
-
-      <a href="#">Gramática</a>
-
-      <p>Dicas</p>
-      <button class="btn-right">
-        <a
-          class="btn-right-anc"
-          href="revisao.html"
-          >Voltar</a
-        >
-      </button>
-    </div>
-
-     <!-- Material de aula -->
-     <h2>Material aula - Livro</h2>
-
-     <img
-       src=""
-       alt=""
-     />
-     <!-- icone-livro 1 -->
-     <p>
-       Baixe o livro das unidades:
-       <a
-         href="books/Business Start-Up 1 Students Book Klett Edition by Mark Ibbotson, Bryan Stephens (z-lib.org).pdf"
-         >Livro Business 1</a
-       >
-     </p>
- 
-     <img
-       src=""
-       alt=""
-     />
-     <!-- icone-livro 2 -->
-    
-
-     <footer class="rodape">
-
-      <img src="img/logo-four.png" alt="" width="40vw" > 
-      <p>Four Language</p></p> <br><hr><br> 
-      <p class="mt-4 text-sm text-white-100 snipcss0-4-7-9"
-      ">
-        O Four Language tem o objetivo de auxiliar os estudantes da
-        Fatec que cursam a matéria de Inglês.
-      </p>
-
-      <p class="text-sm text-gray-100 snipcss0-2-41-42">
-        © Copyright 2024 Four Language Inc. Todos os direitos reservados.
-      </p>
-    </footer>
-
-    <script src="js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-  </body>
+      <div id="segundo-unit" style="display: none;">
+         <div
+            class="revisao-item"
+            id="segundo"
+            >
+            <img
+               class="revisao-img2"
+               src="img/2.jpg"
+               alt=""
+               />
+            <!-- secao conteudo 1 -->
+            <h2>Unit 4 - Information</h2>
+            <p>Gathering and sharing information. Asking and answering questions. Discussing personal information and preferences. Talking about news, events, and current affairs.</p>
+            <a href="#">Gramática</a>
+            <!-- <p>VIDEO IA EXPLICANDO SOBRE A UNIDADE E ASSUNTO RELACIONADOS</p> -->
+            <!-- secao conteudo 2 -->
+            <h3>Unit 5 - Places</h3>
+            <p>
+               Vocabulary related to different places and locations. Describing and giving directions to places. Talking about travel and tourism. Discussing favorite places to visit and activities to do.
+            </p>
+            <a href="#">Gramática</a>
+            <p>Dicas</p>
+            <!-- secao conteudo 3 -->
+            <h4>Unit 6 - Action</h4>
+            <p>
+               Vocabulary and expressions related to various actions and activities. Talking about daily routines and habits. Discussing hobbies, interests, and leisure activities. Describing past experiences and future plans.
+            </p>
+            <a href="#">Gramática</a>
+            <p>Dicas</p>
+            <button class="btn-right">
+            <a
+               class="btn-right-anc"
+               href="revisao.html"
+               >Voltar</a
+               >
+            </button>
+         </div>
+      </div>
+      <footer class="rodape">
+         <img src="img/logo-four.png" alt="" width="40vw" > 
+         <p>Four Language</p>
+         </p> <br>
+         <hr>
+         <br> 
+         <p class="mt-4 text-sm text-white-100 snipcss0-4-7-9"
+            >
+            O Four Language tem o objetivo de auxiliar os estudantes da
+            Fatec que cursam a matéria de Inglês.
+         </p>
+         <p class="text-sm text-gray-100 snipcss0-2-41-42">
+            © Copyright 2024 Four Language Inc. Todos os direitos reservados.
+         </p>
+      </footer>
+      <script src="js/script.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+   </body>
 </html>
