@@ -86,7 +86,7 @@ function applyStyles() {
   .container-nav ul li {
     margin-right: 20px; /* Adapte a margem conforme necessário */
     position: relative; /* Define posição relativa para alinhar a sub-lista */
-    font-size: 18px; 
+    font-size: 1rem; 
   }
   
   .nav-menu ul li ul {

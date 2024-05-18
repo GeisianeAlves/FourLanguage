@@ -55,8 +55,9 @@ class ReusableCode {
             {
                 element: ".typing5",
                 strings: [
-                    "(Conteúdo será inserido para este nível",
-                    "..."
+                    "In the first week of the month, Sheila takes a trip from Lyon to Paris.",
+                    "Gabriel visits Nice twice a year.",
+                    "The TGV is the quickest way to travel between cities in France."
                 ],
                 options: {
                     typeSpeed: 50,

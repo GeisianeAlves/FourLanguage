@@ -12,12 +12,17 @@ body{
  */
 .semestre2, .semestre3, .semestre4, .semestre5, .semestre6, .texto{
     display: none;
-    border: 1px solid plum;
+    border: 2px solid plum;
     background-color: none;
     text-align: center;
-    height: 480px;
+    height: 400px;
     margin-bottom: 10px;
     color: aliceblue;
+      
+}
+.typing1 {
+    font-family: "Space Mono";
+    font-size: 30px;
 }
 #img-left{
     position: absolute;
@@ -60,22 +65,12 @@ left: 50%;
     background-color: rgb(75, 72, 106);
 }
 #botao-proximo {
-    /* margin-top: 50px;
-    border: 3px solid green;
-    border-radius: 25px;
-    width: 200px;
-    height: 50px;
-    font-size: 20px;
-    font: bolder ;
-    font-family: 'Sarala',cursive;
-    color: rgb(212, 204, 196);
-    font-weight: bolder; */
-    background-color: rgb(138, 215, 216);
+    background-color: rgb(53, 76, 77);
     width: 180px;
     height: 50px;
     border-radius: 20px;
-    border: 3px solid palevioletred;
-    color: rgb(31, 27, 27);
+    border: 2px solid rgb(112, 216, 200);
+    color: rgb(220, 249, 252);
     font-family: 'Sarala',cursive;
     font-size: 22px;
     font-weight: bolder;
@@ -84,6 +79,10 @@ left: 50%;
     background-color: #778899; 
 
     color: rgb(36, 33, 33);
+}
+#botao-proximo a {
+    color: rgb(220, 249, 252);
+    text-decoration: none;
 }
 .box{
     height: 100vh;    
@@ -96,8 +95,7 @@ left: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;    
     border-radius: 20px;
     top: 20%;
     width: 60%;
@@ -106,9 +104,7 @@ left: 50%;
     display: none;
     font-size: 35px;
     line-height:55px;
-    /* border: 5px solid orange; */
     padding: 40px;
-    /* background-color: rgb(124, 120, 141); */
     opacity: 0.85;
 }
 .container-resposta{
@@ -148,12 +144,7 @@ left: 50%;
   text-align: center;
   align-items: left;
 }
-/* .container img{
-  position: absolute;
-  right: 0;
-  width: 600px;
-  bottom: 0;
-} */
+
 .container .img-1 {
     position: absolute;
     right: 70px;
@@ -162,9 +153,9 @@ left: 50%;
 }
 .container .img-0 { 
     position: absolute;
-    right: 70px;
-    width:400px;
-    bottom: 0px;
+    right: 150px;
+    width:150px;
+    bottom: 50px;
 }
 
 .img-2 {
@@ -224,3 +215,83 @@ display: none;
 .show-review-div {
 display: flex !important;
 }
+.resposta-correta {
+    background-color: rgb(171, 210, 156);
+    color: #3d4247;
+    font-weight: bold;
+}
+.resposta-errada {
+    background-color: rgb(228, 145, 145);
+    color: #3d4247;
+    font-weight: bold;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    height: 60%;
+    overflow: auto;
+    padding: 0;
+    
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    /* padding: 20px; */
+    border: 1px solid #c2f0b0;
+    border-radius: 10px;
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 10px; */
+}
+.modal-content  h2 {
+    text-align: center;
+} 
+.modal-content p {
+    font-size: 50px;
+    font-weight: bold;
+    color: #305376;
+}
+#questions-qty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.close {
+    position: absolute;
+    color: #aaa;
+    /* float: right; */
+    font-size: 28px;
+    font-weight: bold;
+    right: 15%;
+    top: 15%;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#restart {
+    cursor: pointer;
+    height: 30px;
+    width: 150px;
+    background-color: rgb(250, 250, 186);
+    border: 2px solid rgb(237, 184, 86);
+    border-radius: 10px;
+    margin-top: 30px;
+    font-weight: bold;
+    color: #393c3f;
+}
+#restart:hover {
+    background-color: rgb(241, 197, 115);;
+}
+
