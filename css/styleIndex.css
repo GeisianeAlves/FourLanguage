@@ -52,8 +52,8 @@
 }
 
 .container-banners .slide-container .slide .content-slide .btn-slide:hover {
-  background: rgba(254, 124, 213, 0.45);
-  border: 2px solid #d46dc6;
+  /* background: rgba(254, 124, 213, 0.45); */
+  /* border: 2px solid #d46dc6; */
   color: #ffffff;
 }
 
@@ -94,9 +94,9 @@
   top: 90%;
   transform: translateY(87%);
   color: #ffffff;
-  background: #c787dad3;
-  height: 44px;
-  width: 31px;
+  /* background: #c787dad3; */
+  height: 50px;
+  /* width: 31px; */
   line-height: 50px;
   font-size: 20px;
   text-align: center;
@@ -107,15 +107,16 @@
 
 .container-banners #prev:hover,
 .container-banners #next:hover {
-  background: #a355d761;
+  background: white;
 }
 
 .container-banners #prev {
-  left: 51px;
+  left: 81px;
+  /* width: 60px; */
 }
 
 .container-banners #next {
-  right: 51px;
+  right: 100px;
 }
 
 @media(max-width: 500px) {

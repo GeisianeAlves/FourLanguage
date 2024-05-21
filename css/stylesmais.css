@@ -230,15 +230,13 @@ input {
 
 
 /* BANNERS */
-
-
+/* BANNERS */
 .slide #prev,
 .slide #next {
   position: absolute;
   top: 90%;
   transform: translateY(0%);
   color: #ffffff;
-  /* background: #c787dad3; cor para o botao preview */
   height: 44px;
   width: 31px;
   line-height: 50px;
@@ -276,29 +274,40 @@ input {
   .slide p {
     font-size: 16px;
     color: #ffffff;
-    /* width: 80%;
-    height: 10%; */
-
   }
 }
-
 
 /* TESTE DA MAIN SLIDE */
 .slide {
   background: linear-gradient(to top, rgba(245, 222, 179, 0.86), rgba(0, 0, 0, 0.1));
-
   font-family: "Space Mono";
   width: 80%;
-  max-width: 1000px;
+  /* max-width: 1000px; */
   margin: 0 auto;
   padding: 40px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+
+  /* overflow: hidden; */
 }
+
+/* .slide-container{
+  
+  position: relative;
+  
+} */
 
 .slide-content {
   text-align: center;
+  display: none;
+
+  /* transition: transform 0.9s ease; */
+}
+
+#section1 {
+  display: block;
 }
 
 h1 {
@@ -322,6 +331,13 @@ li {
   margin-bottom: 10px;
 }
 
+
+
+
+
+
+
+
 /* SECTION ESTILOS */
 .section-content1,
 .section-content2,
@@ -344,16 +360,16 @@ li {
 }
 
 /* Estilos para o conteúdo interno (ajuste conforme necessário) */
-.section-content1 h2 {
+.section-content h2 {
   margin-bottom: 20px;
 }
 
-.section-content1 p {
+.section-content p {
   line-height: 1.6;
   margin-bottom: 15px;
 }
 
-.section-content1 ul {
+.section-content ul {
   list-style: disc;
   padding-left: 20px;
 }
