@@ -227,89 +227,13 @@ input {
   height: 30px;
 }
 
-/* secao dos banners - o que falam */
+
+
 /* BANNERS */
-.container-banners .slide-container .slide {
-  background-color: #08021df5;
-  width: 100%;
-  /* height: 218px; */
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  /* gap: 15px;
-  padding: 20px 9%;
-  padding-bottom: 100px; */
-  margin-top: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(0%, 0%);
-}
-
-.container-banners .slide-container .slide .content-slide {
-  flex: 1 1 350px;
-  animation: slideContent 0.4s linear 0.4s backwards;
-}
-
-@keyframes slideContent {
-  0% {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-}
 
 
-.container-banners .slide-container .slide .content-slide .btn-slide {
-  margin-top: 10px;
-  display: inline-block;
-  background: rgb(255, 168, 243);
-  color: #ffffff;
-  font-size: 15px;
-  padding: 9px 40px;
-  border-radius: 5px;
-  font-family: 'Noto Sans', sans-serif;
-  text-decoration: none;
-}
-
-.container-banners .slide-container .slide .content-slide .btn-slide:hover {
-  background: rgba(254, 124, 213, 0.45);
-  border: 2px solid #d46dc6;
-  color: #ffffff;
-}
-
-.container-banners .slide-container {
-  display: none;
-}
-
-.container-banners .slide-container.active {
-  display: block;
-}
-
-.container-banners .slide-container .slide .banner1 {
-  z-index: 1;
-  position: absolute;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: 100vw;
-  height: auto;
-  z-index: -1000;
-  /* background: url(img/Seja\ bem-vindo\,\ Fateco\ \(a\)\ \(1\).gif) no-repeat;
-      background-size: cover; 
-   */
-}
-
-.banner1 .banner2 .banner3 {
-  max-width: 100%;
-  min-width: 50%;
-  max-height: 100%;
-  min-height: 50%;
-  width: 50%;
-  height: 200px;
-}
-
-.container-banners #prev,
-.container-banners #next {
+.slide #prev,
+.slide #next {
   position: absolute;
   top: 90%;
   transform: translateY(0%);
@@ -325,41 +249,78 @@ input {
   border-radius: 60px;
 }
 
-.container-banners #prev:hover,
-.container-banners #next:hover {
+.slide #prev:hover,
+.slide #next:hover {
   background: #a355d761;
 }
 
-.container-banners #prev {
+.slide #prev {
   left: 71px;
 }
 
-.container-banners #next {
-  right: 72px;
+.slide #next {
+  right: 90px;
 }
 
 @media(max-width: 500px) {
-  .container-banners #prev {
+  .slide #prev {
     left: 0px;
     top: 60%;
   }
 
-  .container-banners #next {
+  .slide #next {
     right: 0px;
     top: 60%;
   }
 
-  .container-banners .slide-container .slide .content-slide p {
+  .slide p {
     font-size: 16px;
     color: #ffffff;
-    font-family: 'Noto Sans', sans-serif;
-    width: 80%;
-    height: 10%;
+    /* width: 80%;
+    height: 10%; */
 
   }
 }
 
 
+/* TESTE DA MAIN SLIDE */
+.slide {
+  background: linear-gradient(to top, rgba(245, 222, 179, 0.86), rgba(0, 0, 0, 0.1));
+
+  font-family: "Space Mono";
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.slide-content {
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
 
 /* SECTION ESTILOS */
 .section-content1,
@@ -397,9 +358,11 @@ input {
   padding-left: 20px;
 }
 
+
+
+
+
 /* tips  */
-
-
 .recommendation {
   /* Estiliza cada recomendação */
   display: flex;

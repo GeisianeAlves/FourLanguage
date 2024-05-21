@@ -4,22 +4,22 @@
       <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
       <style>
          .container-banners .slide-container:nth-child(1) .slide {
-         background: url(img/welcome-unit1.jpg);
-         background-size: cover;
+         /* background: url(img/welcome-unit1.jpg); */
+         /* background-size: cover; */
          background-repeat: no-repeat;
          /* width: 100vw;
          height: 50vh; */
          }
          .container-banners .slide-container:nth-child(2) .slide {
-         background: url(img/number-unit2.jpg);
-         background-size: cover;
+         /* background: url(img/number-unit2.jpg); */
+         /* background-size: cover; */
          background-repeat: no-repeat;
          /* width: 100vw;
          height: 100vh; */
          }
          .container-banners .slide-container:nth-child(3) .slide {
-         background: url(img/work-unit3.jpg);
-         background-size: cover;
+         /* background: url(img/work-unit3.jpg); */
+         /* background-size: cover; */
          background-repeat: no-repeat;
          /* width: 100vw;
          height: 100vh; */
@@ -90,35 +90,42 @@
       <script src="utils/renderHeader.js"> </script>
       </header>
 
+      <main class="slide">
+         <div class="slide-content row">
+            <h1>Unit 1: Welcome</h1>
+      
+            <div class="section-content col-md-6 align-self-center">
+              <h2>Introductions</h2>
+              <ul>
+                <li>Greet others: "Hello," "Good morning," "Good afternoon," "Good evening"</li>
+                <li>Share your name: "My name is [your name]."</li>
+                <li>Discuss your nationality: "I'm from [your country]."</li>
+                <li>Occupation: "I'm a [your occupation]."</li>
+              </ul>
+      
+              <h2>Likes & Dislikes</h2>
+              <ul>
+                <li>Expressing preferences: "I like [something]," "I don't like [something]."</li>
+                <li>Talking about things you enjoy or don't enjoy: "My favorite hobby is [your hobby]." "I don't enjoy [something]."</li>
+              </ul>
+      
+              <h2>Daily Routines</h2>
+              <ul>
+                <li>Describing your typical day: "I usually wake up at [time]," "I go to work/school from [time] to [time]," "I like to [hobby] in my free time."</li>
+                <li>Discussing work, hobbies, and leisure activities: "I work as a [your occupation]." "I enjoy [hobbies]." "I like to [leisure activities]."</li>
+              </ul>
 
-      <div class="container-banners">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-6 align-self-center text-center">
-                  <!--primeiro banner-->
-                  <div class="slide-container active">
-                     <div class="slide banner">
-                        <div class="content-slide"></div>
-                     </div>
-                  </div>
-                  <!--segundo banner-->
-                  <div class="slide-container">
-                     <div class="slide">
-                        <div class="content-slide"></div>
-                     </div>
-                  </div>
-                  <!--terceiro banner-->
-                  <div class="slide-container">
-                     <div class="slide">
-                        <div class="content-slide"></div>
-                     </div>
-                  </div>
-                  <div id="prev" onclick="prev()">  <img src="img/caret-quadrado-esquerda.svg" alt="" width="50"></div>
-                  <div id="next" onclick="next()"> <img src="img/caret-circulo-direita.svg" alt="" width="50"></div>
-               </div>
+              
             </div>
-         </div>
-      </div>
+
+            <!-- BOTOES -->
+            <div id="prev" onclick="prev()">  <img src="img/caret-quadrado-esquerda.svg" alt="" width="50"></div>
+            <div id="next" onclick="next()"> <img src="img/caret-circulo-direita.svg" alt="" width="50"></div>
+          </div>
+
+      </main>
+
+      
       <div id="primeiro-unit" style="display: none;">
          <section class="section-content1" id="primeiro-unit1">
             <!-- secao conteudo 1 -->
