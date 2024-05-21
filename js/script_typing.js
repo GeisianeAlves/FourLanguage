@@ -105,7 +105,7 @@ class ReusableCode {
             var typed = new Typed(config.element, {
                 strings: config.strings,
                 typeSpeed: config.options.typeSpeed || 50,
-                backSpeed: config.options.backSpeed || 30,
+                // backSpeed: config.options.backSpeed || 30,
                 loop: config.options.loop || false,
             });
         });

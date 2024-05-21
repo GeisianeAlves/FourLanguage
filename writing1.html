@@ -20,7 +20,7 @@
     <script src="utils/renderWritingLevel.js"></script>
     <script>
       window.renderWriting()
-    </script>
+    </script> 
 
 </head>
 <body>
@@ -62,8 +62,20 @@
     <!-- chamando a formatacao do cabecalho -->
   <script src="utils/renderHeader.js"> </script>   
  
-</header>
-        
+  </header>
+   
+
+<div id="resultModal" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3>Your progress</h3>
+      <p id="questions-qty"></p>
+
+      <button id="restart" onclick="reiniciarJogo()"> Redo Quiz!</button>
+  </div>
+</div>
+
+
     <div class="container-left">
       <img src="img/nave_big.png" id="img-nave">
       <img src="img/astronaut11.png" id="img-astronaut">
@@ -89,13 +101,18 @@
             <p class="incorrect">Solare</p>
             <p class="correct">Mercury</p>
             <p class="correct">Nebula</p>    
+            <p class="correct">meteor</p>
+            <p class="incorrect">rock</p>   
+            <p class="correct">gravity</p>
+            <p class="incorrect">station</p>  
           </div>
         </div>
-        <div id="timer"> 00:00</div>
-        <h1 id="score">score:</h1>
+<!--        
+        <h1 id="score">score:</h1> -->
 
-        <div>
+        <div class="container-botton">
           <button id="btn-voltar"><a href="tela_skills.html"> &larr; BACK</a></button>
+          <button id="timer"> 00:00</button>          
         </div>
 
       </div>
@@ -123,17 +140,19 @@
             <p class="incorrect">train</p>
             <p class="correct">bench</p> 
             <p class="correct">walk</p>
-            <p class="correct">dog area</p>    
+            <p class="correct">dog area</p>
+            <p class="correct">pond</p>
+            <p class="incorrect">paper</p>   
+            <p class="correct">fountain</p>
           </div>        
-          <div id="timer2">  00 : 00</div>
-        <h1 id="score2">score:</h1>
-        <div>
-          <button id="btn-voltar"><a href="tela_skills.html"> &larr; BACK</a></button>
         </div>
-
+        <div class="container-botton">
+          <button id="btn-voltar"><a href="tela_skills.html"> &larr; BACK</a></button>
+          <button id="timer2"> 00:00</button>          
+        </div>
       </div>
     </div>
-    </div>
+    
 
    <!--jogo do terceiro semestre-->
     <div class="main level" id="terceiro">
@@ -158,17 +177,14 @@
             <p class="correct">paintings</p>
             <p class="correct">sculptures</p>   
             <p class="incorrect">jeopardy</p> 
-            <p class="correct">antiquities</p>   
+            <p class="correct">antiquities</p>               
+            <p class="correct">bench</p> 
           </div>
         </div>
-        <div id="timer3">  00 : 00</div>
-        <h1 id="score3">score:</h1>
-
-        <div>
+        <div class="container-botton">
           <button id="btn-voltar"><a href="tela_skills.html"> &larr; BACK</a></button>
-        </div>
-
-        </div>
+          <button id="timer3"> 00:00</button>          
+        </div>   
     </div>
       
     </div>
@@ -199,15 +215,15 @@
            <p class="incorrect">sample</p> 
            <p class="correct">firm</p>  
            <p class="incorrect">jungle</p>  
+           <p class="incorrect">work</p> 
+           <p class="correct">revenues</p>               
+           <p class="correct">reserve</p> 
          </div>
        </div>
-       <div id="timer4">  00 : 00</div>
-       <h1 id="score4">score:</h1>
-
-       <div>
+       <div class="container-botton">
         <button id="btn-voltar"><a href="tela_skills.html"> &larr; BACK</a></button>
-        </div>
-
+        <button id="timer4"> 00:00</button>          
+      </div>
      </div>
      
     </div>
@@ -240,13 +256,13 @@
            <p class="correct">headline</p>  
            <p class="correct">press</p>  
            <p class="incorrect">affliction</p>  
+           <p class="correct">editorial</p>  
+           <p class="incorrect">anchor</p>
          </div>
        </div>
-       <div id="timer5">  00 : 00</div>
-       <h1 id="score5">score:</h1>
-
-       <div>
+       <div class="container-botton">
         <button id="btn-voltar"><a href="tela_skills.html"> &larr; BACK</a></button>
+        <button id="timer5"> 00:00</button>          
       </div>
      </div>
      
@@ -284,11 +300,9 @@
           <p class="incorrect">statistics</p>  
         </div>
       </div>
-      <div id="timer6">  00 : 00</div>
-      <h1 id="score6">score:</h1>
-
-      <div>
+      <div class="container-botton">
         <button id="btn-voltar"><a href="tela_skills.html"> &larr; BACK</a></button>
+        <button id="timer6"> 00:00</button>          
       </div>
     </div>
     

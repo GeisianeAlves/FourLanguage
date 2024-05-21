@@ -20,7 +20,7 @@ body{
     color: aliceblue;
       
 }
-.typing1 {
+.typing1, .typing2, .typing3, .typing4, .typing5, .typing6 {
     font-family: "Space Mono";
     font-size: 30px;
 }
