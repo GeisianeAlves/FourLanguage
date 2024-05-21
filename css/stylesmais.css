@@ -312,7 +312,7 @@ input {
 .container-banners #next {
   position: absolute;
   top: 90%;
-  transform: translateY(-50%);
+  transform: translateY(0%);
   color: #ffffff;
   /* background: #c787dad3; cor para o botao preview */
   height: 44px;
@@ -331,11 +331,11 @@ input {
 }
 
 .container-banners #prev {
-  left: 51px;
+  left: 71px;
 }
 
 .container-banners #next {
-  right: 20px;
+  right: 72px;
 }
 
 @media(max-width: 500px) {
