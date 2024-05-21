@@ -501,12 +501,81 @@ li {
   /* Darker blue on hover */
 }
 
+/* section materiais */
+/* Links within Material Section */
+.section-materials a {
+  color: #333; /* Text color */
+  text-decoration: none; /* Remove default underline */
+  font-weight: bold; /* Make text bold */
+  padding: 5px 10px; /* Add padding around text */
+  border-radius: 5px; /* Round corners of the link */
+  background-color: #f2f2f2; /* Light gray background */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.section-materials a:hover {
+  background-color: #70bb72b7; /* Darker gray on hover */
+}
+
+
+/* botao de voltar */
+/* Button Styles */
+.button-return {
+  /* General Styling */
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #70bb72b7; /* Green */
+  color: white;
+  border: none;
+  font-family: "Space Mono";
+
+  /* Hover Effect */
+  &:hover {
+    background-color: #b5d1b6; /* Darker Green */
+  }
+}
+
 
 /* RODAPE */
-.rodape {
+.footer, .rodape {
   padding: 25px;
   color: white;
   background-color: #4c546c;
-  font-size: 20px;
+  font-size: 14px;
   font-family: "Space Mono";
+  text-align: left;
+  
 }
+
+.footer img{
+  width: 12vh;
+}
+
+
+.float-left{
+  float: left;
+  margin: 2px 10px;
+  padding: 2px;
+  /* margin-bottom: 20px; */
+ 
+}
+
+.rodape span {
+  margin: 2px 9px 2px 9px;
+  padding-right: 2px;
+  /* padding-bottom: 2px; */
+  line-height: 2; /* Set line-height to twice the font size */
+}
+
+footer .text, .copy{
+  padding-left: 23px;
+  padding-top: 2px;
+  
+}
+
