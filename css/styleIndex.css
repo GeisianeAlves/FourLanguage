@@ -786,11 +786,195 @@ mark {
     height: 50px;
     width: 150px;
   } 
+  /* .container-dic {
+    height: 300vh;
+  }
+  .card-dic {
+    width:300px;
+    height:100px;
+  } */
+}
 
+/* @media only screen and (max-width: 340px) {
+  .container-dic {
+    height: 300vh;
+  }
+  .card-dic {
+    width:300px;
+    height:200px;
+  }
+} */
+.container-dic {
+  background:#fff;
+  color:white;
+  font-family:system-ui, sans-serif;
+  height:98.65vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap
+}
+
+
+.card-dic {
+  width:250px;
+  height:300px;
+  margin:50px;
+  border-radius:50px;
+  max-width:90%;
+  max-height:90%;
+  position:relative;
+  /* box-shadow:0px 0px 10px fade(#fff,80%); */
+  background-size:cover !important;  
+  &::after {
+    width:100%;
+    height:100%;
+    border-radius:50px;
+    position:absolute;
+    top:0;left:0;
+    z-index:-1;
+    content:'';
+    background:inherit;
+    filter:blur(20px);
+    transform:scale(1.05);
+    opacity:0.8;
+    transition:500ms all ease-in-out 0ms;
+  }
+  &:hover::after {
+    transform:scale(0.8);
+    opacity:0;
+  }
+}
+ 
+/* .card-dic:nth-of-type(1) {
+  background:url('https://assets.codepen.io/48941/photo-1627208550904-7abe585132d4.avif')
+}
+.card-dic:nth-of-type(2) {
+  background: url('https://assets.codepen.io/48941/photo-1560015534-cee980ba7e13.avif');
+}
+.card-dic:nth-of-type(3) {
+  background:url('https://assets.codepen.io/48941/photo-1641135821230-04f53e366336.avif')
+}
+.card-dic:nth-of-type(4) {
+  background:url('https://assets.codepen.io/48941/photo-1647099450706-bddaf1219994.avif')
+} */
+:root {
+  --card-width: 100%;
+  --card-height: auto;
+  --border-radius: 10px;
+  --margin: 10px;
+  --font-size: 16px;
+}
+
+.box-dicionario {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  /* margin: 0; */
+  background-color: #f4f4f4;
+}
+.box-dicionario h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  color: #333;
+}
+.content-dic {
+  /* background-color: #92a1cd; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* height: 90%;
+  width: 90%; */
+}
+.container-dicionario {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* gap: var(--margin); */
+  max-width: 100%;
+  /* margin: auto;
+  padding: 20px; */
+  /* background-color: #8b6760; */
+}
+
+.card-dic {
+  background-color: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  /* width: 20%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.card-dic:hover {
+  transform: translateY(-10px);
+}
+
+.image-dic {
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+}
+
+.content-dic {
+  padding: 20px;
+}
+
+.content-dic h2 {
+  margin: 0 0 10px;
+  font-size: var(--font-size);
+}
+
+.content-dic p {
+  margin: 0;
+  color: #555;
 }
 
 
 
+@media (max-width: 1200px) {
+  .card-dic {
+    width: calc(33.333% - var(--margin) * 2);
+  }
+}
 
+@media (max-width: 940px) {
 
+  .container-jogos {
+    width: 100%;
+  }
+  .jogos {
+    width: 100%;
+  }
+  .jogos img {
+    width: 60%;
+  }
+  .preview-jogos .container-right {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
 
+  .box-dicionario h1 {
+    margin-top: 50px;
+    font-size: 22px;
+  }
+ 
+   .card-dic {
+    width: calc(50% - var(--margin) * 2);
+  }
+}
+
+@media (max-width: 480px) {
+  .card-dic {
+    width: calc(100% - var(--margin) * 2);
+  }
+}
