@@ -5,14 +5,38 @@ function applyFooterStyles() {
   style.type = 'text/css';
 
   style.innerHTML = `
-      /* RODAPE - FOOTER */
-      .rodape {
-          padding: 25px;
-          color: white;
-          background-color: #4c546c;
-          font-size: 20px;
-          font-family: "Space Mono";
-      }
+  const styles = {
+    footer: {
+      padding: '25px',
+      color: 'white',
+      backgroundColor: '#4c546c',
+      fontSize: '14px',
+      fontFamily: '"Space Mono"',
+      textAlign: 'left',
+    },
+    footerImg: {
+      width: '12vh',
+    },
+    floatLeft: {
+      float: 'left',
+      margin: '2px 10px',
+      padding: '2px',
+    },
+    rodapeSpan: {
+      margin: '2px 9px 20px 9px', // Adjust margin-bottom for spacing
+      padding: '2px',
+      lineHeight: '2',
+    },
+    footerText: {
+      paddingLeft: '23px',
+      paddingTop: '2px',
+    },
+    footerCopy: {
+      paddingLeft: '23px',
+      paddingTop: '2px',
+    },
+  };
+  
   `;
 
   document.head.appendChild(style);
