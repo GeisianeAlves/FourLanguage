@@ -178,19 +178,39 @@
 
 }
 
-#container-semestre {
-  background-color: #FFF8DC;
+/* cards de gramatica */
+#container-grammar {
+  background-color: #fff8dcc2;
   gap: 20px;
   padding-top: 60px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  font-family: "Space Mono";
 
 }
-#container-semestre h1 {
+
+#container-grammar h1 {
   font-size: 25px;
   text-align: center;
+  /* color: #92a1cdf6; */
   color: #92a1cd;
+}
+
+
+.card p {
+  font-weight: 510;
+  padding-top: 15px;
+  /* line-height: 2.5px; */
+  text-align: justify;
+  color: #555;
+  font-size: 13px;
+  
+}
+
+.card h2 {
+  font-size: medium;
+  color: #262829;
 }
 
 /* CARDS DOS SEMESTRES GRAMMAR */
@@ -212,10 +232,12 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
+  border-radius: 13%;
 }
 
 .card img {
-  width: 100%; /* Images scale proportionally */
+  width: 93px;
+  height: 32px; /* Images scale proportionally */
   height: auto;
   margin-bottom: 10px;
 }
