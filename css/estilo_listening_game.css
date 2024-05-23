@@ -27,7 +27,7 @@
     width: 550px;
     height: 550px;
     border-radius: 10px;
-    border: 2px solid rgb(182, 131, 37);
+    /* border: 2px solid rgb(182, 131, 37); */
   }
 .all h1{
     font-family: 'Righteous', cursive;
@@ -134,6 +134,7 @@ img {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-top: 30px;
 }
 .div {
     display: flex;
@@ -161,7 +162,8 @@ img {
     color: #89848a;
 }
 .btn2:hover {
-    background-color:rgb(131, 222, 167);
+    background-color:rgb(122, 163, 139);
+    color: #e7efea;
 }
 
 #img-2 {
@@ -192,7 +194,8 @@ img {
     top: 100px;
     height: 550px;
     width: 300px;
-    background-color: #89848a;
+    /* background-color: #706f8a; */
+    background-color: #4c546c;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -235,7 +238,7 @@ font-size: 1rem;
     font-family: "Space Mono", monospace;
     width: 100%;
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(55, 41, 75, 0.8);
+    background-color: rgba(137, 144, 214, 0.8);
   }
   
   /* Modal Content/Box */
@@ -255,7 +258,7 @@ font-size: 1rem;
     font-size: 1rem;
   }
   .modal-content h4 {
-    color: #7a9da0;
+    color: #3a3445;
     padding: 10px 0;
     font-size: 1rem;
   }
@@ -306,4 +309,22 @@ display: none;
 
 .show-review-div {
 display: flex !important;
+}
+
+#progressContainer {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#progressBar {
+    width: 0%;
+    height: 20px;
+    background-color: #76c7c0;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    transition: width 0.3s;
 }

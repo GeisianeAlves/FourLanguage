@@ -1,3 +1,7 @@
+function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 class WordGame {
     constructor() {
         this.palavra = '';
@@ -21,11 +25,12 @@ class WordGame {
 
         this.palavras = ['pink', 'pig', 'mug', 'horse','apple', 'banana', 'cherry', 'blueberry', 'orange', 'syrup'];        
         this.palavras2 = ['knife', 'pineapple', 'watermelon', 'headphone', 'town', 'backpack', 'suitcase', 'cabinet', 'strong', 'strawberry'];
-        this.palavras3 = ['lemon', 'skirt', 'dress', 't-shirt', 'blouse', 'jacket', 'coat', 'denim', 'hat', 'belt', 'socks']
+        this.palavras3 = ['lemon', 'skirt', 'dress', 't-shirt', 'blouse', 'jacket', 'coat', 'denim', 'hat', 'belt', 'socks'];
+        this.palavras4 = ['lemon', 'skirt', 'dress', 't-shirt', 'blouse', 'jacket', 'coat', 'denim', 'hat', 'belt', 'socks'];
+        this.palavras5 = ['lemon', 'skirt', 'dress', 't-shirt', 'blouse', 'jacket', 'coat', 'denim', 'hat', 'belt', 'socks'];
+        this.palavras6 = ['lemon', 'skirt', 'dress', 't-shirt', 'blouse', 'jacket', 'coat', 'denim', 'hat', 'belt', 'socks'];
 
-        this.palavras4 = ['lemon', 'skirt', 'dress', 't-shirt', 'blouse', 'jacket', 'coat', 'denim', 'hat', 'belt', 'socks']
-        this.palavras5 = ['lemon', 'skirt', 'dress', 't-shirt', 'blouse', 'jacket', 'coat', 'denim', 'hat', 'belt', 'socks']
-        this.palavras6 = ['lemon', 'skirt', 'dress', 't-shirt', 'blouse', 'jacket', 'coat', 'denim', 'hat', 'belt', 'socks']
+        this.currentArray = null;
 
         document.getElementById('gerarPalavra1').addEventListener('click', this.generateAndSpeakWord1.bind(this));
         document.getElementById('gerarPalavra2').addEventListener('click', this.generateAndSpeakWord2.bind(this));
@@ -34,15 +39,12 @@ class WordGame {
         document.getElementById('gerarPalavra5').addEventListener('click', this.generateAndSpeakWord5.bind(this));
         document.getElementById('gerarPalavra6').addEventListener('click', this.generateAndSpeakWord6.bind(this));
         
-        document.getElementById('enviar').addEventListener('click', () => this.checkAndDisplayScore('input', this.palavra, this.correctPalavra, this.incorrectPalavra, 'pontos', 'erros'));
-        document.getElementById('enviar2').addEventListener('click', () => this.checkAndDisplayScore('input2', this.palavra2, this.correctPalavra2, this.incorrectPalavra2, 'pontos2', 'erros2'));
-        document.getElementById('enviar3').addEventListener('click', () => this.checkAndDisplayScore('input3', this.palavra3, this.correctPalavra3, this.incorrectPalavra3, 'pontos3', 'erros3'));
-        document.getElementById('enviar4').addEventListener('click', () => this.checkAndDisplayScore('input4', this.palavra4, this.correctPalavra4, this.incorrectPalavra4, 'pontos4', 'erros4'));
-        document.getElementById('enviar5').addEventListener('click', () => this.checkAndDisplayScore('input5', this.palavra5, this.correctPalavra5, this.incorrectPalavra5, 'pontos5', 'erros5'));
-        document.getElementById('enviar6').addEventListener('click', () => this.checkAndDisplayScore('input6', this.palavra6, this.correctPalavra6, this.incorrectPalavra6, 'pontos6', 'erros6'));
-
-          
-
+        document.getElementById('enviar').addEventListener('click', () => this.checkAndDisplayScore('input', 'correctPalavra', 'pontos', 'erros'));
+        document.getElementById('enviar2').addEventListener('click', () => this.checkAndDisplayScore('input2', 'correctPalavra2', 'pontos2', 'erros2'));
+        document.getElementById('enviar3').addEventListener('click', () => this.checkAndDisplayScore('input3', 'correctPalavra3', 'pontos3', 'erros3'));
+        document.getElementById('enviar4').addEventListener('click', () => this.checkAndDisplayScore('input4', 'correctPalavra4', 'pontos4', 'erros4'));
+        document.getElementById('enviar5').addEventListener('click', () => this.checkAndDisplayScore('input5', 'correctPalavra5', 'pontos5', 'erros5'));
+        document.getElementById('enviar6').addEventListener('click', () => this.checkAndDisplayScore('input6', 'correctPalavra6', 'pontos6', 'erros6'));
     }
 
     generateAndSpeakWord(palavrasArray, palavraProp) {
@@ -56,10 +58,14 @@ class WordGame {
     
         palavrasArray.splice(num, 1);
     
+        this.currentArray = palavrasArray;
+    
         let voice = new SpeechSynthesisUtterance();
         voice.lang = "en-US";
         voice.text = this[palavraProp];
         speechSynthesis.speak(voice);
+        
+        this.updateProgressBar();
     }
     
     generateAndSpeakWord1() {
@@ -73,34 +79,81 @@ class WordGame {
     generateAndSpeakWord3() {
         this.generateAndSpeakWord(this.palavras3, 'palavra3');
     }
+    
     generateAndSpeakWord4() {
         this.generateAndSpeakWord(this.palavras4, 'palavra4');
     }
+    
     generateAndSpeakWord5() {
         this.generateAndSpeakWord(this.palavras5, 'palavra5');
     }
-        generateAndSpeakWord6() {
+    
+    generateAndSpeakWord6() {
         this.generateAndSpeakWord(this.palavras6, 'palavra6');
     }
     
+    checkAndDisplayScore(inputId, correctProp, pontosId, errosId) {
+        const inputElement = document.getElementById(inputId);
+        const userInput = inputElement.value.trim();
+        let palavra = '';
 
-     checkAndDisplayScore(inputId, palavra, correctPalavra, incorrectPalavra, pontosId, errosId) {
-        const userInput = document.getElementById(inputId).value.trim();
+        switch(inputId) {
+            case 'input': palavra = this.palavra; break;
+            case 'input2': palavra = this.palavra2; break;
+            case 'input3': palavra = this.palavra3; break;
+            case 'input4': palavra = this.palavra4; break;
+            case 'input5': palavra = this.palavra5; break;
+            case 'input6': palavra = this.palavra6; break;
+        }
 
         if (userInput === palavra) {
-            correctPalavra++;
-            document.querySelector(`#${pontosId} span`).textContent = 'Score: ' + correctPalavra;
+            this[correctProp]++;
+            document.querySelector(`#${pontosId} span`).textContent = 'Score: ' + this[correctProp];
         } else {
-            incorrectPalavra++;
+            this[`incorrect${capitalize(inputId)}`]++;
             document.querySelector(`#${errosId} span`).textContent = `Correct spelling: '${palavra}'`;
             const tempoDesaparecer = 3000;
             setTimeout(() => {
                 document.querySelector(`#${errosId} span`).textContent = '';
             }, tempoDesaparecer);
         }
-                
-        document.getElementById(inputId).value = '';
+
+        inputElement.value = '';
+        this.updateProgressBar();
     }
+
+    updateProgressBar() {
+        if (this.currentArray) {
+            let totalWords;
+            switch (this.currentArray) {
+                case this.palavras: totalWords = 10; break;
+                case this.palavras2: totalWords = 10; break;
+                case this.palavras3: totalWords = 11; break;
+                case this.palavras4: totalWords = 11; break;
+                case this.palavras5: totalWords = 11; break;
+                case this.palavras6: totalWords = 11; break;
+                default: totalWords = 10; // Default to 10 words
+            }
+            const wordsUsed = totalWords - this.currentArray.length;
+            const progressPercent = (wordsUsed / totalWords) * 100;
+            document.getElementById('progressBar').style.width = `${progressPercent}%`;
+            document.getElementById('progressBar').style.width = `${progressPercent}%`;
+        }
+    }
+    // endGame() {
+    //     // Esconder todos os elementos relacionados ao jogo
+    //     document.getElementById('primeiro').style.display = 'none';
+    // }
 }
 
 const game = new WordGame();
+
+// function closeModal()
+
+// Função para esconder elementos ao fim do jogo
+// function hideElements() {
+//     game.endGame();
+// }
+
+// // Chamando a função hideElements ao final do jogo
+// hideElements();
