@@ -5,7 +5,30 @@
     padding: 0;
     margin: 0;
 }
+.container-speaking {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    min-height: 90vh;
+    width: 100vw;
+}
 
+.container-audio #title {
+    font-size: 2rem;
+    color: rgb(219, 210, 172);
+}
+#como-jogar h2 {
+    font-family: "Space Mono";
+}
+#como-jogar p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+#como-jogar span {
+    color: rebeccapurple;
+    font-weight: bold;
+}
 .box {
     display: none;
 }
@@ -15,8 +38,8 @@ img{
  
 }
 .container-audio{
-    min-height: 90vh;
-    width: 100vw;
+    /* min-height: 90vh;
+    width: 100vw; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,9 +73,14 @@ img{
     transform: scale(1);
     animation: scaleEffect 3s linear infinite;
 }
-#btnGravar {
+#btnGravar, #btnGravar2, #btnGravar3, #btnGravar4, #btnGravar5, #btnGravar6 {
     margin-top: 20px;
     font-size: 20px;
+    height: 40px;
+    width: 200px;
+    border-radius: 5px;
+    background-color: #dfd5d5;
+    font-weight: bold;
 }
 
 
@@ -181,4 +209,23 @@ display: none;
 
 .show-review-div {
 display: flex !important;
+}
+
+#back {
+    position: absolute;
+    right: 200px;
+}
+#restart, #back {
+    width: 200px;
+    height: 50px;
+    color: rgb(34, 33, 31);
+    background-color: rgb(101, 99, 94);
+    border-radius: 25px;
+    border: 2px solid black;
+    color: #efe6e6;
+    font-size: 20px;
+}
+
+#restart:hover {
+    background-color: rgb(138, 131, 122);
 }
