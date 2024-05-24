@@ -25,10 +25,11 @@ class WordGame {
 
         this.palavras = ['pink', 'pig', 'mug', 'horse','apple', 'banana', 'cherry', 'blueberry', 'orange', 'syrup'];        
         this.palavras2 = ['knife', 'pineapple', 'watermelon', 'headphone', 'town', 'backpack', 'suitcase', 'cabinet', 'strong', 'strawberry'];
-        this.palavras3 = ['lemon', 'skirt', 'dress', 't-shirt', 'blouse', 'jacket', 'coat', 'denim', 'hat', 'belt', 'socks'];
-        this.palavras4 = ['lemon', 'skirt', 'dress', 't-shirt', 'blouse', 'jacket', 'coat', 'denim', 'hat', 'belt', 'socks'];
-        this.palavras5 = ['lemon', 'skirt', 'dress', 't-shirt', 'blouse', 'jacket', 'coat', 'denim', 'hat', 'belt', 'socks'];
-        this.palavras6 = ['lemon', 'skirt', 'dress', 't-shirt', 'blouse', 'jacket', 'coat', 'denim', 'hat', 'belt', 'socks'];
+        this.palavras3 = ['course', 'skirt', 'dress', 't-shirt', 'blouse', 'jacket', 'coat', 'denim', 'belt', 'socks'];
+        this.palavras4 = ['swin', 'bath', 'Poland', 'sales', 'sometimes', 'newspaper', 'photocopy', 'weight', 'train', 'socket'];
+        this.palavras4 = ['chess', 'windy', 'comfortable', 'expensive', 'figure', 'project', 'delay', 'flight', 'passenger', 'departure'];
+        this.palavras5 = ['expect', 'briefcase', 'security', 'luggage', 'prefer', 'message', 'discuss', 'deliver', 'vacation', 'discount'];
+        this.palavras6 = ['exhibition', 'distance', 'convinient', 'demand', 'increase', 'thousand', 'engineer', 'assistant', 'suplly', 'mobile'];
 
         this.currentArray = null;
 

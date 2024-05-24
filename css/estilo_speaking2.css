@@ -56,12 +56,18 @@ img{
     flex-direction: column;
     background-color: rgb(174, 196, 190);
     height: 230px;
-    width: 600px;
+    width: 650px;
     padding: 20px;
     border: 2px solid rgb(138, 91, 135);
     margin-bottom: 35px;
     margin-top: 30px;
     color: rgb(68, 65, 65);
+}
+.text #dica {
+    margin-top: -30px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: rgb(57, 67, 92);
 }
 .container-audio img{
     width: 140px;

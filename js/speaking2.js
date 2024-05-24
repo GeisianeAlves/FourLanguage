@@ -41,9 +41,9 @@ function next(id) {
 }
 
 //Array que contém todas as respostas corretas para completar as frases/diálogos
-const phrases = ["receive", "mean", "again", "card", "stand", "one more time", "could", "can", "book",
-                "works", "lives", "get", "have", "does", "is making", "is working", "are drinking", "is sending", "are speaking",
-                "leave", "seat", "return", "reservation", "rented", "was", "went", "stayed", "left",
+const phrases = ["receive", "mean", "again", "card", "tea", "one more time", "could", "can", "book",
+                "works", "lives", "get", "have", "has", "is making", "is working", "are drinking", "is sending", "are speaking",
+                "arrive", "seat", "return", "reservation", "rented", "was", "went", "stayed", "left",
                 "most", "faster", "cheaper", "longer", "best"];
 
 
