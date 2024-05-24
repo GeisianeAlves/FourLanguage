@@ -204,7 +204,7 @@
   /* line-height: 2.5px; */
   text-align: justify;
   color: #555;
-  font-size: 13px;
+  font-size: 18px;
   
 }
 
@@ -227,7 +227,7 @@
  
 }
 .card {
-  width: 300px; /* Adjust card width as needed */
+  width: 396px; /* Adjust card width as needed */
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -520,14 +520,23 @@ img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #819999df;
-  border: 2px solid rgb(156, 93, 245);
+  background-color: rgb(137 144 214 / 80%);
+  /* border: 2px solid rgb(156, 93, 245); */
   height: 30%;
   width: 100%;
   border-radius: 15px;
   gap: 10px;
   font-weight: 400;
+}
 
+.content-right h1{
+  color: #dbca47cf;
+}
+
+.content-right p {
+  font-weight: bold;
+  padding-bottom: 19px;
+  line-height: 0.9cm;
 }
 
 .container-right-1 {
@@ -550,6 +559,7 @@ img {
 }
 .container-right-1 h1 {
   font-size: 2.2rem;
+  
 }
 .container-right-1 h2 {
   font-size: 1.9rem;
@@ -581,6 +591,7 @@ width: 100px;
   height: 80px;
  margin-top: 10px;
  padding-left: 50px;
+ font-size: 18px;
 }
 .container-right-1-game-on .icone {
   display: flex;
