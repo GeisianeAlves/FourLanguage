@@ -479,7 +479,7 @@ li {
 .card blockquote {
   font-style: italic;
   /* Make quote text italic */
-  margin-top: 10px;
+  margin-top: 0px;
   /* Add spacing above the quote */
 }
 
