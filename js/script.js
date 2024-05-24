@@ -23,6 +23,24 @@ window.addEventListener('resize', () => {
 });
 
 
+// #botao de pesquisa + barra
+const searchInput = document.getElementById('searchInput');
+const searchButton = document.getElementById('searchButton');
+
+searchButton.addEventListener('click', () => {
+  const searchTerm = searchInput.value.toLowerCase(); // Make search case-insensitive
+  const content = document.body.textContent.toLowerCase(); // Get all content
+
+  if (content.includes(searchTerm)) {
+    alert('Search term found!'); // Replace with desired action (highlight, scroll, etc.)
+  } else {
+    alert('Search term not found.');
+  }
+
+  
+});
+
+
 
 let slides = document.querySelectorAll(".slide-container");
 let index = 0;

@@ -6,16 +6,18 @@
 }
 body {
     font-family: 'Open Sans', sans-serif;
+    
 }
 
 
-.container {
+.container-login {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background: url('../img/galaxy.jpg') no-repeat center center fixed;
     background-size: cover;
+    
 }
 .content {
     background-color: #fff;
@@ -52,7 +54,7 @@ body {
     color: #58af9b;
 }
 .description {
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 300;
     line-height: 30px;
 }
@@ -60,17 +62,18 @@ body {
     color: #fff;
 }
 .description-second {
-    color: #7f8c8d;
+    color: #8bdcd8c2;
+    font-weight: bold;
 }
 .btn {
     border-radius: 15px;
     text-transform: uppercase;
     color: #fff;
-    font-size: 10px;
-    padding: 10px 50px;
+    font-size: 14px;
+    padding: 10px 20px;
     cursor: pointer;
     font-weight: bold;
-    width: 150px;
+    width: 148px;
     align-self: center;
     border: none;
     margin-top: 1rem;
@@ -91,7 +94,7 @@ body {
 }
 .btn-second:hover {
     background-color: #fff;
-    border: 1px solid #58af9b;
+    /* border: 1px solid #58af9b; */
     color: #58af9b;
 }
 .first-content {
