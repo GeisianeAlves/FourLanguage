@@ -319,12 +319,12 @@ body{
 .revisao-item p {
   text-align: justify;
   padding: 1px;
-  font-size: 18px;
+  font-size: 21px;
   background-color: white;
   border-radius: 10px;
   color: black;
-  padding: 33px;
-  margin: 25px;
+  padding: 54px;
+  margin: 11px;
 }
 
 .revisao-item .nav-btn {

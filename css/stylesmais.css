@@ -357,6 +357,7 @@ li {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   /* Sombra (opcional) */
   font-family: "Space Mono";
+  font-size: 20px;
 }
 
 /* Estilos para o conteúdo interno (ajuste conforme necessário) */
@@ -448,8 +449,12 @@ li {
   /* Cover the card area while maintaining aspect ratio */
   margin-bottom: 15px;
   /* Add spacing between image and content */
+  transition: transform 0.3s ease; 
 }
 
+.card img:hover{
+  transform: scale(2);
+}
 /* Card Title */
 .card h4 {
   font-size: 20px;
