@@ -54,3 +54,22 @@ prevBtn.addEventListener("click", () => showBanner(currentBannerIndex - 1));
 nextBtn.addEventListener("click", () => showBanner(currentBannerIndex + 1));
 
 showBanner(currentBannerIndex); // Inicializa o carrossel
+
+
+
+// BOTAO DE VOLTAR AO TOPO DO HEADER NAS UNITS
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 200) {
+    document.querySelector('.back-to-top-button').style.display = 'block';
+  } else {
+    document.querySelector('.back-to-top-button').style.display = 'none';
+  }
+});
+
+document.querySelector('.back-to-top-button a').addEventListener('click', function(e) {
+  e.preventDefault(); // Prevent default anchor link behavior
+  window.scrollTo({
+    top: 0, // Scroll to top of page
+    behavior: 'smooth' // Smooth scrolling
+  });
+});

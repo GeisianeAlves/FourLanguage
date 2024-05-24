@@ -547,6 +547,36 @@ li {
 }
 
 
+
+
+/* BOTAO DE IR PARA O TOPO */
+.back-to-top-button {
+  position: fixed; /* Stay in place on scroll */
+  bottom: 20px; /* Distance from bottom */
+  right: 20px; /* Distance from right */
+  z-index: 100; /* Sit on top of other elements */
+  display: none; /* Initially hidden */
+}
+
+.back-to-top-button a {
+  display: block;
+  width: 50px; /* Button width */
+  height: 50px; /* Button height */
+  text-align: center;
+  line-height: 50px; /* Center text vertically */
+  border-radius: 50%; /* Make it round */
+  background-color: #333; /* Button color */
+  color: #fff; /* Text color */
+  font-size: 20px; /* Font size for icon */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.back-to-top-button a:hover {
+  background-color: #444; /* Darker color on hover */
+}
+
+
+
 /* RODAPE */
 .footer, .rodape {
   padding: 25px;

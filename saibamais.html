@@ -2,7 +2,8 @@
 <html>
    <head>
       <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
-      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
       <title>Four Language | Content Review</title>
       <meta charset="UTF-8" />
       <meta
@@ -20,11 +21,27 @@
       <script src="utils/renderUnit.js"></script>
       <script>
          window.renderUnit();
-      </script>
+         
+         window.addEventListener('scroll', function() {
+         if (window.pageYOffset > 200) {
+            document.querySelector('.back-to-top-button').style.display = 'block';
+         } else {
+            document.querySelector('.back-to-top-button').style.display = 'none';
+         }
+         });
+
+         document.querySelector('.back-to-top-button a').addEventListener('click', function(e) {
+         e.preventDefault();
+         window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+         });
+         });
+         </script>
    </head>
    <!-- <link rel="shortcut icon" href="img/icone.png" type="image/x-icon"> -->
    <body>
-      <header class="cabecalho">
+      <header class="cabecalho" id="header">
          <div class="container-nav">
             <nav class="nav-menu">
                <img src="img/logo-four.png" alt="Logo Four Language" width="60vw" class="logo-four">
@@ -187,7 +204,18 @@
                   <a href="https://heinzenglishelp.blogspot.com/2016/10/indefinite-article-aan.html"> English Help - English Classes</a>
                </div>
             </div>
+
+            <!-- botao de voltar ao menu -->
+            <div class="back-to-top-button">
+               <a href="#header">
+                 <i class="fas fa-arrow-up"></i>
+               </a>
+             </div>
+             
          </section>
+
+
+         <!-- UNIT 2 SECTION -->
          <section class="section-content2" id="primeiro-unit2">
             <!-- secao conteudo 2 -->
             <h2>Unit 2 - Numbers</h2>
@@ -396,7 +424,7 @@
                      src="img/presentiyou.png" width="400vw"
                      alt=""
                      />
-                  <blockquote>Fonte: </blockquote>
+                  <blockquote>Fonte: auotira  própria</blockquote>
                   <!-- <p>Card content 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
                </div>
 
@@ -415,7 +443,7 @@
                      src="img/presentnegative.png" width="400vw"
                      alt=""
                      />
-                  <blockquote>Fonte: </blockquote>
+                  <blockquote>Fonte: autoria própria</blockquote>
                </div>
             </div>
 
