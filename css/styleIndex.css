@@ -508,7 +508,8 @@ img {
   flex-direction: column;
   width: 30%;
   height: 100%;
-gap: 50px;
+  gap: 50px;
+  padding-right: 43px;
 
 }
 
@@ -519,17 +520,18 @@ gap: 50px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #819999;
-  border: 2px solid rgb(117, 232, 215);
+  background-color: #819999df;
+  border: 2px solid rgb(156, 93, 245);
   height: 30%;
   width: 100%;
   border-radius: 15px;
   gap: 10px;
+  font-weight: 400;
 
 }
 
 .container-right-1 {
-  background-color: #28353d;
+  background-color: #323f48a5;
   width: 100%;
   height: 60%;
   margin-bottom: 10px;
@@ -588,13 +590,16 @@ width: 100px;
   gap: 20px;
 
 }
+
+
+
 .container-right-1-game-on h2 {
   color: rgb(147, 147, 96);
 
 }
 .container-right-1-game-on .icone img{
   position: absolute;
-  right: 70px;
+  right: 110px;
 }
 /* .container-right img {
   width: 100%;
@@ -626,7 +631,8 @@ width: 100px;
 mark {
   font-weight: bolder;
   font-size: 18px;
-  background-color: #dda1f5;
+  /* background-color: #dda1f5; */
+  background-color: rgb(255 248 220 / 67%);
 }
 
 #titulo {
