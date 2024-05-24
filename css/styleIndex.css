@@ -168,6 +168,23 @@
 }
 
 
+/* Existing CSS from the previous response */
+
+/* Additional CSS for menu toggle button (hidden initially) */
+.menu-toggle {
+  display: none;
+  padding: 10px;
+}
+
+.menu-toggle:before {
+  content: '\f0c9';
+  font-family: FontAwesome, sans-serif;
+  font-size: 20px;
+  color: #333;
+}
+
+
+
 
 /*banner*/
 #container {
@@ -180,6 +197,8 @@
 
 /* cards de gramatica */
 #container-grammar {
+  width: 100%;
+  align-items: center;
   background-color: #fff8dcc2;
   gap: 20px;
   padding-top: 60px;
@@ -243,10 +262,13 @@
 }
 @media (max-width: 768px) {
   .card-container {
-    flex-direction: column; /* Stack columns on mobile */
+    display: flex;
+    flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
+    justify-content: center; /* Center cards horizontally *                                      /* Stack columns on mobile */
   }
 
-  .card-coluna {
+  .card-coluna {        
+    display: none;
     width: 100%; /* Columns take full width on mobile */
     margin-bottom: 20px; /* Add spacing between columns on mobile */
   }
@@ -254,15 +276,15 @@
 
 /* Responsive Styles (Mobile First) */
 @media (max-width: 768px) {
-  .preview-jogos {
+  .preview-jogos, .container-grammar {
     flex-direction: column; /* Stack sections vertically on mobile */
   }
 
-  .container-jogos, .container-right {
+  .container-jogos, .container-right, .card-container {
     width: 100%; /* Make sections full width on mobile */
   }
 
-  .card-container {
+  .card-container, .container-grammar {
     flex-direction: column; /* Cards stack vertically on mobile */
   }
 

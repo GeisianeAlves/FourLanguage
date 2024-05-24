@@ -578,19 +578,6 @@ li {
 
 
 /* RODAPE */
-.footer, .rodape {
-  padding: 25px;
-  color: white;
-  background-color: #4c546c;
-  font-size: 14px;
-  font-family: "Space Mono";
-  text-align: left;
-  
-}
-
-.footer img{
-  width: 12vh;
-}
 
 
 .float-left{

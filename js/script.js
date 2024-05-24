@@ -1,23 +1,28 @@
-// Seleciona os elementos necessários
-const menuToggle = document.querySelector(".menu-toggle");
-const sidebar = document.querySelector(".sidebar");
-const closeMenu = document.querySelector(".close-menu");
+const navMenu = document.querySelector('.nav-menu');
+const menuToggle = document.querySelector('.menu-toggle');
 
-// Adiciona um ouvinte de evento ao botão de menu
-if (menuToggle) {
-  menuToggle.addEventListener("click", () => {
-    // Adiciona a classe .menu-open ao elemento .sidebar
-    sidebar.classList.add("menu-open");
-  });
-}
+// Add click event listener to the menu toggle button
+menuToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
 
-if (closeMenu) {
-  // Adiciona um ouvinte de evento ao botão de fechar menu
-  closeMenu.addEventListener("click", () => {
-    // Remove a classe .menu-open do elemento .sidebar
-    sidebar.classList.remove("menu-open");
-  });
-}
+// Check for screen width on page load and set initial menu state
+window.addEventListener('load', () => {
+  if (window.innerWidth < 768) {
+    navMenu.classList.add('active');
+  }
+});
+
+// Check for screen width changes and adjust menu state accordingly
+window.addEventListener('resize', () => {
+  if (window.innerWidth < 768) {
+    navMenu.classList.add('active');
+  } else {
+    navMenu.classList.remove('active');
+  }
+});
+
+
 
 let slides = document.querySelectorAll(".slide-container");
 let index = 0;

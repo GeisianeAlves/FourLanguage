@@ -199,18 +199,62 @@ function applyStyles() {
     margin-left: 15px; /* Espaçamento entre o botão e a barra de pesquisa */
     height: 30px; 
   }
-  
-  /* secao dos banners - o que falam */
-  
-  
-  /* RODAPE */
-  .rodape {
-    padding: 25px;
-    color: white;
-    background-color: #4c546c;
-    font-size: 20px;
-    font-family: "Space Mono";
+  /* Responsive styles */
+
+
+  /* Responsive styles */
+@media (max-width: 768px) {
+  .nav-menu { /* Target the entire menu for mobile responsiveness */
+    position: absolute; /* Position off-screen initially */
+    top: 100%; /* Place below header content */
+    left: 0; /* Align to left side */
+    width: 100%; /* Full width on mobile */
+    background-color: #4c546c; /* Background color for mobile menu */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Padding for mobile menu content */
+    transition: transform 0.3s ease-in-out; /* Smooth menu slide animation */
+    transform: translateY(-100%); /* Initially hidden */
   }
+
+  .lista-nao-ordenada {
+    display: block; /* Ensure submenus stack vertically on mobile */
+  }
+
+  .item-lista-cabecalho {
+    display: block; /* Display list items vertically on mobile */
+    margin: 0; /* Remove margins for cleaner layout */
+    padding: 10px; /* Padding for mobile menu items */
+    border-bottom: 1px solid #ddd; /* Optional: Separator line */
+  }
+
+  .item-lista-cabecalho a {
+    padding: 8px 12px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Adjust font size for better readability */
+  }
+
+  
+  /* Add menu toggle button */
+  .menu-toggle {
+    display: block; /* Display the toggle button on mobile */
+    padding: 10px; /* Add some padding for better interaction */
+  }
+
+  .menu-toggle:before {
+    content: '\f0c9'; /* Font Awesome icon for menu (bars) */
+    font-family: FontAwesome, sans-serif; /* Ensure icon font is loaded */
+    font-size: 20px; /* Adjust icon size as needed */
+    color: #333; /* Adjust icon color */
+  }
+
+  /* Animate menu toggle */
+  .nav-menu.active {
+    transform: translateY(0); 
+  }
+
+  
+  
+  
+  
   `;
   
   // Adicionar o estilo ao head do documento
