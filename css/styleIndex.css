@@ -92,8 +92,15 @@
 .stripe-color4 {
   background-color: #7185a4;
 }
-#img-slide {
+#img-slide1 {
   width: 200px;
+  z-index: 1;
+  position: absolute;
+  right: 2%;
+  top: 10%;
+}
+#img-slide2 {
+  width: 300px;
   z-index: 1;
   position: absolute;
   left: 20%;
