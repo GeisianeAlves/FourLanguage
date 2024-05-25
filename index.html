@@ -13,26 +13,46 @@
 
     <style>
       .container-banners .slide-container:nth-child(1) .slide {
-        background: url(img/welcome1.png);
+        background: url(img/dark-blue.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         /* width: 100vw;
         height: 50vh; */
       }
       .container-banners .slide-container:nth-child(2) .slide {
-        background: url(img/welcome2.png);
+        /* background: url(img/welcome2.png); */
         background-size: cover;
         background-repeat: no-repeat;
         /* width: 100vw;
         height: 100vh; */
       }
       .container-banners .slide-container:nth-child(3) .slide {
-        background: url(img/welcome3.png);
+        /* background: url(img/welcome3.png); */
         background-size: cover;
         background-repeat: no-repeat;
         /* width: 100vw;
         height: 100vh; */
       }
+      /*estilo para vídeos de slides do canvas*/
+.slides-canvas .max-width{
+    width: 100%;
+    margin-bottom: 0;
+    height: 100%;
+}
+.slides-canvas video{
+    width: 100%;
+    height: 100%;
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh; */
+  width: 100vw;
+}
+
     </style>
   <title> Four Language | Home Page</title>
   <script src="utils/renderHeader.js"> </script>
@@ -99,36 +119,58 @@
   </header>
 
 
-   <!-- <div class="row"> -->
-    <!-- banners -->
-    <div class="container-banners">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 align-self-center text-center">
-            <!--primeiro banner-->
-            <div class="slide-container active">
-              <div class="slide banner">
-                <div class="content-slide"></div>
-              </div>
+   <!--seção - banners temas principais-->
+   <section class="container-banners">  
+    <!--primeiro poster-->
+    <div class="slide-container active">                
+        <div class="slide banner">
+            <div class="div-stripe">     
+              <div class="stripe-color1"></div>
+              <div class="stripe-color2"></div>
+              <div class="stripe-color3"></div>
+              <div class="stripe-color4"></div>
+                 <img src="img/astronaut11.png" id="img-slide">
+             </div>
+             
+             <div class="div-text">     
+              <h1>Boost your <br>studies with </h1>
+              <h2>FREE ENGLISH <br>ACTIVITIES</h2>
+               <h3><i>Business START-UP</i></h3>  
+             </div>
+
             </div>
-            <!--segundo banner-->
-            <div class="slide-container">
-              <div class="slide">
-                <div class="content-slide"></div>
-              </div>
-            </div>
-            <!--terceiro banner-->
-            <div class="slide-container">
-              <div class="slide">
-                <div class="content-slide"></div>
-              </div>
-            </div>
-            <div id="prev" onclick="prev()"><img src="img/caret-quadrado-esquerda.svg" alt="Previous" width="50"></div>
-            <div id="next" onclick="next()"><img src="img/caret-circulo-direita.svg" alt="Next" width="50"></div>
-          </div>
         </div>
-      </div>
     </div>
+    <!--segundo poster-->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="content-slide">
+                <!--tópico 2 do capítulo 5-->
+                <!-- <h3>Novos ambientes comunicacionais</h3>                     
+                <h4>"A profusão exponencial das mídias na vida social e 
+                    individual produz o efeito de fetiche."</h4> -->
+               
+                <!--link no botão para cena de Black mirror!-->
+               
+            </div>
+        </div>
+    </div>
+    <!--terceiro poster-->
+    <div class="slide-container">
+        <div class="slide">
+            <div class="content-slide">
+                <!-- <h3>NFTs</h3>
+                <h4>Artes híbridas</h4> -->
+               <!-- <a href="img/nft.mp4" class="btn-slide">Saiba Mais</a>-->
+            </div>
+        </div>
+    </div>
+
+    <div id="prev" onclick="prev()"> < </div>
+    <div id="next" onclick="next()"> > </div>
+</section>
+
+
     <!--sexta section com link para teste de nivelamento-->
     <div class="container-teste">
       <div class="container-teste-1">

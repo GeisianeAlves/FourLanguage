@@ -1,7 +1,7 @@
 
 /* BANNERS */
 .container-banners .slide-container .slide {
-  background-color: #08021df5;
+  /* background-color: #08021df5; */
   /* width: 400px;
   height: 218px; */
   min-height: 100vh;
@@ -65,20 +65,51 @@
   display: block;
 }
 
-.container-banners .slide-container .slide .banner1 {
-  z-index: 1;
-  position: absolute;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: 100vw;
-  height: auto;
-  z-index: -1000;
-  /* background: url(img/Seja\ bem-vindo\,\ Fateco\ \(a\)\ \(1\).gif) no-repeat;
-      background-size: cover; 
-   */
+.div-stripe,.div-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 95vh;
+  height: 80vh;
+  /* background-color: #10172b; */
+}
+.stripe-color1, .stripe-color2, .stripe-color3, .stripe-color4 {
+  width: 500px;
+  height: 30px;
+ margin-bottom: 10px;
 }
 
+.stripe-color1 {
+  background-color: #92a1cd;
+}
+.stripe-color2 {
+  background-color: #bcb285;
+}
+.stripe-color3 {
+  background-color: #a7d9d7;
+}
+.stripe-color4 {
+  background-color: #7185a4;
+}
+#img-slide {
+  width: 200px;
+  z-index: 1;
+  position: absolute;
+  left: 20%;
+}
+.div-text h1, h2{
+  font-family: 'Noto Sans', sans-serif;
+  line-height: 3rem;
+}
+.div-text h1 {
+  font-size: 40px;
+  color: #cbdb94;
+}
+.div-text h2 {
+  font-size: 50px;
+  color: #36c4dd;
+}
 .banner1 .banner2 .banner3 {
   max-width: 100%;
   min-width: 50%;

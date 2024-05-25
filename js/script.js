@@ -1,26 +1,3 @@
-const navMenu = document.querySelector('.nav-menu');
-const menuToggle = document.querySelector('.menu-toggle');
-
-// Add click event listener to the menu toggle button
-menuToggle.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-});
-
-// Check for screen width on page load and set initial menu state
-window.addEventListener('load', () => {
-  if (window.innerWidth < 768) {
-    navMenu.classList.add('active');
-  }
-});
-
-// Check for screen width changes and adjust menu state accordingly
-window.addEventListener('resize', () => {
-  if (window.innerWidth < 768) {
-    navMenu.classList.add('active');
-  } else {
-    navMenu.classList.remove('active');
-  }
-});
 
 
 // #botao de pesquisa + barra
@@ -55,28 +32,13 @@ function prev() {
   index = (index - 1 + slides.length) % slides.length;
   slides[index].classList.add("active");
 }
-setInterval(next, 60000);
+setInterval(next, 50000);
 
 document.getElementById("btnRedirect").addEventListener("click", function () {
   window.location.href = "login.html";
 });
 
-// config banner saiba mais - semestre revisao
-const banners = document.querySelectorAll(".banner");
-const prevBtn = document.querySelector(".prev");
-const nextBtn = document.querySelector(".next");
-let currentBannerIndex = 0;
 
-function showBanner(index) {
-  banners[currentBannerIndex].classList.remove("active");
-  currentBannerIndex = (index + banners.length) % banners.length;
-  banners[currentBannerIndex].classList.add("active");
-}
-
-prevBtn.addEventListener("click", () => showBanner(currentBannerIndex - 1));
-nextBtn.addEventListener("click", () => showBanner(currentBannerIndex + 1));
-
-showBanner(currentBannerIndex); // Inicializa o carrossel
 
 
 
