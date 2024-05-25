@@ -75,7 +75,7 @@
   /* background-color: #10172b; */
 }
 .stripe-color1, .stripe-color2, .stripe-color3, .stripe-color4 {
-  width: 500px;
+  width: 400px;
   height: 30px;
  margin-bottom: 10px;
 }
@@ -100,10 +100,16 @@
   top: 20%;
 }
 #img-slide2 {
-  width: 300px;
+  width: 320px;
   z-index: 1;
   position: absolute;
-  left: 20%;
+  left: 25%;
+}
+#img-slide3 {
+  height: 400px;
+  z-index: 1;
+  position: absolute;
+  left: 25%;
 }
 .div-text h1, h2{
   font-family: 'Noto Sans', sans-serif;
@@ -112,16 +118,22 @@
 .div-text h1 {
   font-size: 50px;
   color: #cbdb94;
+  padding-left: 70px;
 }
 .div-text h2 {
   font-size: 50px;
   color: #78c1ce;
+  padding-left: 70px;
 }
 .div-text h3 {
   font-size: 25px;
   color: #b6bdbe;
-  margin-top: 20px;
+  margin-top: 24px;
+  padding-left: 70px;
 }
+/* .slide3 h1, h2 {
+  margin-left: 80px;
+} */
 .banner1 .banner2 .banner3 {
   max-width: 100%;
   min-width: 50%;
@@ -390,9 +402,9 @@ img {
 }
 
 .container-teste-1 {
-  width: 30vw;
+  width: 35vw;
   height: 98%;
-  background-color: #323f48a5;
+  background-color: #e4eef5a5;
 }
 
 .container-teste-1 img {
@@ -420,7 +432,7 @@ img {
 .container-test-2 h1 {
   font-family: "Raleway", sans-serif;
   font-size: 30px;
-  color: #333;
+  color: #575252;
 }
 
 .container-teste-3 {
@@ -583,23 +595,24 @@ img {
 /* estilo para div da direito com english tips*/
 .content-right {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(137 144 214 / 80%);
-  /* border: 2px solid rgb(156, 93, 245); */
+  background-color: rgba(213, 217, 255, 0.8);
   height: 30%;
   width: 100%;
   border-radius: 15px;
-  gap: 10px;
+  /* gap: 10px; */
   font-weight: 400;
 }
 
 .content-right h1{
-  color: #dbca47cf;
+  color: #a1974ccf;
 }
-
+.content-right h2{
+  color: #435a4ecf;
+}
 .content-right p {
   font-weight: bold;
   padding-bottom: 19px;
