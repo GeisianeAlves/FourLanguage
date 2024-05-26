@@ -117,7 +117,7 @@
 }
 .div-text h1 {
   font-size: 50px;
-  color: #cbdb94;
+  color: #d3ce96;
   padding-left: 70px;
 }
 .div-text h2 {
@@ -397,19 +397,42 @@ img {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  background-color: #d7def1;
+  background-color: #ebeef7;
 
 }
 
 .container-teste-1 {
-  width: 35vw;
-  height: 98%;
-  background-color: #e4eef5a5;
+  width: 30vw;
+  height: 80%;
+  background-color: #ebeef7;
+  margin-left: 40px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+ 
+
+}
+.container-teste-1 h1{
+  font-family: "Space Mono";
+  color: #e1dfc7;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 150px;
+  line-height: 2rem;
+}
+.container-teste-1 h2{
+  font-family: 'Noto Sans', sans-serif;
+  color: #efeee8;
+  text-align: center;
+  line-height: 1.7rem;
 }
 
 .container-teste-1 img {
   width: 100%;
-  height: 100%;
+  height: 95%;
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
 }
@@ -587,7 +610,7 @@ img {
   flex-direction: column;
   width: 30%;
   height: 100%;
-  gap: 50px;
+  gap: 30px;
   padding-right: 43px;
 
 }
@@ -600,7 +623,7 @@ img {
   align-items: center;
   flex-direction: column;
   background-color: rgba(213, 217, 255, 0.8);
-  height: 30%;
+  height: 34%;
   width: 100%;
   border-radius: 15px;
   /* gap: 10px; */
@@ -1116,6 +1139,7 @@ mark {
   font-size: var(--font-size);
   color: rgb(106, 151, 158);
   font-size: 22px;
+  line-height: 1.7rem;
 }
 
 .content-dic p {
