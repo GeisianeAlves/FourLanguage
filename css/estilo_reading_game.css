@@ -57,9 +57,9 @@ left: 50%;
     border: 1px solid plum;
     background-color: black;
     text-align: center;
-        height: 60px;
-        margin-bottom: 10px;
-        color: aliceblue;
+    height: 60px;
+    margin-bottom: 10px;
+    color: aliceblue;
 }
 .btn-resposta:hover {
     background-color: rgb(75, 72, 106);
@@ -74,6 +74,7 @@ left: 50%;
     font-family: 'Sarala',cursive;
     font-size: 22px;
     font-weight: bolder;
+    cursor: pointer;
 }
 #botao-proximo:hover {
     background-color: #778899; 
@@ -84,7 +85,7 @@ left: 50%;
     color: rgb(220, 249, 252);
     text-decoration: none;
 }
-.box{
+.container-reading {
     height: 100vh;    
     display: flex;
     align-items: center;
@@ -295,3 +296,52 @@ display: flex !important;
     background-color: rgb(241, 197, 115);;
 }
 
+@media(max-width: 540px) {
+    
+    #div-esquerda {
+        display: none;
+    }
+    
+    .container {
+        margin-top: 0;
+        width: 400px;
+    }    
+    .container h1 {
+        font-size: 2.3rem;
+    }   
+    .container h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        line-height: 2.2rem;
+    }
+    .typing1 {
+        font-size: 1.5rem;
+        line-height: 2.6rem;
+    }
+    .img-0 {
+        position: relative;
+        top: 50px;
+        height: 200px;     
+    }
+    #botao-proximo {
+        width: 120px;
+        font-size: 1.2rem;
+    }
+    .respostas {
+        width: 350px;         
+        margin-left: 0;
+    }
+    .btn-letra {
+        margin-left: 0;
+        width: 20%;
+    }
+    .btn-resposta {
+        width: 80%;
+    }
+    .img-1 {
+        display: none;
+    }
+    .modal {
+        width: 300px;
+    }
+}

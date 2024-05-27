@@ -330,3 +330,40 @@ footer:hover {
 #restart:hover {
   background-color: rgb(241, 197, 115);;
 }
+
+
+@media(max-width: 540px) {
+
+  .jogo h1 {
+  align-items: center;
+  }
+  #part-1, #part-2, #part-3, #part-4, #part-5, #part-6 {
+    margin-left: 40px;
+    /* align-items: center; */
+    width:500px;
+  }
+  .palavras {
+    /* background-color: #35b954; */
+    /* flex-direction: row; */
+    width: 100%;
+    margin-left: 40px;
+  }
+  .palavras p {
+    font-size: 1rem;
+  }
+  #tema {
+    font-size: 2rem;
+  }
+  .container-left, #img-planet {
+    display: none;
+  }
+  .modal {
+    width: 300px;
+  }
+  .container-botton {
+    width: 500px;
+  }
+  #btn-voltar {
+    margin-left: 80px;
+  }
+}

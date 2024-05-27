@@ -328,3 +328,28 @@ display: flex !important;
     color: white;
     transition: width 0.3s;
 }
+
+
+@media(max-width: 540px) {
+
+    .container-jogo {
+        flex-direction: column;
+    }
+    .cont {
+        width: 450px;
+    }
+    #progressContainer{
+        width: 480px;
+        align-items: center;
+    }
+    #playpalavra {
+        width: 80px;
+        height: 80px;
+    }
+    .btn2 {
+        width: 100px;
+    }
+    .dicas, .container-direita {
+        display: none;
+    }
+}

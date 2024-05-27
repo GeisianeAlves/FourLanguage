@@ -29,8 +29,6 @@
   z-index: 1;
   background-color: blanchedalmond;
   border-radius: 10px;
-  /* height: 15vh;
-  width: 15%; */
   margin: 10px;
   display: flex;
   align-items: center;
@@ -81,13 +79,6 @@
     }
   }
 
-
-/* @media (max-width: 1440px) {
-  .skills-card {
-    height: 17vh;
-    width: 21%;
-  }
-} */
 
 .skills-card a {
   color: rgb(23, 18, 18);
@@ -234,6 +225,51 @@
 .btn-acessar:hover {
   color: #1b1817;
   background-color: aqua;
+}
+
+@media(max-width: 540px) {
+  .container-skills {
+    height: 100%;
+  }
+  .container-skills h2 {
+    font-size: 2.5rem;
+    line-height: 2.4rem;
+    top: 25%;
+  }
+  .container-skills h2 span {
+    font-size: 2.4rem;
+    line-height: 2rem;
+  }
+  .box h4, h5 {
+    /* font-size: 1.3rem; */
+    display: none;
+  }
+  .box-2 h4 {
+    display: none;
+  }
+  .skills{
+    width: 100%;  
+    flex-wrap: wrap; 
+    top: 40%;
+  }
+  .skills-card{
+    height: 120px;
+   width: 150px;
+  }
+  #img-1 {
+    top: 0;
+    left: 160px;
+    width: 150px;
+  }
+  #img-2 {
+    top: 0;
+    width: 100px;
+  }
+  #img-3 {
+    top: 0;
+    left: 10px;
+    width: 70px;
+  }
 }
 @media (max-width: 800px) {
   .container h2 {

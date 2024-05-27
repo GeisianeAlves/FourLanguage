@@ -235,3 +235,23 @@ display: flex !important;
 #restart:hover {
     background-color: rgb(138, 131, 122);
 }
+
+@media(max-width: 540px) {
+
+    #div-esquerda, #img-direita {
+        display: none;
+    }
+
+    #title {
+        width: 500px;
+    }
+    .container-question h1 {
+        font-size: 1.5rem;
+    }
+    .score-div, .botao-proximo {
+        width: 150px;
+    }
+    #record, #record2, #record3, #record4, #record5, #record6 {
+        width: 100px;
+    }
+}
