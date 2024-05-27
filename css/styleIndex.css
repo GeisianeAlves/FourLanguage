@@ -1,16 +1,10 @@
 
 /* BANNERS */
 .container-banners .slide-container .slide {
-  /* background-color: #08021df5; */
-  /* width: 400px;
-  height: 218px; */
   min-height: 100vh;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  /* gap: 15px;
-  padding: 20px 9%;
-  padding-bottom: 100px; */
   margin-top: 0;
 }
 
@@ -116,7 +110,7 @@
   line-height: 3rem;
 }
 .div-text h1 {
-  font-size: 50px;
+  font-size: 3rem;
   color: #d3ce96;
   padding-left: 70px;
 }
@@ -131,17 +125,7 @@
   margin-top: 24px;
   padding-left: 70px;
 }
-/* .slide3 h1, h2 {
-  margin-left: 80px;
-} */
-.banner1 .banner2 .banner3 {
-  max-width: 100%;
-  min-width: 50%;
-  max-height: 100%;
-  min-height: 50%;
-  width: 50%;
-  height: 100vh;
-}
+
 
 .container-banners #prev,
 .container-banners #next {
@@ -149,9 +133,7 @@
   top: 90%;
   transform: translateY(87%);
   color: #ffffff;
-  /* background: #c787dad3; */
   height: 50px;
-  /* width: 31px; */
   line-height: 50px;
   font-size: 20px;
   text-align: center;
@@ -174,17 +156,45 @@
   right: 100px;
 }
 
+
+/* responsividade banners */
 @media(max-width: 500px) {
   .container-banners #prev {
-    left: 0px;
-    top: 60%;
+    left: 20px;
+    top: 50%;  
   }
 
   .container-banners #next {
-    right: 0px;
-    top: 60%;
+    right: 20px;
+    top: 50%;
   }
 
+  .stripe-color1, .stripe-color2, .stripe-color3, .stripe-color4 {
+    width: 250px;
+    height: 20px;
+    margin-bottom: 5px;
+  }
+  .div-text h1 {
+    font-size: 2.7rem;
+    line-height: 2.4rem;
+  }
+  .div-text h2 {
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+  }
+  #img-slide1 {
+    width: 100px;
+    top: 10%;
+  }
+
+  #img-slide2 {
+    width: 200px;
+    left: 40%;
+  }
+  #img-slide3 {
+    height: 250px;
+    left: 40%;
+  }
   .container-banners .slide-container .slide .content-slide p {
     font-size: 16px;
     color: #ffffff;
@@ -196,17 +206,6 @@
 }
 
 
-/*estilo para vídeos de slides do canvas*/
-.slides-canvas .max-width {
-  width: 100%;
-  margin-bottom: 0;
-  height: 100%;
-}
-
-.slides-canvas video {
-  width: 100%;
-  height: 100%;
-}
 
 /* Estilos para os botões de navegação */
 .nav-btn {
@@ -291,12 +290,15 @@
 /* CARDS DOS SEMESTRES GRAMMAR */
 .card-container {
   display: flex;
-  flex-direction: column; /* Stack card rows vertically */
+  flex-wrap: wrap;
+  flex-direction: column; 
+  justify-content: center;
   width: 100%; /* Take full width of container */
 }
 
 .card-row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly; /* Distribute cards evenly */
   margin-bottom: 20px; /* Add spacing between rows */
  
@@ -393,7 +395,7 @@ img {
   width: 100%;
   height: 100vh;
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
@@ -487,6 +489,7 @@ img {
 .container-teste-3 h1 {
   font-size: 25px;
   color: #8b6760;
+  text-align: center;
 }
 
 .container-teste-3 h2 {
@@ -512,7 +515,7 @@ img {
 
 .container-teste-3 button a {
   text-decoration: none;
-
+  color: #3d4042;
 }
 
 
@@ -756,104 +759,6 @@ mark {
   font-size: 50px;
 }
 
-/*seção com vídeo falando da importância do inglês*/
-.video {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  background-color: #fff8dc62;
-  height: 60vh;
-}
-.video video {
-  height: 70%;
-}
-
-.video h1 {
-  width: 60vw;
-  height: 45px;
-  background-color: #434545;
-  font-size: 30px;
-  color: #a19797;
-  text-align: center;
-}
-
-/*seção com dicas de dicionários */
-.extra-dicionarios {
-  background-color: rgb(18 56 80 / 18%);
-  /* width: 100%; */
-  min-height:60vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; 
-  gap: 10px; 
-}
-
-.extra-dicionarios p {
-  font-size: 16px;
-}
-
-.conteudo-1,
-.conteudo-2,
-.conteudo-3,
-.conteudo-4 {
-  background-color: #edefed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-family: "Raleway", sans-serif;
-  border: 3px solid rgb(121, 122, 165);
-  gap: 10px;
-  border-radius: 10px;
-  color: #333;
-}
-
-.conteudo-1 {
-  width: 400px;
-  height: 400px;
-  /* margin-right: 20px; */
-}
-
-.conteudo-2 {
-  width: 400px;
-  height: 400px;
- 
-}
-
-.conteudo-part3 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  width: 400px;
-  height: 400px;
-}
-
-.conteudo-3 {
-  width: 400px;
-  height: 190px;
-}
-
-.conteudo-4 {
-  width: 400px;
-  height: 190px;
-}
-
-.conteudo img {
-  width: 120px;
-}
-
-.conteudo h2
-{
-  margin-bottom: 20px;
-}
-.conteudo p {
-  font-size: 16px;
-}
-
 
 
 @media only screen and (max-width: 640px) {
@@ -862,23 +767,30 @@ mark {
     display: flex;
     flex-direction: column;
     justify-content: center; 
+
   }
     .container-teste-1 {
     width: 100%;
-    height: 10%;
+    height: 500px;
+    margin-left: 0;
+    border-radius: 0;
     }
     .container-teste-1 img{
-      display: none;
+      /* display: none; */
     } 
   
   .container-test-2 {
-    margin-top: 320px;
+    /* margin-top: 320px; */
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    min-height:100%;
-    width: 100%;
+    align-items: center;
+    /* min-height:200px; */
+    width: 100%; 
+    overflow: auto;
+    height: 100%;
+    margin-bottom: 0;
 }
   .container-test-2 h1 {
     font-size: 1.5rem;
@@ -906,7 +818,7 @@ mark {
   .container-teste-3 button {
     width: 80px;
     height: 30px;
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 10px;
   }
   /*jogos*/
@@ -1105,7 +1017,7 @@ mark {
   flex-wrap: wrap;
   justify-content: center;
   max-width: 100%;
-
+  
 }
 
 .card-dic {
