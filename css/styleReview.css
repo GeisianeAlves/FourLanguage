@@ -250,17 +250,13 @@ body{
 
 /* SOMENTE PARA A PAGINA DE REVISAO */
 #container-revisao {
-  background: url(img/camper-7088130_1920.jpg);
-  background-size:cover;
-  background-repeat: no-repeat;
-
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 4px;
-  padding-top: 56px;
-  padding-bottom: 10px;
-  margin-left: 9px;
-  margin-right: 10px;
+    
+    display: flex; /* Enable Flexbox */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-around; /* Distribute items evenly */
+    align-items: flex-start; /* Align items to the top */
+  
+  
 }
 
 .revisao-item {
@@ -269,6 +265,12 @@ body{
   margin-bottom: 60px;
   padding-top: 10px;
   padding-bottom: 10px; 
+  width: 45%;
+  flex-basis: 45%;
+  flex-direction: column;
+  border: 2px solid #ddd; /* Add a border */
+  border-radius: 4px; 
+  box-shadow: 25px 19px 3px rgba(0, 0, 0, 0.2); 
 }
 
 
@@ -319,14 +321,35 @@ body{
 
 .revisao-item p {
   text-align: justify;
-  padding: 1px;
+  /* padding: 1px; */
   font-size: 21px;
-  background-color: white;
+  /* background-color: white; */
   border-radius: 10px;
   color: black;
-  padding: 54px;
-  margin: 11px;
+  
+  padding: 15px; /* Add padding for spacing within the card */
+  
+  /* margin: 11px; */
 }
+
+
+.revisao-item-band {
+  /* Existing styles for the revision item */
+  width: 100%; /* Span the full width of the revision item */
+  padding: 10px; /* Add padding for spacing within the band */
+  background-color: #4c546c; /* Semi-transparent black background */
+  color: white; /* Light text color for contrast */
+  text-align: center; /* Center the text within the band */
+  font-weight: bold; /* Make the text bold for emphasis */
+}
+
+
+.band-title {
+  font-weight: bold; /* Make the title bold */
+  margin-right: 5px; /* Add spacing after the title */
+  color: #ddd;
+}
+
 
 .revisao-item .nav-btn {
   margin-top: 10px;
