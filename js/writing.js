@@ -96,7 +96,7 @@ function startTimer(durationInSeconds) {
 }
 
 // cronômetro com uma duração em segundos
-startTimer(20);
+startTimer(30);
 
 
 
