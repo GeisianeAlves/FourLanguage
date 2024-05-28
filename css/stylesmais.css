@@ -537,9 +537,10 @@ li {
 
 /* coluna 1 */
 .tips-content1{
-  padding: 46px 0px;
+  padding: 46px 217px;
+  font-size: 20px;
   /* flex-direction: column; */
-  margin: 87px 0px;
+  
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -564,6 +565,7 @@ text-align: center;
   justify-content: space-between; 
   /* flex-direction: column; */
   /* padding: 126px; */
+  padding: 6px 44px 1px 1px;
 }
 
 .tips-content2 .box3-color1,
