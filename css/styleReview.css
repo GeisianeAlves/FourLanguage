@@ -270,7 +270,8 @@ body{
   flex-direction: column;
   border: 2px solid #ddd; /* Add a border */
   border-radius: 4px; 
-  box-shadow: 25px 19px 3px rgba(0, 0, 0, 0.2); 
+  box-shadow: 22px 32px 3px 2px rgba(0, 0, 0, 0.075); 
+ 
 }
 
 
