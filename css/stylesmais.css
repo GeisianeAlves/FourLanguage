@@ -565,7 +565,7 @@ text-align: center;
   justify-content: space-between; 
   /* flex-direction: column; */
   /* padding: 126px; */
-  padding: 6px 44px 1px 64px;
+  padding: 6px 5px 1px 64px;
 }
 
 .tips-content2 .box3-color1,
@@ -573,6 +573,7 @@ text-align: center;
 .tips-content2 .box3-color3 {
   margin: 12px; /* Adjust spacing as needed */
   padding: 23px 41px;
+  justify-content: center;
 }
 
 .tips-content2 img{
@@ -587,7 +588,9 @@ text-align: center;
 }
 
 .box3-color1 p{ 
-  background-color: sandybrown;
+  background-color: #f4a46052;
+  border-radius: 55px;
+  padding: 12px;
 }
 
 .box3-color2 {
@@ -597,17 +600,22 @@ text-align: center;
 }
 
 .box3-color2 p{
-  background-color: cadetblue;
+  background-color: #5f9ea07a;
+  border-radius: 55px;
+    padding: 12px;
 }
 
 .box3-color3 {
   flex-direction: row;
   border: 2px solid mediumpurple;
   
+  
 }
 
 .box3-color3 p{
-  background-color: mediumpurple;
+  border-radius: 55px;
+    padding: 12px;
+  background-color: #9370db94;
   
 }
 
@@ -616,12 +624,94 @@ text-align: center;
   border-radius: 10px;
   padding: 5px 25px;
   text-decoration: none;
+  /* display: flex; */
+  /* justify-self: center; */
   
 }
 
 .tips-content2 p{
   margin-bottom: 10px;
 }
+
+/* Media query for screens smaller than 546px */
+@media (max-width: 546px) {
+
+  /* Make container-tips a single column layout */
+  .container-tips {
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    flex-wrap: wrap;
+   
+  }
+
+  /* Adjust content within the columns */
+  .tips-content1,
+  .tips-content2 {
+    padding: 5px;
+    font-size: 10px; /* Adjust font size as needed */
+  }
+
+  /* Center content in tips-content1 */
+  .tips-content1 h5,
+  .tips-content1 p {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  
+
+  /* Remove unnecessary styles for smaller screens */
+  .tips-content1 p {
+    padding-top: 0; /* Remove padding-top */
+  }
+
+  /* Adjust layout for tips-content2 */
+  .tips-content2 {
+    display: flex; /* Use flexbox for responsive layout */
+    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+    justify-content: space-between; /* Distribute items evenly */
+    padding: 0; /* Remove padding for smaller screens */
+  }
+
+  /* Adjust box styles for smaller screens */
+  .tips-content2 .box3-color1,
+  .tips-content2 .box3-color2,
+  .tips-content2 .box3-color3 {
+    margin: 5px; /* Reduce margin as needed */
+    padding: 15px 20px; /* Adjust padding as needed */
+    font-size: 14px;
+    font-weight: 200px;
+  }
+
+  /* Adjust image size for smaller screens */
+  .tips-content2 img {
+    width: 30%; /* Adjust width as needed */
+    height: 30%; /* Adjust height as needed */
+  }
+
+  /* Remove unnecessary flex direction for boxes */
+  .box3-color1,
+  .box3-color2,
+  .box3-color3 {
+    flex-direction: initial; /* Remove flex-direction */
+  }
+
+  /* Adjust link styles for smaller screens */
+  .tips-content2 a {
+    padding: 3px 10px; /* Adjust padding as needed */
+  }
+}
+
+/* Existing styles for larger screens (outside the media query) */
+.container-tips{
+  display: flex;
+  flex-direction: row;
+  padding: 46px;
+}
+
+/* ... rest of your styles for larger screens ... */
+
 
 /* section materiais */
 .section-materials a {
