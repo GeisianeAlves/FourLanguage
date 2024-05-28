@@ -319,9 +319,7 @@ display: flex !important;
         line-height: 2.6rem;
     }
     .img-0 {
-        position: relative;
-        top: 30px;
-        height: 190px;     
+       display: none;  
     }
     #botao-proximo {
         width: 120px;

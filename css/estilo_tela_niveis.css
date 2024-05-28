@@ -232,12 +232,12 @@ display: flex !important;
     width: 500px;
    }
     .level-card {
-        width: 120px;
-        height: 120px;
+        width: 110px;
+        height: 110px;
         justify-content: center;
         align-items: center;
         line-height: 2.4rem;
-        margin: 8px;
+        margin: 5px;
     }
     .level-box h3{
         font-size: 2rem;
@@ -252,7 +252,7 @@ display: flex !important;
         display: none;
     }
     .topic {
-        margin-left: 25%;
+        margin-left: 0;
        margin-bottom: 500px;
     }
    

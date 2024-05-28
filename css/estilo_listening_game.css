@@ -339,8 +339,9 @@ display: flex !important;
         width: 450px;
     }
     #progressContainer{
-        width: 480px;
+        width: 400px;
         align-items: center;
+        margin-left: 60px;
     }
     #playpalavra {
         width: 80px;

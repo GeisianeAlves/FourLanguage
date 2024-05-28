@@ -238,7 +238,7 @@ display: flex !important;
 
 @media(max-width: 540px) {
 
-    #div-esquerda, #img-direita {
+    #div-esquerda, #img-direita, #title {
         display: none;
     }
 
@@ -246,10 +246,14 @@ display: flex !important;
         width: 500px;
     }
     .text {
-        width: 400px;
+        width: 380px;
     }
+    .text h1 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }    
     .container-question h1 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
     .score-div, .botao-proximo {
         width: 150px;
