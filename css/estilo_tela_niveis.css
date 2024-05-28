@@ -237,6 +237,7 @@ display: flex !important;
         justify-content: center;
         align-items: center;
         line-height: 2.4rem;
+        margin: 8px;
     }
     .level-box h3{
         font-size: 2rem;

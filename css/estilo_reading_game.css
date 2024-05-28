@@ -105,7 +105,7 @@ left: 50%;
     display: none;
     font-size: 35px;
     line-height:55px;
-    padding: 40px;
+    /* padding: 40px; */
     opacity: 0.85;
 }
 .container-resposta{
@@ -320,8 +320,8 @@ display: flex !important;
     }
     .img-0 {
         position: relative;
-        top: 50px;
-        height: 200px;     
+        top: 30px;
+        height: 190px;     
     }
     #botao-proximo {
         width: 120px;

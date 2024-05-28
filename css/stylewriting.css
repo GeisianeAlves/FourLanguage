@@ -334,8 +334,15 @@ footer:hover {
 
 @media(max-width: 540px) {
 
-  .jogo h1 {
-  align-items: center;
+  .jogo {
+    top: 0;
+    height: 90%;
+  }
+  .jogo h1, h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   #part-1, #part-2, #part-3, #part-4, #part-5, #part-6 {
     margin-left: 40px;
@@ -343,9 +350,8 @@ footer:hover {
     width:500px;
   }
   .palavras {
-    /* background-color: #35b954; */
-    /* flex-direction: row; */
-    width: 100%;
+    flex-direction: row;
+    width: 70%;
     margin-left: 40px;
   }
   .palavras p {
