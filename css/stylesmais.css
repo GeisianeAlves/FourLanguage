@@ -365,11 +365,18 @@ h2 {
 
 h3, h4, h5 {
   text-decoration: none;
+  padding: 11px 0px;
+  
 }
 
 ul {
   list-style: none;
   padding: 0;
+}
+
+section ul{
+  padding: 24px 23px;
+  
 }
 
 li {
@@ -386,7 +393,7 @@ li {
   /* Largura da seção (ajuste conforme necessário) */
   margin: 0 auto;
   /* Centraliza horizontalmente */
-  padding: 40px;
+  padding: 70px;
   /* Espaçamento interno */
   background-color: #fff;
   /* Cor de fundo (opcional) */
@@ -449,6 +456,8 @@ li {
   /* Add padding around card content */
   text-align: center;
   /* Center text within the card */
+  margin-top: 38px;
+
 }
 
 .card:hover {

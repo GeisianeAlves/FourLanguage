@@ -1,10 +1,9 @@
 *{
   margin: 0;
   padding: 0;
-  text-decoration: none;
-
-  
+  text-decoration: none; 
 }
+
 
 li, ul,ol, a{
   list-style: none;
@@ -23,6 +22,124 @@ th, td {
 th {
   background-color: #f2f2f2;
 }
+
+/* menu de navegacao das unidades */
+.container-nav-units {
+  width: 229px;
+  height: 335px;
+  background-color: #f0f0f0;
+  position: fixed;
+  top: 163px;
+  bottom: -2px;
+  left: 2px;
+  right: 54px;
+  padding: 17px 5px 26px 6px;
+  border: 2px solid rgb(103 58 183 / 44%);
+  border-radius: 0px 40px 49px 50px;
+  font-family: "Space Mono";
+  font-size: 14px;
+  font-weight: bold;
+}
+ 
+  
+.unit-nav {
+  list-style: none; 
+  padding: 0;
+}
+
+.unit-nav li {
+  margin-bottom: 6px; 
+  
+}
+
+.unit-nav a {
+  display: block; 
+  padding: 9px 9px; 
+  text-decoration: none; /* Remove default link underline */
+  color: #666; /* Link text color */
+  background-color: #fff; /* Link background color */
+  border: 2px dashed #ddd; /* Add border */
+  border-radius: 22px; /* Add rounded corners */
+  transition: background-color 0.3s ease; /* Add hover effect transition */
+}
+
+.unit-nav a:hover {
+  background-color: #e0e0e0; /* Change background color on hover */
+}
+
+/* RESPONSIVIDADE DO MENU UNITS */
+@media (max-width: 768px) {
+  /* Styles for screens smaller than 768px */
+  .container-nav-units {
+    width: 47%; /* Make sidebar occupy full width on smaller screens */
+    height: max-content;
+    position: relative; /* Reset position to relative for non-fixed behavior */
+    top: 2px; /* Reset top position for non-fixed behavior */
+    bottom: 2px;
+    left: 102px;
+    margin-bottom: 7px;
+    padding: 5px 0px 0px 5px; /* Adjust padding for smaller screens */
+    right: 2px;
+  }
+
+  .unit-nav {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .unit-nav li {
+    margin-bottom: 5px; /* Reduce spacing between list items */
+  }
+
+  .unit-nav a {
+    border: 2px dashed #ddd; /* Add border */
+    border-radius: 22px; /* Add rounded corners */
+    transition: background-color 0.3s ease;
+    font-size: 14px; /* Adjust font size for smaller screens */
+    padding: 2px 41px;
+  }
+
+
+}
+
+
+@media (max-width: 1068px) {
+  /* Styles for screens smaller than 768px */
+  .container-nav-units {
+    width: 47%; /* Make sidebar occupy full width on smaller screens */
+    height: max-content;
+    position: relative; /* Reset position to relative for non-fixed behavior */
+    top: 2px; /* Reset top position for non-fixed behavior */
+    bottom: 2px;
+    left: 102px;
+    margin-bottom: 7px;
+    padding: 5px 0px 0px 5px; /* Adjust padding for smaller screens */
+    right: 2px;
+  }
+
+  .unit-nav {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .unit-nav li {
+    margin-bottom: 5px; /* Reduce spacing between list items */
+  }
+
+  .unit-nav a {
+    border: 2px dashed #ddd; /* Add border */
+    border-radius: 22px; /* Add rounded corners */
+    transition: background-color 0.3s ease;
+    font-size: 14px; /* Adjust font size for smaller screens */
+    padding: 2px 41px;
+  }
+
+
+}
+
+
 
 
 
@@ -75,4 +192,39 @@ th {
 .next-btn {
   right: 0;
 }
+
+/* BOTAO DE IR PARA O TOPO */
+/* .back-to-top-button {
+  display: fixed;
+  
+} */
+
+.back-to-top-button {
+  position: relative; /* Make the container relative for positioning */
+  display: flex;
+}
+
+
+
+.back-to-top-button a {
+  /* display: block; */
+  position: absolute;
+  width: 50px; /* Button width */
+  height: 50px; /* Button height */
+  line-height: 50px; /* Center text vertically */
+  border-radius: 50%; /* Make it round */
+  background-color: #333; /* Button color */
+  color: #fff; /* Text color */
+  font-size: 20px; /* Font size for icon */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+  top: 0px;
+  transform: translateY(-50%); /* Move the anchor vertically to center */
+  right: 0px; /* Set right margin to place the icon on the right */
+
+}
+
+.back-to-top-button a:hover {
+  background-color: #444; /* Darker color on hover */
+}
+
 
