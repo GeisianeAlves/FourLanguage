@@ -54,7 +54,7 @@ th {
 
 .unit-nav a {
   display: block; 
-  padding: 9px 9px; 
+  padding: 9px 18px; 
   text-decoration: none; /* Remove default link underline */
   color: #666; /* Link text color */
   background-color: #fff; /* Link background color */
