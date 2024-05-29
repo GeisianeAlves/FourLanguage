@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Levels</title>
     <!--links css-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   
-    <link rel="stylesheet" href="css/styleReview.css" />
-
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="css/estilo_tela_niveis.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet"
+  />
 
     <style>
         .conteudo-principal-background {   display: flex; flex-direction: column; justify-content: center; align-items: center; background: url(img/night_sky3.jpg); 
-         background-size: cover; background-repeat: no-repeat; height: 100vh; width: 100vw; }
+         background-size: cover; background-repeat: no-repeat; height: 90vh; width: 100vw; }
     </style>
 
     <script src="utils/renderSpeakingLevel.js"></script>
@@ -29,11 +31,50 @@
 </head>
 
 <body>    
-    <div id="container-menu">
-        <!-- aqui chama função do arquivo menu.js -->
-    </div>
+    <header class="cabecalho">
+        <div class="container-nav">
+        <nav class="nav-menu">
+          <img src="img/logo-four.png" alt="Logo Four Language" width="60vw" class="logo-four">
+          <ul class="lista-nao-ordenada">
+            <li class="item-lista-cabecalho">
+              <a href="index.html">Home</a>
+            </li>
+        
+            <li class="item-lista-cabecalho">
+              <a href="tela_skills.html">Games</a>
+              <ul>
+                <li class="item-lista-cabecalho"><a href="tela_skills.html">All </a></li>
+                <li class="item-lista-cabecalho"><a href="quiz.html">Extra</li>
+              </ul>
+            </li>
+        
+            <li class="item-lista-cabecalho">
+              <a href="revisao.html"> Content Review</a>
+              
+            </li>
+            <li class="item-lista-cabecalho">
+                <a href="grammar.html"> Grammar</a>
+                
+              </li>
+        
+            <li class="item-lista-cabecalho"><a href="creditos.html">About</a></li>
+            <div class="menu-direita">
+            <li>
+              <input type="text" placeholder="Search Content..." class="search-bar"> </input>
+              <button class="nav-botao"><a href="login.html">Sign out</a></button>
+            </li>
+          </div>
+          </ul>
+        </div>
+        </nav>
+            
+        <!-- chamando a formatacao do cabecalho -->
+      <script src="utils/renderHeader.js"> </script>   
+     
+      </header>
 
-<!--  conteúdo principal -> níveis/semestres     class="skill-speaking" id="primeiro  class="level" id="primeiro"" -->
+
+<!--  conteúdo principal -> níveis/semestres     class="skill-speaking" id="primeiro  class="level"  -->
       <section> 
                       
         <div>

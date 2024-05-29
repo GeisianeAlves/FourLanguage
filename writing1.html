@@ -1,31 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Speaking 1</title>
+    <title>Writing | Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/stylewriting.css">
-    <link rel="stylesheet" href="css/styleReview.css" />
-    <link rel="stylesheet" href="css/styles.css">
-    
+    <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet"
+  />
     <style>
         .main{ background: url(img/stars.jpg); background-size:cover; background-repeat: no-repeat; width: 100vw; height: 90vh;
         display: flex; flex-direction: column; }
     </style>
 
-    <script src="js/script.js" defer></script>
     <script src="utils/renderWritingLevel.js"></script>
     <script>
       window.renderWriting()
-    </script>
+    </script> 
 
 </head>
 <body>
-  <div id="container-menu">
-    <!-- aqui chama função do arquivo menu.js -->
-</div>
+  
+ 
+  <header class="cabecalho">
+    <div class="container-nav">
+    <nav class="nav-menu">
+      <img src="img/logo-four.png" alt="Logo Four Language" width="60vw" class="logo-four">
+      <ul class="lista-nao-ordenada">
+        <li class="item-lista-cabecalho">
+          <a href="index.html">Home</a>
+        </li>
+    
+        <li class="item-lista-cabecalho">
+          <a href="tela_skills.html">Games</a>
+          <ul>
+            <li class="item-lista-cabecalho"><a href="tela_skills.html">All </a></li>
+            <li class="item-lista-cabecalho"><a href="quiz.html">Extra</li>
+          </ul>
+        </li>
+    
+        <li class="item-lista-cabecalho">
+          <a href="revisao.html"> Content Review</a>          
+        </li>
+
+        <li class="item-lista-cabecalho">
+          <a href="grammar.html"> Grammar</a>
+        </li>
+    
+        <li class="item-lista-cabecalho"><a href="creditos.html">About</a></li>
+        <div class="menu-direita">
+        <li>
+          <input type="text" placeholder="Search Content..." class="search-bar"> </input>
+          <button class="nav-botao"><a href="login.html">Sign out</a></button>
+        </li>
+      </div>
+      </ul>
+    </div>
+    </nav>
         
+    <!-- chamando a formatacao do cabecalho -->
+  <script src="utils/renderHeader.js"> </script>   
+ 
+  </header>
+   
+
+<div id="resultModal" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3>Your progress</h3>
+      <p id="questions-qty"></p>
+
+      <button id="restart" onclick="reiniciarJogo()"> Redo Quiz!</button>
+  </div>
+</div>
+
+
     <div class="container-left">
       <img src="img/nave_big.png" id="img-nave">
       <img src="img/astronaut11.png" id="img-astronaut">
@@ -51,10 +104,20 @@
             <p class="incorrect">Solare</p>
             <p class="correct">Mercury</p>
             <p class="correct">Nebula</p>    
+            <p class="correct">meteor</p>
+            <p class="incorrect">rock</p>   
+            <p class="correct">gravity</p>
+            <p class="incorrect">station</p>  
           </div>
         </div>
-        <div id="timer"> 00:00</div>
-        <h1 id="score">score:</h1>
+<!--        
+        <h1 id="score">score:</h1> -->
+
+        <div class="container-botton">
+          <button id="btn-voltar"><a href="tela_skills.html"> &larr; BACK</a></button>
+          <button id="timer"> 00:00</button>          
+        </div>
+
       </div>
 
     </div>
@@ -80,13 +143,19 @@
             <p class="incorrect">train</p>
             <p class="correct">bench</p> 
             <p class="correct">walk</p>
-            <p class="correct">dog area</p>    
+            <p class="correct">dog area</p>
+            <p class="correct">pond</p>
+            <p class="incorrect">paper</p>   
+            <p class="correct">fountain</p>
           </div>        
-          <div id="timer2">  00 : 00</div>
-        <h1 id="score2">score:</h1>
-      </div>      
+        </div>
+        <div class="container-botton">
+          <button id="btn-voltar"><a href="tela_skills.html"> &larr; BACK</a></button>
+          <button id="timer2"> 00:00</button>          
+        </div>
+      </div>
     </div>
-    </div>
+    
 
    <!--jogo do terceiro semestre-->
     <div class="main level" id="terceiro">
@@ -111,12 +180,15 @@
             <p class="correct">paintings</p>
             <p class="correct">sculptures</p>   
             <p class="incorrect">jeopardy</p> 
-            <p class="correct">antiquities</p>   
+            <p class="correct">antiquities</p>               
+            <p class="correct">bench</p> 
           </div>
         </div>
-        <div id="timer3">  00 : 00</div>
-        <h1 id="score3">score:</h1>
-      </div>
+        <div class="container-botton">
+          <button id="btn-voltar"><a href="tela_skills.html"> &larr; BACK</a></button>
+          <button id="timer3"> 00:00</button>          
+        </div>   
+    </div>
       
     </div>
        
@@ -146,10 +218,15 @@
            <p class="incorrect">sample</p> 
            <p class="correct">firm</p>  
            <p class="incorrect">jungle</p>  
+           <p class="incorrect">work</p> 
+           <p class="correct">revenues</p>               
+           <p class="correct">reserve</p> 
          </div>
        </div>
-       <div id="timer4">  00 : 00</div>
-       <h1 id="score4">score:</h1>
+       <div class="container-botton">
+        <button id="btn-voltar"><a href="tela_skills.html"> &larr; BACK</a></button>
+        <button id="timer4"> 00:00</button>          
+      </div>
      </div>
      
     </div>
@@ -182,10 +259,14 @@
            <p class="correct">headline</p>  
            <p class="correct">press</p>  
            <p class="incorrect">affliction</p>  
+           <p class="correct">editorial</p>  
+           <p class="incorrect">anchor</p>
          </div>
        </div>
-       <div id="timer5">  00 : 00</div>
-       <h1 id="score5">score:</h1>
+       <div class="container-botton">
+        <button id="btn-voltar"><a href="tela_skills.html"> &larr; BACK</a></button>
+        <button id="timer5"> 00:00</button>          
+      </div>
      </div>
      
     </div>
@@ -222,8 +303,10 @@
           <p class="incorrect">statistics</p>  
         </div>
       </div>
-      <div id="timer6">  00 : 00</div>
-      <h1 id="score6">score:</h1>
+      <div class="container-botton">
+        <button id="btn-voltar"><a href="tela_skills.html"> &larr; BACK</a></button>
+        <button id="timer6"> 00:00</button>          
+      </div>
     </div>
     
     </div>
@@ -244,7 +327,8 @@
   </script>
   
 <script src="js/writing.js"></script>
-<script src="js/menu.js"></script>
+<!-- <script src="js/menu.js"></script> -->
+
    
    
 </body>

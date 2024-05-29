@@ -41,9 +41,9 @@ function next(id) {
 }
 
 //Array que contém todas as respostas corretas para completar as frases/diálogos
-const phrases = ["receive", "mean", "again", "card", "stand", "one more time", "could", "can", "book",
-                "works", "lives", "get", "have", "does", "is making", "is working", "are drinking", "is sending", "are speaking",
-                "leave", "seat", "return", "reservation", "rented", "was", "went", "stayed", "left",
+const phrases = ["receive", "mean", "again", "card", "tea", "one more time", "could", "can", "book",
+                "works", "lives", "get", "have", "has", "is making", "is working", "are drinking", "is sending", "are speaking",
+                "arrive", "seat", "return", "reservation", "rented", "was", "went", "stayed", "left",
                 "most", "faster", "cheaper", "longer", "best"];
 
 
@@ -61,18 +61,38 @@ const phrases = ["receive", "mean", "again", "card", "stand", "one more time", "
     recog.addEventListener('end', () => recog.start());
     recog.lang = 'en-US';
 
-    //começando reconhecimento
-        // Adicionando efeito ao botão
     document.getElementById('record').addEventListener('click', () => {
         // Alterando o texto do botão para "Recording"
         document.getElementById('btnGravar').innerText = 'Recording';
-
         recog.start();
         document.getElementById('record').classList.add('record-clicked');
-
-});
-    // recog.start();
-
+    });
+    document.getElementById('record2').addEventListener('click', () => {
+        document.getElementById('btnGravar2').innerText = 'Recording';
+        recog.start();
+        document.getElementById('record2').classList.add('record-clicked');
+    });
+    document.getElementById('record3').addEventListener('click', () => {
+        document.getElementById('btnGravar3').innerText = 'Recording';
+        recog.start();
+        document.getElementById('record3').classList.add('record-clicked');
+    });
+    document.getElementById('record4').addEventListener('click', () => {
+        document.getElementById('btnGravar4').innerText = 'Recording';
+        recog.start();
+        document.getElementById('record4').classList.add('record-clicked');
+    });
+    document.getElementById('record5').addEventListener('click', () => {
+        document.getElementById('btnGravar5').innerText = 'Recording';
+        recog.start();
+        document.getElementById('record5').classList.add('record-clicked');
+    });
+    document.getElementById('record6').addEventListener('click', () => {
+        document.getElementById('btnGravar6').innerText = 'Recording';
+        recog.start();
+        document.getElementById('record6').classList.add('record-clicked');
+    });
+    
     // Pegando o áudio do usuário através do microfone
     function captarAudio(e) {
         let mensagem = e.results[0][0].transcript;
@@ -118,6 +138,11 @@ const phrases = ["receive", "mean", "again", "card", "stand", "one more time", "
                 scoreElements.forEach(element => {
                     element.innerText = ` Score: ${score} `;
                 });
+
+                // const botaoGravar = document.querySelectorAll('[id^="record"]');
+                // botaoGravar.forEach(el => {
+                //     el.style.display = 'none';
+                // });
             }
             
             updateScore(correctGuesses);
@@ -146,3 +171,11 @@ const phrases = ["receive", "mean", "again", "card", "stand", "one more time", "
 
     });
 });             
+
+function reiniciarJogo() {
+  
+    var urlPartes = window.location.href.split("/");
+    var ultimaParteUrl = urlPartes[urlPartes.length - 1];
+
+    window.location.href = ultimaParteUrl;
+}

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styleIndex.css" />
@@ -11,44 +13,42 @@
 
     <style>
       .container-banners .slide-container:nth-child(1) .slide {
-        background: url(img/welcome1.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        /* width: 100vw;
-        height: 50vh; */
+        background-image: linear-gradient(to bottom, #22284d, #293157, #303b60, #37446a, #3f4e74, #48587d, #526186, #5b6b8f, #687799, #7483a4, #818fae, #8e9bb9);
       }
       .container-banners .slide-container:nth-child(2) .slide {
-        background: url(img/welcome2.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        /* width: 100vw;
-        height: 100vh; */
+        background-image: linear-gradient(to bottom, #22284d, #293157, #303b60, #37446a, #3f4e74, #48587d, #526186, #5b6b8f, #687799, #7483a4, #818fae, #8e9bb9);
       }
       .container-banners .slide-container:nth-child(3) .slide {
-        background: url(img/welcome3.png);
+        background-image: linear-gradient(to bottom, #22284d, #293157, #303b60, #37446a, #3f4e74, #48587d, #526186, #5b6b8f, #687799, #7483a4, #818fae, #8e9bb9);
+      }
+      .container-teste-1{
+        background: url(img/unlock4.png);
         background-size: cover;
         background-repeat: no-repeat;
-        /* width: 100vw;
-        height: 100vh; */
       }
+
+
     </style>
-  <title>Home Page</title>
-  
+  <title> Four Language | Home Page</title>
+  <script src="utils/renderHeader.js"> </script>
 </head>
+
 <body>
+
   <header class="cabecalho">
+    <div class="container-nav">
     <nav class="nav-menu">
-      <img src="img/logo-four.png" alt="Logo Four Language" width="60vw">
+      <img src="img/logo-four.png" alt="Logo Four Language" width="60vw" class="logo-four">
       <ul class="lista-nao-ordenada">
-        <li class="item-lista-cabecalho">
+        <!-- <li class="item-lista-cabecalho">
           <a href="index.html">Home</a>
-        </li>
+        </li> -->
     
         <li class="item-lista-cabecalho">
-          <a href="tela_skills.html">Games</a>
+          Games
           <ul>
             <li class="item-lista-cabecalho"><a href="tela_skills.html">All </a></li>
-            <li class="item-lista-cabecalho"><a href="quiz.html">Extra Activity </a></li>
+            <li class="item-lista-cabecalho"><a href="quiz.html">Extra</li>
           </ul>
         </li>
     
@@ -56,55 +56,118 @@
           <a href="revisao.html"> Content Review</a>
           
         </li>
+
+        <li class="item-lista-cabecalho">
+          <a href="grammar.html"> Grammar</a>
+          
+        </li>
     
         <li class="item-lista-cabecalho"><a href="creditos.html">About</a></li>
+
+
+        <div class="menu-direita">
         <li>
-          <input type="text" placeholder="Search Content..." class="search-bar"> </input>
-          <button class="nav-botao"><a href="login.html">Sign out</a></button>
+
+          <form action="#">
+            <input type="text" placeholder="Search Content..." class="search-bar" id="searchInput">
+            <button class="nav-botao" type="submit" id="searchButton">go</button>
+            <button class="nav-botao"><a href="login.html">Sign out</a></button>
+          </form>        
+        </input>        
         </li>
+        
+      </div>
       </ul>
+
+    </div>
     </nav>
-    
+        
     <!-- chamando a formatacao do cabecalho -->
-  <script src="utils/renderHeader.js"> </script>
  
   </header>
 
 
-   <!-- <div class="row"> -->
-    <!-- banners -->
-    <div class="container-banners">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 align-self-center text-center">
-            <!--primeiro banner-->
-            <div class="slide-container active">
-              <div class="slide banner">
-                <div class="content-slide"></div>
-              </div>
-            </div>
-            <!--segundo banner-->
-            <div class="slide-container">
-              <div class="slide">
-                <div class="content-slide"></div>
-              </div>
-            </div>
-            <!--terceiro banner-->
-            <div class="slide-container">
-              <div class="slide">
-                <div class="content-slide"></div>
-              </div>
-            </div>
-            <div id="prev" onclick="prev()">&lt;</div>
-            <div id="next" onclick="next()">&gt;</div>
-          </div>
+   <!--seção - banners temas principais-->
+   <section class="container-banners">  
+    <!--primeiro poster-->
+    <div class="slide-container active">                
+        <div class="slide banner">
+        
+            <div class="div-stripe">     
+                <div class="stripe-color1"></div>
+                <div class="stripe-color2"></div>
+                <div class="stripe-color3"></div>
+                <div class="stripe-color4"></div>
+                  <img src="img/satelite3.png" id="img-slide1">
+                  <img src="img/astro2.png" id="img-slide2">
+             </div>
+             
+             <div class="div-text">     
+                <h1>Boost your <br>studies with </h1>
+                <h2>FREE ENGLISH <br>ACTIVITIES</h2>
+                <h3><i>Business START-UP</i></h3>
+             </div>
+
         </div>
-      </div>
+        
     </div>
-    <!--sexta section com link para teste de nivelamento-->
+    <!--segundo poster-->
+    <div class="slide-container">                
+      <div class="slide banner">
+      
+          <div class="div-stripe">     
+              <div class="stripe-color1"></div>
+              <div class="stripe-color2"></div>
+              <div class="stripe-color3"></div>
+              <div class="stripe-color4"></div>
+                <img src="img/satelite.png" id="img-slide1">
+                <img src="img/astronauta-planeta.png" id="img-slide2">
+           </div>
+           
+           <div class="div-text">     
+            <h1> Immerse yourself <br> in the language through </h1>
+            <h2>accessible resources</h2>
+            <h3>Let's go on our journey together</h3>
+              <!-- <h2>Don’t be afraid!</h2> -->
+           </div>
+
+      </div>
+      
+    </div>
+    <!--terceiro poster-->
+    <div class="slide-container">                
+      <div class="slide banner">
+
+          <div class="div-stripe">    
+            <div class="stripe-color1"></div>
+            <div class="stripe-color2"></div>
+            <div class="stripe-color3"></div>
+            <div class="stripe-color4"></div>
+
+              <img src="img/satelite3.png" id="img-slide1">
+              <img src="img/astronaut11.png" id="img-slide3" height="100px">
+           </div>
+           <div class="div-text">     
+            <h1 class="slide3">Quick and <br>fun games </h1>
+            <h2 class="slide3">To enhance your  <br> English language skills!</h2>
+         </div>
+
+      </div>
+      
+    </div>
+
+    <div id="prev" onclick="prev()"> <img src="img/caret-quadrado-esquerda.svg" alt="" width="50px"></div>
+    <div id="next" onclick="next()"> <img src="img/caret-circulo-direita.svg" alt="" width="50px"> </div>
+  </section>
+
+
+
+    <!--segunda seção com links para teste de nivelamento-->
     <div class="container-teste">
       <div class="container-teste-1">
-        <img src="img/uranus.jpg" alt="" />
+        <!-- <img src="img/unlock3.png" alt="" /> -->
+        <h1>Unlock your <br> potential </h1>
+        <h2>and showcase your skills</h2>
       </div>
       <!-- style="background: url(img/uranus.jpg); background-size:cover; background-repeat: no-repeat;" -->
       <div class="container-test-2">
@@ -148,83 +211,61 @@
         </div>
       </div>
     </div>
+    
     <!--section com cards com o conteúdo a ser coberto em cada semestre-->
-    <div id="container-semestre">
-      <!-- <h1 id="titulo">What You Will Learn</h1> -->
-      <div id="first">
-        <br /><br /><br />
-        <img src="img/P1.jpg" alt="" />
-        <h2>1º Semester</h2>
-        <!-- <p class="first-paragraph">Aprenda: </p> -->
-        <ul>
-          <li>How much?</li>
-          <li>Business verbs and nouns</li>
-          <li>Daily routine verbs</li>
-        </ul>
-        <br /><br /><br />
+    <div id="container-grammar">
+      <h1>English Grammar</h1>
+      <section class="card-container">
+        <div class="card-row">
+          <div class="card">
+            <img src="img/1card.png" alt="Card Title 1">
+            <h2>Verb Tenses (Present, Past, Future)</h2>
+            <p>Understanding how to express actions in different time frames is crucial. Start with the simple present (for habits and facts), simple past (for completed actions), and simple future (for plans and predictions).</p>
+          </div>
+      
+          <div class="card">
+            <img src="img/2card.png" alt="Card Title 2">
+            <h2>Sentence Structure (Subject-Verb-Object)</h2>
+              <p>Grasping the basic word order of English sentences helps you construct clear and understandable statements. Practice identifying the subject (who or what is doing the action), the verb (the action itself), and the object (who or what receives the action).</p>
+          </div>
+      
+          <div class="card">
+            <img src="img/3card.png" alt="Card Title 3">
+            <h2>Articles (a, an, the)</h2>
+            <p>Knowing when and how to use articles is essential for accurate noun usage. "A/an" is for general, non-specific nouns, while "the" is for specific nouns or those previously mentioned.</p>
+          </div>
+        </div>
+      
+        <div class="card-row">
+          <div class="card">
+            <img src="img/4card.png" alt="Card Title 4">
+            <h2>Nouns (Singular, Plural, Countable, Uncountable) </h2>
+            <p>Learn the rules for making nouns plural (usually adding "-s" or "-es"), and understand the difference between countable (things you can count, like apples) and uncountable nouns (things you can't count individually, like water).</p>
+          </div>
+      
+          <div class="card">
+            <img src="img/5card.png" alt="Card Title 5">
+            <h2>Pronouns (Subject, Object, Possessive)</h2>
+            <p>Mastering pronoun usage helps you avoid repetition and make your sentences flow smoothly. Learn the different types of pronouns and their roles in a sentence (e.g., "I," "me," "my," "mine").
+
+            </p>
+          </div>
+      
+          <div class="card">
+            <img src="img/6card.png" alt="Card Title 6" width="50vh">
+            <h2>Adjectives and Adverbs</h2>
+            <p>These words add detail and description to your language. Adjectives modify nouns (e.g., "beautiful flower"), while adverbs modify verbs, adjectives, or other adverbs (e.g., "She sings beautifully").
+            </p>
+          </div>
+        </div>
+      </section>    
       </div>
-      <div id="second">
-        <img src="img/2.jpg" alt="" />
-        <h2>2º Semester</h2>
-        <!-- <p class="second-paragraph">Aprenda: </p> -->
-        <ul>
-          <li>Information</li>
-          <li>Places</li>
-          <li>Action</li>
-        </ul>
-        <br /><br />
-      </div>
-      <div id="third">
-        <img src="img/3.jpg" alt="" />
-        <h2>3º Semester</h2>
-        <!-- <p class="third-paragraph">Aprenda: </p> -->
-        <ul>
-          <li>Meeting</li>
-          <li>Reporting</li>
-          <li>Communication</li>
-        </ul>
-        <br /><br />
-      </div>
-      <div id="four">
-        <br /><br /><br />
-        <img src="img/4.jpg" alt="" />
-        <br />
-        <h2>4º Semester</h2>
-        <!-- <p class="four-paragraph">Aprenda:</p> -->
-        <ul>
-          <li>Progress</li>
-          <li>Plans</li>
-          <li>Sales</li>
-        </ul>
-        <br /><br />
-      </div>
-      <div id="five">
-        <br /><br /><br />
-        <img src="img/6200_8_09.jpg" style="width: 150px" />
-        <br />
-        <h2>5º Semester</h2>
-        <!-- <p class="fifth-paragraph">Aprenda:</p> -->
-        <ul>
-          <li>Progress</li>
-          <li>Plans</li>
-          <li>Sales</li>
-        </ul>
-        <br /><br />
-      </div>
-      <div id="six">
-        <br /><br /><br />
-        <img src="img/500_95.jpg" style="width: 150px" />
-        <br />
-        <h2>6º Semester</h2>
-        <!-- <p class="sixth-paragraph">Aprenda:</p> -->
-        <ul>
-          <li>Progress</li>
-          <li>Plans</li>
-          <li>Sales</li>
-        </ul>
-        <br /><br />
-      </div>
-    </div>
+    <br><br>
+
+
+
+
+
     <!--quarta section-->
     <div class="preview-jogos">
       <!--lado esquerdo com jogos e explicação-->
@@ -242,7 +283,7 @@
             <p id="about-game">
               Pick the correct answer for the corresponding question.
             </p>
-            <button>Play</button>
+            <button> <a href="tela_skills.html">Play</a></button>
           </div>
         </div>
         <div class="jogos">
@@ -254,7 +295,7 @@
             </p>
             <h3 id="play">How to play</h3>
             <p id="about-game">Tap all the options related to the given topic.</p>
-            <button>Play</button>
+            <button><a href="tela_skills.html">Play</a></button>
           </div>
         </div>
         <div class="jogos">
@@ -269,7 +310,7 @@
             <p id="about-game">
               Complete the phrases with the correct words.
             </p>
-            <button>Play</button>
+            <button><a href="tela_skills.html">Play</a></button>
           </div>
         </div>
         <div class="jogos">
@@ -284,13 +325,57 @@
             <p id="about-game">
               Click on 'PLAY' icon, listen to it, and try to spell the word.
             </p>
-            <button>Play</button>
+            <button><a href="tela_skills.html">Play</a></button>
           </div>
         </div>
       </div>
-      <!--lado direito com dicas de expressões em inglês-->
+
+      <!--lado direito com c/ banner de games e dicas de expressões em inglês-->
       <div class="container-right">
-        <img src="img/foguete2.jpg" alt="" />
+
+        <div class="container-right-1">
+          <div>
+            <img src="img/rocket4.png" id="canto-esquerdo"> 
+          </div>
+         
+        <img src="img/game5.png" alt="" />
+        <h1>GAME ON</h1>
+        <h2>ARE YOU READY?</h2>
+        <h3>Calling all gamers! <br> Who's up for some fun?</h3>
+      
+
+        <div class="container-right-1-game-on">
+          <h2>What?</h2>
+          <div class="icone">
+            <p>Interact with English Activities!</p>
+            <img src="img/icone.png" alt="">
+          </div>
+        </div>
+        <div class="container-right-1-game-on">
+          <h2>When?</h2>
+          <div class="icone">
+            <p>Any time you want!</p>
+            <img src="img/icone.png" alt="">
+          </div>
+        </div>
+        <div class="container-right-1-game-on">
+          <h2>Where?</h2>
+          <div class="icone">
+            <p>Any place or position.</p>
+            <img src="img/icone.png" alt="">
+          </div>
+        </div>
+        <div class="container-right-1-game-on">
+          <h2>Why?</h2>
+          <div class="icone">
+            <p>To test your skills!</p>
+            <img src="img/icone.png" alt="">
+          </div>
+        </div>
+
+        </div>
+
+      <!--lado direito com dicas de expressões em inglês-->
         <div class="content-right">
           <h1>English Tips</h1>
           <h2>Useful expressions</h2>
@@ -321,45 +406,69 @@
             </div>
           </div>
         </div>
+
       </div>
+
     </div>
-    <!--quinta section com vídeo sobre a importância do inglês-->
-    <div class="video">
-      <h1>
-        Unlock Opportunities: The Importance of Studying English at University
-      </h1>
-      <video width="500" height="560" controls>
-        <source
-          src="img/UnlockOpportunities_The Importance.mp4"
-          type="video/mp4"
-        />
-      </video>
-    </div>
-    <!--segunda section com dicas de dicionários/sites-->
-    <div class="extra-dicionarios">
-      <div class="conteudo-1">
-        <h2>TOEIC Test</h2>
-        <p>Certification</p>
-        <img src="img/toeic.png" alt="" />
-      </div>
-      <div class="conteudo-2">
-        <h2>Cambridge Dictionary</h2>
-        <p>Find English dictionaries</p>
-        <img src="img/cambridge.png" alt="" />
-      </div>
-      <div class="conteudo-part3">
-        <div class="conteudo-3">
-          <h2>British Council Brasil</h2>
-          <p>Participe on free events</p>
-          <img src="img/british.png" alt="" />
+  </div>
+    <!-- <br><br> -->
+
+    <!-- section com dicas de dicionários/sites/podcasts-->
+    <div class="box-dicionario">
+      <h1>Access Free Resources</h1>
+      
+      <div class="container-dicionario">
+        
+        <div class="card-dic">
+          <!-- <div class="image-dic" style="background: url('img/cambridge.png');"></div> -->
+          <div><img src="img/dicio3.jpg" style="width: 100%;height: 160px;"></div>
+          <div class="content-dic">
+            <h2>Websites / Podcasts</h2>
+            <p>Content to support language learning</p>
+            <button class="card-btn-dicio"><a href="https://www.britishcouncil.org.br/" target="_blank">British Council</a></button>
+            <button class="card-btn-dicio"> <a href="https://www.bbc.co.uk/learningenglish/english/features/6-minute-english" target="_blank"> BBC - 6 Minute English</a></button>            
+            <button class="card-btn-dicio"> <a href="https://www.bbc.co.uk/learningenglish/" target="_blank">   BBC Learning English</a></button>
+          </div>   
         </div>
-        <div class="conteudo-4">
-          <h2>Reverso</h2>
-          <p>A Colaborative Dictionary</p>
-          <img src="img/reverso.png" alt="" />
+        <div class="card-dic">
+          <!-- <div class="image-dic" style="background: url('img/cambridge.png');"></div> -->
+          <div><img src="img/translator_3.jpg" style="width: 100%;"></div>
+          <div class="content-dic">
+            <h2>Translator / Dictionary</h2>
+            <p>Find English renowned and popular dictionaries </p>
+            <button class="card-btn-dicio"><a href="https://dictionary.cambridge.org/dictionary/" target="_blank">Cambridge Dictionary</a></button>
+            <button class="card-btn-dicio"><a href="https://www.reverso.net/text-translation" target="_blank">Reverso Context</a></button>
+            <button class="card-btn-dicio"><a href="https://www.urbandictionary.com/" target="_blank">Urban Dictionary</a></button>
+          </div>
+        </div>
+        <div class="card-dic">
+         <!-- <div class="image-dic" style="background: url('img/cambridge.png');"></div> -->
+         <div><img src="img/curso.jpg" style="width: 100%;"></div>
+          <div class="content-dic">
+            <h2>Courses / English Content</h2>
+            <p>Be ambitious! Enroll on free English courses!</p>
+            <button class="card-btn-dicio"><a href="https://www.coursera.org/learn/english-intermediate-b1-2" target="_blank">Coursera</a></button>
+            <button class="card-btn-dicio"><a href="https://www.edx.org/search?q=english" target="_blank">edX For Business</a></button>
+            <button class="card-btn-dicio"><a href="https://www.futurelearn.com/courses/basic-english-pre-intermediate" target="_blank">Future Learn</a></button>
+
+            
+          </div>
+        </div>
+        <div class="card-dic">
+           <!-- <div class="image-dic" style="background: url('img/cambridge.png');"></div> -->
+           <div><img src="img/exame.jpg" style="width: 100%;"></div>
+          <div class="content-dic">
+            <h2>Tests / Certifications </h2>
+            <p>Try out free and other exams, and test your English level</p>
+            <button class="card-btn-dicio"><a href="https://toeic.com.br/produtos-toeic/" target="_blank">TOEC Test</a></button>
+            <button class="card-btn-dicio"><a href="https://www.britishcouncil.org.br/exame/ielts/preparatorio/ready" target="_blank" >IELTS</a></button>
+            <button class="card-btn-dicio"><a href="https://test-english.com/level-test/" target="_blank" >Test English</a></button>
+          </div>
         </div>
       </div>
     </div>
+
+
 
     <!-- Footer -->
     <footer class="rodape">

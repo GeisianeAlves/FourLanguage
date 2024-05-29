@@ -5,7 +5,30 @@
     padding: 0;
     margin: 0;
 }
+.container-speaking {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    min-height: 90vh;
+    width: 100vw;
+}
 
+.container-audio #title {
+    font-size: 2rem;
+    color: rgb(219, 210, 172);
+}
+#como-jogar h2 {
+    font-family: "Space Mono";
+}
+#como-jogar p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+#como-jogar span {
+    color: rebeccapurple;
+    font-weight: bold;
+}
 .box {
     display: none;
 }
@@ -15,8 +38,8 @@ img{
  
 }
 .container-audio{
-    min-height: 100vh;
-    width: 100vw;
+    /* min-height: 90vh;
+    width: 100vw; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,12 +56,18 @@ img{
     flex-direction: column;
     background-color: rgb(174, 196, 190);
     height: 230px;
-    width: 600px;
+    width: 650px;
     padding: 20px;
     border: 2px solid rgb(138, 91, 135);
     margin-bottom: 35px;
     margin-top: 30px;
     color: rgb(68, 65, 65);
+}
+.text #dica {
+    margin-top: -30px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: rgb(57, 67, 92);
 }
 .container-audio img{
     width: 140px;
@@ -50,8 +79,14 @@ img{
     transform: scale(1);
     animation: scaleEffect 3s linear infinite;
 }
-#btnGravar {
+#btnGravar, #btnGravar2, #btnGravar3, #btnGravar4, #btnGravar5, #btnGravar6 {
     margin-top: 20px;
+    font-size: 20px;
+    height: 40px;
+    width: 200px;
+    border-radius: 5px;
+    background-color: #dfd5d5;
+    font-weight: bold;
 }
 
 
@@ -109,12 +144,27 @@ img{
     background-color: rgb(245, 216, 193);
     color:  rgb(102, 96, 88);
 }
-#img-direita{
+#img-direita {
     position: absolute;
     right: 50px;
     width: 400px;
     height:400px;
     bottom: 50px;
+}
+#btn-voltar{
+    position: absolute;
+    right: 50px;
+    background-color: rgb(190, 216, 138);
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid palevioletred;
+    color: rgb(31, 27, 27);
+    font-weight: bolder;
+    bottom: 30px;
+}
+#btn-voltar a {
+    text-decoration: none;
 }
 #div-esquerda{
     position: absolute;
@@ -148,4 +198,68 @@ img{
     padding: 20px;
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
+}
+#primeiro,
+#segundo,
+#terceiro,
+#quarto,
+#quinto,
+#sexto,
+#leitura,
+#escrita,
+#fala,
+#escuta {
+display: none;
+}
+
+
+.show-review-div {
+display: flex !important;
+}
+
+#back {
+    position: absolute;
+    right: 200px;
+}
+#restart, #back {
+    width: 200px;
+    height: 50px;
+    color: rgb(34, 33, 31);
+    background-color: rgb(101, 99, 94);
+    border-radius: 25px;
+    border: 2px solid black;
+    color: #efe6e6;
+    font-size: 20px;
+}
+
+#restart:hover {
+    background-color: rgb(138, 131, 122);
+}
+
+@media(max-width: 540px) {
+
+    #div-esquerda, #img-direita, #title {
+        display: none;
+    }
+
+    #title {
+        width: 500px;
+    }
+    .text {
+        width: 380px;
+    }
+    .text h1 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }    
+    .container-question h1 {
+        font-size: 1.4rem;
+    }
+    .score-div, .botao-proximo {
+        width: 150px;
+    }
+    #record, #record2, #record3, #record4, #record5, #record6 {
+        width: 100px;
+    }
+
 }

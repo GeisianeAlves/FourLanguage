@@ -1,0 +1,78 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+
+  
+}
+
+li, ul,ol, a{
+  list-style: none;
+}
+
+table {
+  width: 80%; /* Adjust width as needed */
+  border-collapse: collapse;
+  margin: 20px auto; /* Center the table */
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
+
+
+
+.carousel-container {
+  width: 80%;
+  margin: 0 auto;
+  /* overflow: hidden; */
+  font-weight: 300;
+  font-size: 20px;
+  
+  
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease; /* Smooth transition for animation (optional) */
+  flex-wrap: wrap;
+}
+
+.carousel-section {
+  flex: 1 0 100%; /* Equal width for each section (adjust if needed) */
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px; /* Add rounded corners */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 10px; /* Add spacing between sections */
+}
+
+.carousel-section h2 {
+  margin-bottom: 10px; /* Add space below headings */
+}
+
+/* Optional: Navigation buttons styles (uncomment if needed) */
+
+.prev-btn, .next-btn {
+  position: static;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 15px;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
+

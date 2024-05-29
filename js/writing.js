@@ -10,12 +10,12 @@ const scoreDisplay6 = document.getElementById('score6');
 function handleOptionClick(option) {
     if (option.classList.contains('correct')) {
         score += 100;
-        scoreDisplay.textContent = `Score: ${score}`;
-        scoreDisplay2.textContent = `Score: ${score}`;
-        scoreDisplay3.textContent = `Score: ${score}`;
-        scoreDisplay4.textContent = `Score: ${score}`;
-        scoreDisplay5.textContent = `Score: ${score}`;
-        scoreDisplay6.textContent = `Score: ${score}`;
+        // scoreDisplay.textContent = `Score: ${score}`;
+        // scoreDisplay2.textContent = `Score: ${score}`;
+        // scoreDisplay3.textContent = `Score: ${score}`;
+        // scoreDisplay4.textContent = `Score: ${score}`;
+        // scoreDisplay5.textContent = `Score: ${score}`;
+        // scoreDisplay6.textContent = `Score: ${score}`;
         option.style.color = 'green';
         // esconde a resposta certa
         setTimeout(() => {
@@ -95,15 +95,64 @@ function startTimer(durationInSeconds) {
            
 }
 
-// cronômetro com uma duração de 1 minuto (60 segundos)
-startTimer(60);
+// cronômetro com uma duração em segundos
+startTimer(30);
+
+
+
+function showModal(score) {
+    const modal = document.getElementById('resultModal');
+    const scoreMessage = document.getElementById('questions-qty');
+    scoreMessage.textContent = score;
+    modal.style.display = 'block';
+
+    // Para fechar o modal quando o usuário clicar no 'x'
+    const span = document.getElementsByClassName('close')[0];
+    span.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    // Para fechar o modal quando o usuário clicar fora do modal
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+}
 
 function endGame() {
     const options = document.querySelectorAll('.palavras p');
-    // const tema = document.querySelectorAll('#tema');
-
-    // tema.style.display = 'none';
     options.forEach(option => {
         option.style.display = 'none';
     });
+
+    const h1 = document.querySelectorAll('.jogo h1')
+        h1.forEach(h1 => {
+        h1.style.display = 'none';
+    });
+
+    const h2 = document.querySelectorAll('.jogo h2')
+        h2.forEach(h2 => {
+        h2.style.display = 'none';
+    });
+    
+    const temas = document.querySelectorAll('#tema')
+    temas.forEach(tema => {
+        tema.style.display = 'none';
+    });
+
+    const botoes = document.querySelectorAll('.container-botton')
+    botoes.forEach(botao => {
+        botao.style.display = 'none';
+    });
+
+    showModal(score);
 }
+
+function reiniciarJogo() {
+  
+        var urlPartes = window.location.href.split("/");
+        var ultimaParteUrl = urlPartes[urlPartes.length - 1];
+
+        window.location.href = ultimaParteUrl;
+    }

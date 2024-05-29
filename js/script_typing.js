@@ -7,7 +7,7 @@ class ReusableCode {
             {
                 element: ".typing1",
                 strings: [
-                    "I'm Paul Reed and this is Julia Bell. We're from zap Productions.", 
+                    "I'm Paul Reed and this is Julia Bell. We're from Zap Productions.", 
                     "Diana Edison is from CCC, and David Clark is from Safeguard.", 
                     "Alan Parker and George Carter are from NorthNet."
                 ],
@@ -55,8 +55,9 @@ class ReusableCode {
             {
                 element: ".typing5",
                 strings: [
-                    "(Conteúdo será inserido para este nível",
-                    "..."
+                    "In the first week of the month, Sheila takes a trip from Lyon to Paris.",
+                    "Gabriel visits Nice twice a year.",
+                    "The TGV is the quickest way to travel between cities in France."
                 ],
                 options: {
                     typeSpeed: 50,
@@ -104,7 +105,7 @@ class ReusableCode {
             var typed = new Typed(config.element, {
                 strings: config.strings,
                 typeSpeed: config.options.typeSpeed || 50,
-                backSpeed: config.options.backSpeed || 30,
+                // backSpeed: config.options.backSpeed || 30,
                 loop: config.options.loop || false,
             });
         });

@@ -1,149 +1,440 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Fatec Linguo</title>
+  <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+
+    <title>Four Language</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesmais.css">
     <script src="utils/renderUnit.js"></script>
     <script>
       window.renderUnit();
     </script>
   </head>
 
-   
+  <header class="cabecalho">
+    <div class="container-nav">
+       <nav class="nav-menu">
+          <img src="img/logo-four.png" alt="Logo Four Language" width="60vw" class="logo-four">
+          <ul class="lista-nao-ordenada">
+             <li class="item-lista-cabecalho">
+                <a href="index.html">Home</a>
+             </li>
+             <li class="item-lista-cabecalho">
+                Games
+                <ul>
+                   <li class="item-lista-cabecalho"><a href="tela_skills.html">All </a></li>
+                   <li class="item-lista-cabecalho"><a href="quiz.html">Extra</a></li>
+                </ul>
+             </li>
+             <li class="item-lista-cabecalho">
+                <a href="revisao.html"> Content Review</a>
+                <ul>
+                   <!-- <li class="item-lista-cabecalho">1º Semester</li> -->
+                   <!-- <li class="item-lista-cabecalho" id="segundo-semestre">2º Semester</li>
+                   <li class="item-lista-cabecalho" id="terceiro-semestre"> <a href="saibamais_2ano.html">3º Semester</a></li>
+                   <li class="item-lista-cabecalho" id="quarto-semestre"> <a href="saibamais_2ano.html">4º Semester</a></li>
+                   <li class="item-lista-cabecalho"  id="quarto-semestre"> <a href="saibamais_3ano.html">5º Semester</a></li>
+                   <li class="item-lista-cabecalho"  id="quarto-semestre"> <a href="saibamais_3ano.html">6º Semester</a></li> -->
+                </ul>
+             </li>
+             <li class="item-lista-cabecalho">
+                <a href="grammar.html"> Grammar</a>
+             </li>
+             <li class="item-lista-cabecalho"><a href="creditos.html">About</a></li>
+             <div class="menu-direita">
+                <li>
+                   <input type="text" placeholder="Search Content..." class="search-bar">
+                   <button class="nav-botao"><a href="login.html">Sign out</a></button>
+                </li>
+             </div>
+          </ul>
+    </div>
+    </nav>
+        
+ <!-- chamando a formatacao do cabecalho -->
+ <script src="utils/renderHeader.js"> </script>
+ </header>
         <!-- TERCEIRO SEMESTRE -->
-        <div class="revisao-item" id="terceiro">
-          <p class="paragraph" style="font-size: 14px">
-            <span>Unit 3 - Welcome: </span>Introductions and greetings. Talking
-            about personal information, such as name, nationality, and
-            occupation. Expressing likes, dislikes, and preferences.
-          </p>
-          <p style="text-align: center; font-size: 16px">
-            <span>RESUMO DA UNIT 1: </span>
-            Aborda as noções básicas de comunicação em inglês no contexto
-            empresarial. Os tópicos discutidos incluem apresentações e
-            cumprimentos, fornecendo informações pessoais como nome,
-            nacionalidade e ocupação.<br />
-            Além disso, são exploradas expressões para falar sobre gostos,
-            desgostos e preferências. Também são abordadas rotinas diárias e
-            atividades de lazer, permitindo que os alunos pratiquem o
-            vocabulário e as estruturas de frase relevantes. A ênfase está em
-            desenvolver habilidades de comunicação eficazes no ambiente de
-            negócios, proporcionando aos alunos uma base sólida para se
-            comunicarem em inglês em um contexto profissional. <br />
-
-            <!-- <img
-              class="img-semestre1"
-              src="img/Revisão01.png"
-              alt="revisao unit 1,2,3"
-            /> -->
-            <br />
-            <br />
-            <b>Introduções e cumprimentos:</b> <br />
-            Exemplo: "Hello, my name is John. Nice to meet you!" <br />
-            Os alunos aprendem a se apresentar e cumprimentar outras pessoas em
-            um contexto empresarial. <br />
-            <br />
-            <b>Informações pessoais:</b> <br />
-            Exemplo: "I am from Brazil. I work as a marketing assistant." <br />
-            Os alunos aprendem a fornecer informações básicas sobre si mesmos,
-            como nacionalidade e ocupação. <br />
-            <br />
-            <b>Expressar gostos, desgostos e preferências:</b> <br />
-            Exemplo: "I enjoy reading books and traveling." <br />
-            Os alunos aprendem a falar sobre suas preferências pessoais em
-            relação a atividades e interesses. <br />
-            <br />
-            <b>Rotinas diárias:</b> <br />
-
-            Exemplo: "I usually start my day by checking emails and planning my
-            tasks." <br />
-            Os alunos aprendem a descrever suas rotinas diárias no ambiente de
-            trabalho. <br />
-            <br />
-            <b>Atividades de lazer:</b> <br />
-            Exemplo: "On weekends, I like to go hiking and spend time with
-            friends." <br />
-            Os alunos aprendem a falar sobre as atividades de lazer que praticam
-            fora do trabalho. <br />
-            <button class="btn-right">
-              <a class="btn-right-anc" href="revisao.html">Voltar</a>
-            </button>
-          </p>
+        <div id="terceiro-unit" style="display: none;">
+         <div class="revisao-item" id="terceiro"></div>
+         <!-- <div class="container-nav-units">
+            <ul>                        
+               <div class="unit-nav">
+                  <li><a href="#primeiro-unit1">Unit 7</a></li>
+                  <li><a href="#primeiro-unit2">Unit 8</a></li>
+                  <li><a href="#primeiro-unit3">Unit 9</a></li>                       
+               </div>       
+            </ul>
+         </div>       -->
+          
         </div>
 
         <!-- QUARTO SEMESTRE -->
-        <div class="revisao-item" id="quarto">
-          <p class="paragraph" style="font-size: 14px">
-            <span>Unit 4 - Welcome: </span>Introductions and greetings. Talking
-            about personal information, such as name, nationality, and
-            occupation. Expressing likes, dislikes, and preferences.
-          </p>
-          <p style="text-align: center; font-size: 16px">
-            <span>RESUMO DA UNIT 1: </span>
-            Aborda as noções básicas de comunicação em inglês no contexto
-            empresarial. Os tópicos discutidos incluem apresentações e
-            cumprimentos, fornecendo informações pessoais como nome,
-            nacionalidade e ocupação.<br />
-            Além disso, são exploradas expressões para falar sobre gostos,
-            desgostos e preferências. Também são abordadas rotinas diárias e
-            atividades de lazer, permitindo que os alunos pratiquem o
-            vocabulário e as estruturas de frase relevantes. A ênfase está em
-            desenvolver habilidades de comunicação eficazes no ambiente de
-            negócios, proporcionando aos alunos uma base sólida para se
-            comunicarem em inglês em um contexto profissional. <br />
+        <div id="quarto-unit" style="display: none;">
+         <!-- <div class="container-nav-units">
+            <ul>                        
+               <div class="unit-nav">
+                  <li><a href="#segundo-unit10">Unit 10</a></li>
+                  <li><a href="#segundo-unit11">Unit 11</a></li>
+                  <li><a href="#segundo-unit12">Unit 12</a></li>                       
+               </div>       
+            </ul>
+         </div>       -->
 
-            <!-- <img
-              class="img-semestre1"
-              src="img/Revisão01.png"
-              alt="revisao unit 1,2,3"
-            /> -->
-            <br />
-            <br />
-            <b>Introduções e cumprimentos:</b> <br />
-            Exemplo: "Hello, my name is John. Nice to meet you!" <br />
-            Os alunos aprendem a se apresentar e cumprimentar outras pessoas em
-            um contexto empresarial. <br />
-            <br />
-            <b>Informações pessoais:</b> <br />
-            Exemplo: "I am from Brazil. I work as a marketing assistant." <br />
-            Os alunos aprendem a fornecer informações básicas sobre si mesmos,
-            como nacionalidade e ocupação. <br />
-            <br />
-            <b>Expressar gostos, desgostos e preferências:</b> <br />
-            Exemplo: "I enjoy reading books and traveling." <br />
-            Os alunos aprendem a falar sobre suas preferências pessoais em
-            relação a atividades e interesses. <br />
-            <br />
-            <b>Rotinas diárias:</b> <br />
+          <div class="revisao-item" id="quarto">
+            <!-- UNIT 10 -->
+            <section class="section-content1" id="quarto-unit10">
 
-            Exemplo: "I usually start my day by checking emails and planning my
-            tasks." <br />
-            Os alunos aprendem a descrever suas rotinas diárias no ambiente de
-            trabalho. <br />
-            <br />
-            <b>Atividades de lazer:</b> <br />
-            Exemplo: "On weekends, I like to go hiking and spend time with
-            friends." <br />
-            Os alunos aprendem a falar sobre as atividades de lazer que praticam
-            fora do trabalho. <br />
-            <button class="btn-right">
-              <a class="btn-right-anc" href="revisao.html">Voltar</a>
-            </button>
-          </p>
+               <h2>Unit 10: Progress</h2>
+             
+               <h3>Asking and Answering Questions</h3>
+               <img
+               class="revisao-img1"
+               src="img/P1.jpg"
+               alt=""
+               />
+               <p>Asking questions is a fundamental part of communication. To gather information, use question words like:</p>
+             
+               <ul>
+                 <li><strong>Who:</strong> Refers to people (e.g., "Who is your favorite author?")</li>
+                 <li><strong>What:</strong> Refers to things, actions, or ideas (e.g., "What is your favorite movie?")</li>
+                 <li><strong>Where:</strong> Refers to places (e.g., "Where are you from?")</li>
+                 <li><strong>When:</strong> Refers to time (e.g., "When did you start learning English?")</li>
+                 <li><strong>Why:</strong> Refers to reasons (e.g., "Why do you like to travel?")</li>
+                 <li><strong>How:</strong> Refers to manner or method (e.g., "How do you make pancakes?")</li>
+               </ul>
+             
+               <p>To answer questions, you can use phrases like:</p>
+             
+               <ul>
+                 <li>"My favorite author is..."</li>
+                 <li>"I started learning English when I was..."</li>
+                 <li>"I like to travel because..."</li>
+                 <li>"To make pancakes, you need to..."</li>
+               </ul>
+             
+               <h3>Discussing Personal Information and Preferences</h3>
+               <p>When getting to know someone, you can ask about their:</p>
+             
+               <ul>
+                 <li>Name</li>
+                 <li>Age</li>
+                 <li>Nationality</li>
+                 <li>Occupation</li>
+                 <li>Hobbies</li>
+                 <li>Favorite foods, movies, books, etc.</li>
+               </ul>
+             
+               <p>Be sure to share your own information as well!</p>
+             
+               <h3>Talking about News, Events, and Current Affairs</h3>
+               <p>Stay informed about what's happening in the world by discussing current events. You can use phrases like:</p>
+             
+               <ul>
+                 <li>"Did you hear about...?"</li>
+                 <li>"What do you think about...?"</li>
+                 <li>"I read an interesting article about..."</li>
+                 <li>"Have you seen the news about...?"</li>
+               </ul>
+             
+               <p>Be respectful of different opinions and perspectives.</p>
+             
+               <!-- CARDS DE CONTEUDO  UNIT 10-->
+            <div class="card-container">
+               <div class="card">
+                  <h4>be: <em>10</em></h4>
+                  <img
+                     src="" width="400vw"
+                     alt=""
+                     />
+                  <blockquote>Fonte: </blockquote>
+                  <p>content</p>
+               </div>
+               <div class="card">
+                  <h4>be: question <br> Prepositions: in and near
+                  </h4>
+                  <img
+                     src="" width="400vw"
+                     alt=""
+                     />
+                  <blockquote>Fonte: </blockquote>
+               </div>
+               <div class="card">
+                  <h4>A/An</h4>
+                  <img
+                     src="" width="400vw"
+                     alt=""
+                     />
+                  <blockquote>Fonte: </blockquote>
+               </div>
+            </div>
+
+            <!--  DICAS UNIT 10 -->
+                        <!-- TIPS UNIT --> 
+                        <div class="container-tips">
+                           <div class="tips-content1">
+                              <h5>Tips About Unit 10</h5>
+                              <p>To learn more about this <br> content,we recommend this <br> trustworthy websites...</p>
+                           </div>
+                           <!-- SEGUNDA DIV - SEGUNDA COLUNA  -->
+                           <div class="tips-content2">
+                              <div class="box3-color1" >
+                                 
+                                 <p><img src="img/livrolampada.png" alt=""> CONTENT</p>
+                                 <a href="#">Acess</a>
+                              </div>
+                              <div class="box3-color2">
+                                 
+                                 <p><img src="img/casestudy.png" alt=""> CONTENT</p>
+                                 <a href="#">Acess</a>
+                              </div>
+                              <div class="box3-color3">
+                                                     <p> <img src="img/girlstudying.png" alt=""> CONTENT</p>
+                                 <a href="#">Acess</a>
+                              </div>
+                           </div>
+                        </div>
+            
+            <!-- MATERIAIS -->
+            <section class="section-materials" >
+               <div>
+                  <!-- Material de aula -->
+                  <h4>Material aula</h4>
+                  <!-- icone-livro 1 -->
+                  <p>
+                     Baixe o livro das unidades:
+                  </p> <br>
+                  <p><img src="img/seta-do-circulo-do-livro-para-a-direita.svg" alt="Ícone Livro" width="30vw">
+                     <a
+                        href="books/Business_Start-Up_1_Student_39_Student's_book.pdf"
+                        ><i>Business</i> Start-Up 1 Student's Book</a
+                        >
+                  </p>
+               </div>
+            </section>
+            
+            <br>
+            
+             </section>
+
+             <!-- UNIT 11 -->
+             <section class="section-content2" id="quarto-unit11">
+
+               <h2>Unit 11: Plans </h2>
+             
+               <h3>Asking and Answering Questions</h3>
+               <img
+               class="revisao-img1"
+               src="img/P1.jpg"
+               alt=""
+               />
+  
+             
+               <!-- CARDS DE CONTEUDO  UNIT 11-->
+            <div class="card-container">
+               <div class="card">
+                  <h4>be: <em>11</em></h4>
+                  <img
+                     src="" width="400vw"
+                     alt=""
+                     />
+                  <blockquote>Fonte: </blockquote>
+                  <p>content</p>
+               </div>
+               <div class="card">
+                  <h4>be: question <br> TEXT</h4>
+                  <img
+                     src="" width="400vw"
+                     alt=""
+                     />
+                  <blockquote>Fonte: </blockquote>
+               </div>
+               <div class="card">
+                  <h4>A/An</h4>
+                  <img
+                     src="" width="400vw"
+                     alt=""
+                     />
+                  <blockquote>Fonte: </blockquote>
+               </div>
+            </div>
+
+            <!--  DICAS UNIT 11 -->
+                        <!-- TIPS UNIT --> 
+                        <div class="container-tips">
+                           <div class="tips-content1">
+                              <h5>Tips About Unit 10</h5>
+                              <p>To learn more about this <br> content,we recommend this <br> trustworthy websites...</p>
+                           </div>
+                           <!-- SEGUNDA DIV - SEGUNDA COLUNA  -->
+                           <div class="tips-content2">
+                              <div class="box3-color1" >
+                                 
+                                 <p><img src="img/livrolampada.png" alt=""> CONTENT</p>
+                                 <a href="#">Acess</a>
+                              </div>
+                              <div class="box3-color2">
+                                 
+                                 <p><img src="img/casestudy.png" alt=""> CONTENT</p>
+                                 <a href="#">Acess</a>
+                              </div>
+                              <div class="box3-color3">
+                                                     <p> <img src="img/girlstudying.png" alt=""> CONTENT</p>
+                                 <a href="#">Acess</a>
+                              </div>
+                           </div>
+                        </div>
+            
+            <!-- MATERIAIS -->
+            <section class="section-materials" >
+               <div>
+                  <!-- Material de aula -->
+                  <h4>Material aula</h4>
+                  <!-- icone-livro 1 -->
+                  <p>
+                     Baixe o livro das unidades:
+                  </p> <br>
+                  <p><img src="img/seta-do-circulo-do-livro-para-a-direita.svg" alt="Ícone Livro" width="30vw">
+                     <a
+                        href="books/Business_Start-Up_1_Student_39_Student's_book.pdf"
+                        ><i>Business</i> Start-Up 1 Student's Book</a
+                        >
+                  </p>
+               </div>
+            </section>
+            
+            <br>
+             </section>
+
+            <!-- UNIT 12 -->
+            <section class="section-content3" id="quarto-unit12">
+
+               <h2>Unit 12: Sales </h2>
+             
+               <h3>Title</h3>
+               <img
+               class="revisao-img1"
+               src="img/P1.jpg"
+               alt=""
+               />
+  
+             
+               <!-- CARDS DE CONTEUDO  UNIT 11-->
+            <div class="card-container">
+               <div class="card">
+                  <h4>be: <em>present simple</em></h4>
+                  <img
+                     src="" width="400vw"
+                     alt=""
+                     />
+                  <blockquote>Fonte: </blockquote>
+                  <p>content</p>
+               </div>
+               <div class="card">
+                  <h4>be: question <br> TEXT</h4>
+                  <img
+                     src="" width="400vw"
+                     alt=""
+                     />
+                  <blockquote>Fonte: </blockquote>
+               </div>
+               <div class="card">
+                  <h4>A/An</h4>
+                  <img
+                     src="" width="400vw"
+                     alt=""
+                     />
+                  <blockquote>Fonte: </blockquote>
+               </div>
+            </div>
+
+            <!--  DICAS UNIT 12 -->
+                        <!-- TIPS UNIT 12--> 
+                        <div class="container-tips">
+                           <div class="tips-content1">
+                              <h5>Tips About Unit 12</h5>
+                              <p>To learn more about this <br> content,we recommend this <br> trustworthy websites...</p>
+                           </div>
+                           <!-- SEGUNDA DIV - SEGUNDA COLUNA  -->
+                           <div class="tips-content2">
+                              <div class="box3-color1" >
+                                 
+                                 <p><img src="img/livrolampada.png" alt=""> CONTENT</p>
+                                 <a href="#">Acess</a>
+                              </div>
+                              <div class="box3-color2">
+                                 
+                                 <p><img src="img/casestudy.png" alt=""> CONTENT</p>
+                                 <a href="#">Acess</a>
+                              </div>
+                              <div class="box3-color3">
+                                                     <p> <img src="img/girlstudying.png" alt=""> CONTENT</p>
+                                 <a href="#">Acess</a>
+                              </div>
+                           </div>
+                        </div>
+            
+            <!-- MATERIAIS -->
+            <section class="section-materials" >
+               <div>
+                  <!-- Material de aula -->
+                  <h4>Material aula</h4>
+                  <!-- icone-livro 1 -->
+                  <p>
+                     Baixe o livro das unidades:
+                  </p> <br>
+                  <p><img src="img/seta-do-circulo-do-livro-para-a-direita.svg" alt="Ícone Livro" width="30vw">
+                     <a
+                        href="books/Business_Start-Up_1_Student_39_Student's_book.pdf"
+                        ><i>Business</i> Start-Up 1 Student's Book</a
+                        >
+                  </p>
+               </div>
+            </section>
+            
+            <br>
+            <button class="button-return">
+               <a
+                  href="revisao.html"
+                  >Return</a
+                  >
+               </button>
+
+            <!-- botao para retornar ao topo - menu -->
+            <div class="back-to-top-button">
+               <a href="#header">
+               <i class="fas fa-arrow-up"></i>
+               </a>
+            </div>
+   
+             </section>
+
+          </div>
         </div>
 
-   
+         <!-- Footer -->
+         <footer class="rodape">
 
-    <div>
-    <!-- Footer -->
-    <footer class="footer">
-      <p>Criado por: Rafaela Araujo, Raquel Diniz e Vinicius Pereira</p>
-    </footer>
-    </div>
-  
-   
+            <img src="img/logo-four.png" alt="" width="40vw" > 
+            <p>Four Language</p></p> <br><hr><br> 
+            <p class="mt-4 text-sm text-white-100 snipcss0-4-7-9"
+            ">
+            O Four Language tem o objetivo de auxiliar os estudantes da
+            Fatec que cursam a matéria de Inglês.
+            </p>
+
+            <p class="text-sm text-gray-100 snipcss0-2-41-42">
+            © Copyright 2024 Four Language Inc. Todos os direitos reservados.
+            </p>
+
+            <!-- Estilo do rodape - footer -->
+            <script src="utils/renderFooter.js"></script>
+            
+         </footer>
+         
+         
     <script src="js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>

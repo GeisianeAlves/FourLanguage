@@ -1,42 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reading  | Game </title>
-    
-    <!-- <style>
-        body { font-family: 'Sarala',cursive; color: rgb(26, 24, 24); background: url(img/stars.jpg)no-repeat;
-        background-size: cover; height: 100vh; width: 100%; }
-    </style> -->
-
-<style>
-    body { font-family: 'Sarala',cursive; color: rgb(26, 24, 24); background: url(img/stars.jpg)no-repeat;
-    background-size: cover; height: 100vh; width: 100%; }
-</style>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/estilo_reading_game.css">
+    <link
+         href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+         rel="stylesheet"
+         />
 
-    <script src="utils/renderReadingLevel.js"></script>
+    <style>
+        .container-reading { font-family: 'Sarala',cursive; color: rgb(26, 24, 24); background: url(img/stars.jpg)no-repeat;
+        background-size: cover; height: 90vh; width: 100%; }
+    </style>
+    
+    <script src="utils/renderReadingLevel.js"></script> 
 
     <script>    
       window.renderReading() 
     </script>
-</head>
+</head> 
 
 
 <body>
 
-    <div id="container-menu">
-        <!-- aqui chama função do arquivo menu.js -->
-    </div>
+    <header class="cabecalho">
+        <div class="container-nav">
+        <nav class="nav-menu">
+          <img src="img/logo-four.png" alt="Logo Four Language" width="60vw" class="logo-four">
+          <ul class="lista-nao-ordenada">
+            <li class="item-lista-cabecalho">
+              <a href="index.html">Home</a>
+            </li>
+        
+            <li class="item-lista-cabecalho">
+              <a href="tela_skills.html">Games</a>
+              <ul>
+                <li class="item-lista-cabecalho"><a href="tela_skills.html">All </a></li>
+                <li class="item-lista-cabecalho"><a href="quiz.html">Extra</li>
+              </ul>
+            </li>
+        
+            <li class="item-lista-cabecalho">
+              <a href="revisao.html"> Content Review</a>
+              
+            </li>
+            <li class="item-lista-cabecalho">
+                <a href="grammar.html"> Grammar</a>
+                
+              </li>
+        
+            <li class="item-lista-cabecalho"><a href="creditos.html">About</a></li>
+            <div class="menu-direita">
+            <li>
+              <input type="text" placeholder="Search Content..." class="search-bar"> </input>
+              <button class="nav-botao"><a href="login.html">Sign out</a></button>
+            </li>
+          </div>
+          </ul>
+        </div>
+        </nav>
+            
+        <!-- chamando a formatacao do cabecalho -->
+      <script src="utils/renderHeader.js"> </script>   
+     
+    </header>
+
     
-    <div id="container-menu">
-        <!-- aqui chama função do arquivo menu.js -->
+   
+
+    <div id="div-esquerda">
+        <h2>Wait until typing is completed before answering the questions.</h2>       
     </div>
 
-        <div class="box" id="primeiro">               
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Your progress</h3>
+            <p id="questions-qty"></p>
+
+            <button id="restart" onclick="reiniciarJogo()"> Redo Quiz!</button>
+        </div>
+    </div>
+
+
+
+        <div class="container-reading" id="primeiro">               
                         
                 <div class="container texto">
                 <h1>UNIT 1</h1>
@@ -45,94 +98,102 @@
                         <button class="next" id="botao-proximo" onclick="next(1)">Answer</button> 
                     </div>
                     
-                    <img class="img-0" src="img/foguete6.jpg" alt="">
+                    <img class="img-0" src="img/foguete0.png" alt="">
                     
                 </div>            
 
                 <div class="container">
                     <img class="img-1" src="img/planet_red.png" alt="">
-
-                <h2>Where is Julia Bell from?</h2>
-                <div class="respostas">
-                    <button class="btn-letra">A</button>
-                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Zap Productions</button><br>
-                </div>
-                <div class="respostas">
-                    <button class="btn-letra">B</button>
-                    <button class="btn-resposta">Safeguard</button><br>  
-                </div>           
-                <div class="respostas">
-                    <button class="btn-letra">C</button>
-                    <button class="btn-resposta">Amazon</button><br>
-                </div>
-                <button id="botao-proximo" onclick="next(2)">Next</button>
-        
-                <img class="img-1" src="img/planet_red.png" alt="">
-                </div>   
-
-                <div class="container">
-                
-                    <h2>What is correct to say about Paul Reed?</h2>
+                <!-- 1ª pergunta -->
+                    <h2>Where is Julia Bell from?</h2>
                     <div class="respostas">
                         <button class="btn-letra">A</button>
-                        <button class="btn-resposta">He works for NorthNet.</button><br>
+                        <button class="btn-resposta" id="correct1" correct-answer="true" onclick="checarResposta(this)">Zap Productions</button><br>
                     </div>
                     <div class="respostas">
                         <button class="btn-letra">B</button>
-                        <button class="btn-resposta">He is the owener of CCC.</button><br>   
+                        <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Safeguard</button><br>  
+                    </div>           
+                    <div class="respostas">
+                        <button class="btn-letra">C</button>
+                        <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Amazon</button><br>
+                    </div>
+                    <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
+                    <button id="botao-proximo" onclick="next(2)">Next</button>
+            
+                    <img class="img-1" src="img/planet_red.png" alt="">
+                </div>    
+
+                <div class="container">
+                <!-- 2ª pergunta -->
+                    <h2>What is correct to say about Paul Reed?</h2>
+                    <div class="respostas">
+                        <button class="btn-letra">A</button>
+                        <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">He works for NorthNet.</button><br>
+                    </div>
+                    <div class="respostas">
+                        <button class="btn-letra">B</button>
+                        <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">He is the owener of CCC.</button><br>   
                     </div>          
                     <div class="respostas">
                         <button class="btn-letra">C</button>
-                        <button class="btn-resposta" id="correct3" onclick="checarResposta('correct3')">He is from Zap Productions.</button><br>
+                        <button class="btn-resposta" id="correct3" correct-answer="true" onclick="checarResposta(this)">He is from Zap Productions.</button><br>
                     </div>
+                    <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
                     <button class="next" id="botao-proximo" onclick="next(3)">Next</button>
                 
                     <img class="img-1" src="img/moon-removebg-preview.png" alt="">
                 </div>    
 
                 <div class="container">
-              
+                <!-- 3ª pergunta -->
                     <h2>Where is David Clark from?</h2>
                     <div class="respostas">
                         <button class="btn-letra">A</button>
-                        <button class="btn-resposta" >CCC</button><br>
+                        <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">CCC</button><br>
                     </div>
                     <div class="respostas">
                         <button class="btn-letra">B</button>
-                        <button class="btn-resposta" id="correct2" onclick="checarResposta('correct2')">Safeguard</button><br> 
+                        <button class="btn-resposta" id="correct2" correct-answer="true" onclick="checarResposta(this)">Safeguard</button><br> 
                     </div>            
                     <div class="respostas">
                         <button class="btn-letra">C</button>
-                        <button class="btn-resposta">NorthNet</button><br>
+                        <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">NorthNet</button><br>
                     </div>
+                    <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
                     <button class="next" id="botao-proximo" onclick="next(4)">Next</button>
             
                     <img class="img-1" src="img/planet.png" alt="">
                 </div> 
 
                 <div class="container">
-                <h2>Where are Alan Parker and George Carter from?</h2>
-                <div class="respostas">
-                    <button class="btn-letra">A</button>
-                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">NorthNet</button><br>
-                </div>
-                <div class="respostas">
-                    <button class="btn-letra">B</button>
-                    <button class="btn-resposta">IBM</button><br>      
-                </div>       
-                <div class="respostas">
-                    <button class="btn-letra">C</button>
-                    <button class="btn-resposta">Zap Productions</button><br>
-                </div>
-                <button class="next" id="botao-proximo" onclick="result()">Submit</button>
-     
-                <img class="img-1" src="img/planet_pink.png" alt="">
+                <!-- 4ª pergunta -->
+                    <h2>Where are Alan Parker and George Carter from?</h2>
+                    <div class="respostas">
+                        <button class="btn-letra">A</button>
+                        <button class="btn-resposta" id="correct1" correct-answer="true" onclick="checarResposta(this)">NorthNet</button><br>
+                    </div>
+                    <div class="respostas">
+                        <button class="btn-letra">B</button>
+                        <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">IBM</button><br>      
+                    </div>       
+                    <div class="respostas">
+                        <button class="btn-letra">C</button>
+                        <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Zap Productions</button><br>
+                    </div>
+                    <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
+                    <button class="next" id="botao-proximo" onclick="result()">Submit</button>
+
+                    <img class="img-1" src="img/planet_pink.png" alt="">
                 </div> 
+         
+                  
+               
     
         </div>
 
 
-        <div class="box" id="segundo">
+        <div class="container-reading" id="segundo">
 
             <div class="semestre2 container">
                 <h1>UNIT 2 </h1>
@@ -146,20 +207,21 @@
 
 
             <div class="container">            
-
+                <!-- 1ª pergunta -->
                 <h2>Where does Sharon come from?</h2>
                 <div class="respostas">
                     <button class="btn-letra">A</button>
-                    <button class="btn-resposta" >Dublin</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Dublin</button><br>
                 </div>
                 <div class="respostas">
                     <button class="btn-letra">B</button>
-                    <button class="btn-resposta" id="correct2" onclick="checarResposta('correct2')">Chicago</button><br>
+                    <button class="btn-resposta" id="correct2" correct-answer="true" onclick="checarResposta(this)">Chicago</button><br>
                 </div>
                 <div class="respostas">
                     <button class="btn-letra">C</button>
-                    <button class="btn-resposta">USA</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">USA</button><br>
                 </div>
+                <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
                 <button id="botao-proximo" onclick="next(7)">Next</button>
         
                 <img class="img-1" src="img/planet_roxo.png" alt="">       
@@ -168,20 +230,21 @@
     
             
             <div class="container">            
-
+            <!-- 2ª pergunta -->
                 <h2>Which city does Ross Milburn live?</h2>
                 <div class="respostas">
                     <button class="btn-letra">A</button>
-                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">USA</button><br>
+                    <button class="btn-resposta" id="correct1" correct-answer="true" onclick="checarResposta(this)">USA</button><br>
                 </div>
                 <div class="respostas">
                     <button class="btn-letra">B</button>
-                    <button class="btn-resposta">Melbourne</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Melbourne</button><br>
                 </div>
                 <div class="respostas">
                     <button class="btn-letra">C</button>
-                    <button class="btn-resposta">Chicago</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Chicago</button><br>
                 </div>
+                <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
                 <button id="botao-proximo" onclick="next(8)">Next</button>
         
                 <img class="img-1" src="img/planet_roxo.png" alt="">       
@@ -190,20 +253,21 @@
     
             
             <div class="container">            
-
+                <!-- 3ª pergunta -->
                 <h2>Where does Sharon work?</h2>
                 <div class="respostas">
                     <button class="btn-letra">A</button>
-                    <button class="btn-resposta">Germany</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Germany</button><br>
                 </div>
                 <div class="respostas">
                     <button class="btn-letra">B</button>
-                    <button class="btn-resposta" >Dublin</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Dublin</button><br>
                 </div>
                 <div class="respostas">
                     <button class="btn-letra">C</button>
-                    <button class="btn-resposta" id="correct3" onclick="checarResposta('correct3')">Melbourne</button><br>
+                    <button class="btn-resposta" id="correct3" correct-answer="true" onclick="checarResposta(this)">Melbourne</button><br>
                 </div>
+                <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
                 <button id="botao-proximo" onclick="next(9)">Next</button>
         
                 <img class="img-1" src="img/planet_roxo.png" alt="">       
@@ -211,20 +275,21 @@
             </div>   
     
             <div class="container">            
-
+                <!-- 4ª pergunta -->
                 <h2>Where does James Smith live?</h2>
                 <div class="respostas">
                     <button class="btn-letra">A</button>
-                    <button class="btn-resposta">Chicago</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Chicago</button><br>
                 </div>
                 <div class="respostas">
                     <button class="btn-letra">B</button>
-                    <button class="btn-resposta" id="correct2" onclick="checarResposta('correct2')">USA</button><br>
+                    <button class="btn-resposta" id="correct2" correct-answer="true" onclick="checarResposta(this)">USA</button><br>
                 </div>
                 <div class="respostas">
                     <button class="btn-letra">C</button>
-                    <button class="btn-resposta">France</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">France</button><br>
                 </div>
+                <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
                 <button id="botao-proximo" onclick="result()">Submit</button>
         
                 <img class="img-1" src="img/planet_roxo.png" alt="">       
@@ -234,7 +299,7 @@
 
         </div>
  
-        <div class="box" id="terceiro">
+        <div class="container-reading" id="terceiro">
 
             <div class="semestre3 container">
                 <h1>UNIT 3</h1>
@@ -243,25 +308,26 @@
                 <div>
                     <button class="next" id="botao-proximo" onclick="next(11)">Answer</button> 
                 </div> 
-                <img class="img-1" src="img/planet_red.png" alt="">
+                <img class="img-1" src="img/globe.png" style="width: 200px;">
             </div>
 
 
             <div class="container">            
-
+                <!-- 1ª pergunta -->
                 <h2>Who does think running is boring?</h2>
                 <div class="respostas">
                     <button class="btn-letra">A</button>
-                    <button class="btn-resposta">Jacob</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Jacob</button><br>
                 </div>
                 <div class="respostas">
                     <button class="btn-letra">B</button>
-                    <button class="btn-resposta">Sarah</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Sarah</button><br>
                 </div>
                 <div class="respostas">
                     <button class="btn-letra">C</button>
-                    <button class="btn-resposta" id="correct3" onclick="checarResposta('correct3')">Page</button><br>
+                    <button class="btn-resposta" id="correct3" correct-answer="true" onclick="checarResposta(this)">Page</button><br>
                 </div>
+                <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
                 <button id="botao-proximo" onclick="next(12)">Next</button>
         
                 <img class="img-1" src="img/planet_roxo.png" alt="">       
@@ -270,20 +336,21 @@
     
             
             <div class="container">            
-
+                <!-- 2ª pergunta -->
                 <h2>Which activity does Gabriel love?</h2>
                 <div class="respostas">
                     <button class="btn-letra">A</button>
-                    <button class="btn-resposta" >Football</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Football</button><br>
                 </div>
                 <div class="respostas">
                     <button class="btn-letra">B</button>
-                    <button class="btn-resposta" id="correct2" onclick="checarResposta('correct2')">Swimming</button><br>
+                    <button class="btn-resposta" id="correct2" correct-answer="true" onclick="checarResposta(this)">Swimming</button><br>
                 </div>
                 <div class="respostas">
                     <button class="btn-letra">C</button>
-                    <button class="btn-resposta">running</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">running</button><br>
                 </div>
+                <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
                 <button id="botao-proximo" onclick="next(13)">Next</button>
         
                 <img class="img-1" src="img/planet_roxo.png" alt="">       
@@ -291,21 +358,22 @@
             </div>   
     
             <div class="container">            
-
+                <!-- 3ª pergunta -->
                 <h2>Who does go swimming every morning?</h2>
                 <div class="respostas">
                     <button class="btn-letra">A</button>
-                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Gabriel</button><br>
+                    <button class="btn-resposta" id="correct1" correct-answer="true" onclick="checarResposta(this)">Gabriel</button><br>
                 </div>
 
                 <div class="respostas">
                     <button class="btn-letra">B</button>
-                    <button class="btn-resposta" >Jacob</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Jacob</button><br>
                 </div>
                 <div class="respostas">
                     <button class="btn-letra">C</button>
-                    <button class="btn-resposta">Grace</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Grace</button><br>
                 </div>
+                <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
                 <button id="botao-proximo" onclick="next(14)">Next</button>
         
                 <img class="img-1" src="img/planet_roxo.png" alt="">       
@@ -313,20 +381,21 @@
             </div>   
     
             <div class="container">            
-
+            <!-- 4ª pergunta -->
                 <h2>Can Jabob play football?</h2>
                 <div class="respostas">
                     <button class="btn-letra">A</button>
-                    <button class="btn-resposta" >He doesn't like football.</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">He doesn't like football.</button><br>
                 </div>
                 <div class="respostas">
                     <button class="btn-letra">B</button>
-                    <button class="btn-resposta" id="correct2" onclick="checarResposta('correct2')">He can't play very well.</button><br>
+                    <button class="btn-resposta" id="correct2" correct-answer="true" onclick="checarResposta(this)">He can't play very well.</button><br>
                 </div>
                 <div class="respostas">
                     <button class="btn-letra">C</button>
-                    <button class="btn-resposta">He hates playing football.</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">He hates playing football.</button><br>
                 </div>
+                <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
                 <button id="botao-proximo" onclick="result()">Submit</button>
         
                 <img class="img-1" src="img/planet_roxo.png" alt="">       
@@ -336,7 +405,7 @@
 
         </div>
  
-       <div class="box" id="quarto">
+       <div class="container-reading" id="quarto">
 
             <div class="semestre4 container">
                 <h1>UNIT 4</h1>
@@ -345,25 +414,26 @@
                 <div>
                     <button class="next" id="botao-proximo" onclick="next(16)">Answer</button> 
                 </div> 
-                <img class="img-1" src="img/planet_red.png" alt="">
+                <img class="img-1" src="img/astronaut-mini.png" alt="">
             </div>
 
 
             <div class="container">            
-
+                <!-- 1ª pergunta -->
                 <h2>When did Scott fly back?</h2>
                 <div class="respostas">
                     <button class="btn-letra">A</button>
-                    <button class="btn-resposta">last month</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">last month</button><br>
                 </div>
                 <div class="respostas">
                     <button class="btn-letra">B</button>
-                    <button class="btn-resposta" >last Friday</button><br>
+                    <button class="btn-resposta" id="correct2" correct-answer="true" onclick="checarResposta(this)">last Friday</button><br>
                 </div>
                 <div class="respostas">
                     <button class="btn-letra">C</button>
-                    <button class="btn-resposta" id="correct3" onclick="checarResposta('correct3')">last night</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">last night</button><br>
                 </div>
+                <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
                 <button id="botao-proximo" onclick="next(17)">Next</button>
         
                 <img class="img-1" src="img/planet_roxo.png" alt="">       
@@ -372,20 +442,21 @@
     
             
             <div class="container">            
-
+            <!-- 2ª pergunta -->
                 <h2>Who did Leonard drive with?</h2>
                 <div class="respostas">
                     <button class="btn-letra">A</button>
-                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Carolina</button><br>
+                    <button class="btn-resposta" id="correct1" correct-answer="true" onclick="checarResposta(this)">Carolina</button><br>
                 </div>
                 <div class="respostas">
                     <button class="btn-letra">B</button>
-                    <button class="btn-resposta" >Celine</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Celine</button><br>
                 </div>
                 <div class="respostas">
                     <button class="btn-letra">C</button>
-                    <button class="btn-resposta">Carla</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Carla</button><br>
                 </div>
+                <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
                 <button id="botao-proximo" onclick="next(18)">Next</button>
         
                 <img class="img-1" src="img/planet_roxo.png" alt="">       
@@ -394,20 +465,21 @@
     
             
             <div class="container">            
-
-                <h2>Question 3</h2>
+                 <!-- 3ª pergunta -->
+                <h2>From where did Carolina drive?</h2>
                 <div class="respostas">
                     <button class="btn-letra">A</button>
-                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                    <button class="btn-resposta"  correct-answer="false" onclick="checarResposta(this)">Barcelona</button><br>
                 </div>
                 <div class="respostas">
                     <button class="btn-letra">A</button>
-                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                    <button class="btn-resposta" id="correct2" correct-answer="true" onclick="checarResposta(this)">London</button><br>
                 </div>
                 <div class="respostas">
                     <button class="btn-letra">A</button>
-                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Madri</button><br>
                 </div>
+                <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
                 <button id="botao-proximo" onclick="next(19)">Next</button>
         
                 <img class="img-1" src="img/planet_roxo.png" alt="">       
@@ -415,20 +487,21 @@
             </div>   
     
             <div class="container">            
-
-                <h2>Question 4</h2>
+                 <!-- 4ª pergunta -->
+                <h2>When did Lucas and Jack eat at a good restaurant?</h2>
                 <div class="respostas">
                     <button class="btn-letra">A</button>
-                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                    <button class="btn-resposta" id="correct1" correct-answer="false" onclick="checarResposta(this)">on Sunday</button><br>
                 </div>
                 <div class="respostas">
                     <button class="btn-letra">B</button>
-                    <button class="btn-resposta">Dublin</button><br>
+                    <button class="btn-resposta" correct-answer="true" onclick="checarResposta(this)">last night</button><br>
                 </div>
                 <div class="respostas">
                     <button class="btn-letra">C</button>
-                    <button class="btn-resposta">Dublin</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">on Wednesday</button><br>
                 </div>
+                <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
                 <button id="botao-proximo" onclick="result()">Submit</button>
         
                 <img class="img-1" src="img/planet_roxo.png" alt="">       
@@ -438,7 +511,7 @@
 
         </div>
  
-        <div class="box" id="quinto">
+        <div class="container-reading" id="quinto">
 
             <div class="semestre5 container">
                 <h1>UNIT 5</h1>
@@ -447,100 +520,105 @@
                 <div>
                     <button class="next" id="botao-proximo" onclick="next(21)">Answer</button> 
                 </div> 
-                <img class="img-1" src="img/planet_red.png" alt="">
+                <img class="img-1" src="img/planeta_earth2.png" alt="">
             </div>
 
 
             <div class="container">            
-
-                <h2>Question 1</h2>
+                <!-- 1ª pergunta -->
+                <h2>When does Sheila travel by train to Paris?</h2>
                 <div class="respostas">
                     <button class="btn-letra">A</button>
-                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">in the first day of the year</button><br>
                 </div>
                 <div class="respostas">
-                    <button class="btn-letra">A</button>
-                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                    <button class="btn-letra">B</button>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">in the first week of the year</button><br>
                 </div>
                 <div class="respostas">
-                    <button class="btn-letra">A</button>
-                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                    <button class="btn-letra">C</button>
+                    <button class="btn-resposta" id="correct3" correct-answer="true" onclick="checarResposta(this)">in the first week of the month</button><br>
                 </div>
+                <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
                 <button id="botao-proximo" onclick="next(22)">Next</button>
         
-                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                <img class="img-1" src="img/planeta_earth2.png" alt="">       
                  
             </div>   
     
             
             <div class="container">            
-
-                <h2>Question 2</h2>
+                <!-- 2ª pergunta -->
+                <h2>How ofen does Gabriel travel to Nice?</h2>
                 <div class="respostas">
                     <button class="btn-letra">A</button>
-                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                    <button class="btn-resposta" id="correct1" correct-answer="true" onclick="checarResposta(this)">twice a year</button><br>
                 </div>
                 <div class="respostas">
-                    <button class="btn-letra">A</button>
-                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                    <button class="btn-letra">B</button>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">three times per year</button><br>
                 </div>
                 <div class="respostas">
-                    <button class="btn-letra">A</button>
-                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                    <button class="btn-letra">C</button>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">every month</button><br>
                 </div>
+                <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
                 <button id="botao-proximo" onclick="next(23)">Next</button>
         
-                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                <img class="img-1" src="img/planeta_earth2.png" alt="">       
                  
             </div>   
     
             
             <div class="container">            
-
-                <h2>Question 3</h2>
+                <!-- 3ª pergunta -->
+                <h2>Which is the quickest way to travel within France?</h2>
                 <div class="respostas">
                     <button class="btn-letra">A</button>
-                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">by car</button><br>
                 </div>
                 <div class="respostas">
-                    <button class="btn-letra">A</button>
-                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                    <button class="btn-letra">B</button>
+                    <button class="btn-resposta" id="correct2" correct-answer="true" onclick="checarResposta(this)">train</button><br>
                 </div>
                 <div class="respostas">
-                    <button class="btn-letra">A</button>
-                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                    <button class="btn-letra">C</button>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">plane</button><br>
                 </div>
+                <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
                 <button id="botao-proximo" onclick="next(24)">Next</button>
         
-                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                <img class="img-1" src="img/planeta_earth2.png" alt="">       
                  
             </div>   
     
             <div class="container">            
-
-                <h2>Question 4</h2>
+                <!-- 4ª pergunta -->
+                <h2>Frow where does Sheila travel to Lyon?</h2>
                 <div class="respostas">
                     <button class="btn-letra">A</button>
-                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Dublin</button><br>
                 </div>
                 <div class="respostas">
-                    <button class="btn-letra">A</button>
-                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                    <button class="btn-letra">B</button>
+                    <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Nice</button><br>
                 </div>
                 <div class="respostas">
-                    <button class="btn-letra">A</button>
-                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
+                    <button class="btn-letra">C</button>
+                    <button class="btn-resposta" id="correct3" correct-answer="true" onclick="checarResposta(this)">Paris</button><br>
                 </div>
+                <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
                 <button id="botao-proximo" onclick="result()">Submit</button>
+                
         
-                <img class="img-1" src="img/planet_roxo.png" alt="">       
+                <img class="img-1" src="img/planeta_earth2.png" alt="">       
                  
             </div>   
     
 
         </div>
 
-        <div class="box" id="sexto">
+        <div class="container-reading" id="sexto">
 
             <div class="semestre6 container">
                 <h1>UNIT 6</h1>
@@ -549,29 +627,30 @@
                         <button class="next" id="botao-proximo" onclick="next(26)">Answer</button> 
                     </div>
                     
-                    <img class="img-0" src="img/foguete6.jpg" alt="">
+                    <img class="img-0" src="img/astronauta-cafe.png" style="width: 300PX;">
                     
                 </div>            
 
                 <div class="container">
+                    <!-- 1ª pergunta -->
                     <img class="img-1" src="img/planet_red.png" alt="">
-
-                <h2>Where does Mr. Tatié live?</h2>
-                <div class="respostas">
-                    <button class="btn-letra">A</button>
-                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">Dublin</button><br>
-                </div>
-                <div class="respostas">
-                    <button class="btn-letra">A</button>
-                    <button class="btn-resposta">Victoria</button><br>  
-                </div>           
-                <div class="respostas">
-                    <button class="btn-letra">A</button>
-                    <button class="btn-resposta">Austin</button><br>
-                </div>
-                <button id="botao-proximo" onclick="next(27)">Next</button>
-        
-                <img class="img-1" src="img/planet_red.png" alt="">
+                    <h2>Where does Mr. Tatié live?</h2>
+                    <div class="respostas">
+                        <button class="btn-letra">A</button>
+                        <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Dublin</button><br>
+                    </div>
+                    <div class="respostas">
+                        <button class="btn-letra">B</button>
+                        <button class="btn-resposta" id="correct1" correct-answer="true" onclick="checarResposta(this)">Victoria</button><br>  
+                    </div>           
+                    <div class="respostas">
+                        <button class="btn-letra">C</button>
+                        <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Austin</button><br>
+                    </div>
+                    <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
+                    <button id="botao-proximo" onclick="next(27)">Next</button>
+            
+                    <img class="img-1" src="img/planet_red.png" alt="">
                 </div>   
 
                 <div class="container">
@@ -579,16 +658,17 @@
                     <h2>What is correct to say about the text?</h2>
                     <div class="respostas">
                         <button class="btn-letra">A</button>
-                        <button class="btn-resposta">He owns all of the orion Group.</button><br>
+                        <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">He owns all of the orion Group.</button><br>
                     </div>
                     <div class="respostas">
-                        <button class="btn-letra">A</button>
-                        <button class="btn-resposta">Goran Tatié is 38 years old.</button><br>   
+                        <button class="btn-letra">B</button>
+                        <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Goran Tatié is 38 years old.</button><br>   
                     </div>          
                     <div class="respostas">
-                        <button class="btn-letra">A</button>
-                        <button class="btn-resposta" id="correct3" onclick="checarResposta('correct3')">Orion companies have total sales of about $3billion a year.</button><br>
+                        <button class="btn-letra">C</button>
+                        <button class="btn-resposta" id="correct3" correct-answer="true" onclick="checarResposta(this)">Orion companies have total sales of about $3billion a year.</button><br>
                     </div>
+                    <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
                     <button class="next" id="botao-proximo" onclick="next(28)">Next</button>
                 
                     <img class="img-1" src="img/moon-removebg-preview.png" alt="">
@@ -599,87 +679,55 @@
                     <h2>Where does Mr. Tatié come from?</h2>
                     <div class="respostas">
                         <button class="btn-letra">A</button>
-                        <button class="btn-resposta" >Germany</button><br>
+                        <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Germany</button><br>
                     </div>
                     <div class="respostas">
-                        <button class="btn-letra">A</button>
-                        <button class="btn-resposta" id="correct2" onclick="checarResposta('correct2')">Croatia</button><br> 
+                        <button class="btn-letra">B</button>
+                        <button class="btn-resposta" id="correct2" correct-answer="true" onclick="checarResposta(this)">Croatia</button><br> 
                     </div>            
                     <div class="respostas">
-                        <button class="btn-letra">A</button>
-                        <button class="btn-resposta">Australia</button><br>
+                        <button class="btn-letra">C</button>
+                        <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">Australia</button><br>
                     </div>
+                    <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
                     <button class="next" id="botao-proximo" onclick="next(29)">Next</button>
             
                     <img class="img-1" src="img/planet.png" alt="">
                 </div> 
 
                 <div class="container">
-                <h2>How many employees do work for Orion group?</h2>
-                <div class="respostas">
-                    <button class="btn-letra">A</button>
-                    <button class="btn-resposta" id="correct1" onclick="checarResposta('correct1')">50.000</button><br>
-                </div>
-                <div class="respostas">
-                    <button class="btn-letra">A</button>
-                    <button class="btn-resposta">40.000</button><br>      
-                </div>       
-                <div class="respostas">
-                    <button class="btn-letra">A</button>
-                    <button class="btn-resposta">30.000</button><br>
-                </div>
-                <button class="next" id="botao-proximo" onclick="result()">Submit</button>
-     
-                <img class="img-1" src="img/planet_pink.png" alt="">
+                    <h2>How many employees do work for Orion group?</h2>
+                    <div class="respostas">
+                        <button class="btn-letra">A</button>
+                        <button class="btn-resposta" id="correct1" correct-answer="true" onclick="checarResposta(this)">50.000</button><br>
+                    </div>
+                    <div class="respostas">
+                        <button class="btn-letra">B</button>
+                        <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">40.000</button><br>      
+                    </div>       
+                    <div class="respostas">
+                        <button class="btn-letra">C</button>
+                        <button class="btn-resposta" correct-answer="false" onclick="checarResposta(this)">30.000</button><br>
+                    </div>
+                    <button id="botao-proximo"><a href="tela_skills.html"> Back</a></button>
+                    <button class="next" id="botao-proximo" onclick="result()">Submit</button>
+        
+                    <img class="img-1" src="img/planet_pink.png" alt="">
                 </div> 
+
+                
+                
         </div>
 
         
-    <script>
-        
-        document.getElementsByClassName('container')[0].style.display = "block";
-        document.getElementsByClassName('semestre2 container')[0].style.display = "block";
-        document.getElementsByClassName('semestre3 container')[0].style.display = "block";
-        document.getElementsByClassName('semestre4 container')[0].style.display = "block";
-        document.getElementsByClassName('semestre5 container')[0].style.display = "block";
-        document.getElementsByClassName('semestre6 container')[0].style.display = "block";
-        function next(id) {
-            document.getElementsByClassName('container')[id-1].style.display = "none";        
-            document.getElementsByClassName('container')[id].style.display = "block";
+    <script src="js/reading.js"></script>
 
-        }
-        function proximo(id) {
-
-            document.getElementsByClassName('invisible')[id-1].style.display = "none";
-            document.getElementsByClassName('invisible')[id].style.display = "block";
-        }
-        var score = 0;
-        function checarResposta(id) {
-            if (id === 'correct1' || id === 'correct2' || id === 'correct3') {
-            score++;
-        }
-        }
-        function result() {
-            alert('Score: ' + score);
-        }
-        // mudar a cor do botão da resposta escolhida
-        var buttons = document.querySelectorAll(".btn-resposta");
-
-        buttons.forEach(function(button) {
-            button.addEventListener("click", function() {
-                button.style.backgroundColor = "rgb(75, 72, 106)"; 
-            });
-        });
-    </script>
-
-    <script src="js/menu.js"></script>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="js/script_typing.js"></script>
-    <script src="js/menu.js"></script>   
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     
