@@ -106,16 +106,31 @@ class WordGame {
             case 'input5': palavra = this.palavra5; break;
             case 'input6': palavra = this.palavra6; break;
         }
+        const tempoDesaparecer = 3000;
 
         if (userInput === palavra) {
-            this[correctProp]++;
-            document.querySelector(`#${pontosId} span`).textContent = 'Score: ' + this[correctProp];
+            this[correctProp]+=100;
+            
+            // document.querySelector(`#${pontosId} span`).textContent = 'Score: ' + this[correctProp];
+            document.querySelector(`#${pontosId} span`).textContent = palavra;
+            const correctIcon = document.getElementById('correct-icon');
+            correctIcon.style.display = 'block';
+
+            setTimeout(() => {
+                document.querySelector(`#${pontosId} span`).textContent = '';
+                correctIcon.style.display = 'none';
+            }, tempoDesaparecer);
         } else {
+           
             this[`incorrect${capitalize(inputId)}`]++;
+
+            const wrongIcon = document.getElementById('wrong-icon');
+            wrongIcon.style.display = 'block';
             document.querySelector(`#${errosId} span`).textContent = `Correct spelling: '${palavra}'`;
-            const tempoDesaparecer = 3000;
+            
             setTimeout(() => {
                 document.querySelector(`#${errosId} span`).textContent = '';
+                wrongIcon.style.display = 'none';
             }, tempoDesaparecer);
         }
 
@@ -127,34 +142,66 @@ class WordGame {
         if (this.currentArray) {
             let totalWords;
             switch (this.currentArray) {
-                case this.palavras: totalWords = 10; break;
-                case this.palavras2: totalWords = 10; break;
-                case this.palavras3: totalWords = 11; break;
-                case this.palavras4: totalWords = 11; break;
-                case this.palavras5: totalWords = 11; break;
-                case this.palavras6: totalWords = 11; break;
-                default: totalWords = 10; // Default to 10 words
+                case this.palavras:
+                case this.palavras2:
+                    totalWords = 10;
+                    break;
+                case this.palavras3:
+                case this.palavras4:
+                case this.palavras5:
+                case this.palavras6:
+                    totalWords = 11;
+                    break;
+                default:
+                    totalWords = 10; // Default to 10 words
             }
             const wordsUsed = totalWords - this.currentArray.length;
             const progressPercent = (wordsUsed / totalWords) * 100;
             document.getElementById('progressBar').style.width = `${progressPercent}%`;
-            document.getElementById('progressBar').style.width = `${progressPercent}%`;
+
+            if (progressPercent === 100) {
+                this.endGame();
+            }
         }
     }
-    // endGame() {
-    //     // Esconder todos os elementos relacionados ao jogo
-    //     document.getElementById('primeiro').style.display = 'none';
-    // }
+
+    showModal(correctPalavra) {
+        const modal = document.getElementById('resultModal-listening');
+        const scoreMessage = document.getElementById('questions-qty');
+        scoreMessage.textContent = correctPalavra;
+        modal.style.display = 'block';
+
+        // To close the modal when the user clicks on the 'x'
+        const span = document.getElementsByClassName('close-listening')[0];
+        span.onclick = function () {
+            modal.style.display = 'none';
+        }
+    }
+
+    endGame() {
+        const totalCorrect = this.correctPalavra + this.correctPalavra2 + this.correctPalavra3 + this.correctPalavra4 + this.correctPalavra5 + this.correctPalavra6;
+        this.showModal(totalCorrect); // Pass the final score to showModal
+        //hide elements
+        const divDicas = document.querySelector('.dicas');
+        divDicas.style.display = 'none';
+        const divDireita = document.querySelector('.container-direita');
+        divDireita.style.display = 'none';
+        const divProgressBar = document.querySelector('.container-com-barra');
+        divProgressBar.style.display = 'none';
+       
+    }
+
+
+  
 }
 
 const game = new WordGame();
 
-// function closeModal()
 
-// Função para esconder elementos ao fim do jogo
-// function hideElements() {
-//     game.endGame();
-// }
+function restartGame() {
 
-// // Chamando a função hideElements ao final do jogo
-// hideElements();
+    var urlPartes = window.location.href.split("/");
+    var ultimaParteUrl = urlPartes[urlPartes.length - 1];
+
+    window.location.href = ultimaParteUrl;
+}

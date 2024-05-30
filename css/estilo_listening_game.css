@@ -181,12 +181,18 @@ img {
     left:15%;
 
 }
-
+.correct-icon-message {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 .correct-answer span{
     font-weight: bold;
     color: #4bad7c;
     font-size: 1.2rem;
 }
+
 .dicas {
     color: #e7e2bd;
     padding: 30px;
@@ -330,6 +336,97 @@ display: flex !important;
 }
 
 
+.modal-listening {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    height: 60%;
+    overflow: auto;
+    padding: 0;
+    
+  }
+  .modal-content-listening {
+    background-color: #fefefe;
+    margin: 5% auto;
+    border: 5px solid #a6a2f7;
+    border-radius: 10px;
+    width: 80%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-content-listening  h2 {
+    text-align: center;
+  } 
+  .modal-content-listening p {
+    font-size: 50px;
+    font-weight: bold;
+    color: #305376;
+  }
+  #questions-qty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .close-listening {
+    position: absolute;
+    color: #aaa;
+    /* float: right; */
+    font-size: 28px;
+    font-weight: bold;
+    right: 15%;
+    top: 15%;
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #modal-btn {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+  }
+  #restart, #btn-voltar-popup {
+    cursor: pointer;
+    height: 50px;
+    width: 150px;
+    background-color: rgb(250, 250, 186);
+    border: 2px solid rgb(237, 184, 86);
+    border-radius: 10px;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #393c3f;
+  }
+  #btn-voltar-popup a {  
+    color: #393c3f;
+  }
+  .plus-points-span {
+    position: absolute;
+    font-size: 1em;
+    /* font-weight: bold; */
+    color: rgb(107, 138, 107);
+    display: none; /* Initially hidden */
+    z-index: 10; /* Ensure it appears above other elements */
+  }
+  
+  #restart:hover, #btn-voltar-popup:hover {
+    background-color: rgb(241, 197, 115);;
+  }
+
+  
 @media(max-width: 540px) {
 
     .container-jogo {

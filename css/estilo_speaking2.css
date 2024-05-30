@@ -54,7 +54,7 @@ img{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: rgb(174, 196, 190);
+    background-color: rgb(189, 192, 217);
     height: 230px;
     width: 650px;
     padding: 20px;
@@ -67,7 +67,8 @@ img{
     margin-top: -30px;
     margin-bottom: 20px;
     font-size: 20px;
-    color: rgb(57, 67, 92);
+    color: rgb(138, 88, 130);
+    font-weight: bolder;
 }
 .container-audio img{
     width: 140px;
@@ -80,7 +81,7 @@ img{
     animation: scaleEffect 3s linear infinite;
 }
 #btnGravar, #btnGravar2, #btnGravar3, #btnGravar4, #btnGravar5, #btnGravar6 {
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 20px;
     height: 40px;
     width: 200px;
@@ -147,8 +148,8 @@ img{
 #img-direita {
     position: absolute;
     right: 50px;
-    width: 400px;
-    height:400px;
+    width: 300px;
+    height:200px;
     bottom: 50px;
 }
 #btn-voltar{

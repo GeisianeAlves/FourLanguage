@@ -72,7 +72,17 @@
      
     </header>
 
-    
+    <div id="resultModal-listening" class="modal-listening">
+        <div class="modal-content-listening">
+            <!-- <span class="close-listening" onclick="closeModal()">&times;</span> -->
+            <h3>Your progress</h3>
+            <p id="questions-qty"></p>
+            <div id="modal-btn">
+              <button id="btn-voltar-popup"><a href="tela_skills.html"> &larr; Back</a></button>
+              <button id="restart" onclick="restartGame()"> Redo Quiz!</button>
+            </div>
+        </div>
+      </div>
   
 
     <div class="container-jogo">
@@ -113,13 +123,16 @@
                 <input type="text" placeholder="Type the correct word..." id="input">
                 <button id="enviar" class="btn2">Check</button>            
             </div>
-            <p id="pontos"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 32px;">Score: </span></p><br><br>
+           
+            
+            <div class="correct-icon-message">
+                <img src="img/correct.png" id="correct-icon" style="display: none; width:70px;" >
+                <p id="pontos"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 32px;"></span></p><br><br>
+                
+            </div>
+
+            <img src="img/wrong.png" id="wrong-icon" style="display: none; width:70px;" >
             <p id="erros"><span class="correct-answer" style="font-size: 28px;"></span></p>
-            
-            <!-- <div id="progressContainer">
-                <div id="progressBar"></div>
-            </div> -->
-            
         </div>
     
     <!--  JOGO SEGUNDO SEMESTRE -->   
@@ -134,7 +147,7 @@
             </div>
             <p id="pontos2"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 32px;">Score: </span></p><br><br>
             <p id="erros2"><span class="correct-answer" style="font-size: 28px;"></span></p>
-         
+            
 
         </div>
     

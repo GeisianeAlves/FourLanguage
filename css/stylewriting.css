@@ -56,6 +56,7 @@ html {
 }
 
 .palavras {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
@@ -316,18 +317,40 @@ footer:hover {
   text-decoration: none;
   cursor: pointer;
 }
-#restart {
+
+#modal-btn {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+}
+#restart, #btn-voltar-popup {
   cursor: pointer;
-  height: 30px;
+  height: 50px;
   width: 150px;
   background-color: rgb(250, 250, 186);
   border: 2px solid rgb(237, 184, 86);
   border-radius: 10px;
   margin-top: 30px;
   font-weight: bold;
+  font-size: 1.1em;
   color: #393c3f;
 }
-#restart:hover {
+#btn-voltar-popup a {  
+  color: #393c3f;
+}
+.plus-points-span {
+  position: absolute;
+  font-size: 1em;
+  /* font-weight: bold; */
+  color: rgb(107, 138, 107);
+  display: none; /* Initially hidden */
+  z-index: 10; /* Ensure it appears above other elements */
+}
+
+#restart:hover, #btn-voltar-popup:hover {
   background-color: rgb(241, 197, 115);;
 }
 
@@ -355,7 +378,8 @@ footer:hover {
     margin-left: 40px;
   }
   .palavras p {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
   }
   #tema {
     font-size: 2rem;
@@ -366,6 +390,7 @@ footer:hover {
   .modal {
     width: 300px;
   }
+ 
   .container-botton {
     width: 500px;
   }

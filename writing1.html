@@ -13,7 +13,9 @@
     rel="stylesheet"
   />
     <style>
-        .main{ background: url(img/stars.jpg); background-size:cover; background-repeat: no-repeat; width: 100vw; height: 90vh;
+        .main{ 
+          background: url(img/stars.jpg); background-size:cover; background-repeat: no-repeat;
+           width: 100vw; height: 90vh;
         display: flex; flex-direction: column; }
     </style>
 
@@ -73,8 +75,10 @@
       <span class="close" onclick="closeModal()">&times;</span>
       <h3>Your progress</h3>
       <p id="questions-qty"></p>
-
-      <button id="restart" onclick="reiniciarJogo()"> Redo Quiz!</button>
+      <div id="modal-btn">
+        <button id="btn-voltar-popup"><a href="tela_skills.html"> &larr; Back</a></button>
+        <button id="restart" onclick="reiniciarJogo()"> Redo Quiz!</button>
+      </div>
   </div>
 </div>
 
@@ -94,6 +98,7 @@
         <div id="part-1">
           <h1 id="tema">SPACE</h1>
           <div class="palavras">
+            <p id="display-plus-points"><span class="plus-points-span" style="display: none;">+100</span></p>
             <p class="correct">Saturn</p>
             <p class="incorrect">wanderlust</p> 
             <p class="incorrect">naive</p>
@@ -132,6 +137,7 @@
         <div id="part-2" >
           <h1 id="tema">PARK</h1>
           <div class="palavras">
+            <p id="display-plus-points"><span class="plus-points-span2" style="display: none;">+100</span></p>
             <p class="correct">recreation</p>
             <p class="incorrect">picnik</p> 
             <p class="correct">playground</p>    
@@ -167,6 +173,7 @@
         <div id="part-3">
           <h1 id="tema">MUSEUM</h1>
           <div class="palavras">
+            <p id="display-plus-points"><span class="plus-points-span3" style="display: none;">+100</span></p>
             <p class="correct">history</p>
             <p class="incorrect">height</p> 
             <p class="incorrect">width</p>
@@ -202,6 +209,7 @@
        <div id="part-4">
          <h1 id="tema">BUSINESS</h1>
          <div class="palavras">
+          <p id="display-plus-points"><span class="plus-points-span4" style="display: none;">+100</span></p>
            <p class="correct">startup</p>
            <p class="incorrect">busy</p> 
            <p class="correct">profit</p>   
@@ -241,6 +249,7 @@
        <div id="part-5">
          <h1 id="tema">NEWS</h1>
          <div class="palavras">
+          <p id="display-plus-points"><span class="plus-points-span5" style="display: none;">+100</span></p>
            <p class="correct">journalism</p>
            <p class="incorrect">appetizer</p> 
            <p class="correct">coverage</p>   
@@ -281,6 +290,7 @@
       <div id="part-6">
         <h1 id="tema">CULTURE</h1>
         <div class="palavras">
+          <p id="display-plus-points"><span class="plus-points-span6" style="display: none;">+100</span></p>
           <p class="incorrect">bread</p>
           <p class="correct">ethnicity</p>
           <p class="incorrect">spice</p> 
@@ -315,9 +325,7 @@
     <img src="img/planet_red.png" id="img-planet">
 
  <!-- Footer -->
- <footer class="footer">
-    <p>Criado por: Geisiane Alves, Rafaela Araujo, Raquel Diniz e Vinicius Pereira</p>
-</footer>
+ 
 
 
 <script>
