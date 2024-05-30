@@ -15,9 +15,24 @@
     rel="stylesheet"
   />
 
-    <script src="utils/renderUnit.js"></script>
+    <script src="utils/renderGrammar.js"></script>
     <script>
-      window.renderUnit();
+      window.renderGrammar();
+      window.addEventListener('scroll', function() {
+       if (window.pageYOffset > 200) {
+          document.querySelector('.back-to-top-button').style.display = 'block';
+       } else {
+          document.querySelector('.back-to-top-button').style.display = 'none';
+       }
+       });
+    
+       document.querySelector('.back-to-top-button a').addEventListener('click', function(e) {
+       e.preventDefault();
+       window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+       });
+       });
     </script>
     
   </head>
@@ -66,16 +81,21 @@
       <!-- chamando a formatacao do cabecalho -->
     <script src="utils/renderHeader.js"> </script> 
     </header>
-
+    <!-- botao de voltar ao menu -->
+    <div class="back-to-top-button">
+      <a href="#header">
+        <i class="fas fa-arrow-up"></i>
+      </a>
+    </div>
     <div class="container-nav-units">
       <ul>                        
          <div class="unit-nav">
-            <li><a href="#">Verbs: Tenses</a></li>
-            <li><a href="#">Sentence Structure</a></li>
-            <li><a href="#">Articles</a></li>
-            <li><a href="#">Nouns</a></li>
-            <li><a href="#">Pronouns</a></li>
-            <li><a href="#">Adjectives | Adverbs</a></li>                       
+            <li><a href="?render=verbs">Verbs: Tenses</a></li>
+            <li><a href="?render=sentence">Sentence Structure</a></li>
+            <li><a href="?render=articles">Articles</a></li>
+            <li><a href="?render=nouns">Nouns</a></li>
+            <li><a href="?render=pronouns">Pronouns</a></li>
+            <li><a href="?render=adjectives">Adjectives | Adverbs</a></li>                       
          </div>       
       </ul>
    </div>
@@ -91,7 +111,7 @@
 
     <div class="carousel-container">
       <div class="carousel-inner" style="transform: translateX(3%);"> 
-          <section class="carousel-section">
+          <section class="carousel-section" id="verbs" style="display: none;">
               
               <div class="box-content">
                 <h2>Verbs: Tenses (Present, Past, Future)</h2>
@@ -183,7 +203,7 @@
                 </ul>
               </div>
           </section>
-          <section class="carousel-section">
+          <section class="carousel-section" id="sentence" style="display: none;">
               
           <div class="box-content">
             <h2>Sentence Structure: Subject-Verb-Object (SVO)</h2>
@@ -230,8 +250,7 @@
               </div>
           </section>
 
-
-          <section class="carousel-section">
+          <section class="carousel-section" id="articles" style="display: none;">
               <!-- <h2>Articles (A, An, The)</h2> -->
               <div class="box-content">
                 <h2>Articles (A, An, The)</h2>
@@ -277,7 +296,7 @@
               </div>
           </section>
 
-          <section class="carousel-section">
+          <section class="carousel-section" id="nouns" style="display: none;">
              
               <div class="box-content">
                 
@@ -323,7 +342,7 @@
               </div>
           </section>
 
-          <section class="carousel-section">
+          <section class="carousel-section" id="pronouns" style="display: none;">
               
               <div class="box-content">
                 <h2>Pronouns (Subject, Object, Possessive)</h2>
@@ -438,7 +457,7 @@
               
               </div>
           </section>
-          <section class="carousel-section">
+          <section class="carousel-section" id="adjectives" style="display: none;">
               
               <div class="box-content">
                 <h2>Adjectives and Adverbs</h2>
@@ -483,12 +502,6 @@
                   <li>Adjectives and adverbs add detail and precision to our language.</li>
                 </ul>
               </div>
-<!-- botao de voltar ao menu -->
-<div class="back-to-top-button">
-  <a href="#header">
-    <i class="fas fa-arrow-up"></i>
-  </a>
-</div>
           </section>
 
           
@@ -508,8 +521,7 @@
 
       <img src="img/logo-four.png" alt="" width="40vw" > 
       <p>Four Language</p></p> <br><hr><br> 
-      <p class="mt-4 text-sm text-white-100 snipcss0-4-7-9"
-      ">
+      <p class="mt-4 text-sm text-white-100 snipcss0-4-7-9">
         O Four Language tem o objetivo de auxiliar os estudantes da
         Fatec que cursam a matéria de Inglês.
       </p>
