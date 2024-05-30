@@ -84,9 +84,12 @@ function replaceVisibleText(element, regex) {
 }
 
 function scrollToFirstMatch(searchTerm) {
-  const firstMatch = document.querySelector(".highlight");
-  if (firstMatch) {
-    firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
+  const highlights = document.querySelectorAll(".highlight");
+  for (let highlight of highlights) {
+    if (highlight.textContent.toLowerCase() === searchTerm) {
+      highlight.scrollIntoView({ behavior: "smooth", block: "center" });
+      break;
+    }
   }
 }
 
