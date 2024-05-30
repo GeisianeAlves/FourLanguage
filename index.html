@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styleIndex.css" />
@@ -31,11 +31,28 @@
     </style>
   <title> Four Language | Home Page</title>
   <script src="utils/renderHeader.js"> </script>
+  <script>
+    window.addEventListener('scroll', function() {
+       if (window.pageYOffset > 200) {
+          document.querySelector('.back-to-top-button').style.display = 'block';
+       } else {
+          document.querySelector('.back-to-top-button').style.display = 'none';
+       }
+       });
+    
+       document.querySelector('.back-to-top-button a').addEventListener('click', function(e) {
+       e.preventDefault();
+       window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+       });
+       });
+ </script>
 </head>
 
 <body>
 
-  <header class="cabecalho">
+  <header class="cabecalho" id="header">
     <div class="container-nav">
     <nav class="nav-menu">
       <img src="img/logo-four.png" alt="Logo Four Language" width="60vw" class="logo-four">
@@ -85,6 +102,12 @@
     <!-- chamando a formatacao do cabecalho -->
  
   </header>
+  <!-- botao de voltar ao menu -->
+  <div class="back-to-top-button">
+    <a href="#header">
+    <i class="fas fa-arrow-up"></i>
+    </a>
+ </div>
 
 
    <!--seção - banners temas principais-->
