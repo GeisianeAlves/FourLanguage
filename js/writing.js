@@ -21,7 +21,7 @@ function handleOptionClick(event) {
         const correctAudio = new Audio('/img/correct-choice.mp3'); // Caminho para o arquivo de som correto
         correctAudio.play();
     } else {
-        const incorrectAudio = new Audio('/img/buzzer-or-wrong-answer.mp3'); // Caminho para o arquivo de som incorreto
+        const incorrectAudio = new Audio('/buzzer-or-wrong-answer.mp3'); // Caminho para o arquivo de som incorreto
         incorrectAudio.play();
     }
 
