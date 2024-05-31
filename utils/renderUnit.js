@@ -1,6 +1,6 @@
 function renderUnit() {
   const params = new URLSearchParams(window.location.search);
-  if (!window.location.pathname.includes("/saibamais", "/saibamais_2ano", "/saibamais_3ano")) return;
+  if (!window.location.pathname.includes("/saibamais")) return;
   const sem = params.get("sem");
 
   document.addEventListener("DOMContentLoaded", () => {

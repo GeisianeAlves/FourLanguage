@@ -1,30 +1,298 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Four Language</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="utils/renderUnit.js"></script>
-    <script>
+
+<head>
+   <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+   <title>Four Language</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="css/stylesmais.css">
+   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet" />
+   <script src="utils/renderUnit.js"></script>
+   <script>
       window.renderUnit();
-    </script>
-  </head>
+      window.addEventListener('scroll', function () {
+         if (window.pageYOffset > 200) {
+            document.querySelector('.back-to-top-button').style.display = 'block';
+         } else {
+            document.querySelector('.back-to-top-button').style.display = 'none';
+         }
+      });
 
-  <body>  
-     <!-- TERCEIRO SEMESTRE -->
-     <div class="revisao-item" id="terceiro">
-    </div>
+      document.querySelector('.back-to-top-button a').addEventListener('click', function (e) {
+         e.preventDefault();
+         window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+         });
+      });
+   </script>
+</head>
 
-    <!-- QUARTO SEMESTRE -->
-    <div class="revisao-item" id="quarto">
-     
-    </div>
-  </body>
+<body>
+   <!-- QUINTO SEMESTRE -->
+   <header class="cabecalho" id="header">
+      <div class="container-nav">
+         <nav class="nav-menu">
+            <img src="img/logo-four.png" alt="Logo Four Language" width="60vw" class="logo-four">
+            <ul class="lista-nao-ordenada">
+               <li class="item-lista-cabecalho">
+                  <a href="index.html">Home</a>
+               </li>
+               <li class="item-lista-cabecalho">
+                  Games
+                  <ul>
+                     <li class="item-lista-cabecalho"><a href="tela_skills.html">All </a></li>
+                     <li class="item-lista-cabecalho"><a href="quiz.html">Extra</a></li>
+                  </ul>
+               </li>
+               <li class="item-lista-cabecalho">
+                  <a href="revisao.html"> Content Review</a>
+                  <ul>
+                     <!-- <li class="item-lista-cabecalho">1º Semester</li> -->
+                     <!-- <li class="item-lista-cabecalho" id="segundo-semestre">2º Semester</li>
+                           <li class="item-lista-cabecalho" id="terceiro-semestre"> <a href="saibamais_2ano.html">3º Semester</a></li>
+                           <li class="item-lista-cabecalho" id="quarto-semestre"> <a href="saibamais_2ano.html">4º Semester</a></li>
+                           <li class="item-lista-cabecalho"  id="quarto-semestre"> <a href="saibamais_3ano.html">5º Semester</a></li>
+                           <li class="item-lista-cabecalho"  id="quarto-semestre"> <a href="saibamais_3ano.html">6º Semester</a></li> -->
+                  </ul>
+               </li>
+               <li class="item-lista-cabecalho">
+                  <a href="grammar.html"> Grammar</a>
+               </li>
+               <li class="item-lista-cabecalho"><a href="creditos.html">About</a></li>
+               <div class="menu-direita">
+                  <li>
+      
+                     <form action="#">
+                       <input type="text" placeholder="Search Content..." class="search-bar" id="searchInput">
+                       <button class="nav-botao" type="submit" id="searchButton">go</button>
+                       <button class="nav-botao"><a href="login.html">Sign out</a></button>
+                     </form>        
+                   </input>        
+                   </li>
+           
+               </div>
+            </ul>
+      </div>
+      </nav>
+      <!-- chamando a formatacao do cabecalho -->
+      <script src="utils/renderHeader.js"> </script>
+   </header>
+
+   <!-- botao de voltar ao menu -->
+   <div class="back-to-top-button">
+      <a href="#header">
+         <i class="fas fa-arrow-up"></i>
+      </a>
+   </div>
+
+   <div class="revisao-item" id="quinto-unit" style="display: none;">
+      <!-- menu lateral -->
+      <div class="revisao-item" id="quinto"></div>
+      <div class="container-nav-units">
+         <ul>
+            <div class="unit-nav">
+               <li><a href="#quinto-unitx">Unit x</a></li>
+               <li><a href="#quinto-unity">Unit y</a></li>
+               <li><a href="#quinto-unitz">Unit z</a></li>
+            </div>
+         </ul>
+      </div>
+      <section class="section-content1" id="quinto-unitx">
+         <img class="revisao-img1" src="img/P1.jpg" alt="" />
+         <!-- CARDS DE CONTEUDO  UNIT 10-->
+         <div class="card-container">
+            <div class="card">
+               <h4>be: <em>10</em></h4>
+               <img src="" width="400vw" alt="" />
+               <blockquote>Fonte: </blockquote>
+               <p>content</p>
+            </div>
+            <div class="card">
+               <h4>be: question <br> Prepositions: in and near
+               </h4>
+               <img src="" width="400vw" alt="" />
+               <blockquote>Fonte: </blockquote>
+            </div>
+            <div class="card">
+               <h4>A/An</h4>
+               <img src="" width="400vw" alt="" />
+               <blockquote>Fonte: </blockquote>
+            </div>
+         </div>
+         <!--  DICAS UNIT 10 -->
+         <!-- TIPS UNIT -->
+         <div class="container-tips">
+            <div class="tips-content1">
+               <h5>Tips About Unit 10</h5>
+               <p>To learn more about this <br> content,we recommend this <br> trustworthy websites...</p>
+            </div>
+            <!-- SEGUNDA DIV - SEGUNDA COLUNA  -->
+            <div class="tips-content2">
+               <div class="box3-color1">
+                  <p><img src="img/livrolampada.png" alt=""> CONTENT</p>
+                  <a href="#">Acess</a>
+               </div>
+               <div class="box3-color2">
+                  <p><img src="img/casestudy.png" alt=""> CONTENT</p>
+                  <a href="#">Acess</a>
+               </div>
+               <div class="box3-color3">
+                  <p> <img src="img/girlstudying.png" alt=""> CONTENT</p>
+                  <a href="#">Acess</a>
+               </div>
+            </div>
+         </div>
+         <!-- MATERIAIS -->
+         <section class="section-materials">
+            <div>
+               <!-- Material de aula -->
+               <h4>Material aula</h4>
+               <!-- icone-livro 1 -->
+               <p>
+                  Baixe o livro das unidades:
+               </p>
+               <br>
+               <p><img src="img/seta-do-circulo-do-livro-para-a-direita.svg" alt="Ícone Livro" width="30vw">
+                  <a href="books/Business_Start-Up_1_Student_39_Student's_book.pdf"><i>Business</i> Start-Up 2 Student's
+                     Book</a>
+               </p>
+            </div>
+         </section>
+      </section>
 
 
+
+      <section class="section-content2" id="quinto-unity"></section>
+      <section class="section-content3" id="quinto-unitz"></section>
+   </div>
+
+
+
+
+
+
+
+   <!-- SEXTO SEMESTRE -->
+   <div id="sexto-unit" style="display: none;">
+      <div class="revisao-item" id="sexto">
+
+         <div class="container-nav-units">
+            <ul>
+               <div class="unit-nav">
+                  <li><a href="#sexto-unit1">Unit 1</a></li>
+                  <li><a href="#sexto-unit5">Unit 5</a></li>
+                  <li><a href="#sexto-unit12">Unit 12</a></li>
+               </div>
+            </ul>
+         </div>
+
+
+         <!-- UNIT 1 SEGUNDO LIVRO -->
+         <section class="section-content1" id="sexto-unit1">
+            <!-- CARDS DE CONTEUDO  UNIT 1-->
+            <h2>Unit 1</h2>
+            <div class="card-container">
+               <div class="card">
+                  <h4>be: <em>10</em></h4>
+                  <img src="" width="400vw" alt="" />
+                  <blockquote>Fonte: </blockquote>
+                  <p>content</p>
+               </div>
+               <div class="card">
+                  <h4>be: question <br> Prepositions: in and near
+                  </h4>
+                  <img src="" width="400vw" alt="" />
+                  <blockquote>Fonte: </blockquote>
+               </div>
+               <div class="card">
+                  <h4>A/An</h4>
+                  <img src="" width="400vw" alt="" />
+                  <blockquote>Fonte: </blockquote>
+               </div>
+            </div>
+            <!--  DICAS UNIT 10 -->
+            <!-- TIPS UNIT -->
+            <div class="container-tips">
+               <div class="tips-content1">
+                  <h5>Tips About Unit 10</h5>
+                  <p>To learn more about this <br> content,we recommend this <br> trustworthy websites...</p>
+               </div>
+               <!-- SEGUNDA DIV - SEGUNDA COLUNA  -->
+               <div class="tips-content2">
+                  <div class="box3-color1">
+                     <p><img src="img/livrolampada.png" alt=""> CONTENT</p>
+                     <a href="#">Acess</a>
+                  </div>
+                  <div class="box3-color2">
+                     <p><img src="img/casestudy.png" alt=""> CONTENT</p>
+                     <a href="#">Acess</a>
+                  </div>
+                  <div class="box3-color3">
+                     <p> <img src="img/girlstudying.png" alt=""> CONTENT</p>
+                     <a href="#">Acess</a>
+                  </div>
+               </div>
+            </div>
+            <!-- MATERIAIS -->
+            <section class="section-materials">
+               <div>
+                  <!-- Material de aula -->
+                  <h4>Material aula</h4>
+                  <!-- icone-livro 1 -->
+                  <p>
+                     Baixe o livro das unidades:
+                  </p>
+                  <br>
+                  <p><img src="img/seta-do-circulo-do-livro-para-a-direita.svg" alt="Ícone Livro" width="30vw">
+                     <a href="books/Business_Start-Up_1_Student_39_Student's_book.pdf"><i>Business</i> Start-Up 2
+                        Student's Book</a>
+                  </p>
+               </div>
+            </section>
+         </section>
+
+         <!-- UNIT 5 SEGUNDO LIVRO -->
+         <section class="section-content2" id="sexto-unit5"></section>
+         
+         <!-- UNIT 12 SEGUNDO LIVRO -->
+         <section class="section-content3" id="sexto-unit12"></section>
+      </div>
+
+
+
+
+
+      
+   </div>
+
+
+
+   <!-- Footer -->
+   <footer class="rodape">
+      <img src="img/logo-four.png" alt="" width="40vw">
+      <p>Four Language</p>
+      </p> <br>
+      <hr>
+      <br>
+      <p class="mt-4 text-sm text-white-100 snipcss0-4-7-9">
+         O Four Language tem o objetivo de auxiliar os estudantes da
+         Fatec que cursam a matéria de Inglês.
+      </p>
+      <p class="text-sm text-gray-100 snipcss0-2-41-42">
+         © Copyright 2024 Four Language Inc. Todos os direitos reservados.
+      </p>
+      <!-- Estilo do rodape - footer -->
+      <script src="utils/renderFooter.js"></script>
+   </footer>
+
+</body>
 <script src="js/script.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 </body>
+
 </html>

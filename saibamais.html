@@ -78,7 +78,7 @@
                      <li>
 
                         <form action="#">
-                          <input type="text" placeholder="Search Content..." class="search-bar" id="serachInput">
+                          <input type="text" placeholder="Search Content..." class="search-bar" id="searchInput">
                           <button class="nav-botao" type="submit" id="searchButton">go</button>
                           <button class="nav-botao"><a href="login.html">Sign out</a></button>
                         </form>        
@@ -93,21 +93,24 @@
       <!-- chamando a formatacao do cabecalho -->
       <script src="utils/renderHeader.js"> </script>
       </header>
-
+            <!-- botao de voltar ao menu -->
+            <div class="back-to-top-button">
+               <a href="#header">
+                 <i class="fas fa-arrow-up"></i>
+               </a>
+             </div>
       <!-- secao dos banners e a principal -->
-      
-      <div class="container-nav-units">
-         <ul>                        
-            <div class="unit-nav">
-               <li><a href="#primeiro-unit1">Unit 1</a></li>
-               <li><a href="#primeiro-unit2">Unit 2</a></li>
-               <li><a href="#primeiro-unit3">Unit 3</a></li>                       
-            </div>       
-         </ul>
-      </div>              
-
-      
+        
       <div id="primeiro-unit" style="display: none;">
+         <div class="container-nav-units">
+            <ul>                        
+               <div class="unit-nav">
+                  <li><a href="#primeiro-unit1">Unit 1</a></li>
+                  <li><a href="#primeiro-unit2">Unit 2</a></li>
+                  <li><a href="#primeiro-unit3">Unit 3</a></li>                       
+               </div>       
+            </ul>
+         </div>            
          <section class="section-content1" id="primeiro-unit1">
             <!-- secao conteudo 1 -->
             <h2>Unit 1 - Welcome</h2>
@@ -228,11 +231,11 @@
             
 
             <!-- botao de voltar ao menu -->
-            <div class="back-to-top-button">
+            <!-- <div class="back-to-top-button">
                <a href="#header">
                  <i class="fas fa-arrow-up"></i>
                </a>
-             </div>
+             </div> -->
              
          </section>
 
@@ -549,18 +552,19 @@
       
       <!-- SEGUNDO SEMESTRE -->   
             
-      <!-- <div class="container-nav-units">
-         <ul>                        
-            <div class="unit-nav">
-               <li><a href="#segundo-unit4">Unit 4</a></li>
-               <li><a href="#segundo-unit5">Unit 5</a></li>
-               <li><a href="#segundo-unit6">Unit 6</a></li>                       
-            </div>       
-         </ul>
-      </div>               -->
+          
  
       <!-- <a class="">Four<span>Language</span></a> -->
       <div id="segundo-unit" style="display: none;">
+         <div class="container-nav-units">
+            <ul>                        
+               <div class="unit-nav">
+                  <li><a href="#segundo-unit4">Unit 4</a></li>
+                  <li><a href="#segundo-unit5">Unit 5</a></li>
+                  <li><a href="#segundo-unit6">Unit 6</a></li>                       
+               </div>       
+            </ul>
+         </div>    
          <div
             class="revisao-item"
             id="segundo"
@@ -683,12 +687,8 @@
             
 
             
-            
-               <div class="back-to-top-button">
-                  <a href="#header">
-                    <i class="fas fa-arrow-up"></i>
-                  </a>
-                </div>
+
+
             </section>
 
              <!-- UNIT 5 -->
@@ -954,6 +954,7 @@
 
            
          </div>
+
       </div>
 
       
@@ -981,7 +982,7 @@
 
       
       <script src="js/script.js"></script>
-      <script src="banners.js"></script>
+     
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
    </body>
