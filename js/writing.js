@@ -18,18 +18,21 @@ function handleOptionClick(event) {
     const scoreText = isCorrect ? '+100' : '-100';
 
     if (isCorrect) {
-        const correctAudio = new Audio('/img/correct-choice.mp3'); // Caminho para o arquivo de som correto
-        correctAudio.play();
+        const correctAudio = document.getElementById('correctAudio');
+        correctAudio.play().catch(error => {
+            console.error('Erro ao reproduzir o áudio correto:', error);
+        });
     } else {
-        const incorrectAudio = new Audio('/buzzer-or-wrong-answer.mp3'); // Caminho para o arquivo de som incorreto
-        incorrectAudio.play();
+        const incorrectAudio = document.getElementById('incorrectAudio');
+        incorrectAudio.play().catch(error => {
+            console.error('Erro ao reproduzir o áudio incorreto:', error);
+        });
     }
 
     updateScore(points);
     displayPoints(displayPlusPoints, scoreText, textColor, option, palavrasDiv);
     hideOption(option, isCorrect);
 }
-
 
 function updateScore(points) {
     score += points;
