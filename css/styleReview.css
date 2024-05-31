@@ -88,7 +88,7 @@ html {
   cursor: pointer;
   font-weight: bolder;
   font-family: 'Space Mono';
-  background-color: #4c546c;
+  background-color: #4c546cc9;
   color: white;
   border-radius: 28px; /* Ajuste o valor conforme desejado para bordas mais arredondadas */
   font-size: 19px;
@@ -163,6 +163,14 @@ html {
   text-decoration: underline;
   font-size: 18px;
   padding-top: 8px;
+}
+
+.citacao{
+  /* text-align: left; */
+  font-weight: 300;
+  padding-left: 300px;
+  color: #4c546c;
+  font-style: italic;
 }
 
 
@@ -340,7 +348,7 @@ body{
   /* Existing styles for the revision item */
   width: 100%; /* Span the full width of the revision item */
   padding: 10px; /* Add padding for spacing within the band */
-  background-color: #4c546c; /* Semi-transparent black background */
+  background-color: #4c546ced; /* Semi-transparent black background */
   color: white; /* Light text color for contrast */
   text-align: center; /* Center the text within the band */
   font-weight: bold; /* Make the text bold for emphasis */
@@ -350,7 +358,7 @@ body{
 .band-title {
   font-weight: bold; /* Make the title bold */
   margin-right: 5px; /* Add spacing after the title */
-  color: #ddd;
+  color: #ffffffde;
 }
 
 

@@ -120,44 +120,52 @@ const phrases = ["receive", "mean", "again", "card", "tea", "one more time", "co
         
 
         if (palpiteCorreto) {
-            //computar acertos
-            correctGuesses+=100;
+            // computar acertos
+            correctGuesses += 100;
             console.log('acertos: ' + correctGuesses);
+            let audio;
 
             function mostrarRespostaCorreta(mensagem) {
+                // Reproduz o áudio
+                const correctAudio = document.getElementById('correctAudio');
+                correctAudio.play().catch(error => {
+                    console.error('Erro ao reproduzir o áudio incorreto:', error);
+                });
+
                 const messageElements = document.querySelectorAll('.result'); // Seleciona todos os elementos com a classe 'result'
                 messageElements.forEach(element => {
-                    element.innerHTML =  `<span style="color: #007700;"> ${mensagem} </span> <br> `;
-                });
+                    element.innerHTML = `<span style="color: #01C929;">${mensagem}</span><br>`;
+                });              
+                
             }
+        
             mostrarRespostaCorreta(mensagem);
-
-            //atualizar o score do usuário
+        
+            // atualizar o score do usuário
             function updateScore(score) {
                 const scoreElements = document.querySelectorAll('.score-div, .pontos-div'); // Seleciona todos os elementos com as classes 'score-div' e 'pontos-div'
                 scoreElements.forEach(element => {
-                    element.innerText = ` Score: ${score} `;
+                    element.innerText = `Score: ${score}`;
                 });
-
-                // const botaoGravar = document.querySelectorAll('[id^="record"]');
-                // botaoGravar.forEach(el => {
-                //     el.style.display = 'none';
-                // });
             }
-            
+        
             updateScore(correctGuesses);
-            
-
         } else {
             function mostrarRespostaErrada(mensagem) {
+                
+                const incorrectAudio = document.getElementById('incorrectAudio');
+                incorrectAudio.play().catch(error => {
+                    console.error('Erro ao reproduzir o áudio incorreto:', error);
+                });
+            
                 const messageElements = document.querySelectorAll('.result'); // Seleciona todos os elementos com a classe 'result'
                 messageElements.forEach(element => {
-                    element.innerHTML =  `<span style="color: #F54A19;"> ${mensagem} </span> <br> `;
+                    element.innerHTML = `<span style="color: #F54A19;">${mensagem}</span><br>`;
                 });
             }
             mostrarRespostaErrada(mensagem);
         }
-
+        
     }
 
 

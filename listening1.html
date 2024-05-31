@@ -9,6 +9,7 @@
     <title>Listening | Game</title>
     <link rel="stylesheet" href="css/estilo_listening_game.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
         .container-jogo { background: url(img/stars.jpg)no-repeat; background-size: cover; width: 100%; height: 100vh;}
@@ -72,7 +73,17 @@
      
     </header>
 
-    
+    <div id="resultModal-listening" class="modal-listening">
+        <div class="modal-content-listening">
+            <h1>Thanks for playing!</h1><br>
+            <h3>Your progress</h3>
+            <p id="questions-qty"></p>
+            <div id="modal-btn">
+              <button id="btn-voltar-popup"><a href="tela_skills.html"> &larr; Back</a></button>
+              <button id="restart" onclick="restartGame()"> Play again!</button>
+            </div>
+        </div>
+      </div>
   
 
     <div class="container-jogo">
@@ -91,40 +102,43 @@
             <p>Places</p>
             <p>Traveling</p> 
             <p>Food</p> 
-    
-            <!-- <div>        
-                <img id="img-3"  src="img/planet_pink.png" class="object" data-value="3">
-            </div>      -->
            
-        </div>
+        </div> 
     
-        <div class="container-com-barra">
+        <div id="container-com-barra">
             <div id="progressContainer">
-                <div id="progressBar"></div>
+                <div id="progressBar">
+                    <i class="fa fa-rocket" aria-hidden="true"></i>
+                    <div id="progressPercentage">0%</div>
+                </div>
             </div>
         
         <!--  JOGO PRIMEIRO SEMESTRE -->   
         <div class="all level" id=primeiro >
-            <h3 style="color: rgb(85, 170, 85);">Semester 1 </h3>
-            <h2 style="color: rgb(180, 197, 180);">Listen to the words, <br>and spell them correctly</h2>
+
+            <!-- <h3 style="color: rgb(85, 170, 85);">Semester 1 </h3> -->
+            <h2 style="color: rgb(180, 197, 180);">PLAY the words, <br>and spell them correctly</h2>
             <button  id="gerarPalavra1"><img id="playpalavra" src="img/play6.png" alt=""></button>
         
             <div class="cont">
+                <!-- <button id="enviar" class="btn1">Quit</button>    -->
                 <input type="text" placeholder="Type the correct word..." id="input">
                 <button id="enviar" class="btn2">Check</button>            
             </div>
-            <p id="pontos"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 32px;">Score: </span></p><br><br>
-            <p id="erros"><span class="correct-answer" style="font-size: 28px;"></span></p>
-            
-            <!-- <div id="progressContainer">
-                <div id="progressBar"></div>
-            </div> -->
-            
+                       
+            <div class="correct-wrong-message">
+                <img src="img/correct.png" id="correct-icon" style="display: none; width:70px;" >
+                <p id="pontos"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 24px;"></span></p><br><br>
+
+                <img src="img/wrong.png" id="wrong-icon" style="display: none; width:70px;" >
+                <p id="erros"><span class="correct-answer" style="font-size: 24px;"></span></p>
+            </div>
+
         </div>
     
     <!--  JOGO SEGUNDO SEMESTRE -->   
         <div class="all level" id=segundo >
-            <h3 style="color: rgb(170, 116, 85);">Semester 2 </h3>
+            <!-- <h3 style="color: rgb(170, 116, 85);">Semester 2 </h3> -->
             <h2 style="color: rgb(180, 197, 180);">Listen to the words, <br>and spell them correctly</h2>
             <button  id="gerarPalavra2"><img id="playpalavra" src="img/play6.png" alt=""></button>
         
@@ -132,15 +146,19 @@
                 <input type="text" placeholder="Type the correct word..." id="input2">
                 <button id="enviar2" class="btn2">Check</button>            
             </div>
-            <p id="pontos2"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 32px;">Score: </span></p><br><br>
-            <p id="erros2"><span class="correct-answer" style="font-size: 28px;"></span></p>
-         
+            <div class="correct-wrong-message">
+                <img src="img/correct.png" id="correct-icon2" style="display: none; width:70px;" >
+                <p id="pontos2"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 24px;"></span></p><br><br>
+
+                <img src="img/wrong.png" id="wrong-icon2" style="display: none; width:70px;" >
+                <p id="erros2"><span class="correct-answer" style="font-size: 24px;"></span></p>
+            </div>
 
         </div>
     
         <!--  JOGO TERCEIRO SEMESTRE -->   
         <div class="all level" id=terceiro >
-            <h3 style="color: rgb(224, 212, 249);">Semester 3 </h3>
+            <!-- <h3 style="color: rgb(224, 212, 249);">Semester 3 </h3> -->
             <h2 style="color: rgb(180, 197, 180);">Listen to the words, <br>and spell them correctly</h2>
             <button  id="gerarPalavra3"><img id="playpalavra" src="img/play6.png" alt=""></button>
         
@@ -148,9 +166,13 @@
                 <input type="text" placeholder="Type the correct word..." id="input3">
                 <button id="enviar3" class="btn2">Check</button>            
             </div>
-            <p id="pontos3"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 32px;">Score: </span></p><br><br>
-            <p id="erros3"><span class="correct-answer" style="font-size: 28px;"></span></p>
-            
+            <div class="correct-wrong-message">
+                <img src="img/correct.png" id="correct-icon3" style="display: none; width:70px;" >
+                <p id="pontos3"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 24px;"></span></p><br><br>
+
+                <img src="img/wrong.png" id="wrong-icon3" style="display: none; width:70px;" >
+                <p id="erros3"><span class="correct-answer" style="font-size: 24px;"></span></p>
+            </div>
         </div>
     
     
@@ -164,9 +186,13 @@
                 <input type="text" placeholder="Type the correct word..." id="input4">
                 <button id="enviar4" class="btn2">Check</button>            
             </div>
-            <p id="pontos4"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 32px;">Score: </span></p><br><br>
-            <p id="erros4"><span class="correct-answer" style="font-size: 28px;"></span></p>
-            
+            <div class="correct-wrong-message">
+                <img src="img/correct.png" id="correct-icon4" style="display: none; width:70px;" >
+                <p id="pontos4"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 24px;"></span></p><br><br>
+
+                <img src="img/wrong.png" id="wrong-icon4" style="display: none; width:70px;" >
+                <p id="erros4"><span class="correct-answer" style="font-size: 24px;"></span></p>
+            </div>
         </div>
     
         <!--  JOGO QUINTO SEMESTRE -->   
@@ -179,14 +205,18 @@
                 <input type="text" placeholder="Type the correct word..." id="input5">
                 <button id="enviar5" class="btn2">Check</button>            
             </div>
-            <p id="pontos5"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 32px;">Score: </span></p><br><br>
-            <p id="erros5"><span class="correct-answer" style="font-size: 28px;"></span></p>
-            
+            <div class="correct-wrong-message">
+                <img src="img/correct.png" id="correct-icon5" style="display: none; width:70px;" >
+                <p id="pontos5"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 24px;"></span></p><br><br>
+
+                <img src="img/wrong.png" id="wrong-icon5" style="display: none; width:70px;" >
+                <p id="erros5"><span class="correct-answer" style="font-size: 24px;"></span></p>
+            </div>
         </div>
     
         <!--  JOGO SEXTO SEMESTRE -->   
         <div class="all level" id=sexto >
-            <h3 style="color: rgb(64, 82, 138);">Semester 5 </h3>
+            <h3 style="color: rgb(64, 82, 138);">Semester 6 </h3>
             <h2 style="color: rgb(180, 197, 180);">Listen to the words, <br>and spell them correctly</h2>
             <button  id="gerarPalavra6"><img id="playpalavra" src="img/play6.png" alt=""></button>
         
@@ -194,12 +224,17 @@
                 <input type="text" placeholder="Type the correct word..." id="input6">
                 <button id="enviar6" class="btn2">Check</button>            
             </div>
-            <p id="pontos6"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 32px;">Score: </span></p><br><br>
-            <p id="erros6"><span class="correct-answer" style="font-size: 28px;"></span></p>
-            
+            <div class="correct-wrong-message">
+                <img src="img/correct.png" id="correct-icon6" style="display: none; width:70px;" >
+                <p id="pontos6"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 24px;"></span></p><br><br>
+
+                <img src="img/wrong.png" id="wrong-icon6" style="display: none; width:70px;" >
+                <p id="erros6"><span class="correct-answer" style="font-size: 24px;"></span></p>
+            </div>
+        </div> 
+      
+
         </div>
-    
-    </div>
     
         <div class="container-direita">
     
@@ -207,30 +242,41 @@
                 <img id="myImg" src="img/help.svg" alt="Image">
             </div>
     
-            <!--Container lateral direita sobre como jogar-->
+            
             <div id="myModal" class="modal">
-                <!-- Modal content -->
+                
                 <div class="modal-content">
                 <h2>How to play</h2>
-                <p>First, click on 'Play' icon.</p>
-                <p>After, write the word you listen to.</p>
-                <p>Then, click on 'Check button'.</p>
-                <h4>Score</h4>
-                <p>If you type correcty, points will be added to your score.</p>
-                <h4>Word displayed:</h4>
-                <p>Also, the right one will be displayed.</p>
+                <p>1. Click on 'Play' icon.</p>
+                <p>2. Write the word you listen to.</p>
+                <p>3. Click on 'Check' button.</p>
+                <h4>1 correct word = 100 points.</h4>
+                <!-- <p>1 correct word = 100 points.</p> -->
+                <!-- <h4>Word displayed:</h4>
+                <p>Also, the right one will be displayed.</p> -->
             </div>          
             
-        </div>
+            </div>
     
-            <!--imagem-->
+           
             <div>
                 <img id="img-2"  src="img/astronaut.jpg" class="object" data-value="10">   
             </div> 
     
-        </div>
+        </div> 
     
-       
+           <!------------------- efeitos sonoros ------------>
+        <div id="audio" style="display: none;">
+            <audio id="victoryAudio">
+                <source src="img/victory.mp3" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+    
+            <audio id="game-over">
+                <source src="img/game-over.mp3" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>       
+        </div>
     
     </div> 
 

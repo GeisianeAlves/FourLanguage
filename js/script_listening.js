@@ -29,7 +29,7 @@ class WordGame {
         this.palavras4 = ['swin', 'bath', 'Poland', 'sales', 'sometimes', 'newspaper', 'photocopy', 'weight', 'train', 'socket'];
         this.palavras4 = ['chess', 'windy', 'comfortable', 'expensive', 'figure', 'project', 'delay', 'flight', 'passenger', 'departure'];
         this.palavras5 = ['expect', 'briefcase', 'security', 'luggage', 'prefer', 'message', 'discuss', 'deliver', 'vacation', 'discount'];
-        this.palavras6 = ['exhibition', 'distance', 'convinient', 'demand', 'increase', 'thousand', 'engineer', 'assistant', 'suplly', 'mobile'];
+        this.palavras6 = ['exhibition', 'distance', 'convinient', 'demand', 'increase', 'thousand', 'engineer', 'assistant', 'supply', 'mobile'];
 
         this.currentArray = null;
 
@@ -64,9 +64,14 @@ class WordGame {
         let voice = new SpeechSynthesisUtterance();
         voice.lang = "en-US";
         voice.text = this[palavraProp];
+        this.speaking = true;
+        voice.onend = () => {
+            this.speaking = false;
+            this.updateProgressBar();
+        };
+
         speechSynthesis.speak(voice);
-        
-        this.updateProgressBar();
+    
     }
     
     generateAndSpeakWord1() {
@@ -106,16 +111,62 @@ class WordGame {
             case 'input5': palavra = this.palavra5; break;
             case 'input6': palavra = this.palavra6; break;
         }
+        const tempoDesaparecer = 3000;
 
         if (userInput === palavra) {
-            this[correctProp]++;
-            document.querySelector(`#${pontosId} span`).textContent = 'Score: ' + this[correctProp];
+            this[correctProp]+=100;
+            
+            // document.querySelector(`#${pontosId} span`).textContent = 'Score: ' + this[correctProp];
+            document.querySelector(`#${pontosId} span`).textContent = palavra;
+            const correctIcon = document.getElementById('correct-icon');
+            const correctIcon2 = document.getElementById('correct-icon2');
+            const correctIcon3= document.getElementById('correct-icon3');
+            const correctIcon4 = document.getElementById('correct-icon4');
+            const correctIcon5 = document.getElementById('correct-icon5');
+            const correctIcon6 = document.getElementById('correct-icon6');
+            correctIcon.style.display = 'block';
+            correctIcon2.style.display = 'block';
+            correctIcon3.style.display = 'block';
+            correctIcon4.style.display = 'block';
+            correctIcon5.style.display = 'block';
+            correctIcon6.style.display = 'block';
+
+            setTimeout(() => {
+                document.querySelector(`#${pontosId} span`).textContent = '';
+                correctIcon.style.display = 'none';
+                correctIcon2.style.display = 'none';
+                correctIcon3.style.display = 'none';
+                correctIcon4.style.display = 'none';
+                correctIcon5.style.display = 'none';
+                correctIcon6.style.display = 'none';
+            }, tempoDesaparecer);
         } else {
+           
             this[`incorrect${capitalize(inputId)}`]++;
+
+            const wrongIcon = document.getElementById('wrong-icon');
+            const wrongIcon2 = document.getElementById('wrong-icon2');
+            const wrongIcon3 = document.getElementById('wrong-icon3');
+            const wrongIcon4 = document.getElementById('wrong-icon4');
+            const wrongIcon5 = document.getElementById('wrong-icon5');
+            const wrongIcon6 = document.getElementById('wrong-icon6');
+            wrongIcon.style.display = 'block';
+            wrongIcon2.style.display = 'block';
+            wrongIcon3.style.display = 'block';
+            wrongIcon4.style.display = 'block';
+            wrongIcon5.style.display = 'block';
+            wrongIcon6.style.display = 'block';
+
             document.querySelector(`#${errosId} span`).textContent = `Correct spelling: '${palavra}'`;
-            const tempoDesaparecer = 3000;
+            
             setTimeout(() => {
                 document.querySelector(`#${errosId} span`).textContent = '';
+                wrongIcon.style.display = 'none';
+                wrongIcon2.style.display = 'none';
+                wrongIcon3.style.display = 'none';
+                wrongIcon4.style.display = 'none';
+                wrongIcon5.style.display = 'none';
+                wrongIcon6.style.display = 'none';
             }, tempoDesaparecer);
         }
 
@@ -127,34 +178,88 @@ class WordGame {
         if (this.currentArray) {
             let totalWords;
             switch (this.currentArray) {
-                case this.palavras: totalWords = 10; break;
-                case this.palavras2: totalWords = 10; break;
-                case this.palavras3: totalWords = 11; break;
-                case this.palavras4: totalWords = 11; break;
-                case this.palavras5: totalWords = 11; break;
-                case this.palavras6: totalWords = 11; break;
-                default: totalWords = 10; // Default to 10 words
+                case this.palavras:
+                case this.palavras2:
+                case this.palavras7:
+                    totalWords = 10;
+                    break;
+                case this.palavras3:
+                case this.palavras4:
+                case this.palavras5:
+                case this.palavras6:
+                    totalWords = 11;
+                    break;
+                default:
+                    totalWords = 10; // Default to 10 words
             }
             const wordsUsed = totalWords - this.currentArray.length;
             const progressPercent = (wordsUsed / totalWords) * 100;
-            document.getElementById('progressBar').style.width = `${progressPercent}%`;
-            document.getElementById('progressBar').style.width = `${progressPercent}%`;
+            const progressBar = document.getElementById('progressBar');
+            const progressPercentage = document.getElementById('progressPercentage');
+    
+            progressBar.style.width = `${progressPercent}%`;
+            progressPercentage.textContent = `${Math.round(progressPercent)}%`;
+    
+            if (progressPercent === 100) {
+                this.endGame();
+            }
         }
     }
-    // endGame() {
-    //     // Esconder todos os elementos relacionados ao jogo
-    //     document.getElementById('primeiro').style.display = 'none';
-    // }
+    
+
+    showModal(correctPalavra) {
+        const modal = document.getElementById('resultModal-listening');
+        const scoreMessage = document.getElementById('questions-qty');
+        scoreMessage.textContent = correctPalavra;
+        modal.style.display = 'block';
+
+    }
+
+    endGame() {
+        const totalCorrect = this.correctPalavra + this.correctPalavra2 + this.correctPalavra3 + this.correctPalavra4 + this.correctPalavra5 + this.correctPalavra6;
+        const totalWords = this.palavras.length + this.palavras2.length + this.palavras3.length + this.palavras4.length + this.palavras5.length + this.palavras6.length;
+        const correctPercentage = (totalCorrect / (totalWords * 100)) * 100; // Calcular a porcentagem de acertos
+    
+        const delay = 1000; 
+        let endAudio;
+    
+        if (correctPercentage <= 50) {
+            endAudio = document.getElementById('victoryAudio');
+            endAudio.play().catch(error => {
+                console.error('Erro ao reproduzir o áudio incorreto:', error);
+            });
+           
+        } else {
+           endAudio = document.getElementById('game-over');
+            endAudio.play().catch(error => {
+                console.error('Erro ao reproduzir o áudio incorreto:', error);
+            });
+        }
+    
+        endAudio.play();
+        endAudio.onended = () => {
+            this.showModal(totalCorrect); // Passar a pontuação final para showModal
+            
+            // Esconder elementos
+            const divDicas = document.querySelector('.dicas');
+            divDicas.style.display = 'none';
+            const divDireita = document.querySelector('.container-direita');
+            divDireita.style.display = 'none';
+            const divProgressBar = document.getElementById('container-com-barra');
+            divProgressBar.style.display = 'none';
+        };
+    }
+    
 }
 
 const game = new WordGame();
 
-// function closeModal()
 
-// Função para esconder elementos ao fim do jogo
-// function hideElements() {
-//     game.endGame();
-// }
+function restartGame() {
 
-// // Chamando a função hideElements ao final do jogo
-// hideElements();
+    var urlPartes = window.location.href.split("/");
+    var ultimaParteUrl = urlPartes[urlPartes.length - 1];
+
+    window.location.href = ultimaParteUrl;
+}
+

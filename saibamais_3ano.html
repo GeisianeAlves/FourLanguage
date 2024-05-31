@@ -1,30 +1,599 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Four Language</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="utils/renderUnit.js"></script>
-    <script>
+
+<head>
+   <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+   <title>Four Language</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="css/stylesmais.css">
+   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet" />
+   <script src="utils/renderUnit.js"></script>
+   <script>
       window.renderUnit();
-    </script>
-  </head>
+      window.addEventListener('scroll', function () {
+         if (window.pageYOffset > 200) {
+            document.querySelector('.back-to-top-button').style.display = 'block';
+         } else {
+            document.querySelector('.back-to-top-button').style.display = 'none';
+         }
+      });
 
-  <body>  
-     <!-- TERCEIRO SEMESTRE -->
-     <div class="revisao-item" id="terceiro">
-    </div>
+      document.querySelector('.back-to-top-button a').addEventListener('click', function (e) {
+         e.preventDefault();
+         window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+         });
+      });
+   </script>
+</head>
 
-    <!-- QUARTO SEMESTRE -->
-    <div class="revisao-item" id="quarto">
-     
-    </div>
-  </body>
+<body>
+   <!-- QUINTO SEMESTRE -->
+   <header class="cabecalho" id="header">
+      <div class="container-nav">
+         <nav class="nav-menu">
+            <img src="img/logo-four.png" alt="Logo Four Language" width="60vw" class="logo-four">
+            <ul class="lista-nao-ordenada">
+               <li class="item-lista-cabecalho">
+                  <a href="index.html">Home</a>
+               </li>
+               <li class="item-lista-cabecalho">
+                  Games
+                  <ul>
+                     <li class="item-lista-cabecalho"><a href="tela_skills.html">All </a></li>
+                     <li class="item-lista-cabecalho"><a href="quiz.html">Extra</a></li>
+                  </ul>
+               </li>
+               <li class="item-lista-cabecalho">
+                  <a href="revisao.html"> Content Review</a>
+                  <ul>
+                     <!-- <li class="item-lista-cabecalho">1º Semester</li> -->
+                     <!-- <li class="item-lista-cabecalho" id="segundo-semestre">2º Semester</li>
+                           <li class="item-lista-cabecalho" id="terceiro-semestre"> <a href="saibamais_2ano.html">3º Semester</a></li>
+                           <li class="item-lista-cabecalho" id="quarto-semestre"> <a href="saibamais_2ano.html">4º Semester</a></li>
+                           <li class="item-lista-cabecalho"  id="quarto-semestre"> <a href="saibamais_3ano.html">5º Semester</a></li>
+                           <li class="item-lista-cabecalho"  id="quarto-semestre"> <a href="saibamais_3ano.html">6º Semester</a></li> -->
+                  </ul>
+               </li>
+               <li class="item-lista-cabecalho">
+                  <a href="grammar.html"> Grammar</a>
+               </li>
+               <li class="item-lista-cabecalho"><a href="creditos.html">About</a></li>
+               <div class="menu-direita">
+                  <li>
+      
+                     <form action="#">
+                       <input type="text" placeholder="Search Content..." class="search-bar" id="searchInput">
+                       <button class="nav-botao" type="submit" id="searchButton">go</button>
+                       <button class="nav-botao"><a href="login.html">Sign out</a></button>
+                     </form>        
+                   </input>        
+                   </li>
+           
+               </div>
+            </ul>
+      </div>
+      </nav>
+      <!-- chamando a formatacao do cabecalho -->
+      <script src="utils/renderHeader.js"> </script>
+   </header>
+
+   <!-- botao de voltar ao menu -->
+   <div class="back-to-top-button">
+      <a href="#header">
+         <i class="fas fa-arrow-up"></i>
+      </a>
+   </div>
+
+   <div class="revisao-item" id="quinto-unit" style="display: none;">
+      <!-- menu lateral -->
+      <div class="revisao-item" id="quinto"></div>
+      <div class="container-nav-units">
+         <ul>
+            <div class="unit-nav">
+               <li><a href="#quinto-unitx">Unit x</a></li>
+               <li><a href="#quinto-unity">Unit y</a></li>
+               <li><a href="#quinto-unitz">Unit z</a></li>
+            </div>
+         </ul>
+      </div>
+      <section class="section-content1" id="quinto-unitx">
+         <img class="revisao-img1" src="img/P1.jpg" alt="" />
+         <!-- CARDS DE CONTEUDO  UNIT 10-->
+         <div class="card-container">
+            <div class="card">
+               <h4>be: <em>10</em></h4>
+               <img src="" width="400vw" alt="" />
+               <blockquote>Fonte: </blockquote>
+               <p>content</p>
+            </div>
+            <div class="card">
+               <h4>be: question <br> Prepositions: in and near
+               </h4>
+               <img src="" width="400vw" alt="" />
+               <blockquote>Fonte: </blockquote>
+            </div>
+            <div class="card">
+               <h4>A/An</h4>
+               <img src="" width="400vw" alt="" />
+               <blockquote>Fonte: </blockquote>
+            </div>
+         </div>
+         <!--  DICAS UNIT 10 -->
+         <!-- TIPS UNIT -->
+         <div class="container-tips">
+            <div class="tips-content1">
+               <h5>Tips About Unit 10</h5>
+               <p>To learn more about this <br> content,we recommend this <br> trustworthy websites...</p>
+            </div>
+            <!-- SEGUNDA DIV - SEGUNDA COLUNA  -->
+            <div class="tips-content2">
+               <div class="box3-color1">
+                  <p><img src="img/livrolampada.png" alt=""> CONTENT</p>
+                  <a href="#">Acess</a>
+               </div>
+               <div class="box3-color2">
+                  <p><img src="img/casestudy.png" alt=""> CONTENT</p>
+                  <a href="#">Acess</a>
+               </div>
+               <div class="box3-color3">
+                  <p> <img src="img/girlstudying.png" alt=""> CONTENT</p>
+                  <a href="#">Acess</a>
+               </div>
+            </div>
+         </div>
+         <!-- MATERIAIS -->
+         <section class="section-materials">
+            <div>
+               <!-- Material de aula -->
+               <h4>Material aula</h4>
+               <!-- icone-livro 1 -->
+               <p>
+                  Baixe o livro das unidades:
+               </p>
+               <br>
+               <p><img src="img/seta-do-circulo-do-livro-para-a-direita.svg" alt="Ícone Livro" width="30vw">
+                  <a href="books/Business_Start-Up_1_Student_39_Student's_book.pdf"><i>Business</i> Start-Up 2 Student's
+                     Book</a>
+               </p>
+            </div>
+         </section>
+      </section>
 
 
+
+      <section class="section-content2" id="quinto-unity"></section>
+      <section class="section-content3" id="quinto-unitz"></section>
+   </div>
+
+
+
+
+
+
+
+   <!-- SEXTO SEMESTRE -->
+   <div id="sexto-unit" style="display: none;">
+      <div class="revisao-item" id="sexto">
+
+         <div class="container-nav-units">
+            <ul>
+               <div class="unit-nav">
+                  <li><a href="#sexto-unit1">Unit 1</a></li>
+                  <li><a href="#sexto-unit5">Unit 5</a></li>
+                  <li><a href="#sexto-unit12">Unit 12</a></li>
+               </div>
+            </ul>
+         </div>
+
+
+         <!-- UNIT 1 SEGUNDO LIVRO -->
+         <section class="section-content1" id="sexto-unit1">
+            <!-- conteutdo unit 1 segundo livro -->
+            <h2>Unit 1 - Introductions</h2>
+            <img class="revisao-img1" src="img/P1.jpg" alt="" />
+            <h3>Talking About Your Job</h3>
+
+  <p>
+    Discussing your work is a common topic in everyday conversations. Here's how to effectively talk about your job:
+  </p>
+  <ul>
+    <li>Explain your job title and company in a clear and concise way.</li>
+    <li>Provide a brief overview of your responsibilities and what your work entails.</li>
+    <li>Tailor your explanation to the audience's level of understanding.</li>
+    <li>Be enthusiastic and positive when discussing your work.</li>
+    <li>If appropriate, you can share interesting aspects or challenges of your job.</li>
+  </ul>
+
+  <h3>Talking About Products and Services</h3>
+
+  <p>
+    Conversations about products and services are frequent in daily life. Here are some tips for discussing them effectively:
+  </p>
+  <ul>
+    <li>Clearly identify the product or service you're talking about.</li>
+    <li>Highlight the key features and benefits of the product or service.</li>
+    <li>Use persuasive language to generate interest, but avoid being overly promotional.</li>
+    <li>Consider the context of the conversation and the audience's needs.</li>
+    <li>Be prepared to answer questions and address any concerns about the product or service.</li>
+  </ul>
+
+  <h3>Eating Out</h3>
+
+  <p>
+    Dining out is a popular social activity. Here's how to discuss eating out in everyday conversations:
+  </p>
+  <ul>
+    <li>Sharing restaurant recommendations or discussing favorite cuisines.</li>
+    <li>Making plans for dining out with friends or colleagues.</li>
+    <li>Talking about your dining experiences, including food, service, and ambiance.</li>
+    <li>Using appropriate vocabulary related to food and restaurants.</li>
+    <li>Discussing dietary restrictions or preferences when planning meals with others.</li>
+  </ul>
+
+            <!-- CARDS DE CONTEUDO  UNIT 1-->
+            <div class="card-container">
+               <div class="card">
+                  <h4>be: <em>present simple</em></h4>
+                  <img
+                     src="" width="400vw"
+                     alt=""
+                     />
+                  <blockquote>Fonte: </blockquote>
+                  <p>content</p>
+               </div>
+               <div class="card">
+                  <h4>be: question <br> TEXT</h4>
+                  <img
+                     src="" width="400vw"
+                     alt=""
+                     />
+                  <blockquote>Fonte: </blockquote>
+               </div>
+               <div class="card">
+                  <h4>A/An</h4>
+                  <img
+                     src="" width="400vw"
+                     alt=""
+                     />
+                  <blockquote>Fonte: </blockquote>
+               </div>
+            </div>
+            <!--  DICAS UNIT 11 -->
+            <!-- TIPS UNIT 11--> 
+            <div class="container-tips">
+               <div class="tips-content1">
+                  <h5>Tips About Unit 1</h5>
+                  <p>To learn more about this <br> content,we recommend this <br> trustworthy websites...</p>
+               </div>
+               <!-- SEGUNDA DIV - SEGUNDA COLUNA  -->
+               <div class="tips-content2">
+                  <div class="box3-color1" >
+                     <p><img src="img/livrolampada.png" alt=""> CONTENT</p>
+                     <a href="#">Access</a>
+                  </div>
+                  <div class="box3-color2">
+                     <p><img src="img/casestudy.png" alt=""> CONTENT</p>
+                     <a href="#">Access</a>
+                  </div>
+                  <div class="box3-color3">
+                     <p> <img src="img/girlstudying.png" alt=""> CONTENT</p>
+                     <a href="#">Access</a>
+                  </div>
+               </div>
+            </div>
+
+         <!-- MATERIAIS -->
+      <section class="section-materials" >
+         <div>
+            <!-- Material de aula -->
+            <h4>Material aula</h4>
+            <!-- icone-livro 1 -->
+            <p>
+               Baixe o livro das unidades:
+            </p>
+            <br>
+            <p><img src="img/seta-do-circulo-do-livro-para-a-direita.svg" alt="Ícone Livro" width="30vw">
+               <a
+                  href="books/Business_Start-Up_1_Student_39_Student's_book.pdf"
+                  ><i>Business</i> Start-Up 2 Student's Book</a
+                  >
+            </p>
+         </div>
+      </section>
+      <br>
+      <button class="button-return">
+         <a
+            href="revisao.html"
+            >Return</a
+            >
+         </button>
+         </section>
+
+         <!-- UNIT 5 SEGUNDO LIVRO -->
+         <section class="section-content2" id="sexto-unit5">
+            <!-- conteutdo unit 1 segundo livro -->
+           
+            <h2>Unit 5 - Arrangements</h2>
+            <img class="revisao-img1" src="img/P1.jpg" alt="" />
+            <h3>Making Arrangements</h3>
+
+  <p>
+    Coordinating activities and events requires clear communication. Here's how to effectively make arrangements:
+  </p>
+  <ul>
+    <li><strong>Proposing a plan:</strong> Suggest an activity, time, and location that works for you.</li>
+    <li><strong>Checking availability:</strong> Ask about the other person's schedule and find a mutually agreeable time.</li>
+    <li><strong>Confirming details:</strong> Recap the agreed-upon arrangements to avoid misunderstandings.</li>
+    <li><strong>Using appropriate expressions:</strong> Utilize phrases like "How does this sound?", "Would [time] work for you?", and "Let's confirm the details." </li>
+  </ul>
+
+  <h3>Confirming Arrangements</h3>
+
+  <p>
+    Following up on arrangements ensures everyone is on the same page. Here's how to effectively confirm arrangements:
+  </p>
+  <ul>
+    <li><strong>Recapping the details:</strong> Briefly restate the activity, time, and location.</li>
+    <li><strong>Seeking confirmation:</strong> Ask for verbal or written confirmation to solidify the plans.</li>
+    <li><strong>Responding to changes:</strong> If adjustments are needed, discuss them openly and find a solution that works for all parties.</li>
+  </ul>
+
+  <h3>Sightseeing</h3>
+
+  <p>
+    Exploring new places is a common travel activity. Here's how to discuss sightseeing in everyday conversations:
+  </p>
+  <ul>
+    <li><strong>Sharing sightseeing recommendations:</strong> Recommend interesting landmarks, museums, or attractions.</li>
+    <li><strong>Planning sightseeing activities:</strong> Discussing places to visit and creating an itinerary.</li>
+    <li><strong>Talking about sightseeing experiences:</strong> Sharing impressions of visited locations and attractions.</li>
+    <li><strong>Using vocabulary related to travel and landmarks:</strong> Utilize words like "landmark", "museum", "historical site", and "scenic view".</li>
+    <li><strong>Discussing transportation and logistics:</strong>  Plan how to get around and navigate while sightseeing.</li>
+  </ul>
+
+
+            <!-- CARDS DE CONTEUDO  UNIT 5-->
+            <div class="card-container">
+               <div class="card">
+                  <h4>be: <em>present simple</em></h4>
+                  <img
+                     src="" width="400vw"
+                     alt=""
+                     />
+                  <blockquote>Fonte: </blockquote>
+                  <p>content</p>
+               </div>
+               <div class="card">
+                  <h4>be: question <br> TEXT</h4>
+                  <img
+                     src="" width="400vw"
+                     alt=""
+                     />
+                  <blockquote>Fonte: </blockquote>
+               </div>
+               <div class="card">
+                  <h4>A/An</h4>
+                  <img
+                     src="" width="400vw"
+                     alt=""
+                     />
+                  <blockquote>Fonte: </blockquote>
+               </div>
+            </div>
+            <!--  DICAS UNIT 5 -->
+            <!-- TIPS UNIT 5--> 
+            <div class="container-tips">
+               <div class="tips-content1">
+                  <h5>Tips About Unit 5</h5>
+                  <p>To learn more about this <br> content,we recommend this <br> trustworthy websites...</p>
+               </div>
+               <!-- SEGUNDA DIV - SEGUNDA COLUNA  -->
+               <div class="tips-content2">
+                  <div class="box3-color1" >
+                     <p><img src="img/livrolampada.png" alt=""> CONTENT</p>
+                     <a href="#">Access</a>
+                  </div>
+                  <div class="box3-color2">
+                     <p><img src="img/casestudy.png" alt=""> CONTENT</p>
+                     <a href="#">Access</a>
+                  </div>
+                  <div class="box3-color3">
+                     <p> <img src="img/girlstudying.png" alt=""> CONTENT</p>
+                     <a href="#">Access</a>
+                  </div>
+               </div>
+            </div>
+
+         <!-- MATERIAIS -->
+      <section class="section-materials" >
+         <div>
+            <!-- Material de aula -->
+            <h4>Material aula</h4>
+            <!-- icone-livro 1 -->
+            <p>
+               Baixe o livro das unidades:
+            </p>
+            <br>
+            <p><img src="img/seta-do-circulo-do-livro-para-a-direita.svg" alt="Ícone Livro" width="30vw">
+               <a
+                  href="books/Business_Start-Up_1_Student_39_Student's_book.pdf"
+                  ><i>Business</i> Start-Up 2 Student's Book</a
+                  >
+            </p>
+         </div>
+      </section>
+      <br>
+      <button class="button-return">
+         <a
+            href="revisao.html"
+            >Return</a
+            >
+         </button>
+         </section>
+         
+         <!-- UNIT 12 SEGUNDO LIVRO -->
+         <section class="section-content3" id="sexto-unit12">
+ 
+            <!-- CARDS DE CONTEUDO  UNIT 1-->
+            <h2>Unit 12 - Agendas</h2>
+            <img class="revisao-img1" src="img/P1.jpg" alt="" />
+            <h3>Attending Meetings</h3>
+
+  <p>
+    Effective participation in meetings is crucial for professional success. Here's how to excel in meeting attendance:
+  </p>
+  <ul>
+    <li>Preparation: Review meeting agendas beforehand, gather relevant materials, and come prepared to contribute.</li>
+    <li>Active Listening: Pay close attention to what others are saying, take notes if needed, and avoid interrupting.</li>
+    <li>Engaged Participation: Actively participate in discussions, ask thoughtful questions, and share your insights.</li>
+    <li>Professional Conduct: Maintain professional demeanor, respect others' opinions, and avoid distractions.</li>
+    <li>Follow-up: Review meeting notes, complete action items, and follow up on commitments made during the meeting.</li>
+  </ul>
+
+  <h3>Passing on Information</h3>
+
+  <p>
+    Effective communication of information is essential in various settings. Here's how to convey information clearly and concisely:
+  </p>
+  <ul>
+    <li>Know your audience: Tailor your message to the receiver's level of understanding and background.</li>
+    <li>Clear and concise language: Use simple, direct language, avoiding jargon and technical terms.</li>
+    <li>Structured presentation: Organize your message logically, using headings, bullet points, and visuals if appropriate.</li>
+    <li>Active listening: Encourage questions and clarifications to ensure understanding.</li>
+    <li>Multiple channels: Use a combination of channels, such as email, verbal communication, or written documents, to reach the audience effectively.</li>
+  </ul>
+
+  <h3>Welcoming Visitors</h3>
+
+  <p>
+    Creating a welcoming atmosphere for visitors is essential for positive first impressions. Here's how to make visitors feel welcome:
+  </p>
+  <ul>
+    <li>Warm greetings: Greet visitors with a smile, introduce yourself, and offer assistance.</li>
+    <li>Clear directions: Provide clear directions to their destination or meeting location.</li>
+    <li>Offer refreshments: Offer water, coffee, or tea to make them comfortable.</li>
+    <li>Small talk: Engage in friendly conversation to put them at ease and make them feel valued.</li>
+    <li>Professionalism: Maintain a professional demeanor, dress appropriately, and project a positive image of the organization.</li>
+  </ul>
+
+  
+
+            <!-- CARDS DE CONTEUDO  UNIT 11-->
+            <div class="card-container">
+               <div class="card">
+                  <h4>be: <em>present simple</em></h4>
+                  <img
+                     src="" width="400vw"
+                     alt=""
+                     />
+                  <blockquote>Fonte: </blockquote>
+                  <p>content</p>
+               </div>
+               <div class="card">
+                  <h4>be: question <br> TEXT</h4>
+                  <img
+                     src="" width="400vw"
+                     alt=""
+                     />
+                  <blockquote>Fonte: </blockquote>
+               </div>
+               <div class="card">
+                  <h4>A/An</h4>
+                  <img
+                     src="" width="400vw"
+                     alt=""
+                     />
+                  <blockquote>Fonte: </blockquote>
+               </div>
+            </div>
+            <!--  DICAS UNIT 12 -->
+            <!-- TIPS UNIT 12--> 
+            <div class="container-tips">
+               <div class="tips-content1">
+                  <h5>Tips About Unit 12</h5>
+                  <p>To learn more about this <br> content,we recommend this <br> trustworthy websites...</p>
+               </div>
+               <!-- SEGUNDA DIV - SEGUNDA COLUNA  -->
+               <div class="tips-content2">
+                  <div class="box3-color1" >
+                     <p><img src="img/livrolampada.png" alt=""> CONTENT</p>
+                     <a href="#">Access</a>
+                  </div>
+                  <div class="box3-color2">
+                     <p><img src="img/casestudy.png" alt=""> CONTENT</p>
+                     <a href="#">Access</a>
+                  </div>
+                  <div class="box3-color3">
+                     <p> <img src="img/girlstudying.png" alt=""> CONTENT</p>
+                     <a href="#">Access</a>
+                  </div>
+               </div>
+            </div>
+
+         <!-- MATERIAIS -->
+      <section class="section-materials" >
+         <div>
+            <!-- Material de aula -->
+            <h4>Material aula</h4>
+            <!-- icone-livro 1 -->
+            <p>
+               Baixe o livro das unidades:
+            </p>
+            <br>
+            <p><img src="img/seta-do-circulo-do-livro-para-a-direita.svg" alt="Ícone Livro" width="30vw">
+               <a
+                  href="books/Business_Start-Up_1_Student_39_Student's_book.pdf"
+                  ><i>Business</i> Start-Up 2 Student's Book</a
+                  >
+            </p>
+         </div>
+      </section>
+      <br>
+      <button class="button-return">
+         <a
+            href="revisao.html"
+            >Return</a
+            >
+         </button>
+         </section>
+      </div>
+
+
+
+
+
+      
+   </div>
+
+
+
+   <!-- Footer -->
+   <footer class="rodape">
+      <img src="img/logo-four.png" alt="" width="40vw">
+      <p>Four Language</p>
+      </p> <br>
+      <hr>
+      <br>
+      <p class="mt-4 text-sm text-white-100 snipcss0-4-7-9">
+         O Four Language tem o objetivo de auxiliar os estudantes da
+         Fatec que cursam a matéria de Inglês.
+      </p>
+      <p class="text-sm text-gray-100 snipcss0-2-41-42">
+         © Copyright 2024 Four Language Inc. Todos os direitos reservados.
+      </p>
+      <!-- Estilo do rodape - footer -->
+      <script src="utils/renderFooter.js"></script>
+   </footer>
+
+</body>
 <script src="js/script.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 </body>
+
 </html>

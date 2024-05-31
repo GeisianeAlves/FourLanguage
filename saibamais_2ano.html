@@ -1,147 +1,689 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+   <head>
+      <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+      <title>Four Language</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/stylesmais.css">
+      <link
+         href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+         rel="stylesheet"
+         />
+      <script src="utils/renderUnit.js"></script>
+      <script>
+         window.renderUnit();
+         window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 200) {
+               document.querySelector('.back-to-top-button').style.display = 'block';
+            } else {
+               document.querySelector('.back-to-top-button').style.display = 'none';
+            }
+            });
+         
+            document.querySelector('.back-to-top-button a').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+               top: 0,
+               behavior: 'smooth'
+            });
+            });
+      </script>
 
-    <title>Four Language</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/stylesmais.css">
-    <script src="utils/renderUnit.js"></script>
-    <script>
-      window.renderUnit();
-    </script>
-  </head>
-
-  <header class="cabecalho">
-    <div class="container-nav">
-       <nav class="nav-menu">
-          <img src="img/logo-four.png" alt="Logo Four Language" width="60vw" class="logo-four">
-          <ul class="lista-nao-ordenada">
-             <li class="item-lista-cabecalho">
-                <a href="index.html">Home</a>
-             </li>
-             <li class="item-lista-cabecalho">
-                Games
-                <ul>
-                   <li class="item-lista-cabecalho"><a href="tela_skills.html">All </a></li>
-                   <li class="item-lista-cabecalho"><a href="quiz.html">Extra</a></li>
-                </ul>
-             </li>
-             <li class="item-lista-cabecalho">
-                <a href="revisao.html"> Content Review</a>
-                <ul>
-                   <!-- <li class="item-lista-cabecalho">1º Semester</li> -->
-                   <!-- <li class="item-lista-cabecalho" id="segundo-semestre">2º Semester</li>
-                   <li class="item-lista-cabecalho" id="terceiro-semestre"> <a href="saibamais_2ano.html">3º Semester</a></li>
-                   <li class="item-lista-cabecalho" id="quarto-semestre"> <a href="saibamais_2ano.html">4º Semester</a></li>
-                   <li class="item-lista-cabecalho"  id="quarto-semestre"> <a href="saibamais_3ano.html">5º Semester</a></li>
-                   <li class="item-lista-cabecalho"  id="quarto-semestre"> <a href="saibamais_3ano.html">6º Semester</a></li> -->
-                </ul>
-             </li>
-             <li class="item-lista-cabecalho">
-                <a href="grammar.html"> Grammar</a>
-             </li>
-             <li class="item-lista-cabecalho"><a href="creditos.html">About</a></li>
-             <div class="menu-direita">
-                <li>
-                   <input type="text" placeholder="Search Content..." class="search-bar">
-                   <button class="nav-botao"><a href="login.html">Sign out</a></button>
-                </li>
-             </div>
-          </ul>
-    </div>
-    </nav>
-        
- <!-- chamando a formatacao do cabecalho -->
- <script src="utils/renderHeader.js"> </script>
- </header>
-        <!-- TERCEIRO SEMESTRE -->
-        <div id="terceiro-unit" style="display: none;">
-         <div class="revisao-item" id="terceiro"></div>
-         <!-- <div class="container-nav-units">
-            <ul>                        
-               <div class="unit-nav">
-                  <li><a href="#primeiro-unit1">Unit 7</a></li>
-                  <li><a href="#primeiro-unit2">Unit 8</a></li>
-                  <li><a href="#primeiro-unit3">Unit 9</a></li>                       
-               </div>       
+   </head>
+   <header class="cabecalho" id="header">
+      <div class="container-nav">
+         <nav class="nav-menu">
+            <img src="img/logo-four.png" alt="Logo Four Language" width="60vw" class="logo-four">
+            <ul class="lista-nao-ordenada">
+               <li class="item-lista-cabecalho">
+                  <a href="index.html">Home</a>
+               </li>
+               <li class="item-lista-cabecalho">
+                  Games
+                  <ul>
+                     <li class="item-lista-cabecalho"><a href="tela_skills.html">All </a></li>
+                     <li class="item-lista-cabecalho"><a href="quiz.html">Extra</a></li>
+                  </ul>
+               </li>
+               <li class="item-lista-cabecalho">
+                  <a href="revisao.html"> Content Review</a>
+                  <ul>
+                     <!-- <li class="item-lista-cabecalho">1º Semester</li> -->
+                     <!-- <li class="item-lista-cabecalho" id="segundo-semestre">2º Semester</li>
+                        <li class="item-lista-cabecalho" id="terceiro-semestre"> <a href="saibamais_2ano.html">3º Semester</a></li>
+                        <li class="item-lista-cabecalho" id="quarto-semestre"> <a href="saibamais_2ano.html">4º Semester</a></li>
+                        <li class="item-lista-cabecalho"  id="quarto-semestre"> <a href="saibamais_3ano.html">5º Semester</a></li>
+                        <li class="item-lista-cabecalho"  id="quarto-semestre"> <a href="saibamais_3ano.html">6º Semester</a></li> -->
+                  </ul>
+               </li>
+               <li class="item-lista-cabecalho">
+                  <a href="grammar.html"> Grammar</a>
+               </li>
+               <li class="item-lista-cabecalho"><a href="creditos.html">About</a></li>
+               <div class="menu-direita">
+                  <li>
+      
+                     <form action="#">
+                       <input type="text" placeholder="Search Content..." class="search-bar" id="searchInput">
+                       <button class="nav-botao" type="submit" id="searchButton">go</button>
+                       <button class="nav-botao"><a href="login.html">Sign out</a></button>
+                     </form>        
+                   </input>        
+                   </li>
+           
+               </div>
             </ul>
-         </div>       -->
-          
-        </div>
+      </div>
+      </nav>
+      <!-- chamando a formatacao do cabecalho -->
+      <script src="utils/renderHeader.js"> </script>
+   </header>
 
-        <!-- QUARTO SEMESTRE -->
-        <div id="quarto-unit" style="display: none;">
-         <!-- <div class="container-nav-units">
-            <ul>                        
-               <div class="unit-nav">
-                  <li><a href="#segundo-unit10">Unit 10</a></li>
-                  <li><a href="#segundo-unit11">Unit 11</a></li>
-                  <li><a href="#segundo-unit12">Unit 12</a></li>                       
-               </div>       
-            </ul>
-         </div>       -->
+   <!-- botao de voltar ao menu -->
+   <div class="back-to-top-button">
+      <a href="#header">
+      <i class="fas fa-arrow-up"></i>
+      </a>
+   </div>
 
-          <div class="revisao-item" id="quarto">
-            <!-- UNIT 10 -->
-            <section class="section-content1" id="quarto-unit10">
 
-               <h2>Unit 10: Progress</h2>
-             
-               <h3>Asking and Answering Questions</h3>
-               <img
+   <!-- TERCEIRO SEMESTRE -->
+   <div id="terceiro-unit" style="display: none;">
+      <!-- menu lateral -->
+      <div class="revisao-item" id="terceiro"></div>
+      <div class="container-nav-units">
+         <ul>
+            <div class="unit-nav">
+               <li><a href="#terceiro-unit7">Unit 7</a></li>
+               <li><a href="#terceiro-unit8">Unit 8</a></li>
+               <li><a href="#terceiro-unit9">Unit 9</a></li>
+            </div>
+         </ul>
+      </div>
+
+      <!-- UNIT 7 -->
+      <section class="section-content1" id="terceiro-unit7">
+
+            <!-- CONTEUDO UNIT 7 -->
+            <h2>Unit 7: Meeting</h2>
+            <img
                class="revisao-img1"
                src="img/P1.jpg"
                alt=""
                />
-               <p>Asking questions is a fundamental part of communication. To gather information, use question words like:</p>
-             
+
+  <h3>Meeting Vocabulary and Phrases</h3>
+  <ul>
+    <li><strong>Starting and ending:</strong>
+      <ul>
+        <li>"Calling the meeting to order"</li>
+        <li>"Let's commence the meeting"</li>
+        <li>"Are there any questions before we proceed?"</li>
+        <li>"Let's conclude this meeting"</li>
+        <li>"Thank you for your valuable contributions"</li>
+      </ul>
+    </li>
+    <li><strong>Managing time:</strong>
+      <ul>
+        <li>"Let's maintain our focus on the agenda"</li>
+        <li>"We need to finalize this discussion within X minutes"</li>
+        <li>"Can we postpone this topic for our next meeting?"</li>
+      </ul>
+    </li>
+    <li><strong>Facilitating discussion:</strong>
+      <ul>
+        <li>"Who would like to initiate the discussion?"</li>
+        <li>"Are there any other viewpoints we should consider?"</li>
+        <li>"Let's get X's perspective on this"</li>
+        <li>"Can we recap the main points we've covered?"</li>
+      </ul>
+    </li>
+    <li><strong>Making decisions:</strong>
+      <ul>
+        <li>"I suggest we proceed with X"</li>
+        <li>"What are the alternative options available?"</li>
+        <li>"Do we have a consensus on this matter?"</li>
+        <li>"Let's conduct a vote to determine the best course of action"</li>
+      </ul>
+    </li>
+    <li><strong>Actions and follow-up:</strong>
+      <ul>
+        <li>"X, can you take responsibility for this task?"</li>
+        <li>"Let's set a deadline for completing X by [date]"</li>
+        <li>"We need to monitor the progress of X regularly"</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Discussing Meeting Agendas and Objectives</h3>
+  <p>
+    An effective meeting starts with a clear agenda and defined objectives.
+    Here's how to discuss meeting agendas and objectives:
+  </p>
+  <ol>
+    <li><strong>Define the purpose of the meeting:</strong> What do we want to achieve with this meeting?
+      <ul>
+        <li>Examples: Brainstorming new ideas, reviewing project progress, making decisions on a specific issue, providing updates to stakeholders</li>
+      </ul>
+    </li>
+    <li><strong>Create a clear and concise agenda:</strong>
+      <ul>
+        <li>What topics will be covered?</li>
+        <li>How much time will be allocated to each topic?</li>
+        <li>Ensure the agenda is relevant to the meeting's purpose and objectives.</li>
+      </ul>
+    </li>
+    <li><strong>Share the agenda in advance:</strong> Allow participants to prepare and bring relevant information.
+      <ul>
+        <li>Distribute the agenda via email or project management tools.</li>
+        <li>Encourage participants to come prepared to discuss the agenda items.</li>
+      </ul>
+    </li>
+    <li><strong>Stick to the agenda:</strong> Avoid tangents and keep the discussion on track.
+      <ul>
+        <li>The facilitator can politely redirect the conversation if needed.</li>
+      </ul>
+    </li>
+    <li><strong>Summarize key points and decisions at the end of the meeting.</strong></li>
+  </ol>
+
+  <h3>Effective Communication and Collaboration</h3>
+  <p>
+    Effective communication and collaboration are crucial for successful meetings.
+    Here are some tips:
+  </p>
+    <h3>Negotiation Skills and Conflict Resolution Strategies</h3>
+  <p>
+    Meetings can sometimes involve negotiation and conflict resolution. 
+    Here are some tips for handling these situations:
+  </p>
+         <!-- CARDS DE CONTEUDO  UNIT 10-->
+         <div class="card-container">
+            <div class="card">
+               <h4><em></em></h4>
+               <img
+                  src="" width="400vw"
+                  alt=""
+                  />
+               <blockquote>Fonte: </blockquote>
+               <p>content</p>
+            </div>
+            <div class="card">
+               <h4>be: question <br> Prepositions: in and near
+               </h4>
+               <img
+                  src="" width="400vw"
+                  alt=""
+                  />
+               <blockquote>Fonte: </blockquote>
+            </div>
+            <div class="card">
+               <h4>A/An</h4>
+               <img
+                  src="" width="400vw"
+                  alt=""
+                  />
+               <blockquote>Fonte: </blockquote>
+            </div>
+         </div>
+         <!--  DICAS UNIT 7 -->
+         <!-- TIPS UNIT --> 
+         <div class="container-tips">
+            <div class="tips-content1">
+               <h5>Tips About Unit 7</h5>
+               <p>To learn more about this <br> content,we recommend this <br> trustworthy websites...</p>
+            </div>
+            <!-- SEGUNDA DIV - SEGUNDA COLUNA  -->
+            <div class="tips-content2">
+               <div class="box3-color1" >
+                  <p><img src="img/livrolampada.png" alt=""> CONTENT</p>
+                  <a href="#">Acess</a>
+               </div>
+               <div class="box3-color2">
+                  <p><img src="img/casestudy.png" alt=""> CONTENT</p>
+                  <a href="#">Acess</a>
+               </div>
+               <div class="box3-color3">
+                  <p> <img src="img/girlstudying.png" alt=""> CONTENT</p>
+                  <a href="#">Acess</a>
+               </div>
+            </div>
+         </div>
+         <!-- MATERIAIS -->
+         <section class="section-materials" >
+            <div>
+               <!-- Material de aula -->
+               <h4>Material aula</h4>
+               <!-- icone-livro 1 -->
+               <p>
+                  Baixe o livro das unidades:
+               </p>
+               <br>
+               <p><img src="img/seta-do-circulo-do-livro-para-a-direita.svg" alt="Ícone Livro" width="30vw">
+                  <a
+                     href="books/Business_Start-Up_1_Student_39_Student's_book.pdf"
+                     ><i>Business</i> Start-Up 2 Student's Book</a
+                     >
+               </p>
+            </div>
+            
+         </section>
+         <br>
+         <button class="button-return">
+            <a
+               href="revisao.html"
+               >Return</a
+               >
+            </button>
+      </section>
+
+      <!-- UNIT 8 -->
+      <section class="section-content2" id="terceiro-unit8">
+        
+            <h2>Unit 8: Reporting </h2>
+          <img
+            class="revisao-img1"
+            src="img/P1.jpg"
+            alt=""
+            />
+  <h3>Understanding the Purpose and Structure of Business Reports</h3>
+  <p>
+    Business reports serve various purposes within an organization. Here's a breakdown of their structure:
+  </p>
+  <ul>
+    <li><strong>Purpose:</strong>
+      <ul>
+        <li>Inform: Provide data and analysis to support decision-making.</li>
+        <li>Persuade: Convince the reader to take a specific action or change their perspective.</li>
+        <li>Recommend: Suggest solutions or courses of action based on findings.</li>
+      </ul>
+    </li>
+    <li><strong>Basic Structure:</strong>
+      <ol>
+        <li><strong>Executive Summary:</strong> A concise overview of the report's main points, targeted towards busy readers.</li>
+        <li><strong>Introduction:</strong> Sets the context for the report and outlines the objectives.</li>
+        <li><strong>Methodology:</strong> Explains how data was collected and analyzed, ensuring transparency and credibility.</li>
+        <li><strong>Results:</strong> Presents the findings from data analysis in a clear and organized manner.</li>
+        <li><strong>Discussion:</strong> Interprets the results, highlighting trends, patterns, and key insights.</li>
+        <li><strong>Recommendations:</strong> Proposes actions based on findings, including implementation plans and strategies.</li>
+        <li><strong>Conclusion:</strong> Summarizes the report's key points and reiterates the main findings.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h3>Gathering and Analyzing Data for Reporting</h3>
+  <p>
+    Effective reporting relies on accurate and reliable data. Here's how to gather and analyze data:
+  </p>
+  <ol>
+    <li><strong>Identify Data Sources:</strong>
+      <ul>
+        <li>Internal databases (sales figures, customer data, project metrics)</li>
+        <li>Market research reports</li>
+        <li>Surveys and questionnaires</li>
+        <li>Experiments and case studies</li>
+      </ul>
+    </li>
+    <li><strong>Collect Data:</strong> Ensure data accuracy, completeness, and consistency through proper collection methods.</li>
+    <li><strong>Organize and Clean Data:</strong> Prepare data for analysis by identifying and correcting errors, inconsistencies, and missing values.</li>
+    <li><strong>Analyze Data:</strong> Use appropriate statistical and analytical methods to extract meaningful insights from the data. 
+      <ul>
+        <li>Examples: Charts, graphs, tables, statistical tests</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h3>Presenting Findings and Recommendations Clearly</h3>
+  <p>
+    The clarity and conciseness of your presentation significantly impact the report's effectiveness. Here are some tips:
+  </p>
+  <ul>
+    <li><strong>Use visuals effectively:</strong> Employ charts, graphs, and tables to represent data visually, making it easier to understand.</li>
+    <li><strong>Write in a clear and concise style:</strong> Avoid jargon and complex language. Use active voice and focus on the key message.</li>
+    <li><strong>Tailor the report to the audience:</strong> Consider their level of expertise and information needs when presenting findings and recommendations.</li>
+    <li><strong>Proofread and edit carefully:</strong> Ensure the report is free of errors in grammar, spelling, and formatting.</li>
+  </ul>
+
+  <h3>Developing Skills in Written and Oral Reporting</h3>
+  <p>
+    Business professionals need to be proficient in both written and oral reporting. Here's how to develop these skills:
+  </p>
+         <!-- CARDS DE CONTEUDO  UNIT 8-->
+         <div class="card-container">
+            <div class="card">
+               <h4>be: <em>10</em></h4>
+               <img
+                  src="" width="400vw"
+                  alt=""
+                  />
+               <blockquote>Fonte: </blockquote>
+               <p>content</p>
+            </div>
+            <div class="card">
+               <h4>be: question <br> Prepositions: in and near
+               </h4>
+               <img
+                  src="" width="400vw"
+                  alt=""
+                  />
+               <blockquote>Fonte: </blockquote>
+            </div>
+            <div class="card">
+               <h4>A/An</h4>
+               <img
+                  src="" width="400vw"
+                  alt=""
+                  />
+               <blockquote>Fonte: </blockquote>
+            </div>
+         </div>
+         <!--  DICAS UNIT Y -->
+         <!-- TIPS UNIT --> 
+         <div class="container-tips">
+            <div class="tips-content1">
+               <h5>Tips About Unit 8</h5>
+               <p>To learn more about this <br> content,we recommend this <br> trustworthy websites...</p>
+            </div>
+            <!-- SEGUNDA DIV - SEGUNDA COLUNA  -->
+            <div class="tips-content2">
+               <div class="box3-color1" >
+                  <p><img src="img/livrolampada.png" alt=""> CONTENT</p>
+                  <a href="#">Acess</a>
+               </div>
+               <div class="box3-color2">
+                  <p><img src="img/casestudy.png" alt=""> CONTENT</p>
+                  <a href="#">Acess</a>
+               </div>
+               <div class="box3-color3">
+                  <p> <img src="img/girlstudying.png" alt=""> CONTENT</p>
+                  <a href="#">Acess</a>
+               </div>
+            </div>
+         </div>
+         <!-- MATERIAIS -->
+         <section class="section-materials" >
+            <div>
+               <!-- Material de aula -->
+               <h4>Material aula</h4>
+               <!-- icone-livro 1 -->
+               <p>
+                  Baixe o livro das unidades:
+               </p>
+               <br>
+               <p><img src="img/seta-do-circulo-do-livro-para-a-direita.svg" alt="Ícone Livro" width="30vw">
+                  <a
+                     href="books/Business_Start-Up_1_Student_39_Student's_book.pdf"
+                     ><i>Business</i> Start-Up 2 Student's Book</a
+                     >
+               </p>
+            </div>
+         </section>
+         <br>
+         <button class="button-return">
+            <a
+               href="revisao.html"
+               >Return</a
+               >
+            </button>
+      </section>
+
+      <!-- UNIT 9 -->
+      <section class="section-content3" id="terceiro-unit9">
+        
+
+            <h2>Unit 9: Communication</h2>
+             <img
+            class="revisao-img1"
+            src="img/P1.jpg"
+            alt=""
+            />
+
+  <h3>Exploring Different Forms of Communication in Business Contexts</h3>
+
+  <p>
+    Business communication encompasses various methods used to exchange information within an organization and with external stakeholders. Here's an overview of common forms:
+  </p>
+  <ul>
+    <li><strong>Written Communication:</strong>
+      <ul>
+        <li>Emails: Widely used for day-to-day communication, sharing information, and providing updates.</li>
+        <li>Memos: Internal documents for conveying information or proposing actions within a department or team.</li>
+        <li>Reports: Formal documents presenting data, analysis, findings, and recommendations.</li>
+        <li>Proposals: Documents outlining plans, solutions, or recommendations to persuade the reader to take a specific action.</li>
+        <li>Letters: Formal written communication for external audiences, such as clients, partners, or investors.</li>
+      </ul>
+    </li>
+    <li><strong>Verbal Communication:</strong>
+      <ul>
+        <li>Meetings: Group discussions for brainstorming ideas, making decisions, or solving problems.</li>
+        <li>Presentations: Formal delivery of information to an audience, often using visuals.</li>
+        <li>Telephone Calls: Direct communication for conversations, negotiations, or information exchange.</li>
+        <li>Video conferencing: Enabling real-time communication and collaboration with geographically dispersed teams.</li>
+        <li>One-on-one conversations: Individual discussions for feedback, performance reviews, or mentoring.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Developing Effective Verbal and Nonverbal Communication Skills</h3>
+
+  <p>
+    Effective communication goes beyond words. It includes both verbal and nonverbal cues. Here's how to develop these skills:
+  </p>
+  <ul>
+    <li><strong>Verbal Communication:</strong>
+      <ul>
+        <li>Clarity and Conciseness: Express ideas clearly and directly, avoiding jargon and complex language.</li>
+        <li>Active Voice: Use active voice for a stronger and more confident tone.</li>
+        <li>Varying Vocabulary: Utilize a diverse range of words to avoid repetition and maintain audience engagement.</li>
+        <li>Effective Delivery: Speak clearly and at an appropriate pace, with proper enunciation and modulation.</li>
+      </ul>
+    </li>
+    <li><strong>Nonverbal Communication:</strong>
+      <ul>
+        <li>Body Language: Maintain good posture, make appropriate eye contact, and use gestures effectively to reinforce your message.</li>
+        <li>Facial Expressions: Smile appropriately, avoid frowning, and use facial expressions to convey emotions congruently with your words.</li>
+        <li>Tone of Voice: Speak with an appropriate tone that reflects the message's seriousness or informality.</li>
+        <li>Professional Attire: Dress appropriately for the business context and audience.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Practicing Active Listening and Asking Questions</h3>
+
+  <p>
+    Active listening and asking questions are crucial for effective communication. Here's how to improve these skills:
+  </p>
+  <ul>
+    <li><strong>Active Listening:</strong>
+      <ul>
+        <li>Pay close attention to the speaker, both verbally and nonverbally.</li>
+        <li>Minimize distractions and avoid interrupting.</li>
+        <li>Summarize and paraphrase what you hear to demonstrate understanding.</li>
+        <li>Ask clarifying questions to ensure you understand the speaker's message.</li>
+      </ul>
+    </li>
+    <li><strong>Asking Questions:</strong>
+      <ul>
+        <li>Prepare thoughtful questions relevant to the conversation or topic.</li>
+        <li>Ask open-ended questions that encourage elaboration and discussion.</li>
+        <li>Avoid asking yes-or-no questions that limit the conversation.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Understanding Cultural Differences and Adapting Communication Styles</h3>
+
+  <p>
+    The global nature of business necessitates an understanding of cultural differences in communication. Here's how to adapt your communication style:
+  </p>
+  <ul>
+    <li>Research cultural norms: Learn about communication styles, greetings, and etiquette practices in different cultures.</li>
+    <li>Be mindful of nonverbal cues: Gestures, facial expressions, and personal space can have different meanings in different cultures.</li>
+
+         <!-- CARDS DE CONTEUDO  UNIT Z-->
+         <div class="card-container">
+            <div class="card">
+               <h4>TEXT: <em>Z</em></h4>
+               <img
+                  src="" width="400vw"
+                  alt=""
+                  />
+               <blockquote>Fonte: </blockquote>
+               <p>content</p>
+            </div>
+            <div class="card">
+               <h4>be: question <br> Prepositions: in and near
+               </h4>
+               <img
+                  src="" width="400vw"
+                  alt=""
+                  />
+               <blockquote>Fonte: </blockquote>
+            </div>
+            <div class="card">
+               <h4>A/An</h4>
+               <img
+                  src="" width="400vw"
+                  alt=""
+                  />
+               <blockquote>Fonte: </blockquote>
+            </div>
+         </div>
+         <!--  DICAS UNIT 10 -->
+         <!-- TIPS UNIT --> 
+         <div class="container-tips">
+            <div class="tips-content1">
+               <h5>Tips About Unit 9</h5>
+               <p>To learn more about this <br> content,we recommend this <br> trustworthy websites...</p>
+            </div>
+            <!-- SEGUNDA DIV - SEGUNDA COLUNA  -->
+            <div class="tips-content2">
+               <div class="box3-color1" >
+                  <p><img src="img/livrolampada.png" alt=""> CONTENT</p>
+                  <a href="#">Acess</a>
+               </div>
+               <div class="box3-color2">
+                  <p><img src="img/casestudy.png" alt=""> CONTENT</p>
+                  <a href="#">Acess</a>
+               </div>
+               <div class="box3-color3">
+                  <p> <img src="img/girlstudying.png" alt=""> CONTENT</p>
+                  <a href="#">Acess</a>
+               </div>
+            </div>
+         </div>
+         <!-- MATERIAIS -->
+         <section class="section-materials" >
+            <div>
+               <!-- Material de aula -->
+               <h4>Material aula</h4>
+               <!-- icone-livro 1 -->
+               <p>
+                  Baixe o livro das unidades:
+               </p>
+               <br>
+               <p><img src="img/seta-do-circulo-do-livro-para-a-direita.svg" alt="Ícone Livro" width="30vw">
+                  <a
+                     href="books/Business_Start-Up_1_Student_39_Student's_book.pdf"
+                     ><i>Business</i> Start-Up 2 Student's Book</a
+                     >
+               </p>
+            </div>
+         </section>
+         <br>
+         <button class="button-return">
+            <a
+               href="revisao.html"
+               >Return</a
+               >
+            </button>
+      </section>
+
+      
+   </div>
+
+
+
+
+
+
+
+
+   <!-- QUARTO SEMESTRE -->
+   <div id="quarto-unit" style="display: none;">
+      <div class="container-nav-units">
+         <ul>                        
+            <div class="unit-nav">
+               <li><a href="#quarto-unit10">Unit 10</a></li>
+               <li><a href="#quarto-unit11">Unit 11</a></li>
+               <li><a href="#quarto-unit12">Unit 12</a></li>                       
+            </div>       
+         </ul>
+         </div>      
+      <div class="revisao-item" id="quarto">
+         <!-- UNIT 10 -->
+         <section class="section-content1" id="quarto-unit10">
+            
+            <h2>Unit 10: Progress</h2>
+            <img
+               class="revisao-img1"
+               src="img/P1.jpg"
+               alt=""
+               />
+           
+               <h3>Discussing Progress and Achievements in Business</h3>
+
+               <p>
+                 Monitoring progress and celebrating achievements are essential for business success. Here's how to discuss progress effectively:
+               </p>
                <ul>
-                 <li><strong>Who:</strong> Refers to people (e.g., "Who is your favorite author?")</li>
-                 <li><strong>What:</strong> Refers to things, actions, or ideas (e.g., "What is your favorite movie?")</li>
-                 <li><strong>Where:</strong> Refers to places (e.g., "Where are you from?")</li>
-                 <li><strong>When:</strong> Refers to time (e.g., "When did you start learning English?")</li>
-                 <li><strong>Why:</strong> Refers to reasons (e.g., "Why do you like to travel?")</li>
-                 <li><strong>How:</strong> Refers to manner or method (e.g., "How do you make pancakes?")</li>
+                 <li>Highlighting accomplishments: Showcase completed tasks, achieved goals, and positive outcomes.</li>
+                 <li>Quantifying results: Use data and metrics to demonstrate the impact of your work.</li>
+                 <li>Attributing success: Recognize the contributions of team members and stakeholders.</li>
+                 <li>Addressing challenges: Discuss any obstacles encountered and how they were overcome.</li>
+                 <li>Maintaining a positive and professional tone: Focus on progress made while acknowledging areas for improvement.</li>
                </ul>
              
-               <p>To answer questions, you can use phrases like:</p>
+               <h3>Reporting on Project Milestones and Goals</h3>
              
+               <p>
+                 Project milestones and goals serve as benchmarks for measuring progress. Here's how to effectively report on them:
+               </p>
                <ul>
-                 <li>"My favorite author is..."</li>
-                 <li>"I started learning English when I was..."</li>
-                 <li>"I like to travel because..."</li>
-                 <li>"To make pancakes, you need to..."</li>
+                 <li>Defining milestones and goals clearly: Ensure everyone involved understands the specific objectives and deadlines.</li>
+                 <li>Tracking progress regularly: Monitor progress towards milestones and identify any potential delays.</li>
+                 <li>Reporting on progress in a timely manner: Update stakeholders on progress regularly, highlighting achievements and addressing any challenges.</li>
+                 <li>Adapting strategies as needed: Be prepared to adjust project plans based on progress reports and evolving circumstances.</li>
                </ul>
              
-               <h3>Discussing Personal Information and Preferences</h3>
-               <p>When getting to know someone, you can ask about their:</p>
+               <h3>Identifying Areas for Improvement and Strategies for Growth</h3>
              
+               <p>
+                 Continuous improvement is vital for organizational growth. Here's how to identify areas for improvement and develop growth strategies:
+               </p>
                <ul>
-                 <li>Name</li>
-                 <li>Age</li>
-                 <li>Nationality</li>
-                 <li>Occupation</li>
-                 <li>Hobbies</li>
-                 <li>Favorite foods, movies, books, etc.</li>
+                 <li>Analyzing performance metrics: Identify areas where performance falls short of expectations.</li>
+                 <li>Gathering feedback: Seek feedback from team members, customers, and other stakeholders.</li>
+                 <li>Brainstorming solutions: Collaborate to identify solutions for improvement and develop growth strategies.</li>
+                 <li>Setting SMART goals: Establish Specific, Measurable, Achievable, Relevant, and Time-bound goals to track progress.</li>
+                 <li>Continuous monitoring and evaluation: Regularly monitor progress and assess the effectiveness of implemented strategies.</li>
                </ul>
              
-               <p>Be sure to share your own information as well!</p>
+               <h3>Analyzing Key Performance Indicators and Metrics</h3>
              
-               <h3>Talking about News, Events, and Current Affairs</h3>
-               <p>Stay informed about what's happening in the world by discussing current events. You can use phrases like:</p>
-             
+               <p>
+                 Key Performance Indicators (KPIs) and metrics are essential tools for measuring progress and success. Here's how to analyze them effectively:
+               </p>
                <ul>
-                 <li>"Did you hear about...?"</li>
-                 <li>"What do you think about...?"</li>
-                 <li>"I read an interesting article about..."</li>
-                 <li>"Have you seen the news about...?"</li>
-               </ul>
-             
-               <p>Be respectful of different opinions and perspectives.</p>
-             
-               <!-- CARDS DE CONTEUDO  UNIT 10-->
+                 <li>Selecting relevant KPIs and metrics: Choose metrics that align with your goals and objectives.</li>
+                 <li>Understanding what the data means: Interpret the data to identify trends, patterns, and areas for improvement.</li>
+                 <li>Communicating insights effectively: Present findings in a clear and concise manner, highlighting key takeaways for stakeholders.</li>
+                 <li>Using data to inform decision-making: Leverage data insights to make informed decisions regarding strategies and resource allocation.</li>
+               </ul>   
+
+            <!-- CARDS DE CONTEUDO  UNIT 10-->
             <div class="card-container">
                <div class="card">
                   <h4>be: <em>10</em></h4>
@@ -170,158 +712,260 @@
                   <blockquote>Fonte: </blockquote>
                </div>
             </div>
-
             <!--  DICAS UNIT 10 -->
-                        <!-- TIPS UNIT --> 
-                        <div class="container-tips">
-                           <div class="tips-content1">
-                              <h5>Tips About Unit 10</h5>
-                              <p>To learn more about this <br> content,we recommend this <br> trustworthy websites...</p>
-                           </div>
-                           <!-- SEGUNDA DIV - SEGUNDA COLUNA  -->
-                           <div class="tips-content2">
-                              <div class="box3-color1" >
-                                 
-                                 <p><img src="img/livrolampada.png" alt=""> CONTENT</p>
-                                 <a href="#">Acess</a>
-                              </div>
-                              <div class="box3-color2">
-                                 
-                                 <p><img src="img/casestudy.png" alt=""> CONTENT</p>
-                                 <a href="#">Acess</a>
-                              </div>
-                              <div class="box3-color3">
-                                                     <p> <img src="img/girlstudying.png" alt=""> CONTENT</p>
-                                 <a href="#">Acess</a>
-                              </div>
-                           </div>
-                        </div>
-            
-            <!-- MATERIAIS -->
-            <section class="section-materials" >
-               <div>
-                  <!-- Material de aula -->
-                  <h4>Material aula</h4>
-                  <!-- icone-livro 1 -->
-                  <p>
-                     Baixe o livro das unidades:
-                  </p> <br>
-                  <p><img src="img/seta-do-circulo-do-livro-para-a-direita.svg" alt="Ícone Livro" width="30vw">
-                     <a
-                        href="books/Business_Start-Up_1_Student_39_Student's_book.pdf"
-                        ><i>Business</i> Start-Up 1 Student's Book</a
-                        >
-                  </p>
+            <!-- TIPS UNIT --> 
+            <div class="container-tips">
+               <div class="tips-content1">
+                  <h5>Tips About Unit 10</h5>
+                  <p>To learn more about this <br> content,we recommend this <br> trustworthy websites...</p>
                </div>
-            </section>
-            
-            <br>
-            
-             </section>
-
-             <!-- UNIT 11 -->
-             <section class="section-content2" id="quarto-unit11">
-
-               <h2>Unit 11: Plans </h2>
-             
-               <h3>Asking and Answering Questions</h3>
-               <img
-               class="revisao-img1"
-               src="img/P1.jpg"
-               alt=""
-               />
-  
-             
-               <!-- CARDS DE CONTEUDO  UNIT 11-->
-            <div class="card-container">
-               <div class="card">
-                  <h4>be: <em>11</em></h4>
-                  <img
-                     src="" width="400vw"
-                     alt=""
-                     />
-                  <blockquote>Fonte: </blockquote>
-                  <p>content</p>
-               </div>
-               <div class="card">
-                  <h4>be: question <br> TEXT</h4>
-                  <img
-                     src="" width="400vw"
-                     alt=""
-                     />
-                  <blockquote>Fonte: </blockquote>
-               </div>
-               <div class="card">
-                  <h4>A/An</h4>
-                  <img
-                     src="" width="400vw"
-                     alt=""
-                     />
-                  <blockquote>Fonte: </blockquote>
+               <!-- SEGUNDA DIV - SEGUNDA COLUNA  -->
+               <div class="tips-content2">
+                  <div class="box3-color1" >
+                     <p><img src="img/livrolampada.png" alt=""> CONTENT</p>
+                     <a href="#">Acess</a>
+                  </div>
+                  <div class="box3-color2">
+                     <p><img src="img/casestudy.png" alt=""> CONTENT</p>
+                     <a href="#">Acess</a>
+                  </div>
+                  <div class="box3-color3">
+                     <p> <img src="img/girlstudying.png" alt=""> CONTENT</p>
+                     <a href="#">Acess</a>
+                  </div>
                </div>
             </div>
-
-            <!--  DICAS UNIT 11 -->
-                        <!-- TIPS UNIT --> 
-                        <div class="container-tips">
-                           <div class="tips-content1">
-                              <h5>Tips About Unit 10</h5>
-                              <p>To learn more about this <br> content,we recommend this <br> trustworthy websites...</p>
-                           </div>
-                           <!-- SEGUNDA DIV - SEGUNDA COLUNA  -->
-                           <div class="tips-content2">
-                              <div class="box3-color1" >
-                                 
-                                 <p><img src="img/livrolampada.png" alt=""> CONTENT</p>
-                                 <a href="#">Acess</a>
-                              </div>
-                              <div class="box3-color2">
-                                 
-                                 <p><img src="img/casestudy.png" alt=""> CONTENT</p>
-                                 <a href="#">Acess</a>
-                              </div>
-                              <div class="box3-color3">
-                                                     <p> <img src="img/girlstudying.png" alt=""> CONTENT</p>
-                                 <a href="#">Acess</a>
-                              </div>
-                           </div>
-                        </div>
             
-            <!-- MATERIAIS -->
-            <section class="section-materials" >
-               <div>
-                  <!-- Material de aula -->
-                  <h4>Material aula</h4>
-                  <!-- icone-livro 1 -->
-                  <p>
-                     Baixe o livro das unidades:
-                  </p> <br>
-                  <p><img src="img/seta-do-circulo-do-livro-para-a-direita.svg" alt="Ícone Livro" width="30vw">
-                     <a
-                        href="books/Business_Start-Up_1_Student_39_Student's_book.pdf"
-                        ><i>Business</i> Start-Up 1 Student's Book</a
-                        >
-                  </p>
-               </div>
-            </section>
-            
+              <!-- MATERIAIS -->
+         <section class="section-materials" >
+            <div>
+               <!-- Material de aula -->
+               <h4>Material aula</h4>
+               <!-- icone-livro 1 -->
+               <p>
+                  Baixe o livro das unidades:
+               </p>
+               <br>
+               <p><img src="img/seta-do-circulo-do-livro-para-a-direita.svg" alt="Ícone Livro" width="30vw">
+                  <a
+                     href="books/Business_Start-Up_1_Student_39_Student's_book.pdf"
+                     ><i>Business</i> Start-Up 2 Student's Book</a
+                     >
+               </p>
+            </div>
+         </section>
+         <br>
+         <button class="button-return">
+            <a
+               href="revisao.html"
+               >Return</a
+               >
+            </button>
             <br>
-             </section>
+         </section>
 
-            <!-- UNIT 12 -->
-            <section class="section-content3" id="quarto-unit12">
 
-               <h2>Unit 12: Sales </h2>
+         <!-- UNIT 11 -->
+         <section class="section-content2" id="quarto-unit11">
              
-               <h3>Title</h3>
-               <img
+            <h2>Unit 11: Plans</h2>
+            <img
                class="revisao-img1"
                src="img/P1.jpg"
                alt=""
                />
-  
-             
+           
+            <h3>Developing Business Plans and Strategies</h3>
+
+            <p>
+              Business plans and strategies are crucial roadmaps for achieving organizational goals. Here's how to develop them effectively:
+            </p>
+            <ul>
+              <li>Conducting a situation analysis: Assess internal strengths and weaknesses, and external opportunities and threats (SWOT analysis).</li>
+              <li>Defining your mission and vision: Clearly articulate the organization's purpose and long-term aspirations.</li>
+              <li>Setting goals and objectives: Establish Specific, Measurable, Achievable, Relevant, and Time-bound (SMART) goals to guide your strategy.</li>
+              <li>Developing competitive strategies: Identify strategies to gain a competitive advantage in the market.</li>
+              <li>Creating a financial plan: Outline projected revenue, expenses, and profitability to ensure financial viability.</li>
+            </ul>
+          
+            <h3>Setting Goals and Objectives for the Future</h3>
+          
+            <p>
+              Effective goal setting is essential for achieving success. Here's how to set goals and objectives for the future:
+            </p>
+            <ul>
+              <li>Aligning goals with the overall strategy: Ensure goals contribute to achieving the organization's mission and vision.</li>
+              <li>Setting SMART goals:  Goals should be Specific, Measurable, Achievable, Relevant, and Time-bound.</li>
+              <li>Communicating goals effectively: Clearly communicate goals to all stakeholders to ensure alignment and buy-in.</li>
+              <li>Tracking progress and measuring results: Regularly monitor progress towards goals and assess the effectiveness of strategies.</li>
+            </ul>
+          
+            <h3>Creating Action Plans and Timelines</h3>
+          
+            <p>
+              Action plans and timelines translate strategies into concrete steps. Here's how to create them effectively:
+            </p>
+            <ul>
+              <li>Breaking down goals into smaller tasks: Decompose large goals into manageable and actionable steps.</li>
+              <li>Assigning tasks and responsibilities: Assign clear ownership for each task, ensuring accountability.</li>
+              <li>Establishing deadlines: Set realistic deadlines for completing each task to maintain momentum.</li>
+              <li>Identifying resources: Determine the resources needed to complete tasks, such as personnel, budget, and equipment.</li>
+            </ul>
+          
+            <h3>Monitoring and Adjusting Plans Based on Market Conditions and Business Needs</h3>
+          
+            <p>
+              Business environments can change rapidly. Here's how to monitor and adjust plans accordingly:
+            </p>
+            <ul>
+              <li>Tracking market trends: Regularly monitor industry trends, competitor activity, and customer needs.</li>
+              <li>Evaluating progress: Assess progress towards goals and identify any deviations from the plan.</li>
+              <li>Adapting plans as needed: Be prepared to adjust strategies, action plans, or timelines based on new information.</li>
+              <li>Communicating changes effectively: Clearly communicate any adjustments to stakeholders to maintain transparency.</li>
+            </ul>
+
                <!-- CARDS DE CONTEUDO  UNIT 11-->
+               <div class="card-container">
+                  <div class="card">
+                     <h4>be: <em>present simple</em></h4>
+                     <img
+                        src="" width="400vw"
+                        alt=""
+                        />
+                     <blockquote>Fonte: </blockquote>
+                     <p>content</p>
+                  </div>
+                  <div class="card">
+                     <h4>be: question <br> TEXT</h4>
+                     <img
+                        src="" width="400vw"
+                        alt=""
+                        />
+                     <blockquote>Fonte: </blockquote>
+                  </div>
+                  <div class="card">
+                     <h4>A/An</h4>
+                     <img
+                        src="" width="400vw"
+                        alt=""
+                        />
+                     <blockquote>Fonte: </blockquote>
+                  </div>
+               </div>
+               <!--  DICAS UNIT 11 -->
+               <!-- TIPS UNIT 11--> 
+               <div class="container-tips">
+                  <div class="tips-content1">
+                     <h5>Tips About Unit 11</h5>
+                     <p>To learn more about this <br> content,we recommend this <br> trustworthy websites...</p>
+                  </div>
+                  <!-- SEGUNDA DIV - SEGUNDA COLUNA  -->
+                  <div class="tips-content2">
+                     <div class="box3-color1" >
+                        <p><img src="img/livrolampada.png" alt=""> CONTENT</p>
+                        <a href="#">Access</a>
+                     </div>
+                     <div class="box3-color2">
+                        <p><img src="img/casestudy.png" alt=""> CONTENT</p>
+                        <a href="#">Access</a>
+                     </div>
+                     <div class="box3-color3">
+                        <p> <img src="img/girlstudying.png" alt=""> CONTENT</p>
+                        <a href="#">Access</a>
+                     </div>
+                  </div>
+               </div>
+
+            <!-- MATERIAIS -->
+         <section class="section-materials" >
+            <div>
+               <!-- Material de aula -->
+               <h4>Material aula</h4>
+               <!-- icone-livro 1 -->
+               <p>
+                  Baixe o livro das unidades:
+               </p>
+               <br>
+               <p><img src="img/seta-do-circulo-do-livro-para-a-direita.svg" alt="Ícone Livro" width="30vw">
+                  <a
+                     href="books/Business_Start-Up_1_Student_39_Student's_book.pdf"
+                     ><i>Business</i> Start-Up 2 Student's Book</a
+                     >
+               </p>
+            </div>
+         </section>
+         <br>
+         <button class="button-return">
+            <a
+               href="revisao.html"
+               >Return</a
+               >
+            </button>
+         </section>
+
+
+         <!-- UNIT 12 -->
+         <section class="section-content3" id="quarto-unit12">
+            <h2>Unit 12: Sales </h2>
+            
+            <img
+               class="revisao-img1"
+               src="img/P1.jpg"
+               alt=""
+               />
+
+               <h3>Understanding the Sales Process and Techniques</h3>
+
+  <p>
+    The sales process is a structured approach for converting leads into customers. Here's an overview of the common stages:
+  </p>
+  <ul>
+    <li>Prospecting: Identifying potential customers who might be interested in your product or service.</li>
+    <li>Qualification: Assessing a prospect's needs, budget, and decision-making authority to determine suitability.</li>
+    <li>Presentation: Effectively communicating the value proposition of your product or service to address the prospect's needs.</li>
+    <li>Objection Handling: Addressing concerns and overcoming objections raised by the prospect.</li>
+    <li>Closing the Sale: Guiding the prospect towards a purchase decision.</li>
+    <li>Follow-Up: Maintaining relationships with customers after the sale to ensure satisfaction and encourage repeat business.</li>
+  </ul>
+
+  <h3>Developing Persuasive Communication Skills for Sales</h3>
+
+  <p>
+    Effective communication is key to success in sales. Here's how to develop persuasive communication skills:
+  </p>
+  <ul>
+    <li>Active Listening: Pay close attention to the customer's needs and concerns.</li>
+    <li>Building Rapport: Establish trust and a positive relationship with the customer.</li>
+    <li>Benefit Selling: Focus on how your product or service benefits the customer and solves their problems.</li>
+    <li>Storytelling: Use compelling stories and anecdotes to connect with customers on an emotional level.</li>
+    <li>Clear and Concise Communication: Present information clearly and concisely, avoiding jargon and technical terms.</li>
+    <li>Confident Delivery: Speak with confidence and enthusiasm to inspire trust in your product or service.</li>
+  </ul>
+
+  <h3>Identifying Customer Needs and Providing Solutions</h3>
+
+  <p>
+    Understanding customer needs is crucial for successful sales. Here's how to identify customer needs and provide solutions:
+  </p>
+  <ul>
+    <li>Asking insightful questions: Uncover the customer's pain points, goals, and desired outcomes.</li>
+    <li>Active Listening: Pay close attention to the customer's responses to identify underlying needs.</li>
+    <li>Tailoring Your Pitch: Match your product or service features and benefits to the customer's specific needs.</li>
+    <li>Demonstrating Value: Clearly explain how your product or service can solve the customer's problems and improve their situation.</li>
+  </ul>
+
+  <h3>Building and Maintaining Customer Relationships</h3>
+
+  <p>
+    Building strong customer relationships is essential for long-term success in sales. Here's how to cultivate lasting connections:
+  </p>
+  <ul>
+    <li>Providing excellent customer service: Exceed customer expectations and build trust through prompt and helpful service.</li>
+    <li>Maintaining communication: Stay in touch with customers after the sale to ensure satisfaction and address any concerns.</li>
+    <li>Building trust: Be honest, transparent, and reliable in your interactions with customers.</li>
+    <li>Exceeding expectations: Go the extra mile to surprise and delight your customers, fostering loyalty.</li>
+  </ul>
+            <!-- CARDS DE CONTEUDO  UNIT 11-->
             <div class="card-container">
                <div class="card">
                   <h4>be: <em>present simple</em></h4>
@@ -349,33 +993,29 @@
                   <blockquote>Fonte: </blockquote>
                </div>
             </div>
-
             <!--  DICAS UNIT 12 -->
-                        <!-- TIPS UNIT 12--> 
-                        <div class="container-tips">
-                           <div class="tips-content1">
-                              <h5>Tips About Unit 12</h5>
-                              <p>To learn more about this <br> content,we recommend this <br> trustworthy websites...</p>
-                           </div>
-                           <!-- SEGUNDA DIV - SEGUNDA COLUNA  -->
-                           <div class="tips-content2">
-                              <div class="box3-color1" >
-                                 
-                                 <p><img src="img/livrolampada.png" alt=""> CONTENT</p>
-                                 <a href="#">Acess</a>
-                              </div>
-                              <div class="box3-color2">
-                                 
-                                 <p><img src="img/casestudy.png" alt=""> CONTENT</p>
-                                 <a href="#">Acess</a>
-                              </div>
-                              <div class="box3-color3">
-                                                     <p> <img src="img/girlstudying.png" alt=""> CONTENT</p>
-                                 <a href="#">Acess</a>
-                              </div>
-                           </div>
-                        </div>
-            
+            <!-- TIPS UNIT 12--> 
+            <div class="container-tips">
+               <div class="tips-content1">
+                  <h5>Tips About Unit 12</h5>
+                  <p>To learn more about this <br> content,we recommend this <br> trustworthy websites...</p>
+               </div>
+               <!-- SEGUNDA DIV - SEGUNDA COLUNA  -->
+               <div class="tips-content2">
+                  <div class="box3-color1" >
+                     <p><img src="img/livrolampada.png" alt=""> CONTENT</p>
+                     <a href="#">Access</a>
+                  </div>
+                  <div class="box3-color2">
+                     <p><img src="img/casestudy.png" alt=""> CONTENT</p>
+                     <a href="#">Access</a>
+                  </div>
+                  <div class="box3-color3">
+                     <p> <img src="img/girlstudying.png" alt=""> CONTENT</p>
+                     <a href="#">Access</a>
+                  </div>
+               </div>
+            </div>
             <!-- MATERIAIS -->
             <section class="section-materials" >
                <div>
@@ -384,7 +1024,8 @@
                   <!-- icone-livro 1 -->
                   <p>
                      Baixe o livro das unidades:
-                  </p> <br>
+                  </p>
+                  <br>
                   <p><img src="img/seta-do-circulo-do-livro-para-a-direita.svg" alt="Ícone Livro" width="30vw">
                      <a
                         href="books/Business_Start-Up_1_Student_39_Student's_book.pdf"
@@ -393,50 +1034,45 @@
                   </p>
                </div>
             </section>
-            
             <br>
             <button class="button-return">
-               <a
-                  href="revisao.html"
-                  >Return</a
-                  >
-               </button>
-
+            <a
+               href="revisao.html"
+               >Return</a
+               >
+            </button>
             <!-- botao para retornar ao topo - menu -->
             <div class="back-to-top-button">
                <a href="#header">
                <i class="fas fa-arrow-up"></i>
                </a>
             </div>
-   
-             </section>
+         </section>
+      </div>
+   </div>
 
-          </div>
-        </div>
 
-         <!-- Footer -->
-         <footer class="rodape">
+   <!-- Footer -->
+   <footer class="rodape">
+      <img src="img/logo-four.png" alt="" width="40vw" > 
+      <p>Four Language</p>
+      </p> <br>
+      <hr>
+      <br> 
+      <p class="mt-4 text-sm text-white-100 snipcss0-4-7-9" >
+         O Four Language tem o objetivo de auxiliar os estudantes da
+         Fatec que cursam a matéria de Inglês.
+      </p>
+      <p class="text-sm text-gray-100 snipcss0-2-41-42">
+         © Copyright 2024 Four Language Inc. Todos os direitos reservados.
+      </p>
+      <!-- Estilo do rodape - footer -->
+      <script src="utils/renderFooter.js"></script>
+   </footer>
 
-            <img src="img/logo-four.png" alt="" width="40vw" > 
-            <p>Four Language</p></p> <br><hr><br> 
-            <p class="mt-4 text-sm text-white-100 snipcss0-4-7-9"
-            ">
-            O Four Language tem o objetivo de auxiliar os estudantes da
-            Fatec que cursam a matéria de Inglês.
-            </p>
 
-            <p class="text-sm text-gray-100 snipcss0-2-41-42">
-            © Copyright 2024 Four Language Inc. Todos os direitos reservados.
-            </p>
-
-            <!-- Estilo do rodape - footer -->
-            <script src="utils/renderFooter.js"></script>
-            
-         </footer>
-         
-         
-    <script src="js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-  </body>
+   <script src="js/script.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+   </body>
 </html>

@@ -7,40 +7,80 @@ const scoreDisplay4 = document.getElementById('score4');
 const scoreDisplay5 = document.getElementById('score5');
 const scoreDisplay6 = document.getElementById('score6');
 
-function handleOptionClick(option) {
-    if (option.classList.contains('correct')) {
-        score += 100;
-        // scoreDisplay.textContent = `Score: ${score}`;
-        // scoreDisplay2.textContent = `Score: ${score}`;
-        // scoreDisplay3.textContent = `Score: ${score}`;
-        // scoreDisplay4.textContent = `Score: ${score}`;
-        // scoreDisplay5.textContent = `Score: ${score}`;
-        // scoreDisplay6.textContent = `Score: ${score}`;
-        option.style.color = 'green';
-        // esconde a resposta certa
-        setTimeout(() => {
-            option.style.display = 'none';
-        }, 1500); 
+
+function handleOptionClick(event) {
+    const option = event.target;
+    const palavrasDiv = document.querySelector('.palavras');
+    const displayPlusPoints = document.querySelectorAll('.plus-points-span, .plus-points-span2, .plus-points-span3, .plus-points-span4, .plus-points-span5, .plus-points-span6');
+    const isCorrect = option.classList.contains('correct');
+    const points = isCorrect ? 100 : -100;
+    const textColor = isCorrect ? 'rgb(107, 138, 107)' : 'rgb(255,99,71)';
+    const scoreText = isCorrect ? '+100' : '-100';
+
+    if (isCorrect) {
+        const correctAudio = document.getElementById('correctAudio');
+        correctAudio.play().catch(error => {
+            console.error('Erro ao reproduzir o áudio correto:', error);
+        });
     } else {
-        option.style.color = 'red';
-        // esconde a resposta errada
-        setTimeout(() => {
-            option.style.display = 'none';
-        }, 1500); 
+        const incorrectAudio = document.getElementById('incorrectAudio');
+        incorrectAudio.play().catch(error => {
+            console.error('Erro ao reproduzir o áudio incorreto:', error);
+        });
     }
-   
+
+    updateScore(points);
+    displayPoints(displayPlusPoints, scoreText, textColor, option, palavrasDiv);
+    hideOption(option, isCorrect);
 }
-// todas as partes
+
+function updateScore(points) {
+    score += points;
+}
+
+function displayPoints(elements, text, color, option, palavrasDiv) {
+    elements.forEach(displayPlusPoints => {
+        displayPlusPoints.textContent = text;
+        displayPlusPoints.style.color = color;
+
+        const optionRect = option.getBoundingClientRect();
+        const palavrasRect = palavrasDiv.getBoundingClientRect();
+
+        // Calculate the position relative to the clicked word
+        const offsetX = optionRect.left - palavrasRect.left;
+        const offsetY = optionRect.top - palavrasRect.top;
+
+        // Adjust the position slightly above the word
+        const offsetYAdjusted = offsetY - 20;
+
+        // Set the position of the displayPlusPoints
+        displayPlusPoints.style.left = `${offsetX}px`;
+        displayPlusPoints.style.top = `${offsetYAdjusted}px`;
+        displayPlusPoints.style.display = 'inline';
+    });
+}
+
+
+
+
+function hideOption(option, isCorrect) {
+    setTimeout(() => {
+        option.style.display = 'none';
+    }, 1500);
+    option.style.color = isCorrect ? 'green' : 'red';
+}
+
+
+// Attach the event listener to each word
 const parts = document.querySelectorAll('[id^="part-"]');
 
 parts.forEach(part => {
     part.querySelectorAll('p').forEach(option => {
-        option.addEventListener('click', function() {
-            handleOptionClick(option);
-        });
+        option.addEventListener('click', handleOptionClick);
     });
-  
 });
+
+
 
 //função para o cronômetro
 function formatTime(seconds) {
@@ -89,11 +129,21 @@ function startTimer(durationInSeconds) {
             timerElement4.textContent = "Time out";
             timerElement5.textContent = "Time out";
             timerElement6.textContent = "Time out";
-            endGame()
+
+            // Reproduzir som quando o tempo acabar
+            const endAudio = document.getElementById('endAudio');
+            endAudio.play().catch(error => {
+                console.error('Erro ao reproduzir o áudio incorreto:', error);
+            });
+            
+            // Exibir o modal após o término do som
+            endAudio.addEventListener('ended', () => {
+                endGame();
+            });
         }
     }, 1000); 
-           
 }
+
 
 // cronômetro com uma duração em segundos
 startTimer(30);
@@ -106,18 +156,6 @@ function showModal(score) {
     scoreMessage.textContent = score;
     modal.style.display = 'block';
 
-    // Para fechar o modal quando o usuário clicar no 'x'
-    const span = document.getElementsByClassName('close')[0];
-    span.onclick = function() {
-        modal.style.display = 'none';
-    }
-
-    // Para fechar o modal quando o usuário clicar fora do modal
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-        }
-    }
 }
 
 function endGame() {
