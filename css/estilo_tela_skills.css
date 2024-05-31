@@ -8,13 +8,14 @@
 .container-skills {
   position: relative;
   width: 100%;
-  height: 83vh;
+  height: 85vh;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
+
 .skills {
   position: absolute;
   width: 50%;
@@ -23,7 +24,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  bottom: 0px;
+  bottom: 20px;
 }
 .skills-card {
   z-index: 1;
@@ -120,17 +121,18 @@
 .container-skills h2 {
   z-index: 1;
   position: absolute;
-  font-size: 80px;
+  font-size: 4rem;
   color: rgb(240, 244, 143);
   letter-spacing: 5px;
   font-family: "Righteous", cursive;
   font-weight: 400;
-  line-height: 75px;
+  line-height: 65px;
+  top: 30%;
 }
 .container-skills h2 span {
   font-family: "Righteous", cursive;
   font-weight: 400;
-  font-size: 64px;
+  font-size: 3.5rem;
   color: rgb(32, 32, 30);
 }
 

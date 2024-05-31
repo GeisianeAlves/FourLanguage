@@ -29,7 +29,7 @@
                     button.classList.add("resposta-correta");
                     // Incrementa os pontos se o botão clicado for a resposta correta
                     if (btn === button) {
-                        score++;
+                        score+=100;
                     }
                 } else {
                     button.classList.add("resposta-errada");
@@ -42,6 +42,9 @@
             var resultado = document.getElementById("questions-qty");
             resultado.innerHTML =  score;
             modal.style.display = "block";
+
+            var divPergResp = document.querySelectorAll("respostas");
+            divPergResp.style.display = 'none';
         }
 
         function closeModal() {
