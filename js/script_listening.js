@@ -224,9 +224,16 @@ class WordGame {
         let endAudio;
     
         if (correctPercentage <= 50) {
-            endAudio = new Audio('/img/victory.mp3'); 
+            endAudio = document.getElementById('victoryAudio');
+            endAudio.play().catch(error => {
+                console.error('Erro ao reproduzir o áudio incorreto:', error);
+            });
+           
         } else {
-            endAudio = new Audio('/img/game-over.mp3');
+           endAudio = document.getElementById('game-over');
+            endAudio.play().catch(error => {
+                console.error('Erro ao reproduzir o áudio incorreto:', error);
+            });
         }
     
         endAudio.play();

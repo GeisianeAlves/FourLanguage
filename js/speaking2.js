@@ -127,9 +127,9 @@ const phrases = ["receive", "mean", "again", "card", "tea", "one more time", "co
 
             function mostrarRespostaCorreta(mensagem) {
                 // Reproduz o áudio
-                audio = new Audio('/img/correct-choice.mp3'); // Cria o objeto de áudio
-                audio.play().catch(error => {
-                    console.error('Erro ao reproduzir o áudio:', error);
+                const correctAudio = document.getElementById('correctAudio');
+                correctAudio.play().catch(error => {
+                    console.error('Erro ao reproduzir o áudio incorreto:', error);
                 });
 
                 const messageElements = document.querySelectorAll('.result'); // Seleciona todos os elementos com a classe 'result'
@@ -152,11 +152,12 @@ const phrases = ["receive", "mean", "again", "card", "tea", "one more time", "co
             updateScore(correctGuesses);
         } else {
             function mostrarRespostaErrada(mensagem) {
-                audio = new Audio('/img/error.mp3'); // Cria o objeto de áudio
-                audio.play().catch(error => {
-                    console.error('Erro ao reproduzir o áudio:', error);
+                
+                const incorrectAudio = document.getElementById('incorrectAudio');
+                incorrectAudio.play().catch(error => {
+                    console.error('Erro ao reproduzir o áudio incorreto:', error);
                 });
-
+            
                 const messageElements = document.querySelectorAll('.result'); // Seleciona todos os elementos com a classe 'result'
                 messageElements.forEach(element => {
                     element.innerHTML = `<span style="color: #F54A19;">${mensagem}</span><br>`;

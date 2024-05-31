@@ -212,19 +212,20 @@ img {
     top: 100px;
     height: 550px;
     width: 280px;
-    /* background-color: #706f8a; */
-    background-color: #4c546c;
+    background-color: #f3dec7;
+    /* background-color: #4c546c; */
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: left;
-  
+    color: #464449;
 }
 .dicas h1, h3 {
     margin-bottom: 30px;
     font-family: "Space Mono", monospace;
     font-weight: 700;
+   
 }
 .dicas h3 {
 font-size: 1rem;    
@@ -267,18 +268,20 @@ font-size: 1rem;
   }
   .modal-content p {
     color: #e7e2bd;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .modal-content h2 {
     color: #dbc947;
     padding-top: 15px;
     padding-bottom: 10px;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
   }
   .modal-content h4 {
     color: #3a3445;
     padding: 10px 0;
     font-size: 1rem;
+    font-weight: bolder;
   }
   /* Style the Image */
   #myImg {
@@ -341,7 +344,7 @@ display: flex !important;
 #progressBar {
     width: 0%;
     height: 100%; /* Ajustado para ocupar toda a altura do container */
-    background-color: #928ba8;
+    background-color: #6d959e;
     position: relative;
     transition: width 0.3s;
 }

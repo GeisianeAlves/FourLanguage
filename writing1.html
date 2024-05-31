@@ -232,21 +232,10 @@
            <p class="correct">reserve</p> 
          </div>
        </div>
-       <div class="container-botton">
-        <button id="btn-voltar"><a href="tela_skills.html"> &larr; BACK</a></button>
-        <button id="timer4"> 00:00</button>   
+        <div class="container-botton">
+          <button id="btn-voltar"><a href="tela_skills.html"> &larr; BACK</a></button>
+          <button id="timer4"> 00:00</button>  
         </div>
-        <div id="audio" style="display: none;">
-          <audio id="correctAudio">
-              <source src="img/correct-choice.mp3" type="audio/mpeg">
-              Seu navegador não suporta o elemento de áudio.
-          </audio>
-          <audio id="incorrectAudio">
-              <source src="img/buzzer-or-wrong-answer.mp3" type="audio/mpeg">
-              Seu navegador não suporta o elemento de áudio.
-          </audio>
-      </div> 
-
       
      </div>
      
@@ -334,7 +323,24 @@
     
     </div>
 
+     <!------------------- efeitos sonoros ------------>
+     <div id="audio" style="display: none;">
+      <audio id="correctAudio">
+          <source src="img/correct-choice.mp3" type="audio/mpeg">
+          Seu navegador não suporta o elemento de áudio.
+      </audio>
 
+      <audio id="incorrectAudio">
+          <source src="img/buzzer-or-wrong-answer.mp3" type="audio/mpeg">
+          Seu navegador não suporta o elemento de áudio.
+      </audio>       
+      
+      <audio id="endAudio">
+          <source src="img/game-over.mp3" type="audio/mpeg">
+          Seu navegador não suporta o elemento de áudio.
+      </audio>
+
+    </div> 
     <img src="img/planet_red.png" id="img-planet">
 
  <!-- Footer -->
@@ -348,7 +354,6 @@
   </script>
   
 <script src="js/writing.js"></script>
-<!-- <script src="js/menu.js"></script> -->
 
    
    

@@ -131,11 +131,13 @@ function startTimer(durationInSeconds) {
             timerElement6.textContent = "Time out";
 
             // Reproduzir som quando o tempo acabar
-            const audio = new Audio('/img/game-over.mp3');
-            audio.play();
-
+            const endAudio = document.getElementById('endAudio');
+            endAudio.play().catch(error => {
+                console.error('Erro ao reproduzir o áudio incorreto:', error);
+            });
+            
             // Exibir o modal após o término do som
-            audio.addEventListener('ended', () => {
+            endAudio.addEventListener('ended', () => {
                 endGame();
             });
         }
