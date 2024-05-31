@@ -19,26 +19,27 @@
     gap: 30px;
 }
 
-.all{
+  .all{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    width: 550px;
-    height: 550px;
+    width: 650px;
+    height: 480px;
     border-radius: 10px;
-    /* border: 2px solid rgb(182, 131, 37); */
+    border: 2px solid rgb(78, 69, 116);
   }
 .all h1{
     font-family: 'Righteous', cursive;
-    font-size: 40px;
+    font-size: 2rem;
     color: #e7efea;
     margin-bottom: 20px;
     /* margin-top: 30px; */
 }
 .all h2 {
-    font-size: 1.5rem;
-    font-family: 'Righteous', cursive;
+    font-size: 1.7rem;
+    font-family: "Space Mono", monospace;
+    /* font-family: 'Righteous', cursive; */
     padding-bottom: 30px;
     text-align: center;
 }
@@ -50,6 +51,7 @@
 #playpalavra {
     height: 100px;
     width: 100px;
+    transition: width 0.5s;
 }
 #cor-1{
 color: rgb(212, 227, 170);
@@ -85,7 +87,7 @@ img {
 }
 #input, #input2, #input3, #input4, #input5, #input6{
     height: 50px;
-    border: 1px solid rgb(151, 181, 180);
+    border: 2px solid rgb(201, 154, 227);
     border-radius: 15px;
     width: 60%;
     padding: 20px;
@@ -93,6 +95,7 @@ img {
     outline: 2px solid rgb(131, 222, 167);
     font-family: 'Righteous', cursive;
     font-size: 20px;
+    
 }
 #gerarPalavra1, #gerarPalavra2, #gerarPalavra3, #gerarPalavra4, #gerarPalavra5, #gerarPalavra6 {
    border-radius: 50%;
@@ -125,6 +128,7 @@ img {
     height: 15%;
     margin-top: 20px;
     padding-top: 20px;
+    gap: 20px;
 } 
 
 .correct-answer {
@@ -151,7 +155,7 @@ img {
     width: 150px;
     padding: 5px;
     cursor: pointer;
-    margin-left: 20px ;
+    /* margin-left: 20px ; */
     border: 1px solid rgb(151, 181, 180);
     outline: 2px solid rgb(131, 222, 167);
     font-family: 'Righteous', cursive;
@@ -181,11 +185,19 @@ img {
     left:15%;
 
 }
-.correct-icon-message {
+.correct-wrong-message {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    height: 50px;
+    width: 80%;
+    margin-top: 15px;
+}
+
+#correct-icon, #correct-icon2, #correct-icon3, #correct-icon4, #correct-icon5,
+ #wrong-icon,  #wrong-icon2,  #wrong-icon3,  #wrong-icon4,  #wrong-icon5,  #wrong-icon6 {
+    padding-right: 15px;
 }
 .correct-answer span{
     font-weight: bold;
@@ -196,10 +208,10 @@ img {
 .dicas {
     color: #e7e2bd;
     padding: 30px;
-    right: 120px;
+    right: 150px;
     top: 100px;
     height: 550px;
-    width: 300px;
+    width: 280px;
     /* background-color: #706f8a; */
     background-color: #4c546c;
     border-radius: 10px;
@@ -231,7 +243,7 @@ font-size: 1rem;
     justify-content: flex-end;
     align-content: flex-end;
     text-align: justify;
-    width: 300px; 
+    width: 280px; 
     height:400px; 
     margin-top: 80px;
 }
@@ -319,31 +331,50 @@ display: flex !important;
 
 #progressContainer {
     width: 100%;
-    background-color: #e0e0e0;
+    background-color: #dbd3f2;
     border-radius: 5px;
-    overflow: hidden;
     margin-bottom: 20px;
+    position: relative;
+    height: 20px; /* Adicionado para ajustar a altura do container */
 }
 
 #progressBar {
     width: 0%;
-    height: 20px;
-    background-color: #76c7c0;
-    text-align: center;
-    line-height: 20px;
-    color: white;
+    height: 100%; /* Ajustado para ocupar toda a altura do container */
+    background-color: #928ba8;
+    position: relative;
     transition: width 0.3s;
 }
 
-
+#progressPercentage {
+    position: absolute;
+    top: -60px; /* Ajuste conforme necessário */
+    right: -20%;
+    transform: translateX(-50%);
+    color: #ffffff; /* Cor para ser visível */
+    font-weight: bold;
+    background-color: #359e61;
+    padding: 5px;
+    border-radius: 3px;
+    transition: left 0.3s;
+}
+#progressBar i {
+    position: absolute;
+    top: 2px; /* Ajuste para mover o ícone para fora da barra */
+    right: 0; /* Ajuste conforme necessário */
+    transform: translateY(-50%);
+    transition: right 0.3s; /* Transição suave */
+    font-size: 45px; /* Aumente o tamanho do ícone */
+    color: rgb(231, 178, 118);
+}
 .modal-listening {
     display: none;
     position: fixed;
     z-index: 1;
     left: 25%;
     top: 25%;
-    width: 50%;
-    height: 60%;
+    width: 60%;
+    height: 70%;
     overflow: auto;
     padding: 0;
     
@@ -359,6 +390,7 @@ display: flex !important;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: "Space Mono", monospace;
   }
   .modal-content-listening  h2 {
     text-align: center;
@@ -434,6 +466,7 @@ display: flex !important;
     }
     .cont {
         width: 450px;
+       
     }
     #progressContainer{
         width: 400px;
@@ -451,3 +484,5 @@ display: flex !important;
         display: none;
     }
 }
+
+

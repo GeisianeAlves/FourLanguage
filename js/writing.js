@@ -17,10 +17,19 @@ function handleOptionClick(event) {
     const textColor = isCorrect ? 'rgb(107, 138, 107)' : 'rgb(255,99,71)';
     const scoreText = isCorrect ? '+100' : '-100';
 
+    if (isCorrect) {
+        const correctAudio = new Audio('/img/correct-choice.mp3'); // Caminho para o arquivo de som correto
+        correctAudio.play();
+    } else {
+        const incorrectAudio = new Audio('/img/buzzer-or-wrong-answer.mp3'); // Caminho para o arquivo de som incorreto
+        incorrectAudio.play();
+    }
+
     updateScore(points);
     displayPoints(displayPlusPoints, scoreText, textColor, option, palavrasDiv);
     hideOption(option, isCorrect);
 }
+
 
 function updateScore(points) {
     score += points;
@@ -117,11 +126,19 @@ function startTimer(durationInSeconds) {
             timerElement4.textContent = "Time out";
             timerElement5.textContent = "Time out";
             timerElement6.textContent = "Time out";
-            endGame()
+
+            // Reproduzir som quando o tempo acabar
+            const audio = new Audio('/img/game-over.mp3');
+            audio.play();
+
+            // Exibir o modal após o término do som
+            audio.addEventListener('ended', () => {
+                endGame();
+            });
         }
     }, 1000); 
-           
 }
+
 
 // cronômetro com uma duração em segundos
 startTimer(30);
@@ -134,11 +151,6 @@ function showModal(score) {
     scoreMessage.textContent = score;
     modal.style.display = 'block';
 
-    // Para fechar o modal quando o usuário clicar no 'x'
-    const span = document.getElementsByClassName('close')[0];
-    span.onclick = function() {
-        modal.style.display = 'none';
-    }
 }
 
 function endGame() {
