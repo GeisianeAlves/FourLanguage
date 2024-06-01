@@ -1,3 +1,4 @@
+let currentContainerIndex = 0;
 
 // Função para ocultar todos os elementos com a classe 'container-question'
 function esconderContainers(className) {
@@ -39,10 +40,15 @@ function next(id) {
     mostrarContainer('container-question5', id);
     mostrarContainer('container-question6', id);
 }
-
+function nextContainer(className) {
+    const containers = document.getElementsByClassName(className);
+    currentContainerIndex = (currentContainerIndex + 1) % containers.length;
+    mostrarContainer(className, currentContainerIndex);
+    
+}
 //Array que contém todas as respostas corretas para completar as frases/diálogos
 const phrases = ["receive", "mean", "again", "card", "tea", "one more time", "could", "can", "book",
-                "works", "lives", "get", "have", "has", "making", "late", "back", "island", "weather",
+                "works", "lives", "get", "have", "has", "making", "taking", "boarding", "having", "running",
                 "arrive", "seat", "return", "reservation", "rented", "was", "went", "stayed", "left",
                 "most", "faster", "cheaper", "longer", "best"];
 
@@ -100,13 +106,20 @@ function captarAudio(e) {
     function  mostrarMensagem(mensagem) {
         checarFrase(mensagem);
     }
-// ###################################################
-    //vaiável para somar acertos
+
+    //variável para somar acertos
     let correctGuesses = 0;
+    let wordsUsed = [];
   
-    function checarFrase(mensagem) {          
+    function checarFrase(mensagem) { 
+        if (wordsUsed.includes(mensagem.toLowerCase())) {
+            console.log('A palavra já foi usada: ' + mensagem);
+            return; // Não computar acerto se a palavra já foi usada
+        } 
+                 
         //verificar se o que p usuário falou está dentro do array de respostas corretas
         let palpiteCorreto = false;
+        
         phrases.forEach(phrase => {
             if (mensagem.toLowerCase().includes(phrase.toLowerCase())) {
                 palpiteCorreto = true;
@@ -115,13 +128,20 @@ function captarAudio(e) {
         
 
         if (palpiteCorreto) {
-            // computar acertos
-            correctGuesses += 100;
-            console.log('acertos: ' + correctGuesses);
-
-
+             // Atualizar o container atual com a palavra capturada, e computar os acertos
+            const containers = document.getElementsByClassName('container-question');
+            if (containers[currentContainerIndex]) {
+                containers[currentContainerIndex].textContent = mensagem;
+                wordsUsed.push(mensagem.toLowerCase());
+                correctGuesses += 100;
+                console.log('Acertos: ' + correctGuesses);
+                console.log('Palavras usadas: ' + wordsUsed.join(', '));
+                nextContainer('container-question');
+            }
+                             
+        
             function mostrarRespostaCorreta(mensagem) {
-                // Reproduz o áudio
+                // Reproduz o efeito sonoro para o áudio
                 const correctAudio = document.getElementById('correctAudio');
                 correctAudio.play().catch(error => {
                     console.error('Erro ao reproduzir o áudio incorreto:', error);
@@ -145,6 +165,7 @@ function captarAudio(e) {
             }
         
             updateScore(correctGuesses);
+            
         } else {
             function mostrarRespostaErrada(mensagem) {
                 

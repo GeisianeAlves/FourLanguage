@@ -283,7 +283,7 @@ img{
     width: 50%;
     height: 50px;
 }
-#pontos, #pontos2, #pontos3 {
+#pontos, #pontos2, #pontos3, #pontos4, #pontos5, #pontos6 {
     font-size: 2rem;
     padding: 20px;
     font-family: 'Roboto', sans-serif;
@@ -311,7 +311,7 @@ display: flex !important;
     position: absolute;
     right: 200px;
 }
-#restart, #back {
+#restart, #back, #btn-voltar-popup {
     width: 200px;
     height: 50px;
     color: rgb(34, 33, 31);
@@ -320,11 +320,24 @@ display: flex !important;
     border: 2px solid black;
     color: #efe6e6;
     font-size: 20px;
+    cursor: pointer;
 }
 
-#restart:hover {
+#restart:hover , #btn-voltar-popup:hover{
     background-color: rgb(138, 131, 122);
+   
 }
+#modal-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#btn-voltar-popup a {
+    color: #efe6e6;
+}
+
 
 @media(max-width: 540px) {
 

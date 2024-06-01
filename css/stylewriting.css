@@ -278,7 +278,8 @@ footer:hover {
 }
 .modal-content {
   background-color: #fefefe;
-  margin: 5% auto;
+  margin:  5%;
+  left: 25%;
   border: 5px solid #a6a2f7;
   border-radius: 10px;
   width: 75%;

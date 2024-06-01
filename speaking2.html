@@ -136,7 +136,10 @@
                     <div class="container-question">
                         <h1>Your progress:</h1>
                         <p class="pontos-div" id="pontos" style="color:rgb(129, 81, 36);">Score: 0</p>          
-                        <button id="restart" onclick="reiniciarJogo()"> Play again!</button>
+                        <div id="modal-btn">
+                            <button id="btn-voltar-popup"><a href="tela_skills.html"> &larr; Back</a></button>
+                            <button id="restart" onclick="reiniciarJogo()"> Play again!</button>
+                        </div>                        
                     </div> 
                 
                 </div>
@@ -209,7 +212,10 @@
                     <div class="container-question2">
                         <h1>Your progress:</h1>
                         <p  class="pontos-div" id="pontos2" style="color:rgb(129, 81, 36);">Score: 0</p>
-                        <button id="restart" onclick="reiniciarJogo()"> Play again</button>          
+                        <div id="modal-btn">
+                            <button id="btn-voltar-popup"><a href="tela_skills.html"> &larr; Back</a></button>
+                            <button id="restart" onclick="reiniciarJogo()"> Play again!</button>
+                        </div>          
                     </div> 
                 
                 </div>
@@ -228,8 +234,8 @@
             
                 <div class="text">
                     <div class="container-question3">
-                        <h1>1. We were _______ this morning.</h1>  
-                        <p id="dica"><i>(small, late, train, office)</i></p>             
+                        <h1>1. We were r_______ this morning.</h1>  
+                        <p id="dica"><i>(use present continuous)</i></p>               
                         <p class="result"></p>
                         <div class="div-pontos">
                             <p class="score-div" >Score: 0</p>                 
@@ -239,8 +245,8 @@
 
 
                     <div class="container-question3">
-                        <h1>2. She is ______ in the office.</h1> 
-                        <p id="dica"><i>(conference, saying, back, left)</i></p>          
+                        <h1>2. She was h________ lunch in the office.</h1> 
+                        <p id="dica"><i>(use present continuous)</i></p>      
                         <p class="result"></p>   
                         <div class="div-pontos"> 
                             <p class="score-div" >Score: 0</p>        
@@ -249,8 +255,8 @@
                     </div>
                     
                     <div class="container-question3">
-                        <h1>3. They went on a tour of the _________.</h1>  
-                        <p id="dica"><i>(moon, island, chart, line)</i></p>         
+                        <h1>3. The flight to Berlin is now b__________.</h1>  
+                        <p id="dica"><i>(use present continuous)</i></p>         
                         <p class="result"></p>
                         <div class="div-pontos">    
                             <p class="score-div" >Score: 0</p>     
@@ -259,8 +265,8 @@
                     </div>
             
                     <div class="container-question3">
-                        <h1>4. The ________ is horrible last night.</h1>  
-                        <p id="dica"><i>(weather, rains, snows, windy)</i></p>         
+                        <h1>4. I'm t________ the train to Lisbon.</h1>  
+                        <p id="dica"><i>(use present continuous)</i></p>        
                         <p class="result"></p>    
                         <div class="div-pontos">
                             <p class="score-div" >Score: 0</p>   
@@ -270,7 +276,7 @@
                     
                     <div class="container-question3">
                         <h1>5. One boy is __________ a sandwich.</h1>
-                        <p id="dica"><i>(doing, making, hungry, prepare)</i></p>           
+                        <p id="dica"><i>(use present continuous)</i></p>           
                         <p class="result"></p>    
                         <div class="div-pontos">
                             <p class="score-div" >Score: 0</p>   
@@ -281,7 +287,10 @@
                     <div class="container-question3">
                         <h1>Your progress:</h1>
                         <p  class="pontos-div" id="pontos3" style="color:rgb(129, 81, 36);">Score: 0</p>  
-                        <button id="restart" onclick="reiniciarJogo()"> Play again</button>        
+                        <div id="modal-btn">
+                            <button id="btn-voltar-popup"><a href="tela_skills.html"> &larr; Back</a></button>
+                            <button id="restart" onclick="reiniciarJogo()"> Play again!</button>
+                        </div>       
                     </div> 
                 
                 </div>
@@ -350,10 +359,13 @@
                         </div>
                     </div>
 
-                    <div class="container-question4">
+                    <div class="container-question4 stop">
                         <h1>Your progress:</h1>
-                        <p  class="pontos-div" id="pontos3" style="color:rgb(129, 81, 36);">Score: 0</p>  
-                        <button id="restart" onclick="reiniciarJogo()"> Play again</button>        
+                        <p  class="pontos-div" id="pontos4" style="color:rgb(129, 81, 36);">Score: 0</p>  
+                        <div id="modal-btn">
+                            <button id="btn-voltar-popup"><a href="tela_skills.html"> &larr; Back</a></button>
+                            <button id="restart" onclick="reiniciarJogo()"> Play again!</button>
+                        </div>       
                     </div> 
                 
                 </div>
@@ -369,11 +381,11 @@
             <div class="container-audio">
         
                 <h2>Speak to find out the right word</h2>
-                <h3>Use Past Simple Tense</h3>
             
                 <div class="text">
                     <div class="container-question5">
-                        <h1>1. He _______ <i>(leave)</i> on Wednesday.</h1>            
+                        <h1>1. He _______ <i>(leave)</i> on Wednesday.</h1> 
+                        <p id="dica"> <i>(use Past Simple Tense)</i> </p>           
                         <p class="result"></p>
                         <div class="div-pontos">
                             <p class="score-div" >Score: 0</p>                 
@@ -384,6 +396,7 @@
 
                     <div class="container-question5">
                         <h1>2. She ______ <i>(is)</i> at the trade fair.</h1>
+                        <p id="dica"> <i>(use Past Simple Tense)</i> </p>       
                         <p class="result"></p>   
                         <div class="div-pontos"> 
                             <p class="score-div" >Score: 0</p>        
@@ -392,7 +405,8 @@
                     </div>
                     
                     <div class="container-question5">
-                        <h1>3. We _______ <i>(stay)</i> in Paris for two days.</h1>        
+                        <h1>3. We _______ <i>(stay)</i> in Paris for two days.</h1> 
+                        <p id="dica"> <i>(use Past Simple Tense)</i> </p>              
                         <p class="result"></p>
                         <div class="div-pontos">    
                             <p class="score-div" >Score: 0</p>     
@@ -401,7 +415,8 @@
                     </div>
             
                     <div class="container-question5">
-                        <h1>4. Miguel _________ <i>(rent)</i> a car.</h1>        
+                        <h1>4. Miguel _________ <i>(rent)</i> a car.</h1>   
+                        <p id="dica"> <i>(use Past Simple Tense)</i> </p>            
                         <p class="result"></p>    
                         <div class="div-pontos">
                             <p class="score-div" >Score: 0</p>   
@@ -410,7 +425,8 @@
                     </div>
                     
                     <div class="container-question5">
-                        <h1>5. They _______ <i>(go)</i> to China last month.</h1>        
+                        <h1>5. They _______ <i>(go)</i> to China last month.</h1>
+                        <p id="dica"> <i>(use Past Simple Tense)</i> </p>               
                         <p class="result"></p>    
                         <div class="div-pontos">
                             <p class="score-div" >Score: 0</p>   
@@ -420,8 +436,11 @@
 
                     <div class="container-question5">
                         <h1>Your progress:</h1>
-                        <p  class="pontos-div" id="pontos3" style="color:rgb(129, 81, 36);">Score: 0</p>   
-                        <button id="restart" onclick="reiniciarJogo()">  Play again</button>       
+                        <p  class="pontos-div" id="pontos5" style="color:rgb(129, 81, 36);">Score: 0</p>   
+                        <div id="modal-btn">
+                            <button id="btn-voltar-popup"><a href="tela_skills.html"> &larr; Back</a></button>
+                            <button id="restart" onclick="reiniciarJogo()"> Play again!</button>
+                        </div>       
                     </div> 
                 
                 </div>
@@ -492,8 +511,11 @@
 
                     <div class="container-question6">
                         <h1>Your progress:</h1>
-                        <p  class="pontos-div" id="pontos3" style="color:rgb(129, 81, 36);">Score: 0</p>          
-                        <button id="restart" onclick="reiniciarJogo()"> Play again</button>
+                        <p  class="pontos-div" id="pontos6" style="color:rgb(129, 81, 36);">Score: 0</p>          
+                        <div id="modal-btn">
+                            <button id="btn-voltar-popup"><a href="tela_skills.html"> &larr; Back</a></button>
+                            <button id="restart" onclick="reiniciarJogo()"> Play again!</button>
+                        </div>
                     </div> 
                 
                 </div>
