@@ -1,8 +1,8 @@
 function applyStyles() {
   // Criar uma tag style
-  var style = document.createElement('style');
-  style.type = 'text/css';
-  
+  var style = document.createElement("style");
+  style.type = "text/css";
+
   // Adicionar o CSS ao estilo
   style.innerHTML = `
   @import url("https://fonts.googleapis.com/css2?family=Cookie&family=Jost:wght@200;300&family=Lora:wght@600&display=swap");
@@ -250,13 +250,13 @@ function applyStyles() {
   .nav-menu.active {
     transform: translateY(0); 
   }
-
+}
   
   
   
   
   `;
-  
+
   // Adicionar o estilo ao head do documento
   document.head.appendChild(style);
 }
