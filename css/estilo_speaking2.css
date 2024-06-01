@@ -94,7 +94,7 @@ img{
     transform: scale(1);
     animation: scaleEffect 3s linear infinite;
 }
-#btnGravar, #btnGravar2, #btnGravar3, #btnGravar4, #btnGravar5, #btnGravar6 {
+#btnGravar1, #btnGravar2, #btnGravar3, #btnGravar4, #btnGravar5, #btnGravar6 {
     /* margin-top: 5px; */
     font-size: 18px;
     height: 30px;
