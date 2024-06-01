@@ -176,6 +176,32 @@ th {
 
 }
 
+h2 {
+  padding: 11px 0px;
+}
+
+.section-content1 {
+  width: 80%;
+  /* Largura da seção (ajuste conforme necessário) */
+  margin: 0 auto;
+  /* Centraliza horizontalmente */
+  padding: 70px;
+  /* Espaçamento interno */
+  background-color: #eeeeee42;
+  /* Cor de fundo (opcional) */
+  border: 1px solid #ddd;
+  /* Borda (opcional) */
+  border-radius: 8px;
+  /* Cantos arredondados (opcional) */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Sombra (opcional) */
+  font-family: "Space Mono";
+  font-size: 20px;
+}
+
+.section-content1 ul {
+  padding: 24px 23px;
+}
 
 
 
@@ -185,7 +211,7 @@ th {
   /* overflow: hidden; */
   font-weight: 300;
   font-size: 20px;
-
+  font-family: "Space Mono";
 
 }
 
