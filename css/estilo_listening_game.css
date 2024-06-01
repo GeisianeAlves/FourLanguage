@@ -378,13 +378,12 @@ display: flex !important;
     top: 25%;
     width: 60%;
     height: 70%;
-    overflow: auto;
     padding: 0;
-    
+
   }
   .modal-content-listening {
     background-color: #fefefe;
-    margin: 5% auto;
+    margin: 5%;
     border: 5px solid #a6a2f7;
     border-radius: 10px;
     width: 80%;

@@ -18,13 +18,14 @@
 
 .skills {
   position: absolute;
-  width: 50%;
+  width: 55%;
   height: 30vh;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  bottom: 20px;
+  bottom: 100px;
+
 }
 .skills-card {
   z-index: 1;
@@ -34,17 +35,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  bottom: 0;
+  /* bottom: 0; */
   font-family: "Raleway", sans-serif;
   font-size: 12px;
   border: 3px solid rgb(245, 240, 244);
   opacity: 0.7;
-  gap: 30px;
-  
-
-
+  height: 100%;
 }
 
+.skills-card a {
+  text-align: center;
+  justify-content: center;
+}
+#listening {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* TENTANDO */
 .skills-card-description {
     font-size: 16px;
@@ -88,16 +95,16 @@
 }
 /*botão para escolher skills: listening, reading...*/
 .btn-skill {
-  float: right;
+  /* float: right; */
   cursor: pointer;
   font-weight: bolder;
   font-size: 22px;
   box-shadow: none;
   border: none;
-  padding: 4px 16px 4px 13px;
+  /* padding: 4px 16px 4px 13px;
   margin-left: 3px;
   margin-top: 22px;
-  margin-right: 3px;
+  margin-right: 3px; */
 }
 #reading {
   background-color: rgb(138, 210, 244);
@@ -120,20 +127,20 @@
 }
 .container-skills h2 {
   z-index: 1;
-  position: absolute;
+  position: absolute;margin-left: 0;
   font-size: 4rem;
   color: rgb(240, 244, 143);
   letter-spacing: 5px;
   font-family: "Righteous", cursive;
   font-weight: 400;
   line-height: 65px;
-  top: 30%;
+  top: 15%;
 }
 .container-skills h2 span {
   font-family: "Righteous", cursive;
   font-weight: 400;
   font-size: 3.5rem;
-  color: rgb(32, 32, 30);
+  color: rgb(199, 203, 204);
 }
 
 .container-skills img {
@@ -142,31 +149,31 @@
 }
 
 #img-1 {
-  width: 300px;
-  height: 300px;
-  bottom: 50px;
-  left: 60%;
+  width: 200px;
+  height: 200px;
+  bottom: 80px;
+  left: 75%;
 }
 #img-2 {
   width: 270px;
-  height: 270px;
-  bottom: 150px;
+  height: 200px;
+  bottom: 350px;
   left: 80%;
 }
 #img-3 {
   width: 180px;
   height: 100px;
   top: 10%;
-  left: 0;
+  left: 50px;
 }
 .box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  right: 5%;
+  right: 3%;
   width: 350px;
-  top: 15%;
+  top: 8%;
   position: absolute;
   border-radius: 10px;
 }
@@ -186,7 +193,7 @@
   align-items: center;
   left: 5%;
   width: 400px;
-  bottom: 40%;
+  bottom: 60%;
   position: absolute;
 }
 .box-2 h4 {
