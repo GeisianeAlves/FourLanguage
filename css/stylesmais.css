@@ -245,63 +245,95 @@ input {
   font-size: 12px;
   font-weight: bold;
 }
- 
-  
+
+
 .unit-nav {
-  list-style: none; 
+  list-style: none;
   padding: 0;
 }
 
 .unit-nav li {
-  margin-bottom: 4px; 
-  
+  margin-bottom: 4px;
+
 }
 
 .unit-nav a {
-  display: block; 
-  padding: 10px 41px; 
-  text-decoration: none; /* Remove default link underline */
-  color: #666; /* Link text color */
-  background-color: #fff; /* Link background color */
-  border: 2px dashed #ddd; /* Add border */
-  border-radius: 22px; /* Add rounded corners */
-  transition: background-color 0.3s ease; /* Add hover effect transition */
+  display: block;
+  padding: 10px 41px;
+  text-decoration: none;
+  /* Remove default link underline */
+  color: #666;
+  /* Link text color */
+  background-color: #fff;
+  /* Link background color */
+  border: 2px dashed #ddd;
+  /* Add border */
+  border-radius: 22px;
+  /* Add rounded corners */
+  transition: background-color 0.3s ease;
+  /* Add hover effect transition */
 }
 
 .unit-nav a:hover {
-  background-color: #e0e0e0; /* Change background color on hover */
+  background-color: #e0e0e0;
+  /* Change background color on hover */
+}
+
+.img-units {
+  width: 50vh;
+  height: 40vh;
+  border-radius: 29px 29px;
+}
+
+@media (max-width: 720px) {
+  .img-units {
+    width: 43vh;
+    height: 40vh;
+  }
 }
 
 /* RESPONSIVIDADE DO MENU UNITS */
 @media (max-width: 768px) {
+
   /* Styles for screens smaller than 768px */
   .container-nav-units {
-    width: 47%; /* Make sidebar occupy full width on smaller screens */
+    width: 47%;
+    /* Make sidebar occupy full width on smaller screens */
     height: max-content;
-    position: relative; /* Reset position to relative for non-fixed behavior */
-    top: 2px; /* Reset top position for non-fixed behavior */
+    position: relative;
+    /* Reset position to relative for non-fixed behavior */
+    top: 2px;
+    /* Reset top position for non-fixed behavior */
     bottom: 2px;
     left: 102px;
     margin-bottom: 7px;
-    padding: 5px 0px 0px 5px; /* Adjust padding for smaller screens */
+    padding: 1px 0px 1px 9px;
+    /* Adjust padding for smaller screens */
     right: 2px;
   }
 
   .unit-nav {
-    display: flex; /* Use flexbox for horizontal layout */
-    flex-direction: column; /* Arrange items vertically */
-    align-items: center; /* Center items horizontally */
+    display: flex;
+    /* Use flexbox for horizontal layout */
+    flex-direction: column;
+    /* Arrange items vertically */
+    align-items: center;
+    /* Center items horizontally */
   }
 
   .unit-nav li {
-    margin-bottom: 5px; /* Reduce spacing between list items */
+    margin-bottom: 5px;
+    /* Reduce spacing between list items */
   }
 
   .unit-nav a {
-    border: 2px dashed #ddd; /* Add border */
-    border-radius: 22px; /* Add rounded corners */
+    border: 2px dashed #ddd;
+    /* Add border */
+    border-radius: 22px;
+    /* Add rounded corners */
     transition: background-color 0.3s ease;
-    font-size: 14px; /* Adjust font size for smaller screens */
+    font-size: 14px;
+    /* Adjust font size for smaller screens */
     padding: 2px 41px;
   }
 
@@ -310,34 +342,46 @@ input {
 
 
 @media (max-width: 1068px) {
+
   /* Styles for screens smaller than 768px */
   .container-nav-units {
-    width: 47%; /* Make sidebar occupy full width on smaller screens */
+    width: 47%;
+    /* Make sidebar occupy full width on smaller screens */
     height: max-content;
-    position: relative; /* Reset position to relative for non-fixed behavior */
-    top: 2px; /* Reset top position for non-fixed behavior */
+    position: relative;
+    /* Reset position to relative for non-fixed behavior */
+    top: 2px;
+    /* Reset top position for non-fixed behavior */
     bottom: 2px;
     left: 102px;
     margin-bottom: 7px;
-    padding: 5px 0px 0px 5px; /* Adjust padding for smaller screens */
+    padding: 5px 0px 0px 5px;
+    /* Adjust padding for smaller screens */
     right: 2px;
   }
 
   .unit-nav {
-    display: flex; /* Use flexbox for horizontal layout */
-    flex-direction: column; /* Arrange items vertically */
-    align-items: center; /* Center items horizontally */
+    display: flex;
+    /* Use flexbox for horizontal layout */
+    flex-direction: column;
+    /* Arrange items vertically */
+    align-items: center;
+    /* Center items horizontally */
   }
 
   .unit-nav li {
-    margin-bottom: 5px; /* Reduce spacing between list items */
+    margin-bottom: 5px;
+    /* Reduce spacing between list items */
   }
 
   .unit-nav a {
-    border: 2px dashed #ddd; /* Add border */
-    border-radius: 22px; /* Add rounded corners */
+    border: 2px dashed #ddd;
+    /* Add border */
+    border-radius: 22px;
+    /* Add rounded corners */
     transition: background-color 0.3s ease;
-    font-size: 14px; /* Adjust font size for smaller screens */
+    font-size: 14px;
+    /* Adjust font size for smaller screens */
     padding: 2px 41px;
   }
 
@@ -363,10 +407,12 @@ h2 {
   margin-bottom: 15px;
 }
 
-h3, h4, h5 {
+h3,
+h4,
+h5 {
   text-decoration: none;
   padding: 11px 0px;
-  
+
 }
 
 ul {
@@ -374,9 +420,9 @@ ul {
   padding: 0;
 }
 
-section ul{
+section ul {
   padding: 24px 23px;
-  
+
 }
 
 li {
@@ -479,12 +525,13 @@ li {
   /* Cover the card area while maintaining aspect ratio */
   margin-bottom: 15px;
   /* Add spacing between image and content */
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
 }
 
-.card img:hover{
+.card img:hover {
   transform: scale(2);
 }
+
 /* Card Title */
 .card h4 {
   font-size: 20px;
@@ -538,40 +585,41 @@ li {
 
 /* section tips about units */
 /* div pai */
-.container-tips{
+.container-tips {
   display: flex;
   flex-direction: row;
   padding: 46px;
 }
 
 /* coluna 1 */
-.tips-content1{
+.tips-content1 {
   padding: 46px 167px;
   font-size: 20px;
   /* flex-direction: column; */
-  
+
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.tips-content1 h5{
-text-align: center;
+.tips-content1 h5 {
+  text-align: center;
   font-size: 30px;
   color: #333;
 }
 
-.tips-content1 p{
+.tips-content1 p {
   color: #444;
   font-size: 24px;
-  padding-top:74px;
+  padding-top: 74px;
   text-align: center;
 }
 
 
 /* coluna 2 + 3 divs */
-.tips-content2{
+.tips-content2 {
   display: table-row-group;
-  flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
-  justify-content: space-between; 
+  flex-wrap: wrap;
+  /* Allow items to wrap onto multiple lines */
+  justify-content: space-between;
   /* flex-direction: column; */
   /* padding: 126px; */
   padding: 6px 5px 1px 64px;
@@ -580,17 +628,20 @@ text-align: center;
 .tips-content2 .box3-color1,
 .tips-content2 .box3-color2,
 .tips-content2 .box3-color3 {
-  margin: 12px; /* Adjust spacing as needed */
+  margin: 12px;
+  /* Adjust spacing as needed */
   padding: 7px 13px;
   justify-content: center;
 }
 
-.box3-color1 p, .box3-color2 p, .box3-color3 p {
+.box3-color1 p,
+.box3-color2 p,
+.box3-color3 p {
   border-radius: 45px 2px 45px 45px;
   padding: 18px 14px 23px 24px;
 }
 
-.tips-content2 img{
+.tips-content2 img {
   /* align-items: center; */
   width: 5vh;
   height: 5vh;
@@ -601,35 +652,35 @@ text-align: center;
   /* border: 2px solid salmon; */
 }
 
-.box3-color1 p{ 
+.box3-color1 p {
   background-color: #f4a46052;
-  
+
 }
 
 .box3-color2 {
   flex-direction: row;
   /* border: 2px solid cadetblue; */
-  
+
 }
 
-.box3-color2 p{
+.box3-color2 p {
   background-color: #5f9ea07a;
-  
+
 }
 
 .box3-color3 {
   flex-direction: row;
   /* border: 2px solid mediumpurple; */
-  
-  
+
+
 }
 
-.box3-color3 p{
-    background-color: #9370db94;
-  
+.box3-color3 p {
+  background-color: #9370db94;
+
 }
 
-.tips-content2 a{ 
+.tips-content2 a {
   background-color: #ffff003b;
   border-radius: 10px;
   padding: 5px 25px;
@@ -640,10 +691,14 @@ text-align: center;
   font-weight: bold;
 }
 
-.tips-content2 p{
+.tips-content2 p {
   margin-bottom: 10px;
 }
 
+
+/* @media (min-width: 768px) {
+  .tips-content2{}
+} */
 /* Media query for screens smaller than 546px */
 @media (max-width: 546px) {
 
@@ -651,16 +706,17 @@ text-align: center;
   .container-tips {
     display: flex;
     flex-direction: row;
-    padding: 8px;
+    padding: 1px 0px 1px 9px;
     flex-wrap: wrap;
-   
+
   }
 
   /* Adjust content within the columns */
   .tips-content1,
   .tips-content2 {
     padding: 5px;
-    font-size: 10px; /* Adjust font size as needed */
+    font-size: 10px;
+    /* Adjust font size as needed */
   }
 
   /* Center content in tips-content1 */
@@ -670,52 +726,63 @@ text-align: center;
     font-size: 14px;
   }
 
-  
+
 
   /* Remove unnecessary styles for smaller screens */
   .tips-content1 p {
-    padding-top: 0; /* Remove padding-top */
+    padding-top: 0;
+    /* Remove padding-top */
   }
 
   /* Adjust layout for tips-content2 */
   .tips-content2 {
-    display: flex; /* Use flexbox for responsive layout */
-    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
-    justify-content: space-between; /* Distribute items evenly */
-    padding: 0; /* Remove padding for smaller screens */
+    display: flex;
+    /* Use flexbox for responsive layout */
+    flex-wrap: wrap;
+    /* Allow items to wrap onto multiple lines */
+    justify-content: space-between;
+    /* Distribute items evenly */
+    padding: 0;
+    /* Remove padding for smaller screens */
   }
 
   /* Adjust box styles for smaller screens */
   .tips-content2 .box3-color1,
   .tips-content2 .box3-color2,
   .tips-content2 .box3-color3 {
-    margin: 5px; /* Reduce margin as needed */
-    padding: 15px 20px; /* Adjust padding as needed */
+    margin: 5px;
+    /* Reduce margin as needed */
+
     font-size: 14px;
     font-weight: 200px;
+    padding: 1px 0px 1px 9px;
   }
 
   /* Adjust image size for smaller screens */
   .tips-content2 img {
-    width: 30%; /* Adjust width as needed */
-    height: 30%; /* Adjust height as needed */
+    width: 30%;
+    /* Adjust width as needed */
+    height: 30%;
+    /* Adjust height as needed */
   }
 
   /* Remove unnecessary flex direction for boxes */
   .box3-color1,
   .box3-color2,
   .box3-color3 {
-    flex-direction: initial; /* Remove flex-direction */
+    flex-direction: initial;
+    /* Remove flex-direction */
   }
 
   /* Adjust link styles for smaller screens */
   .tips-content2 a {
-    padding: 3px 10px; /* Adjust padding as needed */
+    padding: 3px 10px;
+    /* Adjust padding as needed */
   }
 }
 
 /* Existing styles for larger screens (outside the media query) */
-.container-tips{
+.container-tips {
   display: flex;
   flex-direction: row;
   padding: 46px;
@@ -726,17 +793,25 @@ text-align: center;
 
 /* section materiais */
 .section-materials a {
-  color: #333; /* Text color */
-  text-decoration: none; /* Remove default underline */
-  font-weight: bold; /* Make text bold */
-  padding: 5px 10px; /* Add padding around text */
-  border-radius: 5px; /* Round corners of the link */
-  background-color: #f2f2f2; /* Light gray background */
-  transition: background-color 0.3s ease; /* Smooth hover effect */
+  color: #333;
+  /* Text color */
+  text-decoration: none;
+  /* Remove default underline */
+  font-weight: bold;
+  /* Make text bold */
+  padding: 5px 10px;
+  /* Add padding around text */
+  border-radius: 5px;
+  /* Round corners of the link */
+  background-color: #f2f2f2;
+  /* Light gray background */
+  transition: background-color 0.3s ease;
+  /* Smooth hover effect */
 }
 
 .section-materials a:hover {
-  background-color: #70bb72b7; /* Darker gray on hover */
+  background-color: #70bb72b7;
+  /* Darker gray on hover */
 }
 
 
@@ -752,14 +827,16 @@ text-align: center;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  background-color: #70bb72b7; /* Green */
+  background-color: #70bb72b7;
+  /* Green */
   color: white;
   border: none;
   font-family: "Space Mono";
 
   /* Hover Effect */
   &:hover {
-    background-color: #b5d1b6; /* Darker Green */
+    background-color: #b5d1b6;
+    /* Darker Green */
   }
 }
 
@@ -768,28 +845,42 @@ text-align: center;
 
 /* BOTAO DE IR PARA O TOPO */
 .back-to-top-button {
-  position: fixed; /* Stay in place on scroll */
-  bottom: 20px; /* Distance from bottom */
-  right: 20px; /* Distance from right */
-  z-index: 100; /* Sit on top of other elements */
-  display: none; /* Initially hidden */
+  position: fixed;
+  /* Stay in place on scroll */
+  bottom: 20px;
+  /* Distance from bottom */
+  right: 20px;
+  /* Distance from right */
+  z-index: 100;
+  /* Sit on top of other elements */
+  display: none;
+  /* Initially hidden */
 }
 
 .back-to-top-button a {
   display: block;
-  width: 50px; /* Button width */
-  height: 50px; /* Button height */
+  width: 50px;
+  /* Button width */
+  height: 50px;
+  /* Button height */
   text-align: center;
-  line-height: 50px; /* Center text vertically */
-  border-radius: 50%; /* Make it round */
-  background-color: #333; /* Button color */
-  color: #fff; /* Text color */
-  font-size: 20px; /* Font size for icon */
-  transition: background-color 0.3s ease; /* Smooth hover effect */
+  line-height: 50px;
+  /* Center text vertically */
+  border-radius: 50%;
+  /* Make it round */
+  background-color: #333;
+  /* Button color */
+  color: #fff;
+  /* Text color */
+  font-size: 20px;
+  /* Font size for icon */
+  transition: background-color 0.3s ease;
+  /* Smooth hover effect */
 }
 
 .back-to-top-button a:hover {
-  background-color: #444; /* Darker color on hover */
+  background-color: #444;
+  /* Darker color on hover */
 }
 
 
@@ -797,24 +888,25 @@ text-align: center;
 /* RODAPE */
 
 
-.float-left{
+.float-left {
   float: left;
   margin: 2px 10px;
   padding: 2px;
   /* margin-bottom: 20px; */
- 
+
 }
 
 .rodape span {
   margin: 2px 9px 2px 9px;
   padding-right: 2px;
   /* padding-bottom: 2px; */
-  line-height: 2; /* Set line-height to twice the font size */
+  line-height: 2;
+  /* Set line-height to twice the font size */
 }
 
-footer .text, .copy{
+footer .text,
+.copy {
   padding-left: 23px;
   padding-top: 2px;
-  
-}
 
+}
