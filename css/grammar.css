@@ -131,23 +131,21 @@ th {
 }
 
 
-@media (max-width: 1068px) {
+
+@media (max-width: 1250px) {
 
   /* Styles for screens smaller than 768px */
   .container-nav-units {
-    width: 47%;
-    /* Make sidebar occupy full width on smaller screens */
+
+    width: 20%;
     height: max-content;
     position: relative;
-    /* Reset position to relative for non-fixed behavior */
-    top: 2px;
-    /* Reset top position for non-fixed behavior */
+    top: 9px;
     bottom: 2px;
-    left: 102px;
-    margin-bottom: 7px;
-    padding: 5px 0px 0px 5px;
-    /* Adjust padding for smaller screens */
-    right: 2px;
+    left: 3px;
+    margin-bottom: 6px;
+    padding: 5px -6px 6px 5px;
+    right: 6px;
   }
 
   .unit-nav {
@@ -177,7 +175,6 @@ th {
 
 
 }
-
 
 
 
