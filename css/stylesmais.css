@@ -292,8 +292,51 @@ input {
   }
 }
 
+@media (max-width: 500px) {
+  .img-units {
+    width: 28vh;
+    height: 26vh;
+  }
+}
+
+@media(max-width: 500px) {
+
+  .section-content1,
+  .section-content2,
+  .section-content3 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 28px 15px 15px 0px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: "Space Mono";
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width:500px) {
+
+  .container-nav-units {
+    width: 47%;
+    height: max-content;
+    position: relative;
+    top: 2px;
+    bottom: 2px;
+    left: 102px;
+    margin-bottom: 7px;
+    padding: 5px 0px 0px 5px;
+    right: 2px;
+
+  }
+}
+
+
+
 /* RESPONSIVIDADE DO MENU UNITS */
-@media (max-width: 768px) {
+@media (max-width: 728px) {
 
   /* Styles for screens smaller than 768px */
   .container-nav-units {
@@ -344,21 +387,19 @@ input {
 @media (max-width: 1068px) {
 
   /* Styles for screens smaller than 768px */
+
   .container-nav-units {
-    width: 47%;
-    /* Make sidebar occupy full width on smaller screens */
+    width: 32%;
     height: max-content;
     position: relative;
-    /* Reset position to relative for non-fixed behavior */
-    top: 2px;
-    /* Reset top position for non-fixed behavior */
-    bottom: 2px;
-    left: 102px;
-    margin-bottom: 7px;
+    top: 129px;
+    bottom: 5px;
+    left: 113px;
+    margin-bottom: 139px;
     padding: 5px 0px 0px 5px;
-    /* Adjust padding for smaller screens */
     right: 2px;
   }
+
 
   .unit-nav {
     display: flex;
