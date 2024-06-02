@@ -15,72 +15,82 @@ html {
 /* LOGO FATEC LINGUO */
 
 
-  /* SPAN: A COR DAQUI ALTERA A LOGO E OS TITULOS DA UNIDADES */
+/* SPAN: A COR DAQUI ALTERA A LOGO E OS TITULOS DA UNIDADES */
 
 
-  span{
-    font-size: 21px;
-    font-family: 'Lora', Courier, monospace;
-    color: #8d28f1;
-    margin-left: 1.9px;
-    margin-top: 20px;
-    font-weight: bold;
-  }
+span {
+  font-size: 21px;
+  font-family: 'Lora', Courier, monospace;
+  color: #8d28f1;
+  margin-left: 1.9px;
+  margin-top: 20px;
+  font-weight: bold;
+}
 
-  .cabecalho {
-    font-family: 'Space Mono';
-    align-items: last baseline;
-    background-color: #4c546c;
-    color: white;
-    padding: 2% 0px 0px;
-  
-    
-  }
-  
-  .nav-menu a {
-    text-decoration: none; /* Remove sublinhado */
-    color: inherit; /* Herda a cor do texto do elemento pai */
-  }
-  
-  .nav-menu img{
-   margin-bottom: 15px;
-    margin-left: 13px;
-  }
-  
-  .nav-menu {
-    Display: flex;
-    Justify-content:left;
-    Align-items:flex-start;
-    Column-gap: 28px; 
-  }
-  
-  .nav-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 22px;
-    display: flex;
-  }
-  
-  .nav-menu ul li {
-    margin-right: 20px; /* Adapte a margem conforme necessário */
-    position: relative; /* Define posição relativa para alinhar a sub-lista */
-  }
-  
-  .nav-menu ul li ul {
-    display: none;
-    position: absolute; /* Posicionamento absoluto em relação ao item pai */
-    top: 100%; /* Aparece abaixo do item pai */
-    left: 0; /* Alinha com o lado esquerdo do item pai */
-    background-color: #4c546c; /* Fundo cinza */
-    color: #fff; /* Cor do texto branca */
-    padding: 10px; /* Adiciona espaço interno */
-  }
-  
-  .nav-menu ul li:hover > ul {
-    display: block;
-  }
+.cabecalho {
+  font-family: 'Space Mono';
+  align-items: last baseline;
+  background-color: #4c546c;
+  color: white;
+  padding: 2% 0px 0px;
 
-  
+
+}
+
+.nav-menu a {
+  text-decoration: none;
+  /* Remove sublinhado */
+  color: inherit;
+  /* Herda a cor do texto do elemento pai */
+}
+
+.nav-menu img {
+  margin-bottom: 15px;
+  margin-left: 13px;
+}
+
+.nav-menu {
+  Display: flex;
+  Justify-content: left;
+  Align-items: flex-start;
+  Column-gap: 28px;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 22px;
+  display: flex;
+}
+
+.nav-menu ul li {
+  margin-right: 20px;
+  /* Adapte a margem conforme necessário */
+  position: relative;
+  /* Define posição relativa para alinhar a sub-lista */
+}
+
+.nav-menu ul li ul {
+  display: none;
+  position: absolute;
+  /* Posicionamento absoluto em relação ao item pai */
+  top: 100%;
+  /* Aparece abaixo do item pai */
+  left: 0;
+  /* Alinha com o lado esquerdo do item pai */
+  background-color: #4c546c;
+  /* Fundo cinza */
+  color: #fff;
+  /* Cor do texto branca */
+  padding: 10px;
+  /* Adiciona espaço interno */
+}
+
+.nav-menu ul li:hover>ul {
+  display: block;
+}
+
+
 
 /*Botao saiba mais*/
 .btn-right {
@@ -90,14 +100,18 @@ html {
   font-family: 'Space Mono';
   background-color: #4c546cc9;
   color: white;
-  border-radius: 28px; /* Ajuste o valor conforme desejado para bordas mais arredondadas */
+  border-radius: 28px;
+  /* Ajuste o valor conforme desejado para bordas mais arredondadas */
   font-size: 19px;
-  padding: 2px 13px; /* Ajuste o padding conforme necessário */
-  margin: 22px 10px 22px 10px; /* Top, Right, Bottom, Left */
-  border: none; /* Remove a borda */
+  padding: 2px 13px;
+  /* Ajuste o padding conforme necessário */
+  margin: 22px 10px 22px 10px;
+  /* Top, Right, Bottom, Left */
+  border: none;
+  /* Remove a borda */
 }
 
-.btn-right-anc{
+.btn-right-anc {
   text-decoration: none;
   color: white;
 }
@@ -113,7 +127,7 @@ html {
 
 
 #container-semestre {
- background-color: rgb(72, 72, 90);
+  background-color: rgb(72, 72, 90);
   gap: 20px;
   padding-top: 60px;
   display: flex;
@@ -137,7 +151,7 @@ html {
   height: 240px;
   margin-bottom: 50px;
   border: 2px solid #f1ecec;
-  background-color:pink;
+  background-color: pink;
   padding: 10px;
   box-shadow: 5px 5px 5px #333;
 }
@@ -152,20 +166,20 @@ html {
 
 /* para mexer no tamanho dos titulos da página inicial, pq se for em revisao você terá que aumentar o nome do id ou class para batata-revisao*/
 #first h2,
- #four h2 {
+#four h2 {
   font-size: 20px;
   margin-top: 9px;
   padding: 3px;
 }
 
 
-.first-paragraph{
+.first-paragraph {
   text-decoration: underline;
   font-size: 18px;
   padding-top: 8px;
 }
 
-.citacao{
+.citacao {
   /* text-align: left; */
   font-weight: 300;
   padding-left: 300px;
@@ -180,7 +194,8 @@ html {
   margin-top: 9px;
   padding: 3px;
 }
-.second-paragraph{
+
+.second-paragraph {
   text-decoration: underline;
   font-size: 18px;
   padding-top: 8px;
@@ -191,6 +206,7 @@ html {
   margin-top: 20px;
   padding: 3px;
 }
+
 .third-paragraph {
   text-decoration: underline;
   font-size: 18px;
@@ -198,7 +214,7 @@ html {
 }
 
 
-.four-paragraph{
+.four-paragraph {
   text-decoration: underline;
   font-size: 18px;
   padding-top: 8px;
@@ -213,10 +229,11 @@ html {
   justify-content: space-around;
   margin-top: 20px;
 }
+
 /* para mexer e alinhar os box de semestre, as imagens parecem no obedecer, mas tem jeito */
 #first,
 #four {
-  display: flex;  
+  display: flex;
   align-items: center;
   width: 228px;
   height: 366px;
@@ -228,7 +245,7 @@ html {
 }
 
 #second,
-#third{
+#third {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -250,8 +267,8 @@ html {
   transition: all 0.5s ease-in-out;
 }
 
-body{
-  
+body {
+
   /* background-color: rgb(245 222 179 / 34%); */
   background-color: rgb(245 222 179 / 30%);
 }
@@ -259,13 +276,17 @@ body{
 
 /* SOMENTE PARA A PAGINA DE REVISAO */
 #container-revisao {
-    
-    display: flex; /* Enable Flexbox */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: space-around; /* Distribute items evenly */
-    align-items: flex-start; /* Align items to the top */
-  
-  
+
+  display: flex;
+  /* Enable Flexbox */
+  flex-wrap: wrap;
+  /* Allow items to wrap to the next line */
+  justify-content: space-around;
+  /* Distribute items evenly */
+  align-items: flex-start;
+  /* Align items to the top */
+
+
 }
 
 .revisao-item {
@@ -273,20 +294,21 @@ body{
   align-items: flex-start;
   margin-bottom: 60px;
   padding-top: 10px;
-  padding-bottom: 10px; 
+  padding-bottom: 10px;
   width: 39%;
   flex-basis: 45%;
   flex-direction: column;
-  border: 1px solid #ddd; /* Add a border */
-  border-radius: 4px; 
-  box-shadow: 9px 11px 3px 2px rgba(0, 0, 0, 0.075); 
- 
+  border: 1px solid #ddd;
+  /* Add a border */
+  border-radius: 4px;
+  box-shadow: 9px 11px 3px 2px rgba(0, 0, 0, 0.075);
+
 }
 
 
 
 /*IMAGENS REVISAO SOMENTE*/
-.revisao-img1{
+/* .revisao-img1{
   margin-left: 18px;
   width: 200px;
   height: auto;
@@ -320,8 +342,28 @@ body{
   border-radius: 20px;
   margin-right: 10px;
   margin-top: 43px;
+} */
+
+.img-units {
+  width: 41vh;
+  height: 27vh;
+  border-radius: 44px 43px;
+  padding: 12px 24px;
 }
 
+@media (max-width: 720px) {
+  .img-units {
+    width: 43vh;
+    height: 40vh;
+  }
+}
+
+@media (max-width: 500px) {
+  .img-units {
+    width: 28vh;
+    height: 26vh;
+  }
+}
 
 .revisao-item .content-container {
   display: flex;
@@ -337,27 +379,36 @@ body{
   /* background-color: white; */
   border-radius: 10px;
   color: black;
-  
-  padding: 15px; /* Add padding for spacing within the card */
-  
+
+  padding: 15px;
+  /* Add padding for spacing within the card */
+
   /* margin: 11px; */
 }
 
 
 .revisao-item-band {
   /* Existing styles for the revision item */
-  width: 100%; /* Span the full width of the revision item */
-  padding: 10px; /* Add padding for spacing within the band */
-  background-color: #4c546ced; /* Semi-transparent black background */
-  color: white; /* Light text color for contrast */
-  text-align: center; /* Center the text within the band */
-  font-weight: bold; /* Make the text bold for emphasis */
+  width: 100%;
+  /* Span the full width of the revision item */
+  padding: 10px;
+  /* Add padding for spacing within the band */
+  background-color: #4c546ced;
+  /* Semi-transparent black background */
+  color: white;
+  /* Light text color for contrast */
+  text-align: center;
+  /* Center the text within the band */
+  font-weight: bold;
+  /* Make the text bold for emphasis */
 }
 
 
 .band-title {
-  font-weight: bold; /* Make the title bold */
-  margin-right: 5px; /* Add spacing after the title */
+  font-weight: bold;
+  /* Make the title bold */
+  margin-right: 5px;
+  /* Add spacing after the title */
   color: #ffffffde;
 }
 
@@ -371,7 +422,8 @@ body{
 .elephant {
   width: 150px;
   height: 100px;
-  background-color: #D2691E; /* Marrom */
+  background-color: #D2691E;
+  /* Marrom */
   border-radius: 70% 70% 50% 50%;
   position: relative;
 }
@@ -380,7 +432,8 @@ body{
   content: '';
   width: 30px;
   height: 30px;
-  background-color: #D2691E; /* Marrom */
+  background-color: #D2691E;
+  /* Marrom */
   border-radius: 50%;
   position: absolute;
   top: 10px;
@@ -391,7 +444,8 @@ body{
   content: '';
   width: 50px;
   height: 70px;
-  background-color: #D2691E; /* Marrom */
+  background-color: #D2691E;
+  /* Marrom */
   position: absolute;
   top: 50px;
   left: 40px;
@@ -423,7 +477,8 @@ body{
 .elephant .ear2 {
   width: 70px;
   height: 70px;
-  background-color: #D2691E; /* Marrom */
+  background-color: #D2691E;
+  /* Marrom */
   border-radius: 50%;
   position: absolute;
   top: -20px;
@@ -442,7 +497,8 @@ body{
 .elephant .tail {
   width: 20px;
   height: 80px;
-  background-color: #D2691E; /* Marrom */
+  background-color: #D2691E;
+  /* Marrom */
   position: absolute;
   top: 10px;
   left: -30px;
@@ -452,9 +508,17 @@ body{
 }
 
 @keyframes wag {
-  0% { transform: rotate(-45deg); }
-  50% { transform: rotate(-40deg); }
-  100% { transform: rotate(-45deg); }
+  0% {
+    transform: rotate(-45deg);
+  }
+
+  50% {
+    transform: rotate(-40deg);
+  }
+
+  100% {
+    transform: rotate(-45deg);
+  }
 }
 
 
@@ -476,7 +540,7 @@ footer:hover {
 
 
 /*SAIBA MAIS IMAGEM*/
-.img-semestre1{
+.img-semestre1 {
   margin-left: 18px;
   width: 800px;
   height: auto;
@@ -484,4 +548,3 @@ footer:hover {
   margin-right: 10px;
   margin-top: 43px;
 }
-
