@@ -1,3 +1,4 @@
+let currentContainerIndex = 0;
 
 // Função para ocultar todos os elementos com a classe 'container-question'
 function esconderContainers(className) {
@@ -39,79 +40,86 @@ function next(id) {
     mostrarContainer('container-question5', id);
     mostrarContainer('container-question6', id);
 }
-
+function nextContainer(className) {
+    const containers = document.getElementsByClassName(className);
+    currentContainerIndex = (currentContainerIndex + 1) % containers.length;
+    mostrarContainer(className, currentContainerIndex);
+    
+}
 //Array que contém todas as respostas corretas para completar as frases/diálogos
 const phrases = ["receive", "mean", "again", "card", "tea", "one more time", "could", "can", "book",
-                "works", "lives", "get", "have", "has", "is making", "is working", "are drinking", "is sending", "are speaking",
+                "works", "lives", "get", "have", "has", "making", "taking", "boarding", "having", "running",
                 "arrive", "seat", "return", "reservation", "rented", "was", "went", "stayed", "left",
                 "most", "faster", "cheaper", "longer", "best"];
 
+const resultMessage = document.querySelectorAll('result');
 
-    const resultMessage = document.querySelectorAll('result');
+// pegar frases aleatórias
+let randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
 
+window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+let recog = new window.SpeechRecognition();
 
-    // pegar frases aleatórias
-    let randomPhrase = phrases[Math.floor(Math.random() * 33)];
+recog.addEventListener('result', captarAudio);
+recog.addEventListener('end', () => recog.start());
+recog.lang = 'en-US';
 
-    window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    let recog = new window.SpeechRecognition();
+document.getElementById('record').addEventListener('click', () => {
+    document.getElementById('btnGravar1').innerText = 'Recording';
+    recog.start();
+    document.getElementById('record').classList.add('record-clicked');
+});
+document.getElementById('record2').addEventListener('click', () => {
+    document.getElementById('btnGravar2').innerText = 'Recording';
+    recog.start();
+    document.getElementById('record2').classList.add('record-clicked');
+});
+document.getElementById('record3').addEventListener('click', () => {
+    document.getElementById('btnGravar3').innerText = 'Recording';
+    recog.start();
+    document.getElementById('record3').classList.add('record-clicked');
+});
+document.getElementById('record4').addEventListener('click', () => {
+    document.getElementById('btnGravar4').innerText = 'Recording';
+    recog.start();
+    document.getElementById('record4').classList.add('record-clicked');
+});
+document.getElementById('record5').addEventListener('click', () => {
+    document.getElementById('btnGravar5').innerText = 'Recording';
+    recog.start();
+    document.getElementById('record5').classList.add('record-clicked');
+});
+document.getElementById('record6').addEventListener('click', () => {
+    document.getElementById('btnGravar6').innerText = 'Recording';
+    recog.start();
+    document.getElementById('record6').classList.add('record-clicked');
+});
 
-    
-    recog.addEventListener('result', captarAudio);
-    recog.addEventListener('end', () => recog.start());
-    recog.lang = 'en-US';
-
-    document.getElementById('record').addEventListener('click', () => {
-        // Alterando o texto do botão para "Recording"
-        document.getElementById('btnGravar').innerText = 'Recording';
-        recog.start();
-        document.getElementById('record').classList.add('record-clicked');
-    });
-    document.getElementById('record2').addEventListener('click', () => {
-        document.getElementById('btnGravar2').innerText = 'Recording';
-        recog.start();
-        document.getElementById('record2').classList.add('record-clicked');
-    });
-    document.getElementById('record3').addEventListener('click', () => {
-        document.getElementById('btnGravar3').innerText = 'Recording';
-        recog.start();
-        document.getElementById('record3').classList.add('record-clicked');
-    });
-    document.getElementById('record4').addEventListener('click', () => {
-        document.getElementById('btnGravar4').innerText = 'Recording';
-        recog.start();
-        document.getElementById('record4').classList.add('record-clicked');
-    });
-    document.getElementById('record5').addEventListener('click', () => {
-        document.getElementById('btnGravar5').innerText = 'Recording';
-        recog.start();
-        document.getElementById('record5').classList.add('record-clicked');
-    });
-    document.getElementById('record6').addEventListener('click', () => {
-        document.getElementById('btnGravar6').innerText = 'Recording';
-        recog.start();
-        document.getElementById('record6').classList.add('record-clicked');
-    });
-    
-    // Pegando o áudio do usuário através do microfone
-    function captarAudio(e) {
-        let mensagem = e.results[0][0].transcript;
-        mostrarMensagem(mensagem);
-
-    }
-    
+// Pegando o áudio do usuário através do microfone
+function captarAudio(e) {
+    let mensagem = e.results[0][0].transcript;
+    let firstWord = mensagem.split(' ')[0]; // Capturar apenas a primeira palavra
+    mostrarMensagem(firstWord);
+}
 
 
     function  mostrarMensagem(mensagem) {
         checarFrase(mensagem);
     }
 
-    //vaiável para somar acertos
+    //variável para somar acertos
     let correctGuesses = 0;
+    let wordsUsed = [];
   
-    function checarFrase(mensagem) {          
+    function checarFrase(mensagem) { 
+        if (wordsUsed.includes(mensagem.toLowerCase())) {
+            console.log('A palavra já foi usada: ' + mensagem);
+            return; // Não computar acerto se a palavra já foi usada
+        } 
+                 
         //verificar se o que p usuário falou está dentro do array de respostas corretas
         let palpiteCorreto = false;
+        
         phrases.forEach(phrase => {
             if (mensagem.toLowerCase().includes(phrase.toLowerCase())) {
                 palpiteCorreto = true;
@@ -120,13 +128,20 @@ const phrases = ["receive", "mean", "again", "card", "tea", "one more time", "co
         
 
         if (palpiteCorreto) {
-            // computar acertos
-            correctGuesses += 100;
-            console.log('acertos: ' + correctGuesses);
-            let audio;
-
+             // Atualizar o container atual com a palavra capturada, e computar os acertos
+            const containers = document.getElementsByClassName('container-question');
+            if (containers[currentContainerIndex]) {
+                containers[currentContainerIndex].textContent = mensagem;
+                wordsUsed.push(mensagem.toLowerCase());
+                correctGuesses += 100;
+                console.log('Acertos: ' + correctGuesses);
+                console.log('Palavras usadas: ' + wordsUsed.join(', '));
+                nextContainer('container-question');
+            }
+                             
+        
             function mostrarRespostaCorreta(mensagem) {
-                // Reproduz o áudio
+                // Reproduz o efeito sonoro para o áudio
                 const correctAudio = document.getElementById('correctAudio');
                 correctAudio.play().catch(error => {
                     console.error('Erro ao reproduzir o áudio incorreto:', error);
@@ -150,6 +165,7 @@ const phrases = ["receive", "mean", "again", "card", "tea", "one more time", "co
             }
         
             updateScore(correctGuesses);
+            
         } else {
             function mostrarRespostaErrada(mensagem) {
                 

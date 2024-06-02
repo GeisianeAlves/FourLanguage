@@ -267,9 +267,8 @@ display: flex !important;
   }
 .modal-content {
     background-color: #fefefe;
-    margin: 5% auto;
-    /* padding: 20px; */
-    border: 1px solid #c2f0b0;
+    margin:  5%;
+    left: 25%;
     border-radius: 10px;
     width: 80%;
     height: 50%;
@@ -277,7 +276,7 @@ display: flex !important;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 3px solid rgb(112, 205, 231);
+    border: 3px solid rgb(158, 207, 195);
 }
 .modal-content h1 {
     margin-bottom: 20px;

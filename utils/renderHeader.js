@@ -1,8 +1,8 @@
 function applyStyles() {
   // Criar uma tag style
-  var style = document.createElement('style');
-  style.type = 'text/css';
-  
+  var style = document.createElement("style");
+  style.type = "text/css";
+
   // Adicionar o CSS ao estilo
   style.innerHTML = `
   @import url("https://fonts.googleapis.com/css2?family=Cookie&family=Jost:wght@200;300&family=Lora:wght@600&display=swap");
@@ -37,6 +37,7 @@ function applyStyles() {
   
   .item-lista-cabecalho:hover {
     color: rgb(186, 250, 228);
+    
   }
   
   
@@ -84,9 +85,11 @@ function applyStyles() {
   }
   
   .container-nav ul li {
-    margin-right: 20px; /* Adapte a margem conforme necessário */
-    position: relative; /* Define posição relativa para alinhar a sub-lista */
-    font-size: 1rem; 
+    margin-right: 4px;
+    position: relative;
+    font-size: 1rem;
+    padding-right: 37px;
+
   }
   
   .nav-menu ul li ul {
@@ -150,6 +153,7 @@ function applyStyles() {
     background-color: #4c546c;
     color: white;
     font-size: 14px;
+    text-align: center;
   }
   
   
@@ -203,37 +207,69 @@ function applyStyles() {
 
 
   /* Responsive styles */
+  
+
+
+
 @media (max-width: 768px) {
   .nav-menu { /* Target the entire menu for mobile responsiveness */
     position: absolute; /* Position off-screen initially */
-    top: 100%; /* Place below header content */
+    top: 12%; /* Place below header content */
     left: 0; /* Align to left side */
     width: 100%; /* Full width on mobile */
     background-color: #4c546c; /* Background color for mobile menu */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     padding: 20px; /* Padding for mobile menu content */
     transition: transform 0.3s ease-in-out; /* Smooth menu slide animation */
-    transform: translateY(-100%); /* Initially hidden */
+    transform: translateY(-90%); /* Initially hidden */
   }
+
+  
 
   .lista-nao-ordenada {
     display: block; /* Ensure submenus stack vertically on mobile */
   }
 
-  .item-lista-cabecalho {
+  .menu-direita li {
+    right: 28px;
+    top: 35px;
+  }
+
+  .nav-menu button{
+    padding: 4px 10px;
+    margin-top: 7px;
+    
+  }
+  .menu-direita input{
+    padding: 8px 5px;
+    width: 152px;
+    font-size: 13px;
+
+  }
+
+  .container-nav ul li{
+    right: 28px;
+        bottom: 24px;
+    }
+  }
+  
+
+  .item-lista-cabecalho .menu-direita{
     display: block; /* Display list items vertically on mobile */
     margin: 0; /* Remove margins for cleaner layout */
     padding: 10px; /* Padding for mobile menu items */
-    border-bottom: 1px solid #ddd; /* Optional: Separator line */
   }
 
   .item-lista-cabecalho a {
-    padding: 8px 12px; /* Adjust padding for smaller screens */
+   
     font-size: 14px; /* Adjust font size for better readability */
   }
 
+ 
+
   
   /* Add menu toggle button */
+  
   .menu-toggle {
     display: block; /* Display the toggle button on mobile */
     padding: 10px; /* Add some padding for better interaction */
@@ -250,13 +286,13 @@ function applyStyles() {
   .nav-menu.active {
     transform: translateY(0); 
   }
-
+}
   
   
   
   
   `;
-  
+
   // Adicionar o estilo ao head do documento
   document.head.appendChild(style);
 }
