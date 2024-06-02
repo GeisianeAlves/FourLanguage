@@ -7,6 +7,9 @@
   body h1, h2 {
     color: rgb(79, 73, 73);
   }
+  body h1 {
+    font-size: 1.3em;
+  }
 .container-about {
     display: flex;
     flex-direction: column;
@@ -29,7 +32,7 @@
     justify-content:center;
     align-items: center;
     gap: 30px;
-
+    margin-bottom: 30px;
 }
 .team-members-cards {
     width: 160px;
@@ -40,7 +43,7 @@
 
 }
 .team-members-cards img {
-    width: 100px;
+    width: 80px;
 }
 .team-members-cards h2 {
     font-size: 1em;
@@ -56,6 +59,7 @@
     align-items: flex-start;
     text-align: left;
     text-align: justify;
+    margin-bottom: 30px;
 }
 
 .tools-websites-container {
@@ -65,6 +69,7 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    margin-bottom: 30px;
 }
 .tools-websites-div-cards {
     width: 80%;
@@ -76,7 +81,7 @@
 }
 
 .tools-websites-div-cards h2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 .tools-websites-cards {
