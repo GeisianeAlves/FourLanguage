@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    
+  }
+  body h1, h2 {
+    color: rgb(79, 73, 73);
+  }
+.container-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    font-weight: 300;
+    font-size: 20px;
+    font-family: "Space Mono";
+    background-color: #f0f0f0;
+    
+}  
+
+.team-members {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    gap: 30px;
+
+}
+.team-members-cards {
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.team-members-cards img {
+    width: 100px;
+}
+.team-members-cards h2 {
+    font-size: 1em;
+    border: 3px dashed pink;
+    border-radius: 25px;
+    padding: 0 10px;
+}
+.project {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    text-align: justify;
+}
+
+.tools-websites-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.tools-websites-div-cards {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.tools-websites-div-cards h2 {
+    font-size: 1.4rem;
+}
+
+.tools-websites-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 3px solid rgb(238, 220, 186);
+    border-radius: 10px;
+    padding: 20px;
+    height: 200px;
+}
+
+.project, .tools-websites-cards p, a {
+    color: rgb(79, 73, 73);
+    font-size: 1rem;
+}
+.tools-websites-cards p {
+    text-align: left;
+}

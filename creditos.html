@@ -2,32 +2,29 @@
 <html>
   <head>
   <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
-
-    <title>Four Language | About </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link
+         href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+         rel="stylesheet"
+         />
+    <title> Four Language | Grammar</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/stylecreditos.css" />
+    <link rel="stylesheet" href="css/credito.css" />
    
     <link
     href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet"
   />
 
-    <script src="utils/renderUnit.js"></script>
-
-    <script src="utils/renderSpeakingLevel.js"></script>  
-    <script src="utils/renderListeningLevel.js"></script>
-    <script src="utils/renderLevels.js"></script>
-
-    <script>
-      window.renderUnit()
-    
-    </script>
 
   </head>
-  
+
+
+
   <body>
-    <header class="cabecalho">
+   
+    <header class="cabecalho" id="header">
       <div class="container-nav">
       <nav class="nav-menu">
         <img src="img/logo-four.png" alt="Logo Four Language" width="60vw" class="logo-four">
@@ -48,82 +45,131 @@
             <a href="revisao.html"> Content Review</a>
             
           </li>
+          <li class="item-lista-cabecalho">
+            <a href="grammar.html"> Grammar</a>
+            
+          </li>
       
           <li class="item-lista-cabecalho"><a href="creditos.html">About</a></li>
-          <!-- <div class="menu-direita">
-          <li>
-            <input type="text" placeholder="Search Content..." class="search-bar"> </input>
-            <button class="nav-botao"><a href="login.html">Sign out</a></button>
-          </li>
-        </div> -->
+
+          <div class="menu-direita">
+            <li>
+
+               <form action="#">
+                 <input type="text" placeholder="Search Content..." class="search-bar" id="searchInput">
+                 <button class="nav-botao" type="submit" id="searchButton">go</button>
+                 <button class="nav-botao"><a href="login.html">Sign out</a></button>
+               </form>        
+             </input>        
+             </li>
+     
+         </div>
         </ul>
       </div>
+
+
       </nav>
           
       <!-- chamando a formatacao do cabecalho -->
-    <script src="utils/renderHeader.js"> </script>
-    
-   
-   
-   
+    <script src="utils/renderHeader.js"> </script> 
     </header>
+   
+    <section>
+      <div class="container-about">
+        <h1>Team Members</h1>
+
+        <div class="team-members">
+          <div class="team-members-cards">
+            <img src="img/astronaut-mini.png" alt="">
+            <h2>Geisiane Alves</h2>
+          </div>
+          <div class="team-members-cards">
+            <img src="img/astronaut-mini.png" alt="">
+            <h2>Rafaela Rodrigues</h2>
+          </div>          
+          <div class="team-members-cards">
+            <img src="img/astronaut-mini.png" alt="">
+            <h2>Raquel Diniz</h2>
+          </div>
+          <div class="team-members-cards">
+            <img src="img/astronaut-mini.png" alt="">
+            <h2>Vinicius Pereira</h2>
+          </div>          
+        </div>
 
 
-            <!-- banners -->
-            <section class="">   
-                <!--lado esquerdo-->
-                <div class="quem-somos">
-                    <h1>About Project</h1>
-                    
-                    <p style="text-align: center;">Estudantes de Análise e Desenvolvimento de Sistemas na Fatec de Carapicuíba.</p><br>
-                       
-                    <p><i>Site educacional</i> desenvolvido como requisito para aprovação na disciplina de Trabalho de Graduação II, com
-                         orientação da <span style="font-size: 20px;">Dra. Sandra B. H. Geroldo</span> </p>
-        
-                    <p class="paragrafo-destaque">Ferramentas utilizadas e Créditos:</p><br>
-                    <br>
-                    <p>Javascript, CSS, HTML e Bootstrap<br>        
-                    <a href="https://www.pexels.com/pt-br/">Pexels</a> - Fotos Profissionais <br>
-                    </p>
-                    <p><a href="https://icons8.com/icons">Icon8</a></p>
-                    <p><a href="https://www.flaticon.com/br/">flaticon</a></p>
-                    <p>Livro: <i>Business Start-Up 1 Students Book Klett Edition by Mark Ibbotson, Bryan Stephens</i><br>
-                    <p>Livro: <i>Business Start-Up 2 Students Book Klett Edition by Mark Ibbotson, Bryan Stephens</i><br>
+        <div class="project">
+          <h1>Project</h1>
+          <p>Software developed as a requirement for approval on 'Análise e Desenvolvimento de Sistemas', under the guidance of Dr. Sandra B. H. Geroldo.
+        </div>
+    
 
-                    
-                </div>
-            </section>
+      <div class="tools-websites-container">
+        <h1>Tools and Websites</h1>
+
+        <div class="tools-websites-div-cards">
+
+          <div class="tools-websites-cards">
+            <h2>Tools</h2>
+            <p>Javascript</p>
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>Bootstrap</p>
+          </div>
+
+          <div class="tools-websites-cards">
+            <h2>Images</h2>
+            <p><a href="https://pixabay.com/" target="_blank">Pixabay </a></p>
+            <p><a href="https://icons8.com/icons" target="_blank">Icons8 </a></p>
+            <p><a href="https://www.flaticon.com/br/" target="_blank">Flaticon </a></p>
+            <p><a href="https://br.freepik.com/autor/flatart" target="_blank">Freepik </a></p>      
+          </div>
+
+          
+          <div class="tools-websites-cards">
+            <h2>Websites</h2>
+            <p><a href="https://www.britishcouncil.org.br/" target="_blank">British Council</a></p>     
+            <p><a href="https://www.coursera.org/learn/english-intermediate-b1-2" target="_blank">Coursera</a></p>     
+            <p><a href="https://dictionary.cambridge.org/dictionary/" target="_blank">Cambridge</a></p>     
+          </div>
 
 
+          <div class="tools-websites-cards">
+            <h2>Books</h2>
+            <p><a href="books/Business_Start-Up_1_Student_39_Student's_book.pdf" target="_blank"><i>Business Start-Up 1</i>, by Mark Ibbotson, Bryan Stephens</a></p>     
+            <p><a href="books/Business Start-Up 2-Student's Book.pdf" target="_blank"><i>Business Start-Up 2</i>, by Mark Ibbotson, Bryan Stephens</a></p>    
+          </div>
 
-                <!-- Footer -->
-        <footer class="rodape">
+        </div>
+
+      </div>
+
+    </div>
+
+    </section>
+
+    <footer class="rodape">
 
           <img src="img/logo-four.png" alt="" width="40vw" >
            
-          <p>Four Language</p></p> <br><hr><br> 
-          <p class="mt-4 text-sm text-white-100 snipcss0-4-7-9"
-          ">
-            O Four Language tem o objetivo de auxiliar os estudantes da
-            Fatec que cursam a matéria de Inglês.
-          </p>
-    
-          <p class="text-sm text-gray-100 snipcss0-2-41-42">
-            © Copyright 2024 Four Language Inc. Todos os direitos reservados.
-          </p>
-    
-          <!-- Estilo do rodape - footer -->
-          <script src="utils/renderFooter.js"></script>
-          
-        </footer>
+      <p>Four Language</p></p> <br><hr><br> 
+      <p class="mt-4 text-sm text-white-100 snipcss0-4-7-9">
+        O Four Language tem o objetivo de auxiliar os estudantes da
+        Fatec que cursam a matéria de Inglês.
+      </p>
 
+      <p class="text-sm text-gray-100 snipcss0-2-41-42">
+        © Copyright 2024 Four Language Inc. Todos os direitos reservados.
+      </p>
 
-           
-            <script src="js/script.js"></script>
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+      <!-- Estilo do rodape - footer -->
+      <script src="utils/renderFooter.js"></script>
+      
+    </footer>
 
-            
-</body>
-
+    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="js/grammar.js"></script>
+  </body>
 </html>
