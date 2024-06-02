@@ -33,17 +33,17 @@ th {
 
 /* menu de navegacao das unidades */
 .container-nav-units {
-  width: 229px;
-  height: 335px;
+  width: 310px;
+  height: 315px;
   background-color: #f0f0f0;
   position: fixed;
   top: 163px;
   bottom: -2px;
-  left: 2px;
+  left: 62px;
   right: 54px;
-  padding: 17px 5px 26px 6px;
+  padding: 17px 5px 25px 8px;
   border: 2px solid rgb(103 58 183 / 44%);
-  border-radius: 0px 40px 49px 50px;
+  border-radius: 0px 48px 52px 58px;
   font-family: "Space Mono";
   font-size: 14px;
   font-weight: bold;
@@ -84,49 +84,40 @@ th {
 
 /* RESPONSIVIDADE DO MENU UNITS */
 @media (max-width: 768px) {
-
-  /* Styles for screens smaller than 768px */
   .container-nav-units {
-    width: 47%;
-    /* Make sidebar occupy full width on smaller screens */
-    height: max-content;
-    position: relative;
-    /* Reset position to relative for non-fixed behavior */
-    top: 2px;
-    /* Reset top position for non-fixed behavior */
-    bottom: 2px;
-    left: 102px;
-    margin-bottom: 7px;
-    padding: 5px 0px 0px 5px;
-    /* Adjust padding for smaller screens */
-    right: 2px;
+    width: auto !important;
+    height: auto !important;
+    position: static !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    margin-bottom: auto !important;
+    padding: auto !important;
+    border: none !important;
+    border-radius: none !important;
+    margin-top: 8rem !important;
+    background-color: unset !important;
   }
 
-  .unit-nav {
-    display: flex;
-    /* Use flexbox for horizontal layout */
-    flex-direction: column;
-    /* Arrange items vertically */
-    align-items: center;
-    /* Center items horizontally */
+  .section-content1 {
+    width: 100% !important;
+    /* Largura da seção (ajuste conforme necessário) */
+    margin: 0 auto !important;
+    padding: 10px 15px 5px 15px !important;
+    /* text-align: justify !important; */
+    /* Espaçamento interno */
+    background-color: #eeeeee42 !important;
+    /* Cor de fundo (opcional) */
+    border: 1px solid #ddd !important;
+    /* Borda (opcional) */
+    border-radius: 8px !important;
+    /* Cantos arredondados (opcional) */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    /* Sombra (opcional) */
+    font-family: "Space Mono" !important;
+    font-size: 20px !important;
   }
-
-  .unit-nav li {
-    margin-bottom: 5px;
-    /* Reduce spacing between list items */
-  }
-
-  .unit-nav a {
-    border: 2px dashed #ddd;
-    /* Add border */
-    border-radius: 22px;
-    /* Add rounded corners */
-    transition: background-color 0.3s ease;
-    font-size: 14px;
-    /* Adjust font size for smaller screens */
-    padding: 2px 41px;
-  }
-
 
 }
 

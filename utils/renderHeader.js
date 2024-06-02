@@ -221,8 +221,10 @@ function applyStyles() {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     padding: 20px; /* Padding for mobile menu content */
     transition: transform 0.3s ease-in-out; /* Smooth menu slide animation */
-    transform: translateY(-100%); /* Initially hidden */
+    transform: translateY(-90%); /* Initially hidden */
   }
+
+  
 
   .lista-nao-ordenada {
     display: block; /* Ensure submenus stack vertically on mobile */
