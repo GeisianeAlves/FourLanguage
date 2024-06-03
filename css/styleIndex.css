@@ -618,24 +618,30 @@ img {
   align-items: center;
   /* flex-direction: row; */
   width: 100%;
-  height: 190vh;
-  /* background-color: ; */
+  /* height: 190vh; */
   font-family: "Raleway", sans-serif;
   color: #333;
 }
-
+@media (max-width: 1200px) {
+  .preview-jogos {
+      min-height: 100%; /* Ajuste conforme necessário para telas menores */
+      padding: 0.5rem; /* Reduz o padding em telas menores */
+  }
+  .jogos {
+    height: 100%;
+  }
+}
 .container-jogos {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 70%;
-  gap: 50px;
-
+  width: 65%;
 }
 
 .container-jogos h1 {
   font-size: 30px;
+  margin-bottom: 40PX;
 }
 
 .jogos {
@@ -645,17 +651,17 @@ img {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  width: 80%;
+  width: 90%;
   height: 280px;
   margin-right: 20px;
   font-family: "Raleway", sans-serif;
   border-radius: 10px;
   border: 2px solid rgb(30, 32, 32);
-
+  margin-bottom: 40PX;
 }
 
 .jogos img {
-  width: 450px;
+  width: 55%;
   height: 100%;
   border-bottom-right-radius: 25px;
 }
@@ -701,7 +707,7 @@ img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 30%;
+  width: 35%;
   height: 100%;
   gap: 30px;
   padding-right: 43px;
@@ -760,15 +766,18 @@ h2 {
 
 .container-right-1 h1 {
   font-size: 2.2rem;
-
+/* line-height: 1.2rem; */
+margin-top: 10px;
 }
 
 .container-right-1 h2 {
   font-size: 1.9rem;
+  text-align: center;
+  line-height: 1.8rem;
 }
 
 .container-right-1 h3 {
-  width: 70%;
+  width: 80%;
   padding-top: 50px;
   padding-bottom: 30px;
   text-align: center;
@@ -779,9 +788,9 @@ h2 {
 
 #canto-esquerdo {
   position: relative;
-  right: -160px;
+  right: -130px;
   top: -35px;
-  width: 100px;
+  width: 80px;
 }
 
 .container-right-1-game-on {
@@ -793,10 +802,10 @@ h2 {
   background-color: #d0c8da;
   border-radius: 5px;
   font-family: "Raleway", sans-serif;
-  height: 80px;
-  margin-top: 10px;
-  padding-left: 50px;
-  font-size: 18px;
+  height: 70px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  font-size: 1rem;
 }
 
 .container-right-1-game-on .icone {
@@ -812,12 +821,14 @@ h2 {
 
 .container-right-1-game-on h2 {
   color: rgb(147, 147, 96);
-
+  font-size: 1.4rem;
+  line-height: 1.5rem;
 }
 
 .container-right-1-game-on .icone img {
   position: absolute;
   right: 110px;
+  padding-bottom: 10px;
 }
 
 /* .container-right img {
@@ -940,7 +951,7 @@ mark {
     margin-bottom: 10px;
   }
 
-  /*jogos*/
+  /*jogos  */
   .preview-jogos {
     /* max-width: 640px; */
     min-height: 250vh;
@@ -950,6 +961,7 @@ mark {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+ 
   }
 
   .preview-jogos .container-right {
@@ -964,6 +976,7 @@ mark {
     justify-content: center;
     gap: 20px;
     margin-left: 20px;
+    
   }
 
   .preview-jogos .container-jogos h1 {
