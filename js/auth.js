@@ -13,8 +13,6 @@ async function verificarUnicidadeNomeUsuario(username) {
     return !Object.keys(usernames || {}).some(key => key.toLowerCase() === usernameLowerCase);
 }
 
-
-
 async function fazerCadastro(username, email, senha) {
     if (typeof email === 'string' && typeof senha === 'string' && typeof username === 'string') {
         console.log("Tentando criar usuário com email:", email);
@@ -118,6 +116,5 @@ onAuthStateChanged(auth, (user) => {
         console.log('Nenhum usuário está logado.');
     }
 });
-
 
 export { fazerLogin, fazerCadastro, resetarSenha };
