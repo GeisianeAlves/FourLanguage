@@ -283,7 +283,7 @@ body {
   /* Allow items to wrap to the next line */
   justify-content: space-around;
   /* Distribute items evenly */
-  align-items: flex-start;
+  /* align-items: flex-start; */
   /* Align items to the top */
 
 
@@ -292,12 +292,12 @@ body {
 .revisao-item {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   margin-bottom: 60px;
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 39%;
-  flex-basis: 45%;
+  width: 51%;
+  flex-basis: 46%;
   flex-direction: column;
   border: 1px solid #ddd;
   /* Add a border */
@@ -364,6 +364,17 @@ body {
     width: 28vh;
     height: 26vh;
   }
+  .revisao-item{
+    Width: 80% 
+    }
+    
+    .revisao-item p {
+    Font-size: 13px
+    }
+    
+    span .revisao-item{
+    Font-size: 13px
+    }
 }
 
 .revisao-item .content-container {
