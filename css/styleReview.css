@@ -291,6 +291,7 @@ body {
 
 .revisao-item {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   margin-bottom: 60px;
   padding-top: 10px;
