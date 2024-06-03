@@ -138,7 +138,7 @@ html {
 }
 
 #score-container {
-  background-color: #cddde8;
+  background-color: #f1f5f7;
   color: #000;
   text-align: center;
   width: 400px;
@@ -173,8 +173,8 @@ html {
 }
 
 #restart {
-  background-color: #e78230;
-  color: #fff;
+  background-color: #e9d6b7;
+  color: #413c3c;
   font-weight: bold;
   height: 50px;
   border-radius: 24px;
@@ -186,10 +186,9 @@ html {
   transition: 0.5s;
 }
 
-#restar:hover {
-  background-color: transparent;
-  border-color: #cf34c2;
-  color: #cf34c2;
+#restart:hover {
+  background-color: #fcf4e7;
+  border:  2px solid gray;
 }
 
 /*Quiz container*/
@@ -216,7 +215,7 @@ html {
   font-weight: bold;
 }
 #questions-qty, #correct-answers{
-  color: red;
+  color: rgb(152, 98, 162);
   font-size: 25px;
 }
 #display-score-text {
@@ -230,7 +229,7 @@ html {
   width: 417px;
   height: 60px;
   border-radius: 25px;
-  background-color: #cddde8;
+  background-color: rgba(184, 178, 197, 0.86);;
   border: 2px solid transparent;
   text-align: left;
   padding-bottom: 22px;
@@ -238,6 +237,7 @@ html {
   color: #000;
   cursor: pointer;
   transition: 0.5s;
+  border: 2px solid gainsboro;
 }
 
 #answers-box button:hover {
@@ -248,7 +248,7 @@ html {
 #answers-box .btn-letter {
   font-size: 18px;
   font-weight: bold;
-  background-color: #c46bbc;
+  background-color: #94aeb3;
   color: #fff;
   border-radius: 50%;
   line-height: 40px;
@@ -269,13 +269,13 @@ html {
 
 #quizz-container .wrong-answer,
 #quizz-container .wrong-answer .btn-letter {
-  background-color: #e62210;
+  background-color: #efa29b;
   color: #fff;
 }
 
 #quizz-container .correct-answer,
 #quizz-container .correct-answer .btn-letter {
-  background-color: #40b576;
+  background-color: #7bab92;
   color: #fff;
 }
 
@@ -312,9 +312,9 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(118, 168, 180, 0.671);
+  width: 100%;
+  height: 90vh;
+  background-color: rgba(177, 172, 183, 0.671);
 }
 
 #img-astronauta {
@@ -336,7 +336,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #efe4cc99;
+  background-color: #ecdab499;
   border-radius: 50%;
   text-align: center;
  
