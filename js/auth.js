@@ -1,16 +1,15 @@
-import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
 import firebaseApp from './firebaseConfig.js';
-import { getAuth, createUserWithEmailAndPassword, sendEmailVerification, signInWithEmailAndPassword, sendPasswordResetEmail, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, sendEmailVerification, signInWithEmailAndPassword, sendPasswordResetEmail, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
 
 const auth = getAuth(firebaseApp);
 const db = getDatabase(firebaseApp);
 
 async function verificarUnicidadeNomeUsuario(username) {
     const usernameLowerCase = username.toLowerCase();
-    const usernamesRef = ref(db, 'username');
+    const usernamesRef = ref(db, `usernames/${usernameLowerCase}`);
     const snapshot = await get(usernamesRef);
-    const usernames = snapshot.val();
-    return !Object.keys(usernames || {}).some(key => key.toLowerCase() === usernameLowerCase);
+    return !snapshot.exists();
 }
 
 async function fazerCadastro(username, email, senha) {
@@ -88,7 +87,6 @@ function fazerLogin(email, senha) {
         });
 }
 
-
 function resetarSenha(email) {
     console.log("Tentando redefinir senha para email:", email);
     sendPasswordResetEmail(auth, email)
@@ -99,6 +97,14 @@ function resetarSenha(email) {
             var errorMessage = error.message;
             alert(errorMessage);
         });
+}
+
+function signOutUser() {
+    signOut(auth).then(() => {
+        window.location.href = 'login.html';
+    }).catch((error) => {
+        console.error('Erro ao fazer logout:', error);
+    });
 }
 
 onAuthStateChanged(auth, (user) => {
@@ -117,4 +123,4 @@ onAuthStateChanged(auth, (user) => {
     }
 });
 
-export { fazerLogin, fazerCadastro, resetarSenha };
+export { fazerLogin, fazerCadastro, resetarSenha, signOutUser, auth, db };
