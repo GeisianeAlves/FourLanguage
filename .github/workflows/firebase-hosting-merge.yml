@@ -20,6 +20,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      # Instalar Firebase CLI
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
       # Configurar autenticação com o Firebase
       - name: Set up Firebase authentication
         env:
