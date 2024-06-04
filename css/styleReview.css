@@ -372,6 +372,13 @@ body {
     }
 }
 
+@media (max-width: 768px){
+  .nav-menu{
+    /* padding: 2px 80px 1px 21px; */
+    column-gap: 36px;
+  }
+}
+
 @media (max-width: 500px) {
   .img-units {
     width: 65vw;
