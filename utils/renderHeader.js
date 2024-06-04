@@ -207,21 +207,64 @@ function applyStyles() {
 
 
   /* Responsive styles */
+  @media (max-width: 500px) {
+    .img-units {
+      width: 62vw;
+      height: 26vh;
+    }
+    .revisao-item{
+      width: 80%;
+      padding: 113px 13px 16px 6px; 
+      }
+      
+      .revisao-item p {
+      font-size: 18px;
+      padding: 7px 20px 15px 24px;
+      }
+      
+     
   
+     
+  }
 
+  @media (max-width: 720px) {
+    .img-units {
+      width: 64vw;
+      height: 27vh;
+    }
+  
+    .revisao-item{
+      width: 80%; 
+      }
+      
+      .revisao-item p {
+      font-size: 18px;
+      padding: 7px 18px 15px 24px;
+      }
+      
+      span .revisao-item{
+      Font-size: 13px;
+      }
+  }
 
 
 @media (max-width: 768px) {
   .nav-menu { /* Target the entire menu for mobile responsiveness */
     position: absolute; /* Position off-screen initially */
-    top: 12%; /* Place below header content */
+    top: 91px; /* Place below header content */
     left: 0; /* Align to left side */
     width: 100%; /* Full width on mobile */
     background-color: #4c546c; /* Background color for mobile menu */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    padding: 20px; /* Padding for mobile menu content */
+    padding: 27px 0px 38px 8px; /* Padding for mobile menu content */
     transition: transform 0.3s ease-in-out; /* Smooth menu slide animation */
     transform: translateY(-90%); /* Initially hidden */
+    column-gap: 2px;
+  }
+
+  .nav-menu ul{
+    margin: 2px 2px 0px 0px;
+    padding: 2px 20px 2px 58px;
   }
 
   
@@ -233,6 +276,7 @@ function applyStyles() {
   .menu-direita li {
     right: 28px;
     top: 35px;
+    width: auto;
   }
 
   .nav-menu button{
@@ -247,9 +291,10 @@ function applyStyles() {
 
   }
 
+  
   .container-nav ul li{
-    right: 28px;
-        bottom: 24px;
+    right: 15px;
+        bottom: 15px;
     }
   }
   
@@ -284,7 +329,7 @@ function applyStyles() {
 
   /* Animate menu toggle */
   .nav-menu.active {
-    transform: translateY(0); 
+    transform: translateY(-30%); 
   }
 }
   
