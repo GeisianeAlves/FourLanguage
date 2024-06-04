@@ -352,7 +352,7 @@ body {
   padding: 12px 24px;
 }
 
-@media (max-width: 720px) {
+/* @media (max-width: 720px) {
   
 
   .revisao-item{
@@ -367,7 +367,7 @@ body {
     span .revisao-item{
     Font-size: 13px;
     }
-}
+} */
 
 /* @media (max-width: 768px){
   .nav-menu{

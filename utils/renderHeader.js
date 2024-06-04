@@ -230,11 +230,13 @@ function applyStyles() {
   @media (max-width: 720px) {
     .img-units {
       width: 64vw;
-      height: 27vh;
+      height: 35vh;
     }
   
     .revisao-item{
       width: 80%; 
+      padding-top: 133px;
+      flex-basis: 84%;
       }
       
       .revisao-item p {
@@ -251,7 +253,7 @@ function applyStyles() {
 @media (max-width: 768px) {
   .nav-menu { /* Target the entire menu for mobile responsiveness */
     position: absolute; /* Position off-screen initially */
-    top: 91px; /* Place below header content */
+    top: 18%; /* Place below header content */
     left: 0; /* Align to left side */
     width: 100%; /* Full width on mobile */
     background-color: #4c546c; /* Background color for mobile menu */
@@ -260,6 +262,8 @@ function applyStyles() {
     transition: transform 0.3s ease-in-out; /* Smooth menu slide animation */
     transform: translateY(-90%); /* Initially hidden */
     column-gap: 2px;
+    flex-basis: 73%;
+
   }
 
   .nav-menu ul{
