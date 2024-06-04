@@ -2,17 +2,15 @@
 <html lang="pt-br">
 
 <head>
-  <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Four Language | Login</title>
     <link rel="stylesheet" href="css/style1.css">
-    <link
-         href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-         rel="stylesheet"
-         />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet" />
 
 </head>
 
@@ -31,36 +29,37 @@
                     <ul class="list-social-media">
                         <a class="link-social-media" href="#">
                             <li class="item-social-media">
-                                <i class="fab fa-facebook-f"></i>
+                                <i class="fab fa-facebook-f"></i><!-- social media -->
                             </li>
                         </a>
                         <a class="link-social-media" href="#">
                             <li class="item-social-media">
-                                <i class="fab fa-google-plus-g"></i>
+                                <i class="fab fa-google-plus-g"></i><!-- social media -->
                             </li>
                         </a>
                         <a class="link-social-media" href="#">
                             <li class="item-social-media">
-                                <i class="fab fa-linkedin-in"></i>
+                                <i class="fab fa-linkedin-in"></i><!-- social media -->
                             </li>
                         </a>
                     </ul>
                 </div><!-- social media -->
                 <p class="description description-second">ou use seu e-mail para se cadastrar:</p>
+                <!-- Formulário de cadastro -->
                 <form class="form">
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input id="usernameInput1" type="text" placeholder="Nome de usuário" required>
+                    </label>
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
                         <input id="emailInput1" type="email" placeholder="Email" required>
                     </label>
-                
                     <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
                         <input id="passwordInput1" type="password" placeholder="Password">
                     </label>
-
-
                     <button id="btn-cadastro" class="btn btn-second">Cadastre-se</button>
-                    <!-- botão cadastro -->
                 </form>
             </div><!-- second column -->
         </div><!-- first content -->
@@ -124,9 +123,6 @@
         </div><!-- second-content -->
     </div>
     
-
-
-
     <script type="module">
         // Ouvinte de evento para o botão de login
         import { fazerLogin } from './js/auth.js';
@@ -143,33 +139,33 @@
     </script>
     <script type="module">
         import { resetarSenha } from './js/auth.js';
-    
+
         document.addEventListener('DOMContentLoaded', function () {
             var modal = document.getElementById("myModal");
             var btn = document.getElementById("forgotPasswordLink");
             var span = document.getElementsByClassName("close")[0];
-    
+
             // Oculta o modal ao carregar a página
             modal.style.display = "none";
-    
+
             // Adicione um ouvinte de eventos ao botão de fechar o pop-up
             span.addEventListener('click', function () {
                 modal.style.display = "none"; // Fecha o pop-up quando o botão de fechar for clicado
             });
-    
+
             // Adicione um ouvinte de evento de clique ao link "Esqueceu sua senha?"
             btn.onclick = function (event) {
                 event.preventDefault(); // Evite o comportamento padrão de seguir o link
-    
+
                 // Exibe o modal quando o link for clicado
                 modal.style.display = "block";
             }
-    
+
             document.getElementById("confirmEmail").addEventListener('click', function (event) {
                 event.preventDefault(); // Evite o comportamento padrão do botão
-    
+
                 var modalEmail = document.getElementById('emailPrompt').value;
-    
+
                 if (modalEmail) {
                     resetarSenha(modalEmail);
                     modal.style.display = "none"; // Fechar o modal após confirmar o email
@@ -180,30 +176,25 @@
     <script type="module">
         // Importa a função fazerCadastro do arquivo auth.js
         import { fazerCadastro } from './js/auth.js';
-    
+
+        // Script de Cadastro
         document.addEventListener('DOMContentLoaded', function () {
-            // Adiciona um ouvinte de evento para o botão de cadastro
             document.getElementById('btn-cadastro').addEventListener('click', function (event) {
                 event.preventDefault(); // Impede o comportamento padrão de envio do formulário
-    
-                // Obtenha o valor do campo de email
-                var email = document.getElementById('emailInput').value;
-    
-                // Obtenha o valor do campo de senha
-                var senha = document.getElementById('passwordInput').value;
-    
-                // Chame a função fazerCadastro() passando o email e a senha
-                fazerCadastro(email, senha);
+
+                var username = document.getElementById('usernameInput1').value;
+                var email = document.getElementById('emailInput1').value;
+                var senha = document.getElementById('passwordInput1').value;
+
+                fazerCadastro(username, email, senha);
             });
         });
-    </script>
-    
 
+    </script>
 
     <script src="js/switchScreen.js"></script>
     <script src="js/firebaseConfig.js" type="module"></script>
     <script src="js/auth.js" type="module"></script>
-
 
 </body>
 
