@@ -374,11 +374,12 @@ body {
 
 @media (max-width: 500px) {
   .img-units {
-    width: 28vh;
+    width: 65vw;
     height: 26vh;
   }
   .revisao-item{
-    width: 80% 
+    width: 80%;
+    padding: 113px 13px 16px 6px; 
     }
     
     .revisao-item p {
