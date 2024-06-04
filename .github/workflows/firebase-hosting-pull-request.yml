@@ -29,9 +29,9 @@ jobs:
 
       # Configurar autenticação com o Firebase
       - name: Set up Firebase authentication
-        env:
-          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/service-account.json
-        run: echo "${{ secrets.FOUR_LANGUAGE_CREDENTIALS }}" > ${{ runner.temp }}/service-account.json
+        run: |
+          echo "${{ secrets.FOUR_LANGUAGE_CREDENTIALS }}" > ${{ runner.temp }}/service-account.json
+          echo "export GOOGLE_APPLICATION_CREDENTIALS=${{ runner.temp }}/service-account.json" >> $GITHUB_ENV
 
       # Deploy para Firebase Hosting
       - name: Deploy to Firebase Hosting
