@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "mkdir -p dist && cp -r * dist && rm -rf dist/{node_modules,.github}"
+    "build": "echo 'No build step required'"
   },
   "dependencies": {
     "firebase": "^10.11.0"
