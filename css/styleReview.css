@@ -354,9 +354,22 @@ body {
 
 @media (max-width: 720px) {
   .img-units {
-    width: 43vh;
+    width: 59vw;
     height: 40vh;
   }
+
+  .revisao-item{
+    width: 80%; 
+    }
+    
+    .revisao-item p {
+    font-size: 18px;
+    padding: 7px 37px 15px 24px;
+    }
+    
+    span .revisao-item{
+    Font-size: 13px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -365,16 +378,19 @@ body {
     height: 26vh;
   }
   .revisao-item{
-    Width: 80% 
+    width: 80% 
     }
     
     .revisao-item p {
-    Font-size: 13px
+    font-size: 13px;
+    padding: 7px 92px 15px 24px;
     }
     
     span .revisao-item{
     Font-size: 13px
     }
+
+   
 }
 
 .revisao-item .content-container {
