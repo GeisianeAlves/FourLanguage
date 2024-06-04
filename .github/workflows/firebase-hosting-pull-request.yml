@@ -18,7 +18,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '20.11.1'
+          node-version: '20.x'
 
       - name: Install dependencies
         run: npm install
@@ -30,9 +30,11 @@ jobs:
       # Configurar autenticação com o Firebase
       - name: Set up Firebase authentication
         env:
-          GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.FOUR_LANGUAGE_CREDENTIALS }}
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/service-account.json
         run: echo "${{ secrets.FOUR_LANGUAGE_CREDENTIALS }}" > ${{ runner.temp }}/service-account.json
 
       # Deploy para Firebase Hosting
       - name: Deploy to Firebase Hosting
-        run: firebase deploy --only hosting --token "$(cat ${{ runner.temp }}/service-account.json)"
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/service-account.json
+        run: firebase deploy --only hosting
