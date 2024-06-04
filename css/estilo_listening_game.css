@@ -465,15 +465,23 @@ display: flex !important;
 
     .container-jogo {
         flex-direction: column;
+        width: 100%;
     }
-    .cont {
-        width: 450px;
-       
-    }
-    #progressContainer{
+    .all {
         width: 400px;
+       
+    } 
+    #progressContainer{
+        width: 350px;
         align-items: center;
-        margin-left: 60px;
+        margin-left: 50px;
+    }
+    #progressBar i {
+     font-size: 40px;
+     left: -20px;
+    }
+    #progressPercentage {
+      right: -10%;
     }
     #playpalavra {
         width: 80px;

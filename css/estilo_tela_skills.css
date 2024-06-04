@@ -258,19 +258,23 @@
     width: 100%;  
     flex-wrap: wrap; 
     top: 50%;
+    height: 320px;
+    
   }
   .skills-card{
     height: 120px;
    width: 150px;
+    margin-right: 5px;
   }
   #img-1 {
-    top: 0;
-    left: 160px;
-    width: 150px;
+    top: 30px;
+    left: 180px;
+    width: 70px;
   }
   #img-2 {
     top: 0;
-    width: 100px;
+    width: 80px;
+    left: 280px;
   }
   #img-3 {
     top: 0;
