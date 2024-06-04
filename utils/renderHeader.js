@@ -140,7 +140,7 @@ function applyStyles() {
     top: 100%; /* Posiciona abaixo do item pai */
     z-index: 1; /* Garante que a sublista fique em cima do item pai */
     visibility: hidden; /* Oculta a sublista inicialmente */
-    transition: all 0.3s ease; /* Define a transição para mostrar/ocultar a sublista */
+    transition: all 1s ease; /* Define a transição para mostrar/ocultar a sublista */
   }
   
   .item-lista-cabecalho:hover ul {

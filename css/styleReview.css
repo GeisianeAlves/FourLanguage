@@ -16,7 +16,28 @@ html {
 
 
 /* SPAN: A COR DAQUI ALTERA A LOGO E OS TITULOS DA UNIDADES */
+  /* Responsive styles */
+  @media (max-width: 500px) {
+    .img-units {
+      width: 62vw;
+      height: 26vh;
+    }
+    .revisao-item{
+      width: 80%;
+      padding: 113px 13px 16px 6px; 
+      }
+      
+      .revisao-item p {
+      font-size: 18px;
+      padding: 7px 20px 15px 24px;
+      }
+      
+     
+  
+     
+  }
 
+  
 
 span {
   font-size: 18px;
@@ -32,7 +53,7 @@ span {
   align-items: last baseline;
   background-color: #4c546c;
   color: white;
-  padding: 2% 0px 0px;
+  padding: 2px 0px 0px 0px;
 
 
 }
