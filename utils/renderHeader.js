@@ -235,17 +235,17 @@ function applyStyles() {
   
     .revisao-item{
       width: 80%; 
-      padding-top: 133px;
+      padding-top: 75px;
       flex-basis: 84%;
       }
       
       .revisao-item p {
       font-size: 18px;
-      padding: 7px 18px 15px 24px;
+      padding: 7px 24px 15px 24px;
       }
       
       span .revisao-item{
-      Font-size: 13px;
+      font-size: 13px;
       }
   }
 
@@ -253,16 +253,17 @@ function applyStyles() {
 @media (max-width: 768px) {
   .nav-menu { /* Target the entire menu for mobile responsiveness */
     position: absolute; /* Position off-screen initially */
-    top: 18%; /* Place below header content */
+    top: 10%; /* Place below header content */
     left: 0; /* Align to left side */
     width: 100%; /* Full width on mobile */
     background-color: #4c546c; /* Background color for mobile menu */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    
     padding: 27px 0px 38px 8px; /* Padding for mobile menu content */
     transition: transform 0.3s ease-in-out; /* Smooth menu slide animation */
     transform: translateY(-90%); /* Initially hidden */
-    column-gap: 2px;
-    flex-basis: 73%;
+    
+    margin-left: 0;
+    margin-right: 0;
 
   }
 
@@ -271,6 +272,9 @@ function applyStyles() {
     padding: 2px 20px 2px 58px;
   }
 
+  header img {
+    display:none;
+  }
   
 
   .lista-nao-ordenada {
@@ -281,6 +285,7 @@ function applyStyles() {
     right: 28px;
     top: 35px;
     width: auto;
+    
   }
 
   .nav-menu button{
@@ -292,13 +297,23 @@ function applyStyles() {
     padding: 8px 5px;
     width: 152px;
     font-size: 13px;
+   
 
   }
 
   
+
+  
   .container-nav ul li{
     right: 15px;
-        bottom: 15px;
+    bottom: 8px;
+    margin: 0 5px;
+    
+   
+    }
+    .container-nav ul li:hover, container-nav ul li:active{
+    background-color: transparent; 
+    transform: translateX(2px);
     }
   }
   
@@ -306,35 +321,19 @@ function applyStyles() {
   .item-lista-cabecalho .menu-direita{
     display: block; /* Display list items vertically on mobile */
     margin: 0; /* Remove margins for cleaner layout */
-    padding: 10px; /* Padding for mobile menu items */
+    
   }
 
-  .item-lista-cabecalho a {
-   
-    font-size: 14px; /* Adjust font size for better readability */
-  }
+  
+
+ 
 
  
 
   
   /* Add menu toggle button */
   
-  .menu-toggle {
-    display: block; /* Display the toggle button on mobile */
-    padding: 10px; /* Add some padding for better interaction */
-  }
-
-  .menu-toggle:before {
-    content: '\f0c9'; /* Font Awesome icon for menu (bars) */
-    font-family: FontAwesome, sans-serif; /* Ensure icon font is loaded */
-    font-size: 20px; /* Adjust icon size as needed */
-    color: #333; /* Adjust icon color */
-  }
-
-  /* Animate menu toggle */
-  .nav-menu.active {
-    transform: translateY(-30%); 
-  }
+  
 }
   
   
