@@ -79,15 +79,15 @@ function applyStyles() {
   
   .nav-menu ul {
     list-style: none;
-    padding: 0;
-    margin: 22px;
+    padding: 22px 16px;
+    margin: 2px 0px;
     display: flex;
   }
   
   .container-nav ul li {
     margin-right: 4px;
     position: relative;
-    font-size: 1rem;
+    
     padding-right: 37px;
 
   }
@@ -97,9 +97,9 @@ function applyStyles() {
     position: absolute; /* Posicionamento absoluto em relação ao item pai */
     top: 100%; /* Aparece abaixo do item pai */
     left: 0; /* Alinha com o lado esquerdo do item pai */
-    background-color: #4c546c; /* Fundo cinza */
+        
     color: #fff; /* Cor do texto branca */
-    padding: 10px; /* Adiciona espaço interno */
+    
   }
   
   .nav-menu ul li:hover > ul {
@@ -113,19 +113,22 @@ function applyStyles() {
     display: flex; /* Ativa layout flexbox */
     align-items: center; /* Alinha verticalmente no centro */
     font-family: "Space Mono";
-    color: white;
+    
     text-decoration: none;
-    font-size: 14px;
-    position: relative;
-    height: 40px; /* Define a altura dos itens */
+    height: 20px; /* Define a altura dos itens */
     /* Adicionando propriedades para alinhar e dimensionar no hover */
-    transition: all 0.3s ease; /* Define a transição para as mudanças */
+    transition: all 0.5s ease; /* Define a transição para as mudanças */
+    border-radius: 10px;
   }
   
   .item-lista-cabecalho:hover {
     background-color: #33435c; /* Cor de fundo ao passar o mouse */
-    width: 178px; /* Define a largura da caixa no hover */
-    padding: 10px; /* Adiciona padding para espaçar o texto da borda */
+    width: 140px; /* Define a largura da caixa no hover */
+    height: 50px;
+    border-radius: 10px;
+    margin: 0px;
+    padding: 0px 0px 2px 15px; /* Adiciona padding para espaçar o texto da borda */
+    
   }
   
   /* Estilos para as sublistas do menu principal */
@@ -134,9 +137,9 @@ function applyStyles() {
     padding: 0;
     margin: 0;
     display: flex;
-    background-color: #4c546c;
+    #qualquer coisa volto aqui
     position: absolute; /* Posicionamento absoluto para sublistas */
-    left: 100%; /* Posiciona à esquerda do item pai */
+    left: 50%; /* Posiciona à esquerda do item pai */
     top: 100%; /* Posiciona abaixo do item pai */
     z-index: 1; /* Garante que a sublista fique em cima do item pai */
     visibility: hidden; /* Oculta a sublista inicialmente */
@@ -149,7 +152,7 @@ function applyStyles() {
   }
   
   .item-lista-cabecalho ul li {
-    padding: 5px 20px;
+    padding: 1px 20px;
     background-color: #4c546c;
     color: white;
     font-size: 14px;
@@ -203,52 +206,7 @@ function applyStyles() {
     margin-left: 15px; /* Espaçamento entre o botão e a barra de pesquisa */
     height: 30px; 
   }
-  /* Responsive styles */
-
-
-  /* Responsive styles */
-  @media (max-width: 500px) {
-    .img-units {
-      width: 62vw;
-      height: 26vh;
-    }
-    .revisao-item{
-      width: 80%;
-      padding: 113px 13px 16px 6px; 
-      }
-      
-      .revisao-item p {
-      font-size: 18px;
-      padding: 7px 20px 15px 24px;
-      }
-      
-     
-  
-     
-  }
-
-  @media (max-width: 720px) {
-    .img-units {
-      width: 64vw;
-      height: 35vh;
-    }
-  
-    .revisao-item{
-      width: 80%; 
-      padding-top: 75px;
-      flex-basis: 84%;
-      }
-      
-      .revisao-item p {
-      font-size: 18px;
-      padding: 7px 24px 15px 24px;
-      }
-      
-      span .revisao-item{
-      font-size: 13px;
-      }
-  }
-
+ 
 
 @media (max-width: 768px) {
   .nav-menu { /* Target the entire menu for mobile responsiveness */
@@ -300,10 +258,7 @@ function applyStyles() {
    
 
   }
-
-  
-
-  
+ 
   .container-nav ul li{
     right: 15px;
     bottom: 8px;
@@ -323,15 +278,6 @@ function applyStyles() {
     margin: 0; /* Remove margins for cleaner layout */
     
   }
-
-  
-
- 
-
- 
-
-  
-  /* Add menu toggle button */
   
   
 }
