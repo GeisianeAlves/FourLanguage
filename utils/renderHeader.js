@@ -85,9 +85,8 @@ function applyStyles() {
   }
   
   .container-nav ul li {
-    margin-right: 4px;
+    margin-right: 0px;
     position: relative;
-    
     padding-right: 37px;
 
   }
@@ -104,6 +103,7 @@ function applyStyles() {
   
   .nav-menu ul li:hover > ul {
     display: block;
+    text-align: center;
   }
   
   
@@ -152,7 +152,7 @@ function applyStyles() {
   }
   
   .item-lista-cabecalho ul li {
-    padding: 1px 20px;
+    padding: 22px 50px;
     background-color: #4c546c;
     color: white;
     font-size: 14px;
