@@ -77,12 +77,6 @@ span {
   Column-gap: 28px;
 }
 
-.nav-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 22px;
-  display: flex;
-}
 
 .nav-menu ul li {
   margin-right: 20px;

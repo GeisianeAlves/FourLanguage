@@ -62,6 +62,7 @@ function applyStyles() {
   
   .nav-menu a {
     color: inherit; /* Herda a cor do texto do elemento pai */
+    width: 100%;
   }
   
   .nav-menu img {
