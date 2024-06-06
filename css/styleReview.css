@@ -91,25 +91,7 @@ span {
   /* Define posição relativa para alinhar a sub-lista */
 }
 
-.nav-menu ul li ul {
-  display: none;
-  position: absolute;
-  /* Posicionamento absoluto em relação ao item pai */
-  top: 100%;
-  /* Aparece abaixo do item pai */
-  left: 0;
-  /* Alinha com o lado esquerdo do item pai */
-  background-color: #4c546c;
-  /* Fundo cinza */
-  color: #fff;
-  /* Cor do texto branca */
-  padding: 10px;
-  /* Adiciona espaço interno */
-}
 
-.nav-menu ul li:hover>ul {
-  display: block;
-}
 
 
 
