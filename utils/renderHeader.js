@@ -64,6 +64,10 @@ function applyStyles() {
     color: inherit; /* Herda a cor do texto do elemento pai */
     width: 100%;
   }
+
+  item-lista-cabecalho ul li a {
+    width: 100%;
+  }
   
   .nav-menu img {
     margin-bottom: 25px;
@@ -219,7 +223,7 @@ function applyStyles() {
     
     padding: 27px 0px 38px 8px; /* Padding for mobile menu content */
     transition: transform 0.3s ease-in-out; /* Smooth menu slide animation */
-    transform: translateY(-90%); /* Initially hidden */
+    transform: translateY(-54%); /* Initially hidden */
     
     margin-left: 0;
     margin-right: 0;
@@ -263,7 +267,7 @@ function applyStyles() {
   .container-nav ul li{
     right: 15px;
     bottom: 8px;
-    margin: 0 5px;
+    margin: 0 0;
     
    
     }

@@ -48,45 +48,6 @@ span {
   font-weight: bold;
 }
 
-.cabecalho {
-  font-family: 'Space Mono';
-  align-items: last baseline;
-  background-color: #4c546c;
-  color: white;
-  padding: 2px 0px 0px 0px;
-
-
-}
-
-.nav-menu a {
-  text-decoration: none;
-  /* Remove sublinhado */
-  color: inherit;
-  /* Herda a cor do texto do elemento pai */
-}
-
-.nav-menu img {
-  margin-bottom: 15px;
-  margin-left: 13px;
-}
-
-.nav-menu {
-  Display: flex;
-  Justify-content: left;
-  Align-items: flex-start;
-  Column-gap: 28px;
-}
-
-
-.nav-menu ul li {
-  margin-right: 20px;
-  /* Adapte a margem conforme necessário */
-  position: relative;
-  /* Define posição relativa para alinhar a sub-lista */
-}
-
-
-
 
 
 /*Botao saiba mais*/
