@@ -319,13 +319,11 @@ html {
   
 
   #audio{
-    
-    
     padding: 2px 128px 2px 128px;
   }
 
   audio {
-    width: 150px;
+    width: 120px;
   }
 
 
@@ -364,6 +362,8 @@ h1 {
 #audio {
   padding-top: 4px;
 }
+
+
 
 .logout-button {
   margin-top: -22px;
