@@ -6,6 +6,7 @@
   }
   body h1, h2 {
     color: rgb(79, 73, 73);
+
   }
   body h1 {
     font-size: 1.3em;
@@ -16,7 +17,6 @@
     justify-content: space-evenly;
     align-items: center;
     width: 80%;
-    height: 100vh;
     margin: 0 auto;
     font-weight: 300;
     font-size: 20px;
@@ -24,15 +24,20 @@
     background-color: #f0f0f0;
     
 }  
-
+.container-about h1 {
+    margin-top: 60px;
+    font-size: 1em;
+}
 .team-members {
     width: 80%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content:center;
     align-items: center;
     gap: 30px;
     margin-bottom: 30px;
+   
 }
 .team-members-cards {
     width: 160px;
@@ -63,7 +68,7 @@
 }
 
 .tools-websites-container {
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,8 +77,9 @@
     margin-bottom: 30px;
 }
 .tools-websites-div-cards {
-    width: 80%;
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -102,4 +108,66 @@
 }
 .tools-websites-cards p {
     text-align: left;
+}
+
+@media(max-width: 540px) {
+    .container-about {
+        margin: 0;
+        width: 100%;
+        justify-content: center;
+    }
+    .container-about h1 {
+        margin-top: 100px;
+        margin-bottom: 50px;
+        font-size: 1.2em;
+    }
+    .team-members {
+        width: 80%;
+        gap: 20px;
+        margin-bottom: 0;
+    }
+   
+    .team-members-cards {
+        width: 140px;
+        margin-bottom: 10px;
+    }
+    .team-members-cards img {
+        width: 60px;
+    }
+    .team-members-cards h2 {
+        font-size: 1rem;
+        padding-left: 15px;
+    }
+    .project {
+        gap: 20px;
+        margin-bottom: 0;
+    }
+    .project h1 {
+        font-size: 1.2em;
+    }
+    .project p {
+        font-size: 0.9rem;
+    }
+    .tools-websites-container h1 {
+        font-size: 1em;
+        width: 100%;
+    }
+   
+    .tools-websites-cards {
+        width: 160px;
+        height: 160px;
+    }
+    .tools-websites-cards  h2 {
+        font-size: 0.8em;
+    }
+    .tools-websites-div-cards {
+        width: 100%;
+    }
+    .tools-websites-cards p, a {
+        text-align: center;
+        width: 100%;
+        font-size: 0.7rem;
+        line-height: 0.8rem;
+    }
+    
 }
