@@ -90,9 +90,10 @@ function applyStyles() {
   }
   
   .container-nav ul li {
-    margin-right: 0px;
+    margin-right: 31px;
     position: relative;
-    padding-right: 37px;
+    padding-right: 0px;
+    padding-left: 10px;
 
   }
   
@@ -152,7 +153,7 @@ function applyStyles() {
   }
   
   .item-lista-cabecalho:hover ul {
-    visibility: visible; /* Mostra a sublista quando o item pai é hoverizado */
+    visibility: visible; 
   
   }
   
