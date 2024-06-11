@@ -26,7 +26,8 @@
 }  
 .container-about h1 {
     margin-top: 60px;
-    font-size: 1em;
+    font-size: 1.2em;
+    margin-bottom: 50px;   
 }
 .team-members {
     width: 80%;
@@ -36,8 +37,7 @@
     justify-content:center;
     align-items: center;
     gap: 30px;
-    margin-bottom: 30px;
-   
+    margin-bottom: 30px;   
 }
 .team-members-cards {
     width: 160px;
@@ -60,11 +60,14 @@
     width: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: left;
+    justify-content: center;
+    align-items: center;
     text-align: justify;
     margin-bottom: 30px;
+    
+}
+.project h1 {
+    font-size: 1.5em;
 }
 
 .tools-websites-container {
@@ -151,6 +154,7 @@
     .tools-websites-container h1 {
         font-size: 1em;
         width: 100%;
+        text-align: center;
     }
    
     .tools-websites-cards {
