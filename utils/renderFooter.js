@@ -27,7 +27,11 @@ function applyFooterStyles() {
   footer:hover {
     color: white;
   }
-  
+  @media(max-width: 540px) {
+    .rodape {
+      font-size: 14px;
+    }
+  }
 
   `;
 
