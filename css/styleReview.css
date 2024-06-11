@@ -22,9 +22,10 @@ html {
       width: 62vw;
       height: 26vh;
     }
-    .revisao-item{
+    .revisao-item {
       width: 80%;
       padding: 113px 13px 16px 6px; 
+      flex-basis: 79%;
       }
       
       .revisao-item p {
@@ -138,7 +139,6 @@ span {
 }
 
 .citacao {
-  /* text-align: left; */
   font-weight: 300;
   padding-left: 300px;
   color: #4c546c;
@@ -310,46 +310,22 @@ body {
   padding: 12px 24px;
 }
 
-/* @media (max-width: 720px) {
-  
-
+@media (max-width: 768px){
   .revisao-item{
-    width: 80%; 
-    }
-    
-    .revisao-item p {
-    font-size: 12px;
-    padding: 7px 37px 15px 24px;
-    }
-    
-    span .revisao-item{
-    Font-size: 13px;
-    }
-} */
-
-/* @media (max-width: 768px){
-  .nav-menu{
-    padding: 2px 38px 14px 0px;
-    column-gap: 41px;
-    top: 12%;
-    width: auto;
+    flex-direction: row;
+    flex-basis: 89%;
+    margin-top: 64px;
   }
 
-  .menu-direita{
-    width: auto;
-    right: 66px;
+  .revisao-item p {
+    font-size: 15px;
+    padding: 5px;
   }
 
-  .nav-menu img{
-    background-image: none;
+  .citacao{
+    padding-left: 223px;
   }
-
-  .nav-menu ul{
-    margin: 2px 2px 0px 0px;
-    padding: 2px 20px 2px 58px;
-  }
-} */
-
+}
 
 
 .revisao-item .content-container {
