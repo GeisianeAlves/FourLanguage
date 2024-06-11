@@ -319,8 +319,13 @@ html {
   
 
   #audio{
-    padding-top: 128px;
-    width: 95%;
+    
+    
+    padding: 2px 128px 2px 128px;
+  }
+
+  audio {
+    width: 150px;
   }
 
 
