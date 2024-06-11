@@ -37,9 +37,17 @@ function applyFooterStyles() {
 
 .header li a:hover,
 .header .menu-btn:hover {
-  background-color: rgb(245 222 179 / 86%);
+  background-color: rgb(186, 250, 228);
 }
-
+.header button {
+  background: none;
+      background-color: rgba(245, 222, 179, 0.86);
+    border: 1px solid rgba(245, 222, 179, 0.86);
+    border-radius: 10px;
+    color: rgb(93, 91, 91);
+    font-weight: bold;
+}
+}
 .header .logo {
   display: block;
   float: left;
@@ -67,6 +75,14 @@ function applyFooterStyles() {
   user-select: none;
 }
 
+.search-bar{
+        background-color: rgba(245, 222, 179, 0.86);
+    border: 1px solid rgba(245, 222, 179, 0.86);
+    border-radius: 10px;
+    color: rgb(93, 91, 91);
+    font-weight: bold;
+
+}
 .header .menu-icon .navicon {
   background: white;
   display: block;
@@ -120,6 +136,17 @@ function applyFooterStyles() {
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
+}
+
+.header li form{
+  margin-right: 0px;
+    position: relative;
+    padding-right: 37px;
+}
+
+.header li input{
+  padding: 10px 20px;
+    width: 250px;
 }
 
 .nav-menu button {
