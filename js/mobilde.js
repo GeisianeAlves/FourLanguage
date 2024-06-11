@@ -33,11 +33,15 @@ function applyFooterStyles() {
   padding: 0px 12px;
   border-right: 1px solid #f4f4f4;
   color:white;
+  
 }
 
 .header li a:hover,
 .header .menu-btn:hover {
   background-color: rgb(186, 250, 228);
+  width: 170px;
+  padding: 2px 2px;
+  text-align: center;
 }
 .header button {
   background: none;

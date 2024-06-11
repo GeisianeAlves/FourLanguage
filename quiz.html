@@ -59,6 +59,37 @@
          
         </ul>
       </div>
+
+      <!-- MOBILE VERSION -->
+<div class="header" style="display: none">
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li ><a href="index.html">Home Page</a></li>
+    <li>
+      Games
+      <ul>
+        <li><a href="tela_skills.html">All</a></li>
+        <li><a href="quiz.html">Extra</a></li>
+      </ul>
+    </li>
+    <li ><a href="revisao.html">Content Review</a></li>
+    <li ><a href="grammar.html">Grammar</a></li> 
+            
+       
+          <li>
+           
+              
+              <button class="nav-botao"><a href="login.html">Sign out</a></button>
+            
+          </li>
+      
+      
+     <script src="js/mobilde.js"></script>
+  </ul>
+
+  
+</div>
       </nav>
           
       <!-- chamando a formatacao do cabecalho -->
@@ -124,7 +155,7 @@
     </div>
 
 
-    <div id="div-esquerda">
+    <div id="div-esquerda" class="circulo">
       <h2>Play the audio, and listen to the dialogue!</h2>       
     </div>
 
@@ -134,14 +165,25 @@
     
   </div>
 
+<!-- Footer -->
+<footer class="rodape">
 
-    <!-- Footer 
-    <footer class="footer">
-      <p>
-        Criado por: Geisiane Alves, Rafaela Araujo, Raquel Diniz e Vinicius
-        Pereira
-      </p>
-    </footer>-->
+  <img src="img/logo-four.png" alt="" width="40vw" > 
+  <p>Four Language</p></p> <br><hr><br> 
+  <p class="mt-4 text-sm text-white-100 snipcss0-4-7-9"
+  ">
+    O Four Language tem o objetivo de auxiliar os estudantes da
+    Fatec que cursam a matéria de Inglês.
+  </p>
+
+  <p class="text-sm text-gray-100 snipcss0-2-41-42">
+    © Copyright 2024 Four Language Inc. Todos os direitos reservados.
+  </p>
+
+  <!-- Estilo do rodape - footer -->
+  <script src="utils/renderFooter.js"></script>
+  
+</footer>
 
 
     <script src="js/quiz.js"></script>

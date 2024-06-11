@@ -280,11 +280,33 @@ html {
 }
 
 /* RESPONSIVO */
-@media (max-width: 450px) {
+
+@media (max-width: 450px){
+  #div-esquerda {
+    display: none;
+  }
+
+  
+}
+
+@media (max-width: 500px) {
   #quizz-container {
     border: none;
     width: 100%;
+    
   }
+
+  #div-esquerda{
+    padding: 0px;
+    background-color: transparent;
+    
+  }
+
+  #div-esquerda h2{
+   display:none;
+   
+  }
+
 
   #answers-box button {
     width: 100%;
@@ -293,9 +315,49 @@ html {
   #score-container {
     width: 90%;
   }
+
+  
+
+  #audio{
+    padding-top: 128px;
+    width: 84%;
+  }
+
+
+
+  #img-astronauta{
+    display: none;
+  }
+
+  #div-all{
+   width:  none;
+   height: none;
+  }
 }
+
+
+
+@media (max-widtg: 768px){
+  #div-esquerda h2{
+    font-size: 12px;
+  }
+
+
+  #img-astronauta {
+    display: none;
+}
+
+}
+
+
+
+
 h1 {
   align-items: center;
+}
+
+#audio {
+  padding-top: 4px;
 }
 
 .logout-button {
@@ -313,7 +375,7 @@ h1 {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 90vh;
+  height: 100%;
   background-color: rgba(177, 172, 183, 0.671);
 }
 
@@ -324,7 +386,7 @@ h1 {
   /* width: 50px; */
 }
 
-#div-esquerda{
+.circulo{
   position: absolute;
   left: 50px;
   width: 200px;

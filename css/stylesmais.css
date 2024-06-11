@@ -77,16 +77,16 @@ input {
 
 /* menu de navegacao das unidades */
 .container-nav-units {
-  width: 158px;
-  height: 163px;
+  width: 120px;
+  height: 169px;
   background-color: #f0f0f0;
   position: fixed;
-  top: 163px;
+  top: 110px;
   bottom: -2px;
   left: 4px;
   right: 54px;
   padding: 14px 5px 20px 7px;
-  border: 2px solid rgba(173, 216, 230, 0.728);
+  border: 3px solid rgba(173, 216, 230, 0.728);
   border-radius: 0px 24px 23px 25px;
   font-family: "Space Mono";
   font-size: 12px;
@@ -106,7 +106,7 @@ input {
 
 .unit-nav a {
   display: block;
-  padding: 10px 41px;
+  padding: 10px 21px;
   text-decoration: none;
   /* Remove default link underline */
   color: #666;
@@ -139,14 +139,13 @@ input {
   }
 }
 
-@media (max-width: 500px) {
+
+
+@media(max-width: 500px) {
   .img-units {
     width: 28vh;
     height: 26vh;
   }
-}
-
-@media(max-width: 500px) {
 
   .section-content1,
   .section-content2,
@@ -161,13 +160,20 @@ input {
     font-family: "Space Mono";
     font-size: 16px;
   }
-}
 
 
-@media (max-width:500px) {
+  .section-content1, .section-content2, .section-content3{
+    width: 92%;
+    font-size: 14px;
+    
+  }
+
+  section, p, h2, h3, h4, li, ul, span, blockquote, a {
+    font-size: 14px;
+  }
 
   .container-nav-units {
-    width: 47%;
+    
     height: max-content;
     position: relative;
     top: 2px;
@@ -178,27 +184,53 @@ input {
     right: 2px;
 
   }
+
+  .container-tips {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0px;
+}
+
+
+.tips-content1, .tips-content2{
+  padding: 0px 16px;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
 }
 
 
 
-/* RESPONSIVIDADE DO MENU UNITS */
-@media (max-width: 728px) {
 
+
+
+/* RESPONSIVIDADE DO MENU UNITS */
+@media (max-width: 768px) {
+
+  section, p, h2, h3, h4, h5, li, ul, span, button, a, blockquote {
+    font-size: 17px;
+    
+  }
+
+  .container-tips {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    flex-wrap: wrap;
+}
   /* Styles for screens smaller than 768px */
   .container-nav-units {
     width: 47%;
     /* Make sidebar occupy full width on smaller screens */
     height: max-content;
     position: relative;
-    /* Reset position to relative for non-fixed behavior */
     top: 2px;
-    /* Reset top position for non-fixed behavior */
     bottom: 2px;
     left: 102px;
     margin-bottom: 7px;
     padding: 1px 0px 1px 9px;
-    /* Adjust padding for smaller screens */
     right: 2px;
   }
 
@@ -227,7 +259,25 @@ input {
     padding: 2px 41px;
   }
 
+  .tips-content1 div{
+    padding: 15px 0px;
+    font-size: 12px;
 
+  }
+
+  .card-container{
+    flex-wrap: wrap;
+  }
+
+
+  .section-content1, .section-content2, .section-content3{
+    width: 92%;
+    font-size: 14px;
+    padding: 45px;
+    
+  }
+
+ 
 }
 
 
@@ -235,16 +285,19 @@ input {
 
   /* Styles for screens smaller than 768px */
 
+ 
   .container-nav-units {
-    width: 32%;
-    height: max-content;
-    position: relative;
-    top: 158px;
-    bottom: 5px;
-    left: 113px;
-    margin-bottom: 200px;
-    padding: 5px 0px 0px 5px;
+    width: 8%;
+    /* height: max-content; */
+    position: fixed;
+    top: 64px;
+    bottom: 3px;
+    left: 1px;
+    margin-bottom: 0px;
+    padding: 3px 10px 0px 9px;
     right: 2px;
+    border: none;
+    font-size: 10px;
   }
 
 
@@ -264,13 +317,10 @@ input {
 
   .unit-nav a {
     border: 2px dashed #ddd;
-    /* Add border */
     border-radius: 22px;
-    /* Add rounded corners */
     transition: background-color 0.3s ease;
-    font-size: 14px;
-    /* Adjust font size for smaller screens */
-    padding: 2px 41px;
+    font-size: 10px;
+    padding: 2px 24px;
   }
 
 
@@ -726,6 +776,8 @@ section li {
     background-color: #b5d1b6;
     /* Darker Green */
   }
+
+  
 }
 
 
