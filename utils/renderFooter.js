@@ -30,6 +30,7 @@ function applyFooterStyles() {
   @media(max-width: 540px) {
     .rodape {
       font-size: 14px;
+      padding: 11px 2px 2px 2px;
     }
   }
 
