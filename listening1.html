@@ -32,8 +32,8 @@
 
 
 <body>
-  <header class="cabecalho-listening">
-        <div class="container-nav">
+  <header class="cabecalho">
+    <div class="container-nav">
         <nav class="nav-menu">
           <img src="img/logo-four.png" alt="Logo Four Language" width="60vw" class="logo-four-listening">
           <ul class="lista-nao-ordenada">
@@ -42,37 +42,66 @@
             </li>
         
             <li class="item-lista-cabecalho">
-              <a href="tela_skills.html">Games</a>
+              <a>Games</a>
               <ul>
-                <li class="item-lista-cabecalho"><a class="anc-games" href="tela_skills.html">All </a></li>
-                <li class="item-lista-cabecalho"><a class="anc-games" href="quiz.html">Extra</li>
+                <li class="item-lista-cabecalho"><a href="tela_skills.html">All </a></li>
+                <li class="item-lista-cabecalho"><a href="quiz.html">Extra</a></li>
               </ul>
             </li>
         
             <li class="item-lista-cabecalho">
-              <a href="revisao.html"> Content Review</a>              
+              <a href="revisao.html"> Content Review</a>
+              
             </li>
-                <li></li>
             <li class="item-lista-cabecalho">
-                <a href="grammar.html"> Grammar</a>
+              <a href="grammar.html"> Grammar</a>          
             </li>
-
-            <li class="item-lista-cabecalho"><a href="creditos.html">About</a></li>
-            <div class="menu-direita">
-                <li>
     
-                   <form action="#">
-                     <!-- <input type="text" placeholder="Search Content..." class="search-bar" id="searchInput">
-                     <button class="nav-botao" type="submit" id="searchButton">go</button> -->
-                     <button class="nav-botao"><a href="login.html">Sign out</a></button>
-                   </form>        
-                 </input>        
-                 </li>
-         
-             </div>
+          <li class="item-lista-cabecalho"><a href="creditos.html">About</a></li>
+    
+          <div class="menu-direita">
+            <li>
+    
+              <form action="#">
+                <input type="text" placeholder="Search Content..." class="search-bar" id="searchInput">
+                <button class="nav-botao" type="submit" id="searchButton">go</button>
+                <button class="nav-botao"><a href="login.html">Sign out</a></button>
+              </form>        
+            </input>        
+            </li>
+            
+          </div>
           </ul>
-        </div>
+        
         </nav>
+    </div>
+<!-- MOBILE VERSION -->
+    <div class="header" style="display: none">
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+          <li ><a href="index.html">Home Page</a></li>
+          <li>
+            Games
+            <ul>
+              <li><a href="tela_skills.html">All</a></li>
+              <li><a href="quiz.html">Extra</a></li>
+            </ul>
+          </li>
+          <li ><a href="revisao.html">Content Review</a></li>
+          <li ><a href="grammar.html">Grammar</a></li> 
+                  
+             
+            <li>
+                <button class="nav-botao"><a href="login.html">Sign out</a></button>
+            </li>
+        
+            
+           <script src="js/mobilde.js"></script>
+        </ul>
+      
+        
+    </div>
             
         <!-- chamando a formatacao do cabecalho -->
       <script src="utils/renderHeader.js"> </script>   

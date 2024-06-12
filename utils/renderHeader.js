@@ -206,7 +206,6 @@ function applyStyles() {
     font-family: "Space Mono";
     border: 2px solid rgba(245, 222, 179, 0.738);
     border-radius: 15px;
-    padding: 10px 20px;
     cursor: pointer;
     font-weight: bold;
     margin-left: 15px; /* Espaçamento entre o botão e a barra de pesquisa */
