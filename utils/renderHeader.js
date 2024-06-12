@@ -119,7 +119,6 @@ function applyStyles() {
     display: flex; /* Ativa layout flexbox */
     align-items: center; /* Alinha verticalmente no centro */
     font-family: "Space Mono";
-    
     text-decoration: none;
     height: 20px; /* Define a altura dos itens */
     /* Adicionando propriedades para alinhar e dimensionar no hover */
@@ -129,7 +128,7 @@ function applyStyles() {
   
   .item-lista-cabecalho:hover {
     background-color: #33435c; /* Cor de fundo ao passar o mouse */
-    width: 140px; /* Define a largura da caixa no hover */
+    width: 180px; /* Define a largura da caixa no hover */
     height: 50px;
     border-radius: 10px;
     margin: 0px;
@@ -163,6 +162,7 @@ function applyStyles() {
     color: white;
     font-size: 14px;
     text-align: center;
+    width: 180px;
   }
   
   
