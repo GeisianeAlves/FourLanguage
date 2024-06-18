@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listening | Game</title>
+    <link rel="stylesheet" href="css/estilo_listening_game.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        .container-jogo { background: url(img/stars.jpg)no-repeat; background-size: cover; width: 100%; height: 100vh;}
+
+        /* estilo diferente para este cabeçalho */
+        .cabecalho-listening { font-family: "Space Mono";  align-items: last baseline; background-color: #4c546c;
+        height: 100px;  color: white;  padding: 1%;  }
+       .logo-four-listening{
+        width: 50px;  margin-top: 10px;
+       }
+
+    </style> 
+
+    <script src="utils/renderListeningLevel.js"></script>
+
+    <script>    
+      window.renderListening() 
+    </script>
+</head>
+
+
+<body>
+  <header class="cabecalho-listening">
+        <div class="container-nav">
+        <nav class="nav-menu">
+          <img src="img/logo-four.png" alt="Logo Four Language" width="60vw" class="logo-four-listening">
+          <ul class="lista-nao-ordenada">
+            <li class="item-lista-cabecalho">
+              <a href="index.html">Home</a>
+            </li>
+        
+            <li class="item-lista-cabecalho">
+              <a href="tela_skills.html">Games</a>
+              <ul>
+                <li class="item-lista-cabecalho"><a href="tela_skills.html">All </a></li>
+                <li class="item-lista-cabecalho"><a href="quiz.html">Extra</li>
+              </ul>
+            </li>
+        
+            <li class="item-lista-cabecalho">
+              <a href="revisao.html"> Content Review</a>              
+            </li>
+        
+            <li class="item-lista-cabecalho">
+                <a href="grammar.html"> Grammar</a>
+            </li>
+
+            <li class="item-lista-cabecalho"><a href="creditos.html">About</a></li>
+            <div class="menu-direita">
+            <li>
+              <input type="text" placeholder="Search Content..." class="search-bar"> </input>
+              <button class="nav-botao"><a href="login.html">Sign out</a></button>
+            </li>
+          </div>
+          </ul>
+        </div>
+        </nav>
+            
+        <!-- chamando a formatacao do cabecalho -->
+      <script src="utils/renderHeader.js"> </script>   
+     
+    </header>
+
+    <div id="resultModal-listening" class="modal-listening">
+        <div class="modal-content-listening">
+            <h1>Thanks for playing!</h1><br>
+            <!-- <span class="close-listening" onclick="closeModal()">&times;</span> -->
+            <h3>Your progress</h3>
+            <p id="questions-qty"></p>
+            <div id="modal-btn">
+              <button id="btn-voltar-popup"><a href="tela_skills.html"> &larr; Back</a></button>
+              <button id="restart" onclick="restartGame()"> Redo Quiz!</button>
+            </div>
+        </div>
+      </div>
+  
+
+    <div class="container-jogo">
+
+        <!--Container lateral esquerda com dicas-->
+        <div class="dicas">
+            <h1>Tips</h1>
+            <p>
+                According to British Council, <b> Listening</b> activities are important to enhance your understanding of the language and your pronunciation.
+            </p>
+            <h3>Here are some topics related to the words you might hear:</h3>
+            <p>Clothes</p>
+            <p>Numbers</p>
+            <p>Work</p>
+            <p>Information</p>
+            <p>Places</p>
+            <p>Traveling</p> 
+            <p>Food</p> 
+    
+            <!-- <div>        
+                <img id="img-3"  src="img/planet_pink.png" class="object" data-value="3">
+            </div>      -->
+           
+        </div>
+    
+        <div class="container-com-barra">
+            <div id="progressContainer">
+                <div id="progressBar"></div>
+            </div>
+        
+        <!--  JOGO PRIMEIRO SEMESTRE -->   
+        <div class="all level" id=primeiro >
+            <h3 style="color: rgb(85, 170, 85);">Semester 1 </h3>
+            <h2 style="color: rgb(180, 197, 180);">Listen to the words, <br>and spell them correctly</h2>
+            <button  id="gerarPalavra1"><img id="playpalavra" src="img/play6.png" alt=""></button>
+        
+            <div class="cont">
+                <input type="text" placeholder="Type the correct word..." id="input">
+                <button id="enviar" class="btn2">Check</button>            
+            </div>
+           
+            
+            <div class="correct-icon-message">
+                <img src="img/correct.png" id="correct-icon" style="display: none; width:70px;" >
+                <p id="pontos"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 32px;"></span></p><br><br>
+                
+            </div>
+
+            <img src="img/wrong.png" id="wrong-icon" style="display: none; width:70px;" >
+            <p id="erros"><span class="correct-answer" style="font-size: 28px;"></span></p>
+        </div>
+    
+    <!--  JOGO SEGUNDO SEMESTRE -->   
+        <div class="all level" id=segundo >
+            <h3 style="color: rgb(170, 116, 85);">Semester 2 </h3>
+            <h2 style="color: rgb(180, 197, 180);">Listen to the words, <br>and spell them correctly</h2>
+            <button  id="gerarPalavra2"><img id="playpalavra" src="img/play6.png" alt=""></button>
+        
+            <div class="cont">
+                <input type="text" placeholder="Type the correct word..." id="input2">
+                <button id="enviar2" class="btn2">Check</button>            
+            </div>
+            <p id="pontos2"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 32px;">Score: </span></p><br><br>
+            <p id="erros2"><span class="correct-answer" style="font-size: 28px;"></span></p>
+            
+
+        </div>
+    
+        <!--  JOGO TERCEIRO SEMESTRE -->   
+        <div class="all level" id=terceiro >
+            <h3 style="color: rgb(224, 212, 249);">Semester 3 </h3>
+            <h2 style="color: rgb(180, 197, 180);">Listen to the words, <br>and spell them correctly</h2>
+            <button  id="gerarPalavra3"><img id="playpalavra" src="img/play6.png" alt=""></button>
+        
+            <div class="cont">
+                <input type="text" placeholder="Type the correct word..." id="input3">
+                <button id="enviar3" class="btn2">Check</button>            
+            </div>
+            <p id="pontos3"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 32px;">Score: </span></p><br><br>
+            <p id="erros3"><span class="correct-answer" style="font-size: 28px;"></span></p>
+            
+        </div>
+    
+    
+        <!--  JOGO QUARTO SEMESTRE -->   
+        <div class="all level" id=quarto >
+            <h3 style="color: rgb(148, 106, 238);">Semester 4 </h3>
+            <h2 style="color: rgb(180, 197, 180);">Listen to the words, <br>and spell them correctly</h2>
+            <button  id="gerarPalavra4"><img id="playpalavra" src="img/play6.png" alt=""></button>
+        
+            <div class="cont">
+                <input type="text" placeholder="Type the correct word..." id="input4">
+                <button id="enviar4" class="btn2">Check</button>            
+            </div>
+            <p id="pontos4"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 32px;">Score: </span></p><br><br>
+            <p id="erros4"><span class="correct-answer" style="font-size: 28px;"></span></p>
+            
+        </div>
+    
+        <!--  JOGO QUINTO SEMESTRE -->   
+        <div class="all level" id=quinto >
+            <h3 style="color: rgb(64, 82, 138);">Semester 5 </h3>
+            <h2 style="color: rgb(180, 197, 180);">Listen to the words, <br>and spell them correctly</h2>
+            <button  id="gerarPalavra5"><img id="playpalavra" src="img/play6.png" alt=""></button>
+        
+            <div class="cont">
+                <input type="text" placeholder="Type the correct word..." id="input5">
+                <button id="enviar5" class="btn2">Check</button>            
+            </div>
+            <p id="pontos5"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 32px;">Score: </span></p><br><br>
+            <p id="erros5"><span class="correct-answer" style="font-size: 28px;"></span></p>
+            
+        </div>
+    
+        <!--  JOGO SEXTO SEMESTRE -->   
+        <div class="all level" id=sexto >
+            <h3 style="color: rgb(64, 82, 138);">Semester 5 </h3>
+            <h2 style="color: rgb(180, 197, 180);">Listen to the words, <br>and spell them correctly</h2>
+            <button  id="gerarPalavra6"><img id="playpalavra" src="img/play6.png" alt=""></button>
+        
+            <div class="cont">
+                <input type="text" placeholder="Type the correct word..." id="input6">
+                <button id="enviar6" class="btn2">Check</button>            
+            </div>
+            <p id="pontos6"><span class="correct-answer" style="color: rgb(85, 170, 85); font-size: 32px;">Score: </span></p><br><br>
+            <p id="erros6"><span class="correct-answer" style="font-size: 28px;"></span></p>
+            
+        </div>
+    
+    </div>
+    
+        <div class="container-direita">
+    
+            <div id="img-help">
+                <img id="myImg" src="img/help.svg" alt="Image">
+            </div>
+    
+            <!--Container lateral direita sobre como jogar-->
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                <h2>How to play</h2>
+                <p>First, click on 'Play' icon.</p>
+                <p>After, write the word you listen to.</p>
+                <p>Then, click on 'Check button'.</p>
+                <h4>Score</h4>
+                <p>If you type correcty, points will be added to your score.</p>
+                <h4>Word displayed:</h4>
+                <p>Also, the right one will be displayed.</p>
+            </div>          
+            
+        </div>
+    
+            <!--imagem-->
+            <div>
+                <img id="img-2"  src="img/astronaut.jpg" class="object" data-value="10">   
+            </div> 
+    
+        </div>
+    
+       
+    
+    </div> 
+
+    
+</body>
+
+<script>
+    window.onbeforeunload = function() {
+        return "Tem certeza que deseja sair desta página?"
+    };
+    </script>
+    
+<script>
+
+
+</script>
+<script src="js/script_listening.js"></script>
+</html>

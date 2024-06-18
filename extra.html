@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="img/icone.png" type="image/x-icon">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speaking | Game</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/estilo_speaking2.css"> 
+    <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet"
+  />
+
+    <style>
+        .container-speaking { background: url(img/back2.jpg)no-repeat; background-size: cover; height: 90vh; }
+        /* estilo diferente apenas para este cabeçalho */
+        .logo-four-speaking{
+            width: 50px; margin-top: 10px;
+        }
+   </style>
+    
+    
+<script src="utils/renderSpeakingLevel.js"></script>
+
+    <script>    
+      window.renderUnit()
+    </script>
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="container-nav">
+        <nav class="nav-menu">
+          <img src="img/logo-four.png" alt="Logo Four Language" width="60vw" class="logo-four-speaking">
+          <ul class="lista-nao-ordenada">
+            <li class="item-lista-cabecalho">
+              <a href="index.html">Home</a>
+            </li>
+        
+            <li class="item-lista-cabecalho">
+              <a href="tela_skills.html">Games</a>
+              <ul>
+                <li class="item-lista-cabecalho"><a href="tela_skills.html">All </a></li>
+                <li class="item-lista-cabecalho"><a href="quiz.html">Extra</li>
+              </ul>
+            </li>
+        
+            <li class="item-lista-cabecalho">
+              <a href="revisao.html"> Content Review</a>
+              
+            </li>
+        
+            <li class="item-lista-cabecalho"><a href="creditos.html">About</a></li>
+            <div class="menu-direita">
+            <li>
+              <input type="text" placeholder="Search Content..." class="search-bar"> </input>
+              <button class="nav-botao"><a href="login.html">Sign out</a></button>
+            </li>
+          </div>
+          </ul>
+        </div>
+        </nav>
+            
+        <!-- chamando a formatacao do cabecalho -->
+      <script src="utils/renderHeader.js"> </script>   
+     
+      </header>
+
+    <div class="container-speaking">
+      
+    <!-- <button id="btnGravar">Back</button> -->
+
+        <div class="box" id="primeiro">           
+        
+            <div class="container-audio">
+        
+                <!-- <h1 id="title">  Complete the phrases with 1 WORD</h1> -->
+                <h2>Speak to find out the right word:</h2>
+               <img id="record" src="img/icons8-record-100.png" alt="">
+                <button id="btnGravar">Start Recording</button>
+
+                <div class="text">
+                 
+                    
+                    <div class="container-question">
+      
+                        <!-- <h1>1. Could you say that ___________ ?</h1> -->
+                        <p id="dica"><i>Hint: adverb</i></p>       
+                        <!-- <h1 id="word">A _ _ _ N</h1> -->
+                        <div class="word">
+                            <p class="letter1">A</p>
+                            <p class="letter2">_</p>
+                            <p class="letter3">_</p>
+                            <p class="letter4">_</p>
+                            <p class="letter5">N</p>
+                        </div>
+                        <!-- <p id="dica"><i>(happy, again, never, angry)</i></p>             -->
+                           
+                        
+                        <div class="div-pontos">
+                            <p class="score-div">Score: 0</p>                 
+                            <button class="botao-proximo" onclick="next(1)">Next</button>
+                        </div>
+
+                        <p class="result"></p>
+                    </div>
+
+
+                    <div class="container-question">
+                        <h1>2. Can I pay by ___________ ?</h1>  
+                        <p id="dica"><i>(food, card, money, coin)</i></p>       
+                        <p class="result"></p>   
+                        <div class="div-pontos"> 
+                            <p class="score-div" >Score: 0</p>        
+                            <button class="botao-proximo" onclick="next(2)">Next</button>
+                        </div>
+                    </div>
+                    
+                    <div class="container-question">
+                        <h1>3. Could I have _______, please??</h1>  
+                        <p id="dica"><i>(hot, double, tea, number)</i></p>       
+                        <p class="result"></p>
+                        <div class="div-pontos">    
+                            <p class="score-div" >Score: 0</p>     
+                            <button class="botao-proximo" onclick="next(3)">Next</button>
+                        </div>
+                    </div>
+            
+                    <div class="container-question">
+                        <h1> 4. _________ you speak slowly?</h1>  
+                        <p id="dica"><i>(cannot, how, can, could)</i></p>
+                        <p class="result"></p>    
+                        <div class="div-pontos">
+                            <p class="score-div" >Score: 0</p>   
+                            <button class="botao-proximo" onclick="next(4)">Next</button>
+                        </div>
+                    </div>
+                    
+                    <div class="container-question">
+                        <h1>5. You can ___________ a hotel online.</h1>   
+                        <p id="dica"><i>(book, buy, have, call)</i></p>     
+                        <p class="result"></p>    
+                        <div class="div-pontos">
+                            <p class="score-div" >Score: 0</p>   
+                            <button class="botao-proximo" onclick="next(5)">Submit</button>                    
+                        </div>
+                    </div>
+
+                    <div class="container-question">
+                        <h1>Your progress:</h1>
+                        <p class="pontos-div" id="pontos" style="color:rgb(129, 81, 36);">Score: 0</p>          
+                        <button id="restart" onclick="reiniciarJogo()"> Redo Quiz!</button>
+                    </div> 
+                
+                </div>
+                
+                
+            </div>   
+    
+        </div>
+        
+        <div class="box" id="segundo">           
+            
+            <div class="container-audio">
+        
+                <h1 id="title">  Complete the phrases with 1 WORD</h1>
+                <h2>Fill in the gaps with the correct form of the verbs:</h2>
+            
+                <div class="text">
+                    <div class="container-question2">
+                        <h1>1. I _______ up at six o’clock.</h1> 
+                        <p id="dica"><i>(got, get, dress, drink)</i></p>           
+                        <p class="result"></p>
+                        <div class="div-pontos">
+                            <p class="score-div" >Score: 0</p>                 
+                            <button class="botao-proximo" onclick="next(1)">Next</button>
+                        </div>
+                    </div>
+
+
+                    <div class="container-question2">
+                        <h1>2. We _________ 75 stores in Europe.</h1>
+                        <p id="dica"><i>(contain, belong, know, have)</i></p>        
+                        <p class="result"></p>   
+                        <div class="div-pontos"> 
+                            <p class="score-div" >Score: 0</p>        
+                            <button class="botao-proximo" onclick="next(2)">Next</button>
+                        </div>
+                    </div>
+                    
+                    <div class="container-question2">
+                        <h1>3. He __________ for SHS.</h1>
+                        <p id="dica"><i>(pay, works, travels, work)</i></p>        
+                        <p class="result"></p>
+                        <div class="div-pontos">    
+                            <p class="score-div" >Score: 0</p>     
+                            <button class="botao-proximo" onclick="next(3)">Next</button>
+                        </div>
+                    </div>
+            
+                    <div class="container-question2">
+                        <h1>4. He _____ breakfast in a café.</h1> 
+                        <p id="dica"><i>(eat, do, does, has)</i></p>       
+                        <p class="result"></p>    
+                        <div class="div-pontos">
+                            <p class="score-div" >Score: 0</p>   
+                            <button class="botao-proximo" onclick="next(4)">Next</button>
+                        </div>
+                    </div>
+                    
+                    <div class="container-question2">
+                        <h1>5. He _________ in the town centre.</h1> 
+                        <p id="dica"><i>(stay, leaves, eats, sing)</i></p>       
+                        <p class="result"></p>    
+                        <div class="div-pontos">
+                            <p class="score-div" >Score: 0</p>   
+                            <button class="botao-proximo" onclick="next(5)">Submit</button>                    
+                        </div>
+                    </div>
+
+                    <div class="container-question2">
+                        <h1>Your progress:</h1>
+                        <p  class="pontos-div" id="pontos2" style="color:rgb(129, 81, 36);">Score: 0</p>
+                        <button id="restart" onclick="reiniciarJogo()"> Redo Quiz!</button>          
+                    </div> 
+                
+                </div>
+        
+                <img id="record2" src="img/icons8-record-100.png" alt="">
+                <button id="btnGravar2">Start Recording</button>
+            </div>  
+    
+        </div>
+
+        <div class="box" id="terceiro">           
+        
+            <div class="container-audio">
+        
+                <h1 id="title">  Complete the phrases with 2 WORDS</h1>
+                <h2>Use Present Continuous Tense:</h2>
+            
+                <div class="text">
+                    <div class="container-question3">
+                        <h1>1. Two people ____ _________ coffee.</h1>  
+                        <p id="dica"><i>(are eating, is enjoying, are drinking)</i></p>             
+                        <p class="result"></p>
+                        <div class="div-pontos">
+                            <p class="score-div" >Score: 0</p>                 
+                            <button class="botao-proximo" onclick="next(1)">Next</button>
+                        </div>
+                    </div>
+
+
+                    <div class="container-question3">
+                        <h1>2. One man ____ __________ at a computer.</h1> 
+                        <p id="dica"><i>(are working, is working, is looking)</i></p>          
+                        <p class="result"></p>   
+                        <div class="div-pontos"> 
+                            <p class="score-div" >Score: 0</p>        
+                            <button class="botao-proximo" onclick="next(2)">Next</button>
+                        </div>
+                    </div>
+                    
+                    <div class="container-question3">
+                        <h1>3. Two men ___ ________ on the phone.</h1>  
+                        <p id="dica"><i>(is talking, are saying, are speaking)</i></p>         
+                        <p class="result"></p>
+                        <div class="div-pontos">    
+                            <p class="score-div" >Score: 0</p>     
+                            <button class="botao-proximo" onclick="next(3)">Next</button>
+                        </div>
+                    </div>
+            
+                    <div class="container-question3">
+                        <h1>4. One woman ___ __________ an email.</h1>  
+                        <p id="dica"><i>(is typing, are reading, is sending)</i></p>         
+                        <p class="result"></p>    
+                        <div class="div-pontos">
+                            <p class="score-div" >Score: 0</p>   
+                            <button class="botao-proximo" onclick="next(4)">Next</button>
+                        </div>
+                    </div>
+                    
+                    <div class="container-question3">
+                        <h1>5. One boy ___ __________ a sandwich.</h1>
+                        <p id="dica"><i>(are preparing, is doing, is making)</i></p>           
+                        <p class="result"></p>    
+                        <div class="div-pontos">
+                            <p class="score-div" >Score: 0</p>   
+                            <button class="botao-proximo" onclick="next(5)">Submit</button>                    
+                        </div>
+                    </div>
+
+                    <div class="container-question3">
+                        <h1>Your progress:</h1>
+                        <p  class="pontos-div" id="pontos3" style="color:rgb(129, 81, 36);">Score: 0</p>  
+                        <button id="restart" onclick="reiniciarJogo()"> Redo Quiz!</button>        
+                    </div> 
+                
+                </div>
+        
+                <img id="record3" src="img/icons8-record-100.png" alt="">
+                <button id="btnGravar3">Start Recording</button>
+            </div>   
+    
+        </div>  
+        
+        <div class="box" id="quarto">           
+        
+            <div class="container-audio">
+        
+                <h1 id="title">  Complete the phrases with 1 WORD</h1>
+                <h2>FiIl in the gaps:</h2>
+            
+                <div class="text">
+                    <div class="container-question4">
+                        <h1>1. Would you like a single or a _______ ticket?</h1> 
+                        <p id="dica"><i>(return, double, eight, simple)</i></p>              
+                        <p class="result"></p>
+                        <div class="div-pontos">
+                            <p class="score-div" >Score: 0</p>                 
+                            <button class="botao-proximo" onclick="next(1)">Next</button>
+                        </div>
+                    </div>
+
+
+                    <div class="container-question4">
+                        <h1>2. When does the next train _________?</h1>
+                        <p id="dica"><i>(back, arrive, leave, go)</i></p>   
+                        <p class="result"></p>   
+                        <div class="div-pontos"> 
+                            <p class="score-div" >Score: 0</p>        
+                            <button class="botao-proximo" onclick="next(2)">Next</button>
+                        </div>
+                    </div>
+                    
+                    <div class="container-question4">
+                        <h1>3. Do you want to _____ the return trip now?</h1> 
+                        <p id="dica"><i>(buy, book, call, download)</i></p>          
+                        <p class="result"></p>
+                        <div class="div-pontos">    
+                            <p class="score-div" >Score: 0</p>     
+                            <button class="botao-proximo" onclick="next(3)">Next</button>
+                        </div>
+                    </div>
+            
+                    <div class="container-question4">
+                        <h1>4. I’d like to cancel my _________ .</h1> 
+                        <p id="dica"><i>(purchase, mail, ticket, reservation)</i></p>          
+                        <p class="result"></p>    
+                        <div class="div-pontos">
+                            <p class="score-div" >Score: 0</p>   
+                            <button class="botao-proximo" onclick="next(4)">Next</button>
+                        </div>
+                    </div>
+                    
+                    <div class="container-question4">
+                        <h1>5. I want to reserve a _________ .</h1>  
+                        <p id="dica"><i>(place, seat, document, day)</i></p>         
+                        <p class="result"></p>    
+                        <div class="div-pontos">
+                            <p class="score-div" >Score: 0</p>   
+                            <button class="botao-proximo" onclick="next(5)">Submit</button>                    
+                        </div>
+                    </div>
+
+                    <div class="container-question4">
+                        <h1>Your progress:</h1>
+                        <p  class="pontos-div" id="pontos3" style="color:rgb(129, 81, 36);">Score: 0</p>  
+                        <button id="restart" onclick="reiniciarJogo()"> Redo Quiz!</button>        
+                    </div> 
+                
+                </div>
+        
+                <img id="record4" src="img/icons8-record-100.png" alt="">
+                <button id="btnGravar4">Start Recording</button>
+            </div>   
+    
+        </div>   
+    
+        <div class="box" id="quinto">           
+        
+            <div class="container-audio">
+        
+                <h1 id="title">  Complete the phrases with 1 WORD</h1>
+                <h2>Use Past Simple Tense:</h2>
+            
+                <div class="text">
+                    <div class="container-question5">
+                        <h1>1. He _______ <i>(leave)</i> on Wednesday.</h1>            
+                        <p class="result"></p>
+                        <div class="div-pontos">
+                            <p class="score-div" >Score: 0</p>                 
+                            <button class="botao-proximo" onclick="next(1)">Next</button>
+                        </div>
+                    </div>
+
+
+                    <div class="container-question5">
+                        <h1>2. She ______ <i>(is)</i> at the trade fair.</h1>
+                        <p class="result"></p>   
+                        <div class="div-pontos"> 
+                            <p class="score-div" >Score: 0</p>        
+                            <button class="botao-proximo" onclick="next(2)">Next</button>
+                        </div>
+                    </div>
+                    
+                    <div class="container-question5">
+                        <h1>3. We _______ <i>(stay)</i> in Paris for two days.</h1>        
+                        <p class="result"></p>
+                        <div class="div-pontos">    
+                            <p class="score-div" >Score: 0</p>     
+                            <button class="botao-proximo" onclick="next(3)">Next</button>
+                        </div>
+                    </div>
+            
+                    <div class="container-question5">
+                        <h1>4. Miguel _________ <i>(rent)</i> a car.</h1>        
+                        <p class="result"></p>    
+                        <div class="div-pontos">
+                            <p class="score-div" >Score: 0</p>   
+                            <button class="botao-proximo" onclick="next(4)">Next</button>
+                        </div>
+                    </div>
+                    
+                    <div class="container-question5">
+                        <h1>5. They _______ <i>(go)</i> to China last month.</h1>        
+                        <p class="result"></p>    
+                        <div class="div-pontos">
+                            <p class="score-div" >Score: 0</p>   
+                            <button class="botao-proximo" onclick="next(5)">Submit</button>                    
+                        </div>
+                    </div>
+
+                    <div class="container-question5">
+                        <h1>Your progress:</h1>
+                        <p  class="pontos-div" id="pontos3" style="color:rgb(129, 81, 36);">Score: 0</p>   
+                        <button id="restart" onclick="reiniciarJogo()"> Redo Quiz!</button>       
+                    </div> 
+                
+                </div>
+        
+                <img id="record5" src="img/icons8-record-100.png" alt="">
+                <button id="btnGravar5">Start Recording</button>
+            </div>   
+    
+        </div>
+        
+        <div class="box" id="sexto">           
+        
+            <div class="container-audio">
+        
+                <h1 id="title">  Complete the phrases with 1 WORD</h1>
+                <h2>FiIl in the gaps using the right word:</i></h2>
+            
+                <div class="text">
+                    <div class="container-question6">
+                        <h1>1. A train is ________ than a bus.</h1>  
+                        <p id="dica"><i>(longer, big, huge, more)</i></p>             
+                        <p class="result"></p>
+                        <div class="div-pontos">
+                            <p class="score-div" >Score: 0</p>                 
+                            <button class="botao-proximo" onclick="next(1)">Next</button>
+                        </div>
+                    </div>
+
+
+                    <div class="container-question6">
+                        <h1>2. A Ford is _________ than a Rolls Royce.</h1>
+                        <p id="dica"><i>(expensive, nice, pretty, cheaper)</i></p>   
+                        <p class="result"></p>   
+                        <div class="div-pontos"> 
+                            <p class="score-div" >Score: 0</p>        
+                            <button class="botao-proximo" onclick="next(2)">Next</button>
+                        </div>
+                    </div>
+                    
+                    <div class="container-question6">
+                        <h1>3. A sports car can go _____ than a bus.</h1>   
+                        <p id="dica"><i>(rapid, slow, faster, flash)</i></p>        
+                        <p class="result"></p>
+                        <div class="div-pontos">    
+                            <p class="score-div" >Score: 0</p>     
+                            <button class="botao-proximo" onclick="next(3)">Next</button>
+                        </div>
+                    </div>
+            
+                    <div class="container-question6">
+                        <h1>4. You always have the _______ ideas.</h1> 
+                        <p id="dica"><i>(better, best, great, good)</i></p>          
+                        <p class="result"></p>    
+                        <div class="div-pontos">
+                            <p class="score-div" >Score: 0</p>   
+                            <button class="botao-proximo" onclick="next(4)">Next</button>
+                        </div>
+                    </div>
+                    
+                    <div class="container-question6">
+                        <h1>5. This is the ____ difficult question in the book!</h1>
+                        <p id="dica"><i>(more, strong, most, much)</i></p>           
+                        <p class="result"></p>    
+                        <div class="div-pontos">
+                            <p class="score-div" >Score: 0</p>   
+                            <button class="botao-proximo" onclick="next(5)">Submit</button>                    
+                        </div>
+                    </div>
+
+                    <div class="container-question6">
+                        <h1>Your progress:</h1>
+                        <p  class="pontos-div" id="pontos3" style="color:rgb(129, 81, 36);">Score: 0</p>          
+                        <button id="restart" onclick="reiniciarJogo()"> Redo Quiz!</button>
+                    </div> 
+                
+                </div>
+        
+                <img id="record6" src="img/icons8-record-100.png" alt="">
+                <button id="btnGravar6">Start Recording</button>
+            </div>   
+    
+    </div>
+   <!-- imagem do astronauta (direita) -->
+    <img src="img/satelite3.png" id="img-direita">
+    
+
+      <div id="div-esquerda">
+        <h2>Speak using the microphone!</h2>       
+    </div>
+
+
+</div>
+
+
+ 
+
+    <script>
+    window.onbeforeunload = function() {
+        return "Tem certeza que deseja sair desta página?"
+    };
+    </script>
+    
+    <!-- <script src="js/menu.js"></script> -->
+    <script src="js/speaking2.js"></script>
+        
+</body>
+</html>
