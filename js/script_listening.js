@@ -100,16 +100,16 @@ class WordGame {
     
     checkAndDisplayScore(inputId, correctProp, pontosId, errosId) {
         const inputElement = document.getElementById(inputId);
-        const userInput = inputElement.value.trim();
+        const userInput = inputElement.value.trim().toLowerCase();
         let palavra = '';
 
         switch(inputId) {
-            case 'input': palavra = this.palavra; break;
-            case 'input2': palavra = this.palavra2; break;
-            case 'input3': palavra = this.palavra3; break;
-            case 'input4': palavra = this.palavra4; break;
-            case 'input5': palavra = this.palavra5; break;
-            case 'input6': palavra = this.palavra6; break;
+            case 'input': palavra = this.palavra.toLowerCase(); break;  
+            case 'input2': palavra = this.palavra2.toLowerCase(); break;  
+            case 'input3': palavra = this.palavra3.toLowerCase(); break;  
+            case 'input4': palavra = this.palavra4.toLowerCase(); break; 
+            case 'input5': palavra = this.palavra5.toLowerCase(); break;  
+            case 'input6': palavra = this.palavra6.toLowerCase(); break;  
         }
         const tempoDesaparecer = 3000;
 
